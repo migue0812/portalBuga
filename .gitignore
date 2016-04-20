@@ -3,5 +3,6 @@
 /nbproject/private/
 /nbproject/
 /nbproject/*
+/.env
 Homestead.yaml
 Homestead.json
