@@ -1,0 +1,7 @@
+/node_modules
+/public/storage
+/nbproject/private/
+/nbproject/
+/nbproject/*
+Homestead.yaml
+Homestead.json
