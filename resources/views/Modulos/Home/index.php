@@ -15,7 +15,7 @@
     <div class="carousel-inner">
         <div class="item active">
             <!-- Imagen 1 -->
-            <div class="fill img-responsive" style="background-image:url('../..//..//..//public/img/Basilica.jpg');"></div>
+            <div class="fill img-responsive" style="background-image:url('../..//..//..//public/img/Ferro.jpg');"></div>
             <div class="carousel-caption">
                 <h2>Caption 1</h2>
                 <span>Descripcion</span>
@@ -23,7 +23,7 @@
         </div>
         <div class="item">
             <!-- Imagen 2 -->
-            <div class="fill" style="background-image:url('http://placehold.it/1900x1080&text=Slide Two');"></div>
+            <div class="fill" style="background-image:url('../..//..//..//public/img/Ferro.jpg');"></div>
             <div class="carousel-caption">
                 <h2>Caption 2</h2>
                 <span>Descripcion</span>
@@ -31,7 +31,7 @@
         </div>
         <div class="item">
             <!-- Imagen 3 -->
-            <div class="fill" style="background-image:url('http://placehold.it/1900x1080&text=Slide Three');"></div>
+            <div class="fill" style="background-image:url('../..//..//..//public/img/Ferro.jpg');"></div>
             <div class="carousel-caption">
                 <h2>Caption 3</h2>
                 <span>Descripcion</span>
@@ -62,7 +62,7 @@
     <div class="row ">
         <div class="col-md-4 portfolio-item">
             <a href="#">
-                <img class="img-responsive" src="<?php echo asset("img/Holmes.png")?>" alt="">
+                <img class="img-responsive" src="<?php echo asset("img/Holmes.png") ?>" alt="">
             </a>
             <h3>
                 <a href="#">Project Name</a>
@@ -119,14 +119,19 @@
             </h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
         </div>
-           
+
     </div>
- <?php include ("/../../Templates/Frontend/whatToDo.php") ?>
+    <?php include ("/../../Templates/Frontend/whatToDo.php") ?>
 
 </div>
 
 <!-- /.row -->
-
+<!-- Script to Activate the Carousel -->
+<script>
+    $('.carousel').carousel({
+        interval: 3000 //changes the speed
+    })
+</script>
 
 <?php include ("/../../Templates/Frontend/footer.php") ?>
 <?php include ("/../../Templates/Frontend/foot.php") ?>
