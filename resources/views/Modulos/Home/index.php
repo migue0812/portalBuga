@@ -15,7 +15,7 @@
     <div class="carousel-inner">
         <div class="item active">
             <!-- Imagen 1 -->
-            <div class="fill img-responsive" style="background-image:url('../..//..//..//public/img/Holmes.png');"></div>
+            <div class="fill img-responsive" style="background-image:url('../..//..//..//public/img/Basilica.jpg');"></div>
             <div class="carousel-caption">
                 <h2>Caption 1</h2>
                 <span>Descripcion</span>
@@ -62,7 +62,7 @@
     <div class="row ">
         <div class="col-md-4 portfolio-item">
             <a href="#">
-                <img class="img-responsive" src="http://placehold.it/700x400" alt="">
+                <img class="img-responsive" src="<?php echo asset("img/Holmes.png")?>" alt="">
             </a>
             <h3>
                 <a href="#">Project Name</a>
