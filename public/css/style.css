@@ -1,0 +1,278 @@
+/* 
+    Created on : 21-abr-2016, 22:05:51
+    Author     : Ne_K Music
+*/
+
+/*---Header---*/
+
+@import url('fonts/fonts.css');
+*{
+    margin:0px;
+    padding:0px;
+
+}
+
+/*---Nav Header---*/
+
+.navbarMain{
+    font-family: 'Lora', serif;
+    font-size: 14px;
+    letter-spacing: 2px;
+    color: #313131;
+    height: 180px;
+    border-bottom: 2px solid #eee;
+
+}
+
+.hrWhat{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 0;
+    border-bottom: 2px solid #eee;
+}
+.menuMain{
+    padding-top: 70px;
+    text-transform: uppercase;
+
+}
+.menuMainDos{
+    padding-top: 70px;
+    text-transform: uppercase;
+}
+.evenNav{
+    padding-right:40px;
+    padding-left:50px;
+}
+.titulo{
+    font-family: riesling;
+    font-size: 130px;
+    text-decoration:none;  
+    font-weight: bold;
+    text-shadow: 6px 4px #DFDEDE;
+    color: #4F4E4E;
+}
+.tituloCont{
+    padding-left: 60px;
+}
+.titulo:hover{
+    text-decoration:none;  
+
+}
+/*---Contenido Header---*/
+.carousel {
+    height: 100%;
+}
+.carousel-caption{
+    font-family: 'Lora', serif;
+
+}
+
+.visitNav{
+    font-family: 'Lora';
+    margin: 0;
+    color: #313131;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+}
+h2 {
+    line-height: 42px; 
+    font-size: 30px;
+    margin-bottom: 10px !important;
+}
+/*---Que Hacer---*/
+.portImg {
+    padding-top: 50px; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+}
+
+.portfolio-item {
+    margin-bottom: 25px;
+}
+
+footer {
+    margin: 50px 0;
+}
+
+.queHacer{
+
+    font-family: 'Lora';
+    margin: 0;
+    color: #313131;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    border-bottom: 1px solid #eee;
+}
+
+
+
+/*---Footer---*/
+.nav-footer {
+
+    margin-top:-30px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 7.5px;
+    padding-right: 7.5px;
+}
+.footer{
+    /*---background: #000;---*/
+    color: #434343;
+
+}
+.div-h3 {
+    font-family: 'Lora';
+    color: #313131;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 15px;
+    margin: 35px 0 20px 0;
+}
+.social-footer{
+    font-family: ralewayRegular,'Helvetica Neue',Helvetica,Arial,sans-serif;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 34px;
+
+}
+
+.social-footer li a{
+    font-family: ralewayRegular,'Helvetica Neue',Helvetica,Arial,sans-serif;
+    font-weight: normal;
+    color: #626161;
+    font-size: 15px;
+    line-height: 1;
+}
+.social-footer li a:hover{
+    color: #626161;
+}
+.footDerechos{
+    margin-top:20px;
+}
+.copyright{
+    font-size:15px;
+}
+.copyright > p > a{
+    color: #a6a6a6;
+    text-decoration: none;
+}
+/*---Enlaces---*/
+.social-facebook{
+    list-style:none;
+    position: relative;
+    font-family: ralewayRegular,'Helvetica Neue',Helvetica,Arial,sans-serif;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 34px;
+    color: #d1d2d3;
+    padding-left: 38px;
+
+}
+.social-twitter{
+    list-style:none;
+    position: relative;
+    font-family: ralewayRegular,'Helvetica Neue',Helvetica,Arial,sans-serif;
+    font-weight: normal;
+    font-size: 20px;
+    padding-left: 38px;
+}
+.social-google{
+    list-style:none;
+    position: relative;
+    font-family: ralewayRegular,'Helvetica Neue',Helvetica,Arial,sans-serif;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 34px;
+    padding-left: 38px;
+}
+.social-contactanos{
+    list-style:none;
+    position: relative;
+    font-family: ralewayRegular,'Helvetica Neue',Helvetica,Arial,sans-serif;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 34px;
+    color: #d1d2d3;
+}
+
+
+/*---Icono---*/
+.facebook{
+    content: '';
+    display: inline-block;
+    position: relative;
+    speak: none;
+    width: 30px;
+    height: 28px;
+    background-position: -223px;
+    position: absolute;
+    left: 0;
+    top: 3px;
+    /*---background-image: url(../img/facebook.gif);---*/
+    margin-right:10px;
+}
+/*---footer Extend---*/
+.footer-Extend {
+    margin: 0 0 30px 0;
+    padding-top: 50px;
+}
+.social-page-footer{
+    width: 1125px;
+}
+.header-expand{
+    text-align: center;
+    color: #333;
+    margin-bottom: 25px;
+}
+.header-expand > h1{
+    text-align: center;
+    font-family: sourcesans;
+    font-weight: normal;
+    font-size: 36px;
+    line-height: 1;
+    text-transform: uppercase;
+    margin: 0;
+    margin-bottom:30px;
+}
+.header-expand > h1 > span{
+    text-align: center;
+    font-family: sourcesans;
+    font-weight: normal;
+    font-size: 26px;
+    line-height: 36px;
+    text-transform: uppercase;
+    margin: 0;
+}
+.cont-row{
+    margin-left: -7.5px;
+    margin-right: -7.5px;
+}
+.cont-expand{
+    padding-left: 0;
+}
+.box-expand{
+    border: 1px solid #e1dfdf;
+    padding: 20px 10px 25px;
+    height: 217px;
+}
+.box-expand > p{
+    font-size: 16px;
+    font-family: 'Raleway regular','Helvetica Neue',Helvetica,Arial,sans-serif;
+    line-height: 23px;
+    margin: 0 0 10px;
+    color:#595959;
+}
+.box-expand > p > strong{
+    text-align:justify;
+    color:#424242;
+}
+.social-logo{
+    float: right;
+    margin: 0;
+
+}
+.cont-expand-ex{
+    padding: 0 7.5px;
+}
+.cont-expand-ext{
+    padding-right: 0;
+}
+
