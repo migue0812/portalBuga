@@ -1,6 +1,5 @@
 <?php include ("/../../Templates/Frontend/head.php") ?>
 <?php include ("/../../Templates/Frontend/header.php") ?>
-<!-- Comienzo Slides -->
 <!-- Carousel Header -->
 
 <header id="myCarousel" class="carousel slide">
@@ -53,12 +52,12 @@
 <div class="visitNav">
     <div>
         <h2 style="text-align: center;">Mas Visitados</h2>
-    </div> 
+    </div>
 </div>
 <hr>
 
 <!-- Projects Row -->
-<div class="container portImg"> 
+<div class="container portImg">
     <div class="row ">
         <div class="col-md-4 portfolio-item">
             <a href="#">

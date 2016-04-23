@@ -9,7 +9,7 @@
 *{
     margin:0px;
     padding:0px;
-
+    -webkit-font-smoothing: antialiased;
 }
 
 /*---Nav Header---*/
@@ -21,6 +21,7 @@
     color: #313131;
     height: 180px;
     border-bottom: 2px solid #eee;
+    -webkit-font-smoothing: antialiased;
 
 }
 
@@ -33,11 +34,12 @@
 .menuMain{
     padding-top: 70px;
     text-transform: uppercase;
-
+    -webkit-font-smoothing: antialiased;
 }
 .menuMainDos{
     padding-top: 70px;
     text-transform: uppercase;
+    -webkit-font-smoothing: antialiased;
 }
 .evenNav{
     padding-right:40px;
@@ -50,6 +52,7 @@
     font-weight: bold;
     text-shadow: 6px 4px #DFDEDE;
     color: #4F4E4E;
+    -webkit-font-smoothing: antialiased;
 }
 .tituloCont{
     padding-left: 60px;
@@ -68,7 +71,9 @@
 }
 
 .visitNav{
-    font-family: 'Lora';
+
+
+    font-family: 'franchise';
     margin: 0;
     color: #313131;
     text-transform: uppercase;
@@ -76,14 +81,28 @@
 }
 h2 {
     line-height: 42px;
-    font-size: 30px;
+    font-size: 40px;
     margin-bottom: 10px !important;
+
 }
 
 .what {
-    padding-top: 20px; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
-}
+    padding-top: 20px;
+    font-family: 'Lora';
 
+
+}
+.detWhat{
+    font-size: 14px;
+    color: #6c6c6c;
+    letter-spacing: 1px;
+    line-height: 23px;
+}
+.page-header{
+    font-size: 30px;
+    font-family: 'Lora';
+
+}
 .img-center {
     margin: 0 auto;
 }
@@ -93,7 +112,8 @@ footer {
 }
 /*---Que Hacer---*/
 .portImg {
-    padding-top: 50px; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+    padding-top: 50px;
+    font-family: 'Lora';
 }
 
 .portfolio-item {
@@ -105,13 +125,11 @@ footer {
 }
 
 .queHacer{
-
-    font-family: 'Lora';
+    font-family: 'franchise';
     margin: 0;
     color: #313131;
     text-transform: uppercase;
     letter-spacing: -1px;
-    border-bottom: 1px solid #eee;
 }
 
 
@@ -139,7 +157,6 @@ footer {
     margin: 35px 0 20px 0;
 }
 .social-footer{
-    font-family: ralewayRegular,'Helvetica Neue',Helvetica,Arial,sans-serif;
     font-weight: normal;
     font-size: 16px;
     line-height: 34px;
@@ -147,7 +164,6 @@ footer {
 }
 
 .social-footer li a{
-    font-family: ralewayRegular,'Helvetica Neue',Helvetica,Arial,sans-serif;
     font-weight: normal;
     color: #626161;
     font-size: 15px;
@@ -170,7 +186,6 @@ footer {
 .social-facebook{
     list-style:none;
     position: relative;
-    font-family: ralewayRegular,'Helvetica Neue',Helvetica,Arial,sans-serif;
     font-weight: normal;
     font-size: 20px;
     line-height: 34px;
@@ -181,7 +196,6 @@ footer {
 .social-twitter{
     list-style:none;
     position: relative;
-    font-family: ralewayRegular,'Helvetica Neue',Helvetica,Arial,sans-serif;
     font-weight: normal;
     font-size: 20px;
     padding-left: 38px;
@@ -189,7 +203,6 @@ footer {
 .social-google{
     list-style:none;
     position: relative;
-    font-family: ralewayRegular,'Helvetica Neue',Helvetica,Arial,sans-serif;
     font-weight: normal;
     font-size: 20px;
     line-height: 34px;
@@ -198,7 +211,6 @@ footer {
 .social-contactanos{
     list-style:none;
     position: relative;
-    font-family: ralewayRegular,'Helvetica Neue',Helvetica,Arial,sans-serif;
     font-weight: normal;
     font-size: 20px;
     line-height: 34px;

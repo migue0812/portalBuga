@@ -1,10 +1,10 @@
-<div class="container what"> 
+<div class="container what">
     <div class="row ">
 
         <div class="queHacer">
             <div>
                 <h2 style="text-align: center;">Que Hacer</h2>
-            </div> 
+            </div>
         </div>
         <!-- Page Content -->
         <div class="container">
@@ -15,7 +15,7 @@
                     <h1 class="page-header">Visitanos
                         <small>Los Mejores Lugares Para Ti !</small>
                     </h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint, explicabo dolores ipsam aliquam inventore corrupti eveniet quisquam quod totam laudantium repudiandae obcaecati ea consectetur debitis velit facere nisi expedita vel?</p>
+                    <p class="detWhat">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint, explicabo dolores ipsam aliquam inventore corrupti eveniet quisquam quod totam laudantium repudiandae obcaecati ea consectetur debitis velit facere nisi expedita vel?</p>
                 </div>
             </div>
 
