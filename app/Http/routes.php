@@ -16,7 +16,8 @@ Route::get('/', function () {
 
 Route::controllers([
     'home/index' => "Modulos\Home\IndexController",
-        
+    'Evento' => "Eventos\principalController",
+    'Eventodetalle' => "Evento\detalleController",
 ]);
 
 /*
