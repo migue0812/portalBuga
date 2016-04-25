@@ -36,7 +36,8 @@
         </div>
         <div class="col-md-6 portfolio-item">
             <h3 style="color:blue;"><b>Ferias De Buga</b></h3>
-            <p class="text-justify" style="clear: right;">Los eventos inician el jueves 9 de julio con un gran concierto espiritual con el artista ganador del premio Grammy Alex Campos, reconocido en el mundo de la música cristiana.. Los eventos inician el jueves 9 de julio con un gran concierto espiritual con el artista ganador del premio Grammy Alex Campos, reconocido en e Los eventos inician el jueves 9 de julio con un gran concierto espiritual con el artista ganador del premio Grammy Ale</p>
+            <p class="text-justify" style="clear: right;">Los eventos inician el jueves 9 de julio con un gran concierto espiritual con el artista ganador del premio Grammy Alex Campos, reconocido en el mundo de la música cristiana.. Los eventos inician el jueves 9 de julio con un gran concierto espiritual con el artista ganador del premio Grammy Alex Campos, reconocido en e Los eventos inician el jueves 9 de julio con un gran concierto espiritual con el artista ganador del premio Grammy Ale 
+            Los eventos inician el jueves 9 de julio con un gran concierto espiritual con el artista ganador del premio Grammy Al</p>
         </div>
     </div>
     <!-- /.row -->
