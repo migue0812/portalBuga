@@ -1,10 +1,9 @@
 <?php
 
-namespace App\Http\Controllers\Eventos;
+namespace App\Http\Controllers\Modulos\Home;
 
+use App\Http\Requests;
 use App\Http\Controllers\Controller;
-use DB;
-use Illuminate\Http\Request;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -17,13 +16,16 @@ use Illuminate\Http\Request;
  *
  * @author Luis Angel
  */
-class principalController extends Controller {
+class EventosController extends Controller {
 
-   
-    function getPrincipal() {
-        
-        return view('Evento.principal');
+    function getIndex() {
+
+        return view('Modulos.Home.eventos');
     }
-   }
-    
-    
+
+    function getDet() {
+
+        return view('Modulos.Home.eventosdet');
+    }
+
+}
