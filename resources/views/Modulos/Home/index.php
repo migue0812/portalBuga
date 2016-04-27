@@ -107,9 +107,9 @@
                 <!-- Introduction Row -->
                 <div class="row">
                     <div class="col-lg-12">
-                        <h1 class="page-header">Visitanos
+                        <h3 class="visit">Visitanos
                             <small>Los Mejores Lugares Para Ti !</small>
-                        </h1>
+                        </h3>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint, explicabo dolores ipsam aliquam inventore corrupti eveniet quisquam quod totam laudantium repudiandae obcaecati ea consectetur debitis velit facere nisi expedita vel?</p>
                     </div>
                 </div>

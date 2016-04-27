@@ -18,12 +18,11 @@ body {
 
 h1,
 h2,
-h3,
 h4,
 h5,
 h6 {
     text-transform: uppercase;
-    font-family: "Josefin Slab","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: "Lora","Helvetica Neue",Helvetica,Arial,sans-serif;
     font-weight: 700;
     letter-spacing: 1px;
 }
@@ -190,11 +189,14 @@ hr {
     }
 }
 .visitNav{
-    font-family: 'Lora';
+    font-family: 'riesling';
     margin: 0;
     color: #313131;
     text-transform: uppercase;
     letter-spacing: -1px;
+}
+.visit{
+    font-size: 30px;
 }
 .portafolio{
     margin-bottom:50px;
@@ -218,7 +220,8 @@ footer {
 
 .nav-footer {
 
-    margin-top:-30px;
+    margin-top:-10px;
+    margin-bottom: 30px;
     margin-right: auto;
     margin-left: auto;
     padding-left: 7.5px;
@@ -228,6 +231,9 @@ footer {
     /*---background: #000;---*/
     color: #434343;
 
+}
+.copy{
+    color:#fff;
 }
 .div-h3 {
     font-family: 'Lora';

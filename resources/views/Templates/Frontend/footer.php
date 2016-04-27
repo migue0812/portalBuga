@@ -39,7 +39,7 @@
 <div class="container">
     <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-            <div class="copyright"><p>Todos los derechos reservados &copy; 2016 Desarrollado por <a href="#">TPS Buga</a></p></div>
+            <div class="copyright"><div class="copy">Todos los derechos reservados &copy; 2016 Desarrollado por <a href="#">TPS Buga</a></div></div>
         </div>
     </div>
 </div>
