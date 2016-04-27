@@ -16,9 +16,15 @@ body {
     -o-background-size: cover;
 }
 
+h4 {
+    text-transform: none;
+    font-family: "Lora","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
 h1,
 h2,
-h4,
 h5,
 h6 {
     text-transform: uppercase;
@@ -28,7 +34,7 @@ h6 {
 }
 
 p {
-    font-size: 1.25em;
+    font-size: 1.2em;
     line-height: 1.6;
     color: #000;
 }
@@ -403,4 +409,11 @@ footer {
 }
 .what {
     padding-top: 20px; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+}
+
+
+.fb-comments{
+    position: static;
+    margin-top: -100px;
+ 
 }
