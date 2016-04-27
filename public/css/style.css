@@ -6,135 +6,211 @@
 /*---Header---*/
 
 @import url('fonts/fonts.css');
-*{
-    margin:0px;
-    padding:0px;
-    -webkit-font-smoothing: antialiased;
+
+body {
+    font-family: "Lora","Helvetica Neue",Helvetica,Arial,sans-serif;
+    background: url('../img/vintagecom.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
 }
 
-/*---Nav Header---*/
-
-.navbarMain{
-    font-family: 'Lora', serif;
-    font-size: 14px;
-    letter-spacing: 2px;
-    color: #313131;
-    height: 180px;
-    border-bottom: 2px solid #eee;
-    -webkit-font-smoothing: antialiased;
-
-}
-
-.hrWhat{
-    margin-top: 20px;
-    margin-bottom: 20px;
-    border: 0;
-    border-bottom: 2px solid #eee;
-}
-.menuMain{
-    padding-top: 70px;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     text-transform: uppercase;
-    -webkit-font-smoothing: antialiased;
-}
-.menuMainDos{
-    padding-top: 70px;
-    text-transform: uppercase;
-    -webkit-font-smoothing: antialiased;
-}
-.evenNav{
-    padding-right:40px;
-    padding-left:50px;
-}
-.titulo{
-    font-family: riesling;
-    font-size: 130px;
-    text-decoration:none;
-    font-weight: bold;
-    text-shadow: 6px 4px #DFDEDE;
-    color: #4F4E4E;
-    -webkit-font-smoothing: antialiased;
-}
-.tituloCont{
-    padding-left: 60px;
-}
-.titulo:hover{
-    text-decoration:none;
-
-}
-/*---Contenido Header---*/
-.carousel {
-    height: 100%;
-}
-.carousel-caption{
-    font-family: 'Lora', serif;
-
-}
-
-.visitNav{
-
-
-    font-family: 'franchise';
-    margin: 0;
-    color: #313131;
-    text-transform: uppercase;
-    letter-spacing: -1px;
-}
-h2 {
-    line-height: 42px;
-    font-size: 40px;
-    margin-bottom: 10px !important;
-
-}
-
-.what {
-    padding-top: 20px;
-    font-family: 'Lora';
-
-
-}
-.detWhat{
-    font-size: 14px;
-    color: #6c6c6c;
+    font-family: "Josefin Slab","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: 700;
     letter-spacing: 1px;
-    line-height: 23px;
 }
-.page-header{
-    font-size: 30px;
+
+p {
+    font-size: 1.25em;
+    line-height: 1.6;
+    color: #000;
+}
+
+hr {
+    max-width: 400px;
+    border-color: #999999;
+}
+
+.brand,
+.address-bar {
+    display: none;
+}
+
+.navbar-brand {
+    text-transform: uppercase;
+    font-weight: 900;
+    letter-spacing: 2px;
+}
+
+.navbar-nav {
+    text-transform: uppercase;
+    font-weight: 400;
+    letter-spacing: 3px;
+}
+
+.img-full {
+    min-width: 100%;
+}
+
+.brand-before,
+.brand-name {
+    text-transform: capitalize;
+    font-family: "Lora";
+}
+
+.brand-before {
+    margin: 15px 0;
+
+}
+
+.brand-name {
+    margin: 0;
+    font-size: 4em;
+    font-family: "riesling"
+}
+
+.tagline-divider {
+    margin: 10px auto 10px;
+    max-width: 250px;
+    border-color: #999999;
+}
+.tagline-divider-cont {
+    margin: 10px auto 50px;
+    max-width: 250px;
+    border-color: #999999;
+}
+
+.box {
+    margin-bottom: 20px;
+    padding: 30px 15px;
+    background: #fff;
+    background: rgba(255,255,255,0.9);
+}
+
+.intro-text {
+    text-transform: uppercase;
+    font-size: 1.25em;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
+.img-border {
+    float: none;
+    margin: 0 auto 0;
+    border: #999999 solid 1px;
+}
+
+.img-left {
+    float: none;
+    margin: 0 auto 0;
+}
+
+
+@media screen and (min-width:768px) {
+    .brand {
+        display: inherit;
+        margin: 0;
+        padding: 30px 0 10px;
+        text-align: center;
+        text-shadow: 4px 1px 2px rgba(0,0,0,0.5);
+        font-family: "riesling";
+        font-size: 15em;
+        font-weight: 700;
+        line-height: normal;
+        color: #fff;
+    }
+
+    .top-divider {
+        margin-top: 0;
+    }
+
+    .img-left {
+        float: left;
+        margin-right: 25px;
+    }
+
+    .address-bar {
+        display: inherit;
+        margin: 0;
+        padding: 0 0 40px;
+        text-align: center;
+        text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+        text-transform: uppercase;
+        font-size: 1.25em;
+        font-weight: 400;
+        letter-spacing: 3px;
+        color: #fff;
+    }
+
+    .navbar {
+        border-radius: 0;
+    }
+
+    .navbar-header {
+        display: none;
+    }
+
+    .navbar {
+        min-height: 0;
+    }
+
+    .navbar-default {
+        border: none;
+        background: #fff;
+        background: rgba(255,255,255,0.9);
+    }
+
+    .nav>li>a {
+        padding: 35px;
+    }
+
+    .navbar-nav>li>a {
+        line-height: normal;
+    }
+
+    .navbar-nav {
+        display: table;
+        float: none;
+        margin: 0 auto;
+        table-layout: fixed;
+        font-size: 1.25em;
+    }
+}
+.visitNav{
     font-family: 'Lora';
-
-}
-.img-center {
-    margin: 0 auto;
-}
-
-footer {
-    margin: 50px 0;
-}
-/*---Que Hacer---*/
-.portImg {
-    padding-top: 50px;
-    font-family: 'Lora';
-}
-
-.portfolio-item {
-    margin-bottom: 25px;
-}
-
-footer {
-    margin: 50px 0;
-}
-
-.queHacer{
-    font-family: 'franchise';
     margin: 0;
     color: #313131;
     text-transform: uppercase;
     letter-spacing: -1px;
 }
+.portafolio{
+    margin-bottom:50px;
+}
 
+@media screen and (min-width:1200px) {
+    .box:after {
+        content: '';
+        display: table;
+        clear: both;
+    }
+}
 
 
 /*---Footer---*/
+footer {
+    background: #fff;
+    background: rgba(255,255,255,0.9);
+}
+
+
 .nav-footer {
 
     margin-top:-30px;
@@ -157,6 +233,7 @@ footer {
     margin: 35px 0 20px 0;
 }
 .social-footer{
+    font-family: ralewayRegular,'Helvetica Neue',Helvetica,Arial,sans-serif;
     font-weight: normal;
     font-size: 16px;
     line-height: 34px;
@@ -164,6 +241,7 @@ footer {
 }
 
 .social-footer li a{
+    font-family: ralewayRegular,'Helvetica Neue',Helvetica,Arial,sans-serif;
     font-weight: normal;
     color: #626161;
     font-size: 15px;
@@ -186,6 +264,7 @@ footer {
 .social-facebook{
     list-style:none;
     position: relative;
+    font-family: ralewayRegular,'Helvetica Neue',Helvetica,Arial,sans-serif;
     font-weight: normal;
     font-size: 20px;
     line-height: 34px;
@@ -196,6 +275,7 @@ footer {
 .social-twitter{
     list-style:none;
     position: relative;
+    font-family: ralewayRegular,'Helvetica Neue',Helvetica,Arial,sans-serif;
     font-weight: normal;
     font-size: 20px;
     padding-left: 38px;
@@ -203,6 +283,7 @@ footer {
 .social-google{
     list-style:none;
     position: relative;
+    font-family: ralewayRegular,'Helvetica Neue',Helvetica,Arial,sans-serif;
     font-weight: normal;
     font-size: 20px;
     line-height: 34px;
@@ -211,6 +292,7 @@ footer {
 .social-contactanos{
     list-style:none;
     position: relative;
+    font-family: ralewayRegular,'Helvetica Neue',Helvetica,Arial,sans-serif;
     font-weight: normal;
     font-size: 20px;
     line-height: 34px;
@@ -298,12 +380,4 @@ footer {
 }
 .cont-expand-ext{
     padding-right: 0;
-}
-
-.lado h3 {
-    float: right;
-}
-
-h3 .izquierdo{
-    float:left;
 }

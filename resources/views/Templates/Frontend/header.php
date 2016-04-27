@@ -1,4 +1,6 @@
-<nav class="navbarMain navbar-default" role="navigation">
+<div class="brand">Buga</div>
+<!-- Navigation -->
+<nav class="navbar navbar-default" role="navigation">
     <div class="container">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
@@ -8,43 +10,29 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
+            <!-- navbar-brand is hidden on larger screens, but visible when the menu is collapsed -->
+            <a class="navbar-brand" href="index.html">Buga</a>
         </div>
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-
-            <ul class="menuMain nav navbar-nav pull-left col-xs-5 col-md-5 col-lg-4">
+            <ul class="nav navbar-nav">
                 <li>
-                    <a href="index.html">Home</a>
-                </li>
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Categorias<span class="caret"></span></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="">Todas</a></li>
-                        <li role="separator" class="divider"></li>
-                        <li><a href="">Hola</a></li>
-                        <li><a href="">Hola</a></li>
-                        <li><a href="">Hola</a></li>
-                    </ul>
+                    <a href="index.html">Inicio</a>
                 </li>
                 <li>
-                    <a href="index.html">Sitios</a>
-                </li>
-
-            </ul>
-            <div class="tituloCont hidden-xs col-xs-2 col-md-2 col-lg-2 centered">
-                <span class="titulo" >Buga
-
-                </span>
-            </div>
-            <ul class="menuMainDos nav navbar-nav pull-right col-xs-5 col-md-5 col-lg-5">
-                <li class="evenNav">
-                    <a href="index.html">Eventos</a>
+                    <a href="about.html">Categorias</a>
                 </li>
                 <li>
-                    <a href="index.html">Ingresar</a>
+                    <a href="blog.html">Sitios</a>
                 </li>
                 <li>
-                    <a href="index.html">Registrar</a>
+                    <a href="contact.html">Eventos</a>
+                </li>
+                <li>
+                    <a href="contact.html">Ingresar</a>
+                </li>
+                <li>
+                    <a href="contact.html">Registrar</a>
                 </li>
             </ul>
         </div>
