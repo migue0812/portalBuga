@@ -31,7 +31,7 @@
                         <span class="icon-next"></span>
                     </a>
                 </div>
-                <h1 class="brand-name">Guadalajara De Buga</h1>
+                <h1 class="brand-name" style="text-shadow: 2px 1px 2px rgba(0,0,0,0.5);">Guadalajara De Buga</h1>
                 <hr class="tagline-divider">
                 <p>Una de las mejores ciudades turisticas!</p>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc placerat diam quis nisl vestibulum dignissim. In hac habitasse platea dictumst. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>

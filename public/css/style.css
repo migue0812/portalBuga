@@ -21,16 +21,19 @@ h2,
 h4,
 h5,
 h6 {
-    text-transform: uppercase;
-    font-family: "Lora","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 3em;
     font-weight: 700;
-    letter-spacing: 1px;
+    font-family: 'Franchise';
+    margin: 0;
+    color: #313131;
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }
 
 p {
-    font-size: 1.25em;
+    font-size: 16px;
     line-height: 1.6;
-    color: #000;
+    color: #6c6c6c;
 }
 
 hr {
@@ -53,8 +56,11 @@ hr {
     text-transform: uppercase;
     font-weight: 400;
     letter-spacing: 3px;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
 }
-
+.homeIcon{
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+}
 .img-full {
     min-width: 100%;
 }
@@ -71,7 +77,7 @@ hr {
 }
 
 .brand-name {
-    margin: 0;
+
     font-size: 4em;
     font-family: "riesling"
 }
@@ -97,6 +103,9 @@ hr {
     padding: 30px 15px;
     background: #fff;
     background: rgba(255,255,255,0.9);
+    -webkit-box-shadow: 0px 4px 5px -1px rgba(0,0,0,0.59);
+    -moz-box-shadow: 0px 4px 5px -1px rgba(0,0,0,0.59);
+    box-shadow: 0px 4px 5px -1px rgba(0,0,0,0.59);
 }
 
 .intro-text {
@@ -170,6 +179,9 @@ hr {
         border: none;
         background: #fff;
         background: rgba(255,255,255,0.9);
+        -webkit-box-shadow: 0px 4px 5px -1px rgba(0,0,0,0.59);
+        -moz-box-shadow: 0px 4px 5px -1px rgba(0,0,0,0.59);
+        box-shadow: 0px 4px 5px -1px rgba(0,0,0,0.59);
     }
 
     .nav>li>a {
@@ -210,11 +222,16 @@ hr {
     }
 }
 
-
+.navbar-default .navbar-nav>li>a {
+    color: #313131;
+}
 /*---Footer---*/
 footer {
     background: #fff;
     background: rgba(255,255,255,0.9);
+    -webkit-box-shadow: 0px 4px 5px -1px rgba(0,0,0,0.59);
+    -moz-box-shadow: 0px 4px 5px -1px rgba(0,0,0,0.59);
+    box-shadow: 0px 4px 5px -1px rgba(0,0,0,0.59);
 }
 
 
