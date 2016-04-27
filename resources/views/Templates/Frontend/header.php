@@ -19,8 +19,14 @@
                 <li>
                     <a href="index.html">Inicio</a>
                 </li>
-                <li>
-                    <a href="about.html">Categorias</a>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Categorias<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="<?php echo url("home/categorias") ?>">Todas</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="">Religion</a></li>
+                        <li><a href="">Deporte</a></li>
+                    </ul>
                 </li>
                 <li>
                     <a href="blog.html">Sitios</a>
