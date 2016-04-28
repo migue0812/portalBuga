@@ -1,8 +1,0 @@
-/node_modules
-/public/storage
-/nbproject/private/
-/nbproject/
-/nbproject/*
-/.env
-Homestead.yaml
-Homestead.json

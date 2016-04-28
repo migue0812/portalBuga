@@ -11,6 +11,21 @@ Route::controllers([
     'home/categorias' => "Modulos\Home\CategoriasController",
 ]);
 
+//Rutas del panel administrador
+Route::group(['prefix' => 'admin'], function () {
+  
+Route::controllers([
+    'bienvenido' => "Panel\PanelController",
+    'categoria' => "Panel\CategoriaController",
+    'subcategoria' => "Panel\SubcategoriaController",
+    'sitio' => "Panel\SitioController",
+    'evento' => "Panel\EventoController",
+    'configurar' => "Panel\ConfigurarController",
+    
+]);
+});
+
+
 /*
   |--------------------------------------------------------------------------
   | Application Routes
