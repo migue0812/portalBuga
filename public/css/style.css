@@ -28,7 +28,7 @@ h2,
 h5,
 h6 {
     font-size: 3em;
-    font-weight: 700;
+    font-weight: 600;
     font-family: 'Franchise';
     margin: 0;
     color: #313131;
@@ -432,5 +432,5 @@ footer {
 .fb-comments{
     position: static;
     margin-top: -100px;
- 
+
 }

@@ -1,6 +1,5 @@
 
 <?php include ("/../../Templates/Frontend/head.php") ?>
-
 <?php include ("/../../Templates/Frontend/header.php") ?>
 
 <!-- Page Content -->
