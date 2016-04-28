@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Panel;
+namespace App\Http\Controllers\Modulos\Panel;
 
 use App\Http\Controllers\Controller;
 
@@ -15,28 +15,28 @@ use DB;
 class CategoriaController extends Controller {
 
   function getIndex(Request $request) {
-    return view("Panel.categoria.categoria");
+    return view("Modulos.Panel.categoria.categoria");
   }
 
 
   function getCategoria(Request $request) {
-    return view("Panel.categoria.categoria");
+    return view("Modulos.Panel.categoria.categoria");
   }
   
   function getCrear(Request $request) {
-    return view("Panel.categoria.crear");
+    return view("Modulos.Panel.categoria.crear");
   }
   
   function getEditar(Request $request) {
-    return view("Panel.categoria.editar");
+    return view("Modulos.Panel.categoria.editar");
   }
   
   function getReporte(Request $request) {
-    return view("Panel.categoria.reporte");
+    return view("Modulos.Panel.categoria.reporte");
   }
   
   function getListar(Request $request) {
-    return view("Panel.categoria.listar");
+    return view("Modulos.Panel.categoria.listar");
   }
 
 }

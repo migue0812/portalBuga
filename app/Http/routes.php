@@ -11,16 +11,26 @@ Route::controllers([
     'home/categorias' => "Modulos\Home\CategoriasController",
 ]);
 
-//Rutas del panel administrador
+
+//Las rutas de los controladores del panel del admin estan en un
+//contenedor o grupo de rutas , todo lo que este dentro
+//de este grupo se le asigna un prefijo en este caso es "admin",
+//Ej para llamarlo desde la url:
+//  admin/bienvenido
+//  admin/categoria
+//  
+//Ej para llamarlo desde una vista:
+//  url('admin/bienvenido');
+//  url('admin/categoria');   
 Route::group(['prefix' => 'admin'], function () {
   
 Route::controllers([
-    'bienvenido' => "Panel\PanelController",
-    'categoria' => "Panel\CategoriaController",
-    'subcategoria' => "Panel\SubcategoriaController",
-    'sitio' => "Panel\SitioController",
-    'evento' => "Panel\EventoController",
-    'configurar' => "Panel\ConfigurarController",
+    'bienvenido' => "Modulos\Panel\PanelController",
+    'categoria' => "Modulos\Panel\CategoriaController",
+    'subcategoria' => "Modulos\Panel\SubcategoriaController",
+    'sitio' => "Modulos\Panel\SitioController",
+    'evento' => "Modulos\Panel\EventoController",
+    'configurar' => "Modulos\Panel\ConfigurarController",
     
 ]);
 });

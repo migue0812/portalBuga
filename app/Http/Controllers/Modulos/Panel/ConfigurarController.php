@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Panel;
+namespace App\Http\Controllers\Modulos\Panel;
 
 use App\Http\Controllers\Controller;
 
@@ -15,28 +15,28 @@ use DB;
 class ConfigurarController extends Controller {
 
   function getIndex(Request $request) {
-    return view("Panel.configurar.configurar");
+    return view("Modulos.Panel.configurar.configurar");
   }
 
 
   function getConfigurar(Request $request) {
-    return view("Panel.categoria.configurar");
+    return view("Modulos.Panel.categoria.configurar");
   }
   
   function getCrear(Request $request) {
-    return view("Panel.configurar.crear");
+    return view("Modulos.Panel.configurar.crear");
   }
   
   function getEditar(Request $request) {
-    return view("Panel.configurar.editar");
+    return view("Modulos.Panel.configurar.editar");
   }
   
   function getReporte(Request $request) {
-    return view("Panel.configurar.reporte");
+    return view("Modulos.Panel.configurar.reporte");
   }
   
   function getListar(Request $request) {
-    return view("Panel.configurar.listar");
+    return view("Modulos.Panel.configurar.listar");
   }
 
 }

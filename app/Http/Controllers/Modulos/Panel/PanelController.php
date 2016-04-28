@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Panel;
+namespace App\Http\Controllers\Modulos\Panel;
 
 use App\Http\Controllers\Controller;
 
@@ -15,12 +15,12 @@ use DB;
 class PanelController extends Controller {
 
   function getIndex(Request $request) {
-    return view("Panel.panel");
+    return view("Modulos.Panel.panel");
   }
 
 
   function getPanel(Request $request) {
-    return view("Panel.panel");
+    return view("Modulos.Panel.panel");
   }
 
 }

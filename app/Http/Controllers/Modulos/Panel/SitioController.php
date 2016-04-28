@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Panel;
+namespace App\Http\Controllers\Modulos\Panel;
 
 use App\Http\Controllers\Controller;
 
@@ -15,28 +15,28 @@ use DB;
 class SitioController extends Controller {
 
   function getIndex(Request $request) {
-    return view("Panel.subcategoria.subcategoria");
+    return view("Modulos.Panel.subcategoria.subcategoria");
   }
 
 
   function getSitio(Request $request) {
-    return view("Panel.sitio.sitio");
+    return view("Modulos.Panel.sitio.sitio");
   }
   
   function getCrear(Request $request) {
-    return view("Panel.sitio.crear");
+    return view("Modulos.Panel.sitio.crear");
   }
   
   function getEditar(Request $request) {
-    return view("Panel.sitio.editar");
+    return view("Modulos.Panel.sitio.editar");
   }
   
   function getReporte(Request $request) {
-    return view("Panel.sitio.reporte");
+    return view("Modulos.Panel.sitio.reporte");
   }
   
   function getListar(Request $request) {
-    return view("Panel.sitio.listar");
+    return view("Modulos.Panel.sitio.listar");
   }
 
 }
