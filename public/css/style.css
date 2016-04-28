@@ -132,7 +132,7 @@ hr {
     margin: 0 auto 0;
 }
 
-
+/*---Media Responsive---*/
 @media screen and (min-width:768px) {
     .brand {
         display: inherit;
