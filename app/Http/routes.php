@@ -9,6 +9,7 @@ Route::controllers([
     'home/eventos' => "Modulos\Home\EventosController",
     'home/sitios' => "Modulos\Home\SitiosController",
     'home/categorias' => "Modulos\Home\CategoriasController",
+    'itinerario' => "Modulos\Itinerario\ItinerarioController",
 ]);
 
 
@@ -18,21 +19,20 @@ Route::controllers([
 //Ej para llamarlo desde la url:
 //  admin/bienvenido
 //  admin/categoria
-//  
+//
 //Ej para llamarlo desde una vista:
 //  url('admin/bienvenido');
-//  url('admin/categoria');   
+//  url('admin/categoria');
 Route::group(['prefix' => 'admin'], function () {
-  
-Route::controllers([
-    'bienvenido' => "Modulos\Panel\PanelController",
-    'categoria' => "Modulos\Panel\CategoriaController",
-    'subcategoria' => "Modulos\Panel\SubcategoriaController",
-    'sitio' => "Modulos\Panel\SitioController",
-    'evento' => "Modulos\Panel\EventoController",
-    'configurar' => "Modulos\Panel\ConfigurarController",
-    
-]);
+
+    Route::controllers([
+        'bienvenido' => "Modulos\Panel\PanelController",
+        'categoria' => "Modulos\Panel\CategoriaController",
+        'subcategoria' => "Modulos\Panel\SubcategoriaController",
+        'sitio' => "Modulos\Panel\SitioController",
+        'evento' => "Modulos\Panel\EventoController",
+        'configurar' => "Modulos\Panel\ConfigurarController",
+    ]);
 });
 
 
