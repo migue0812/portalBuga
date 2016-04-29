@@ -22,7 +22,7 @@
 
             <div class="col-md-4 portfolio-item">
                 <a href="#">
-                    <img class="img-responsive" src="<?php echo asset("img/fondo1.jpg") ?>" alt="">
+                    <img class="img-responsive" src="<?php echo asset("img/fondo1_1.jpg") ?>" alt="">
                 </a>
                 <h3>
                     <a href="#">Cultura y tradición</a>
@@ -33,7 +33,7 @@
             <!-- Categoria 2-->
             <div class="col-md-4 portfolio-item">
                 <a href="#">
-                    <img class="img-responsive" src="<?php echo asset("img/Deportes.jpg") ?>" alt="">
+                    <img class="img-responsive" src="<?php echo asset("img/Deportes_1.jpg") ?>" alt="">
                 </a>
                 <h3>
                     <a href="#">Deportes</a>
@@ -44,7 +44,7 @@
             <!-- Categoria 3-->
             <div class="col-md-4 portfolio-item">
                 <a href="#">
-                    <img class="img-responsive" src="<?php echo asset("img/natural.jpg") ?>" alt="">
+                    <img class="img-responsive" src="<?php echo asset("img/natural_1.jpg") ?>" alt="">
                 </a>
                 <h3>
                     <a href="#">Ecoturistico</a>
@@ -58,7 +58,7 @@
         <div class="row">
             <div class="col-md-4 portfolio-item">
                 <a href="#">
-                    <img class="img-responsive" src="<?php echo asset("img/iglesias.jpg") ?>" alt="">
+                    <img class="img-responsive" src="<?php echo asset("img/iglesias_1.jpg") ?>" alt="">
                 </a>
                 <h3>
                     <a href="#">Religioso</a>
@@ -68,7 +68,7 @@
 
             <div class="col-md-4 portfolio-item">
                 <a href="#">
-                    <img class="img-responsive" src="<?php echo asset("img/historico.jpg") ?>" alt="">
+                    <img class="img-responsive" src="<?php echo asset("img/historico_1.jpg") ?>" alt="">
                 </a>
                 <h3>
                     <a href="#">Historico</a>
@@ -78,7 +78,7 @@
 
             <div class="col-md-4 portfolio-item">
                 <a href="#">
-                    <img class="img-responsive" src="<?php echo asset("img/piscinas.jpg") ?>" alt="">
+                    <img class="img-responsive" src="<?php echo asset("img/piscinas_1.jpg") ?>" alt="">
                 </a>
                 <h3>
                     <a href="#">Entretenimiento</a>
