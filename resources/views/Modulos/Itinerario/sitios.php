@@ -6,37 +6,77 @@
             <div id="wrapper">
                 <!-- Sidebar -->
                 <div class="row">
-                    <div class="itineraio col-lg-2 col-xs-12 col-sm-3">
-                        <aside class="" >
-                            <div class="list-group">
-                                <a href="<?php echo url("itinerario/sitios") ?>" class="list-group-item menu-eventos">Sitios</a>
-                                <a href="<?php echo url("itinerario/eventos") ?>" class="list-group-item menu-eventos">Eventos</a>
-
+                    <div class="itineraio col-lg-4 col-xs-4 col-sm-4">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <i class="fa fa-bell fa-fw"></i> Lista Pendientes
                             </div>
-                        </aside>
+                            <!-- /.panel-heading -->
+                            <div class="panel-body">
+                                <div class="list-group">
+                                    <a href="#" class="list-group-item">
+                                        <i class="fa fa-map-marker fa-fw"></i> Sitios
+                                        <span class="pull-right text-muted small"><em>4 minutes ago</em>
+                                        </span>
+                                    </a>
+                                    <a href="#" class="list-group-item">
+                                        <i class="fa fa-puzzle-piece fa-fw"></i> Eventos
+                                        <span class="pull-right text-muted small"><em>12 minutes ago</em>
+                                        </span>
+                                    </a>
+                                </div>
+                                <!-- /.list-group -->
+                                <a href="#" class="btn btn-default btn-block">Ver Todos</a>
+                            </div>
+                            <!-- /.panel-body -->
+                        </div>
                     </div>
                     <div id="tablaMenu" class="col-lg-8 col-xs-12 col-sm-9">
                         <article id="tablaMenu">
-                            <div class="table-responsive">
-                                <table class="table table-striped">
-                                    <thead>
-                                        <tr class="success">
-                                            <th>Sitio</th>
-                                            <th>Visitado</th>
-                                            <th>Opciones</th>
-                                        </tr>
-                                        <tr>
-                                            <td>Nombre</td>
-                                            <td><a>Si</a></td>
-                                            <td>
-                                                <a title="Ver Sitio" href="" class="btn btn-xs btn-success"><i class="glyphicon glyphicon-eye-open"></i></a>
-                                                <a title="No Visitado" href="" class="btn btn-xs btn-warning"><i class="glyphicon glyphicon-plane"></i></a>
-                                                <a title="Visitado" href="" class="btn btn-xs btn-primary"><i class="glyphicon glyphicon-plane"></i></a>
-                                                <a title="Eliminar" href="" class="btn btn-xs btn-danger"><i class="icon-cross"></i></a>
-                                            </td>
-                                        </tr>
-                                    </thead>
-                                </table>
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <i class="fa fa-map-marker fa-fw"></i> Sitios Elegidos
+                                </div>
+                                <!-- /.panel-heading -->
+                                <div class="panel-body">
+                                    <div class="table-responsive">
+                                        <table class="table table-hover">
+                                            <thead>
+                                                <tr>
+                                                    <th>Sitio</th>
+                                                    <th>Visitado</th>
+                                                    <th>Opciones</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Vertigito</td>
+                                                    <td>No</td>
+                                                    <td>
+                                                        <a title="Ver Sitio" href="" class="btn btn-xs btn-primary"><i class="fa fa-eye fa-fw"></i></a>
+
+                                                        <a title="No Visitado" href="" class="btn btn-xs btn-success"><i class="fa fa-rocket fa-fw"></i></a>
+
+                                                        <a title="Visitado" href="" class="btn btn-xs btn-warning"><i class="fa fa-rocket fa-fw"></i></a>
+
+                                                        <a title="Eliminar" href="" class="btn btn-xs btn-danger"><i class="fa  fa-ban fa-fw"></i></a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>La 11</td>
+                                                    <td>No</td>
+                                                    <td>Thornton</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Desire</td>
+                                                    <td>No</td>
+                                                    <td>the Bird</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <!-- /.table-responsive -->
+                                </div>
+                                <!-- /.panel-body -->
                             </div>
                         </article>
                     </div>

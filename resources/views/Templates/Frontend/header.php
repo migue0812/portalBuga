@@ -40,6 +40,7 @@
                 <li>
                     <a style="padding-right: 0px;"href="contact.html">Registrar</a>
                 </li>
+
             </ul>
         </div>
         <!-- /.navbar-collapse -->
