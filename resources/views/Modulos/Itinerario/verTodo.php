@@ -14,12 +14,12 @@
                             <!-- /.panel-heading -->
                             <div class="panel-body">
                                 <div class="list-group">
-                                    <a href="#" class="list-group-item">
+                                    <a href="<?php echo url("itinerario") ?>" class="list-group-item">
                                         <i class="fa fa-map-marker fa-fw"></i> Sitios
                                         <span class="pull-right text-muted small"><em>4 minutes ago</em>
                                         </span>
                                     </a>
-                                    <a href="#" class="list-group-item">
+                                    <a href="<?php echo url("itinerario/evento") ?>" class="list-group-item">
                                         <i class="fa fa-puzzle-piece fa-fw"></i> Eventos
                                         <span class="pull-right text-muted small"><em>12 minutes ago</em>
                                         </span>

@@ -26,12 +26,12 @@
                                     </a>
                                 </div>
                                 <!-- /.list-group -->
-                                <a href="#" class="btn btn-default btn-block">Ver Todos</a>
+                                <a href="<?php echo url("itinerario/todos") ?>" class="btn btn-default btn-block">Ver Todos</a>
                             </div>
                             <!-- /.panel-body -->
                         </div>
                     </div>
-                    <div id="tablaMenu" class="col-xs-12 col-sm-12 col-lg-9">
+                    <div id="tablaMenu" class="col-lg-8 col-xs-12 col-sm-9">
                         <article id="tablaMenu">
                             <div class="panel panel-default">
                                 <div class="panel-heading">
