@@ -15,4 +15,8 @@ class ItinerarioController extends Controller {
         return view('Modulos.Itinerario.eventos');
     }
 
+    function getTodos() {
+        return view('Modulos.Itinerario.verTodo');
+    }
+
 }
