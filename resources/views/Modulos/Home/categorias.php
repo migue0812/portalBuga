@@ -2,7 +2,7 @@
 <?php include ("/../../Templates/Frontend/head.php") ?>
 <?php include ("/../../Templates/Frontend/header.php") ?>
 
-<!-- Page Content -->
+<!-- Pages Content -->
 <div class="container">
     <div class="box">
         <!-- Page Header -->
