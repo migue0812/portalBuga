@@ -57,6 +57,7 @@
                         </div>
                     </div>
                 </div>
+</div>
                     <!-- /.row -->
                     <!-- Script to Activate the Carousel -->
                     <script>
