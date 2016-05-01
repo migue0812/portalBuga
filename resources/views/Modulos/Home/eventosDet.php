@@ -25,15 +25,15 @@
                         </a>
                     </div>
                     <div class="col-md-1 portfolio-item">
-                        <h4><b>Lugar:</b></h4>
+                        <h4 class=" icon-home"><b>:</b></h4>
                         <p>Coliseo de ferias</p>
                     </div>
                     <div class="col-md-2 portfolio-item">
-                        <h4><b>Direccion:</b></h4>
+                        <h4 class="icon-location"><b>:</b></h4>
                         <p>Carrera 8 con calle 21</p>
                     </div>
                     <div class="col-md-2 portfolio-item">
-                        <h4><b>Duracion:</b></h4><p>Del 15 de julio hasta el 20 de julio</p>
+                        <h4 class=" icon-calendar"><b>:</b></h4><p>Del 15 de julio hasta el 20 de julio</p>
                     </div>
                     <div class="col-md-5 portfolio-item">
                         <h2 style="margin-top: 60px;">Ferias De Buga</h2>
