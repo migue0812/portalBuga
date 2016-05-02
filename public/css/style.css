@@ -70,7 +70,13 @@ hr {
 .img-full {
     min-width: 100%;
 }
-
+.tituloWelcome{
+    font-family: "Lora";
+    font-size: 20px;
+    text-transform: capitalize;
+    font-weight: 100;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+}
 .brand-before,
 .brand-name {
     text-transform: capitalize;
@@ -133,7 +139,14 @@ hr {
 }
 
 /*---Media Responsive---*/
+@media screen and (min-width:1000px){
+
+    .carousel {
+        height: 80%;
+    }
+}
 @media screen and (min-width:768px) {
+
     .brand {
         display: inherit;
         margin: 0;
@@ -236,7 +249,7 @@ hr {
 /*---Footer---*/
 footer {
     margin-top: 100px;
-    margin-bottom: -20px;
+    margin-bottom: -10px;
 }
 
 

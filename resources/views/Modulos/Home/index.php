@@ -4,37 +4,60 @@
     <div class="row">
         <div class="box">
             <div class="col-lg-12 text-center">
-                <div id="carousel-example-generic" class="carousel slide">
+                <header id="myCarousel" class="carousel slide">
                     <!-- Indicators -->
-                    <ol class="carousel-indicators hidden-xs">
-                        <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-                        <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-                        <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                    <ol class="carousel-indicators">
+                        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#myCarousel" data-slide-to="1"></li>
+                        <li data-target="#myCarousel" data-slide-to="2"></li>
                     </ol>
-                    <!-- Wrapper for slides -->
+
+                    <!-- Wrapper for Slides -->
                     <div class="carousel-inner">
                         <div class="item active">
-                            <img class="img-responsive img-full" src="<?php echo asset("img/slide.png") ?>" alt="Basilica">
+                            <!-- Set the first background image using inline CSS below. -->
+                            <div class="fill" style="background-image:url('../img/vintagecom.jpg');"></div>
+                            <div class="carousel-caption">
+                                <h2>Caption 1</h2>
+                            </div>
                         </div>
                         <div class="item">
-                            <img class="img-responsive img-full" src="<?php echo asset("img/slide-2") ?>" alt="Holmes">
+                            <!-- Set the second background image using inline CSS below. -->
+                            <div class="fill" style="background-image:url('../img/Ferro.jpg');"></div>
+                            <div class="carousel-caption">
+                                <h2>Caption 2</h2>
+                            </div>
                         </div>
                         <div class="item">
-                            <img class="img-responsive img-full" src="<?php echo asset("img/slide-3") ?>" alt="Holmitos">
+                            <!-- Set the third background image using inline CSS below. -->
+                            <div class="fill" style="background-image:url('../img/Basilica.jpg');"></div>
+                            <div class="carousel-caption">
+                                <h2>Caption 3</h2>
+                            </div>
                         </div>
                     </div>
+
                     <!-- Controls -->
-                    <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+                    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
                         <span class="icon-prev"></span>
                     </a>
-                    <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+                    <a class="right carousel-control" href="#myCarousel" data-slide="next">
                         <span class="icon-next"></span>
                     </a>
-                </div>
-                <h1 class="brand-name" style="text-shadow: 2px 1px 2px rgba(0,0,0,0.5);">Guadalajara De Buga</h1>
+
+                </header>
+                <h2 class="brand-before">
+
+                </h2>
+                <h1 class="brand-name" style="text-shadow: 2px 1px 2px rgba(0,0,0,0.5);text-align: center;">Guadalajara De Buga</h1>
                 <hr class="tagline-divider">
-                <p>Una de las mejores ciudades turisticas!</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc placerat diam quis nisl vestibulum dignissim. In hac habitasse platea dictumst. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+                <div>
+
+                    <div class="tituloWelcome" style="text-align: center;">Una de las mejores ciudades turisticas!</div>
+
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc placerat diam quis nisl vestibulum dignissim. In hac habitasse platea dictumst. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+
+                </div>
             </div>
 
             <div class="col-lg-12">
@@ -106,7 +129,7 @@
 
                 <!-- Team Members Row -->
 
-                <div class="row" style="margin-right: 0px;margin-left: -30px;">
+                <div class="row">
 
                     <div class="col-lg-4 col-sm-4 text-center">
                         <img class="img-circle img-responsive img-center" src="http://placehold.it/200x200" alt="">
