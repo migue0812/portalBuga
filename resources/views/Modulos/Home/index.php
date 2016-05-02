@@ -36,12 +36,7 @@
                 <p>Una de las mejores ciudades turisticas!</p>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc placerat diam quis nisl vestibulum dignissim. In hac habitasse platea dictumst. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
             </div>
-        </div>
-    </div>
-</div>
-<div class="container">
-    <div class="row">
-        <div class="box">
+
             <div class="col-lg-12">
                 <div class="visitNav">
                     <div>
@@ -89,18 +84,13 @@
                 </div>
                 <div class="clearfix"></div>
             </div>
-        </div>
-    </div>
-</div>
-<div class="container what">
-    <div class="row ">
-        <div class="box">
+
             <div class="queHacer">
                 <div>
                     <h2 style="text-align: center;">Que Hacer</h2>
                 </div>
-                <hr class="tagline-divider-sin">
             </div>
+            <div class="line"></div>
             <!-- Page Content -->
             <div class="container">
 
@@ -115,25 +105,24 @@
                 </div>
 
                 <!-- Team Members Row -->
-                <div class="row">
-                    <div class="col-lg-12">
-                        <h2 class="page-header"></h2>
-                    </div>
-                    <div class="col-lg-4 col-sm-6 text-center">
+
+                <div class="row" style="margin-right: 0px;margin-left: -30px;">
+
+                    <div class="col-lg-4 col-sm-4 text-center">
                         <img class="img-circle img-responsive img-center" src="http://placehold.it/200x200" alt="">
                         <h3>John Smith
                             <small>Job Title</small>
                         </h3>
                         <p>What does this team member to? Keep it short! This is also a great spot for social links!</p>
                     </div>
-                    <div class="col-lg-4 col-sm-6 text-center">
+                    <div class="col-lg-4 col-sm-4 text-center">
                         <img class="img-circle img-responsive img-center" src="http://placehold.it/200x200" alt="">
                         <h3>John Smith
                             <small>Job Title</small>
                         </h3>
                         <p>What does this team member to? Keep it short! This is also a great spot for social links!</p>
                     </div>
-                    <div class="col-lg-4 col-sm-6 text-center">
+                    <div class="col-lg-4 col-sm-4 text-center">
                         <img class="img-circle img-responsive img-center" src="http://placehold.it/200x200" alt="">
                         <h3>John Smith
                             <small>Job Title</small>
@@ -142,15 +131,12 @@
                     </div>
                 </div>
             </div>
-        </div>
-        <!-- /.container -->
-    </div>
-</div>
-<!-- Script to Activate the Carousel -->
-<script>
-    $('.carousel').carousel({
-        interval: 5000 //changes the speed
-    });
-</script>
-<?php include ("/../../Templates/Frontend/footer.php") ?>
-<?php include ("/../../Templates/Frontend/foot.php") ?>
+
+            <!-- Script to Activate the Carousel -->
+            <script>
+                $('.carousel').carousel({
+                    interval: 5000 //changes the speed
+                });
+            </script>
+            <?php include ("/../../Templates/Frontend/footer.php") ?>
+            <?php include ("/../../Templates/Frontend/foot.php") ?>
