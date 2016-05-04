@@ -82,10 +82,8 @@
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
-</div>
-<!-- Menu Toggle Script -->
 
-<?php include ("/../../Templates/Frontend/footer.php") ?>
-<?php include ("/../../Templates/Frontend/foot.php") ?>
+            <!-- Menu Toggle Script -->
+
+            <?php include ("/../../Templates/Frontend/footer.php") ?>
+            <?php include ("/../../Templates/Frontend/foot.php") ?>
