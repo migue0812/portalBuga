@@ -5,6 +5,20 @@
 
 /*---Header Main---*/
 
+.tam{
+    width: 300px;
+    height: 200px;
+    
+}
+
+@media screen and (max-width:600px) {
+    .tam{
+        margin-top: 20px;
+        width: 300px;
+        height: 150px;
+    }
+}
+
 @import url('fonts/fonts.css');
 
 body {
