@@ -31,7 +31,7 @@
                             <!-- /.panel-body -->
                         </div>
                     </div>
-                    <div id="tablaMenu" class="col-lg-8 col-xs-12 col-sm-9">
+                    <div id="tablaMenu" class="col-lg-8 col-xs-12 col-sm-12">
                         <article id="tablaMenu">
                             <div class="panel panel-default">
                                 <div class="panel-heading">

@@ -31,7 +31,7 @@
                             <!-- /.panel-body -->
                         </div>
                     </div>
-                    <div id="tablaMenu" class="col-lg-8 col-xs-12 col-sm-9">
+                    <div id="tablaMenu" class="col-lg-8 col-xs-12 col-sm-12">
                         <article id="tablaMenu">
                             <div class="panel panel-default">
                                 <div class="panel-heading">
@@ -85,10 +85,8 @@
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
-</div>
-<!-- Menu Toggle Script -->
 
-<?php include ("/../../Templates/Frontend/footer.php") ?>
-<?php include ("/../../Templates/Frontend/foot.php") ?>
+            <!-- Menu Toggle Script -->
+
+            <?php include ("/../../Templates/Frontend/footer.php") ?>
+            <?php include ("/../../Templates/Frontend/foot.php") ?>

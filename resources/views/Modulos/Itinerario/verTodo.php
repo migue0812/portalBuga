@@ -132,11 +132,6 @@
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
-</div>
 
-
-
-<?php include ("/../../Templates/Frontend/footer.php") ?>
-<?php include ("/../../Templates/Frontend/foot.php") ?>
+            <?php include ("/../../Templates/Frontend/footer.php") ?>
+            <?php include ("/../../Templates/Frontend/foot.php") ?>
