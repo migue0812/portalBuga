@@ -117,7 +117,7 @@
             <div class="col-lg-12">
                 <div class="visitNav">
                     <div>
-                        <h2 style="text-align: center;">Mas Visitados</h2>
+                        <h2 style="text-align: center;">Mas Eventos</h2>
                     </div>
                 </div>
                 <hr class="tagline-divider-cont">
