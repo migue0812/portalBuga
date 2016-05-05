@@ -5,6 +5,20 @@
 
 /*---Header Main---*/
 
+.tam{
+    width: 300px;
+    height: 200px;
+    
+}
+
+@media screen and (max-width:600px) {
+    .tam{
+        margin-top: 20px;
+        width: 300px;
+        height: 150px;
+    }
+}
+
 @import url('fonts/fonts.css');
 
 body {
@@ -70,7 +84,13 @@ hr {
 .img-full {
     min-width: 100%;
 }
-
+.tituloWelcome{
+    font-family: "Lora";
+    font-size: 20px;
+    text-transform: capitalize;
+    font-weight: 100;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+}
 .brand-before,
 .brand-name {
     text-transform: capitalize;
@@ -108,7 +128,7 @@ hr {
     margin-bottom: 20px;
     padding: 30px 15px;
     background: #fff;
-    background: rgba(255,255,255,0.9);
+    background: rgba(255,255,255,0.7);
     -webkit-box-shadow: 0px 4px 5px -1px rgba(0,0,0,0.59);
     -moz-box-shadow: 0px 4px 5px -1px rgba(0,0,0,0.59);
     box-shadow: 0px 4px 5px -1px rgba(0,0,0,0.59);
@@ -133,7 +153,14 @@ hr {
 }
 
 /*---Media Responsive---*/
+@media screen and (min-width:1000px){
+
+    .carousel {
+        height: 80%;
+    }
+}
 @media screen and (min-width:768px) {
+
     .brand {
         display: inherit;
         margin: 0;
@@ -184,7 +211,7 @@ hr {
     .navbar-default {
         border: none;
         background: #fff;
-        background: rgba(255,255,255,0.9);
+        background: rgba(255,255,255,0.7);
         -webkit-box-shadow: 0px 4px 5px -1px rgba(0,0,0,0.59);
         -moz-box-shadow: 0px 4px 5px -1px rgba(0,0,0,0.59);
         box-shadow: 0px 4px 5px -1px rgba(0,0,0,0.59);
@@ -209,12 +236,14 @@ hr {
 .visitNav{
     font-family: 'riesling';
     margin: 0;
+    margin-top: 50px;
     color: #313131;
     text-transform: uppercase;
     letter-spacing: -1px;
 }
 .visit{
     font-size: 30px;
+
 }
 .portafolio{
     margin-bottom:50px;
@@ -233,11 +262,8 @@ hr {
 }
 /*---Footer---*/
 footer {
-    background: #fff;
-    background: rgba(255,255,255,0.9);
-    -webkit-box-shadow: 0px 4px 5px -1px rgba(0,0,0,0.59);
-    -moz-box-shadow: 0px 4px 5px -1px rgba(0,0,0,0.59);
-    box-shadow: 0px 4px 5px -1px rgba(0,0,0,0.59);
+    margin-top: 100px;
+    margin-bottom: -10px;
 }
 
 
@@ -416,13 +442,17 @@ footer {
     padding-right: 0;
 }
 .queHacer{
-
+    margin-bottom: 20px;
     font-family: 'Lora';
     margin: 0;
     color: #313131;
     text-transform: uppercase;
     letter-spacing: -1px;
-    border-bottom: 1px solid #eee;
+
+}
+.line{
+    margin-top: 20px;
+    border-bottom: 1px solid #AAAAAA;
 }
 .what {
     padding-top: 20px; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
