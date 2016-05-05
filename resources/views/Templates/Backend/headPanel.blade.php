@@ -9,25 +9,14 @@
 
     <title>Portal buga</title>
 
-    <!-- Bootstrap core CSS -->
-    <link href="{{asset('panel/css/bootstrap.css')}}" rel="stylesheet">
-    <!--external css-->
-    <link href="{{asset('panel/font-awesome/css/font-awesome.css')}}" rel="stylesheet" />
-    <link rel="stylesheet" type="text/css" href="{{asset('panel/css/zabuto_calendar.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{asset('panel/js/gritter/css/jquery.gritter.css')}}" />
-    <link rel="stylesheet" type="text/css" href="{{asset('panel/lineicons/style.css')}}">    
-
-    <!-- Custom styles for this template -->
+    <link href="{{asset('bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
+    <link href="{{asset('css/font-awesome/css/font-awesome.min.css')}}" rel="stylesheet" />
+<!--    <link href="{{asset('panel/css/zabuto_calendar.css')}}" rel="stylesheet" type="text/css">
+    <link href="{{asset('panel/js/gritter/css/jquery.gritter.css')}}" rel="stylesheet" type="text/css" />   -->
     <link href="{{asset('panel/css/style.css')}}" rel="stylesheet">
     <link href="{{asset('panel/css/style-responsive.css')}}" rel="stylesheet">
 
     <script src="{{asset('panel/js/chart-master/Chart.js')}}"></script>
-
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
   </head>
 
   <body>

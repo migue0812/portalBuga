@@ -35,6 +35,14 @@ Route::group(['prefix' => 'admin'], function () {
     ]);
 });
 
+Route::controllers([
+    'registro' => "Modulos\Seguridad\RegistroController",
+]);
+
+Route::get('login', 'Modulos\Seguridad\RegistroController@getLogin');
+
+
+
 
 /*
   |--------------------------------------------------------------------------

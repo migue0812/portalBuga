@@ -38,7 +38,8 @@
                     <a style="padding-right: 0px;"href="contact.html">Ingresar</a>
                 </li>
                 <li>
-                    <a style="padding-right: 0px;"href="contact.html">Registrar</a>
+                    <a style="padding-right: 0px;" href="<?php echo url("registro") ?>" onClick="$('#loginbox').hide();
+                    $('#signupbox').show()">Registrar</a>
                 </li>
 
             </ul>
