@@ -8,7 +8,7 @@ use App\Http\Controllers\Controller;
 /**
  * Description of CategoriasController
  *
- * @author juan gabo
+ * @author Juan-Gabo
  */
 class CategoriasController extends controller {
 
