@@ -24,8 +24,8 @@
                     <ul class="dropdown-menu">
                         <li><a href="<?php echo url("home/categorias") ?>">Todas</a></li>
                         <li role="separator" class="divider"></li>
+                        <li><a href="<?php echo url("home/categorias/det") ?>">Deporte</a></li>
                         <li><a href="">Religion</a></li>
-                        <li><a href="">Deporte</a></li>
                     </ul>
                 </li>
                 <li>

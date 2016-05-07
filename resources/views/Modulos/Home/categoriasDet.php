@@ -16,7 +16,7 @@
             <div>
                 <div class="row ">
                     <div class="col-md-12 portfolio-item">
-                        <a href="se devuleve al index">
+                        <a href="#">
                             <img class="img-responsive" src="<?php echo asset("img/Deportes_1.jpg") ?>" alt="">     
                         </a>
                     </div>
@@ -55,7 +55,7 @@
                     <p class="text-justify">La ciudad de Guadalajara de Buga, cuenta con grandes escenarios deportivos, los cuales son utilizados 
                         también por los colegios públicos del municipio y todo con el propósito de que nuestros niños y jóvenes se 
                         beneficien del deporte y contribuyan al desarrollo social de la ciudad. </p>
-                    <a href="<?php echo asset("home/eventos/det") ?>">
+                    <a href="<?php echo asset("home/categorias/det") ?>">
                         <button type="button" class="btn btn-primary">Ver Mas</button>
                     </a>
                 </div>
@@ -67,7 +67,7 @@
                     <p class="text-justify">La ciudad de Guadalajara de Buga, cuenta con grandes escenarios deportivos, los cuales son utilizados 
                         también por los colegios públicos del municipio y todo con el propósito de que nuestros niños y jóvenes se 
                         beneficien del deporte y contribuyan al desarrollo social de la ciudad. </p>
-                    <a href="<?php echo asset("Eventodetalle/detalle") ?>">
+                    <a href="<?php echo asset("home/categorias/det") ?>">
                         <button type="button" class="btn btn-primary">Ver Mas</button>
                     </a>
                 </div>
@@ -79,7 +79,7 @@
                     <p class="text-justify">La ciudad de Guadalajara de Buga, cuenta con grandes escenarios deportivos, los cuales son utilizados 
                         también por los colegios públicos del municipio y todo con el propósito de que nuestros niños y jóvenes se 
                         beneficien del deporte y contribuyan al desarrollo social de la ciudad. </p>
-                    <a href="<?php echo asset("Eventodetalle/detalle") ?>">
+                    <a href="<?php echo asset("home/categorias/det") ?>">
                         <button type="button" class="btn btn-primary">Ver Mas</button>
                     </a>
                 </div>
@@ -98,8 +98,7 @@
             }(document, 'script', 'facebook-jssdk'));</script>
 
         <div class="fb-comments" data-href="https://www.facebook.com/groups/860979787324031/?fref=ts" data-numposts="5"></div>
-    </div>
-</div>
+    
 <!-- /.row -->
 <!-- Script to Activate the Carousel -->
 <script>
