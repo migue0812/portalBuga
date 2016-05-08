@@ -105,7 +105,7 @@
   <div id="loginbox" class="regbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">                    
     <div class="panel panel-info">
       <div class="panel-heading">
-        <div class="panel-title">Registrace</div>
+        <div class="panel-title">Registrese</div>
         <div class="signinlink" style=""><a href="#" onclick="$('#loginbox').hide();
             $('#signupbox').show()">Iniciar sesion</a></div>
       </div>  
