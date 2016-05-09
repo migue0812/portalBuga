@@ -4,6 +4,7 @@
 */
 
 /*---Header Main---*/
+@import url('fonts/fonts.css');
 
 @media (min-width:768px) {
     .tam{
@@ -28,7 +29,6 @@
     }
 }
 
-@import url('fonts/fonts.css');
 
 body {
     font-family: "Lora","Helvetica Neue",Helvetica,Arial,sans-serif;
