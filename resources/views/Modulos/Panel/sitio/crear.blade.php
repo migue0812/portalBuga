@@ -267,25 +267,36 @@
         <div class="col-lg-12">
           <div class="form-panel">
             <h4 class="mb"><i class="fa fa-angle-right"></i> Crear Sitio</h4>
-            <form class="style-form" method="post">
+             @if ($errors->any())
+                         <div class="alert alert-danger alert-dismissible center-block" role="alert">
+                             <ul>
+                              @foreach ($errors->all() as $error)  
+                                 <li>{{$error}}</li>
+                                 @endforeach
+                             </ul>
+                         </div>
+                        @endif
+            <form class="style-form" method="post" action="{{url('admin/sitio/crear')}}" enctype="multipart/form-data">
               
               <input type="hidden" name="_token" value="<?php echo csrf_token(); ?>">
               
                   <div class="row col-md-12">
                     <div class="col-md-6">                     
                       <div class="form-group">
-                        <label for="">Categoria</label>
-                        <select class="form-control"  name="categoria_id" required="">
-                          <option name="0" value=""></option>
+                        <label for="categoria">Categoría</label>
+                        <select class="form-control"  name="categoria" required="">
+                          <option name="0" value="1">Histórico</option>
+                          <option name="0" value="2">Religioso</option>
                         </select>                       
                       </div>
                     </div>
                     
                     <div class="col-md-6">
                       <div class="form-group">
-                        <label for="subcategoria_id">Subcategoria</label>
-                        <select class="form-control"  name="subcategoria_id" required="">
-                          <option name="0" value=""></option>
+                        <label for="subcategoria">Subcategoría</label>
+                        <select class="form-control"  name="subcategoria" required="">
+                          <option name="0" value="1">Parques</option>
+                          <option name="0" value="1">Iglesias</option>
                         </select>                       
                       </div>
                     </div> 
@@ -294,15 +305,15 @@
                   <div class="row col-md-12">
                     <div class="col-md-6">
                       <div class="form-group">
-                        <label for="sit_nombre">Nombre</label>
-                        <input type="text" class="form-control" id="sit_nombre" name="sit_nombre" placeholder="Nombre Sitio" required="">
+                        <label for="nombre">Nombre</label>
+                        <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Nombre Sitio" required="">
                       </div>
                     </div>
                     
                     <div class="col-md-6">
                       <div class="form-group">
-                        <label for="sit_telefono">Telefono</label>
-                        <input type="tel" class="form-control" id="sit_telefono" name="sit_telefono" placeholder="Ingresa Telefono" value="" required="">
+                        <label for="telefono">Teléfono</label>
+                        <input type="tel" class="form-control" id="telefono" name="telefono" placeholder="Ingresa Teléfono" value="" required="">
                       </div>
                     </div>
                   </div>
@@ -310,15 +321,15 @@
                   <div class="row col-md-12">
                     <div class="col-md-6">
                       <div class="form-group">
-                        <label for="sit_direccion">Direccion</label>
-                        <input type="text" class="form-control" id="sit_direccion" name="sit_direccion" placeholder="Ingresa Direccion" required="">
+                        <label for="direccion">Dirección</label>
+                        <input type="text" class="form-control" id="direccion" name="direccion" placeholder="Ingresa Dirección" required="">
                       </div>
                     </div>
                     
                     <div class="col-md-6">
                       <div class="form-group">
                         <label for="">Imagen</label>                       
-                        <input type="file" class="form-control" id="path" name="path" required="">
+                        <input type="file" class="form-control" id="imagen" name="imagen" required="">
                       </div>
                     </div> 
                   </div>
@@ -326,8 +337,8 @@
                   <div class="row col-md-12">
                     <div class="col-md-12">
                       <div class="form-group">
-                        <label for="sit_descripcion">Descripcion</label>
-                        <textarea rows="5" class="form-control" id="sit_descripcion" name="sit_descripcion" placeholder="Escriba una pequeña descripcion del sitio" value=""></textarea>
+                        <label for="descripcion">Descripción</label>
+                        <textarea rows="5" class="form-control" id="descripcion" name="descripcion" placeholder="Escriba una pequeña descripción del sitio" value=""></textarea>
                       </div>
                     </div>
                   </div>
