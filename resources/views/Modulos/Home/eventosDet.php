@@ -14,9 +14,8 @@
             </div>
             <hr class="tagline-divider-cont">
 
-            <!-- Projects Row -->
-            <div class="container portImg">
-                <div class="row ">
+         <!-- Projects Row -->
+         
                     <div class="col-md-6 portfolio-item">
                         <a href="se devuleve al index">
                             <img class="img-responsive" src="<?php echo asset("img/ferias.jpg") ?>" alt="">
@@ -39,8 +38,7 @@
                         <h2 style="margin-top: 60px;">Ferias De Buga</h2>
                         <p class="text-justify">Los eventos inician el jueves 9 de julio con un gran concierto espiritual con el artista ganador del premio Grammy Alex Campos, reconocido en el mundo de la música cristiana.. Los eventos inician el jueves 9 de julio con un gran concierto espiritual con el artista ganador del premio Grammy Alex Campos, reconocido en e Los eventos inician el jueves 9 de julio con un gran concierto espiritual con el artista ganador del premio Grammy Ale
                             Los eventos inician el jueves 9 de julio con un gran concierto espiritual con el artista ganador del premio Grammy Al </p>
-                    </div>
-       
+                    </div>     
                                 <div id="fb-root"></div>
                                 <script>(function(d, s, id) {
                                         var js, fjs = d.getElementsByTagName(s)[0];
@@ -53,18 +51,6 @@
                                     }(document, 'script', 'facebook-jssdk'));</script>
 
                                 <div class="fb-comments" data-href="https://www.facebook.com/groups/860979787324031/?fref=ts" data-numposts="5"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-</div>
-                    <!-- /.row -->
-                    <!-- Script to Activate the Carousel -->
-                    <script>
-                        $('.carousel').carousel({
-                            interval: 3000 //changes the speed
-                        });
-                    </script>
-
+      
                     <?php include ("/../../Templates/Frontend/footer.php") ?>
                     <?php include ("/../../Templates/Frontend/foot.php") ?>
