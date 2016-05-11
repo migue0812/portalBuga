@@ -15,7 +15,7 @@
             <div class="container portImg">
                 <div class="row ">
                     <div class="col-md-6 portfolio-item">
-                        <a href="se devuleve al index">
+                        <a href="<?php echo url("home/sitios/det") ?>">
                             <img style="float: right; border-radius: 20px;"  class="img-responsive" src="<?php echo asset("img/Ferro.jpg") ?>" alt="">
                         </a>
 
@@ -25,7 +25,7 @@
                         <hr class="hrWhat">
                         <p class="text-justify">Los eventos inician el jueves 9 de julio con un gran concierto espiritual con el artista ganador del premio Grammy Alex Campos, reconocido en el mundo de la música cristiana.. Los eventos inician el jueves 9 de julio con un gran concierto espiritual con el artista ganador del premio Grammy Alex Campos, reconocido en e Los eventos inician el jueves 9 de julio con un gran concierto espiritual con el artista ganador del premio Grammy Ale
                             Los eventos inician el jueves 9 de julio con un gran concierto espiritual con el artista ganador del premio Grammy Al </p>
-                        <a href="#" class="btnalz">Ver Más</a>
+                        <a href="<?php echo url("home/sitios/det") ?>" class="btnalz">Ver Más</a>
                     </div>
                 </div>
             </div>
@@ -42,7 +42,7 @@
             <div class="container portImg">
                 <div class="row ">
                     <div class="col-md-6 portfolio-item">
-                        <a href="se devuleve al index">
+                        <a href="#">
                             <img style="float: right; border-radius: 20px;"  class="img-responsive" src="<?php echo asset("img/Holmes.png") ?>" alt="">
                         </a>
 

@@ -67,17 +67,17 @@
             <div class="container portImg">
                 <div class="row ">
                     <div class="col-md-6 portfolio-item">
-                        <a href="se devuleve al index">
+                        <a href="<?php echo url("home/eventos/det") ?>">
                             <img style="float: right; border-radius: 20px;"  class="img-responsive" src="<?php echo asset("img/ferias.jpg") ?>" alt="">
                         </a>
-                       
+
                     </div>
                     <div class="col-md-5 portfolio-item">
                         <h2 style="text-align: center">Ferias De Buga</h2>
-                         <hr class="hrWhat">
+                        <hr class="hrWhat">
                         <p class="text-justify">Los eventos inician el jueves 9 de julio con un gran concierto espiritual con el artista ganador del premio Grammy Alex Campos, reconocido en el mundo de la música cristiana.. Los eventos inician el jueves 9 de julio con un gran concierto espiritual con el artista ganador del premio Grammy Alex Campos, reconocido en e Los eventos inician el jueves 9 de julio con un gran concierto espiritual con el artista ganador del premio Grammy Ale
                             Los eventos inician el jueves 9 de julio con un gran concierto espiritual con el artista ganador del premio Grammy Al </p>
-                         <button type="button" class="btn btn-primary">Ver Mas</button>
+                        <a href="<?php echo url("home/eventos/det") ?>" class="btn btn-primary">Ver Más</a>
                     </div>
                 </div>
             </div>
@@ -95,10 +95,10 @@
                 <div class="row ">
                     <div class="col-md-5 portfolio-item">
                         <h2 style="text-align: center">Buga Innova</h2>
-                         <hr class="hrWhat">
+                        <hr class="hrWhat">
                         <p class="text-justify">Los eventos inician el jueves 9 de julio con un gran concierto espiritual con el artista ganador del premio Grammy Alex Campos, reconocido en el mundo de la música cristiana.. Los eventos inician el jueves 9 de julio con un gran concierto espiritual con el artista ganador del premio Grammy Alex Campos, reconocido en e Los eventos inician el jueves 9 de julio con un gran concierto espiritual con el artista ganador del premio Grammy Ale
                             Los eventos inician el jueves 9 de julio con un gran concierto espiritual con el artista ganador del premio Grammy Al </p>
-                         <button type="button" class="btn btn-primary">Ver Mas</button>
+                        <button type="button" class="btn btn-primary">Ver Mas</button>
                     </div>
                     <div class="col-md-6 portfolio-item">
                         <a href="se devuleve al index">
@@ -125,33 +125,33 @@
             <div class="portafolio">
                 <div class="col-sm-4 portfolio-item">
                     <img class="img-responsive" src="<?php echo asset("img/ferias.jpg") ?>" alt="">
-                     <h3 style="color:blue;">
-                            Ferias De Buga
-                        </h3>
-                        <p>Los eventos inician el jueves 9 de julio con un gran concierto espiritual con el artista ganador del premio Grammy Alex Campos, reconocido en el mundo de la música cristiana..... </p>
-                        <a href="<?php echo asset("Eventodetalle/detalle") ?>">
-                            <button type="button" class="btn btn-primary">Ver Mas</button>
-                        </a>
+                    <h3 style="color:blue;">
+                        Ferias De Buga
+                    </h3>
+                    <p>Los eventos inician el jueves 9 de julio con un gran concierto espiritual con el artista ganador del premio Grammy Alex Campos, reconocido en el mundo de la música cristiana..... </p>
+                    <a href="<?php echo asset("Eventodetalle/detalle") ?>">
+                        <button type="button" class="btn btn-primary">Ver Mas</button>
+                    </a>
                 </div>
                 <div class="col-sm-4 portfolio-item">
-                     <img class="img-responsive" src="<?php echo asset("img/ferias.jpg") ?>" alt="">
-                     <h3 style="color:blue;">
-                            Ferias De Buga
-                        </h3>
-                        <p>Los eventos inician el jueves 9 de julio con un gran concierto espiritual con el artista ganador del premio Grammy Alex Campos, reconocido en el mundo de la música cristiana..... </p>
-                        <a href="<?php echo asset("Eventodetalle/detalle") ?>">
-                            <button type="button" class="btn btn-primary">Ver Mas</button>
-                        </a>
+                    <img class="img-responsive" src="<?php echo asset("img/ferias.jpg") ?>" alt="">
+                    <h3 style="color:blue;">
+                        Ferias De Buga
+                    </h3>
+                    <p>Los eventos inician el jueves 9 de julio con un gran concierto espiritual con el artista ganador del premio Grammy Alex Campos, reconocido en el mundo de la música cristiana..... </p>
+                    <a href="<?php echo asset("Eventodetalle/detalle") ?>">
+                        <button type="button" class="btn btn-primary">Ver Mas</button>
+                    </a>
                 </div>
                 <div class="col-sm-4 portfolio-item">
-                     <img class="img-responsive" src="<?php echo asset("img/ferias.jpg") ?>" alt="">
-                      <h3 style="color:blue;">
-                            Ferias De Buga
-                        </h3>
-                        <p>Los eventos inician el jueves 9 de julio con un gran concierto espiritual con el artista ganador del premio Grammy Alex Campos, reconocido en el mundo de la música cristiana..... </p>
-                        <a href="<?php echo asset("Eventodetalle/detalle") ?>">
-                            <button type="button" class="btn btn-primary">Ver Mas</button>
-                        </a>
+                    <img class="img-responsive" src="<?php echo asset("img/ferias.jpg") ?>" alt="">
+                    <h3 style="color:blue;">
+                        Ferias De Buga
+                    </h3>
+                    <p>Los eventos inician el jueves 9 de julio con un gran concierto espiritual con el artista ganador del premio Grammy Alex Campos, reconocido en el mundo de la música cristiana..... </p>
+                    <a href="<?php echo asset("Eventodetalle/detalle") ?>">
+                        <button type="button" class="btn btn-primary">Ver Mas</button>
+                    </a>
                 </div>
             </div>
         </div>

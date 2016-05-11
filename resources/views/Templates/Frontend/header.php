@@ -17,7 +17,7 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
                 <li>
-                    <a  href="index.html"><span style="font-size: 23px;" class="homeIcon glyphicon glyphicon-home"></span></a>
+                    <a  href="index"><span style="font-size: 23px;" class="homeIcon glyphicon glyphicon-home"></span></a>
                 </li>
                 <li class="dropdown">
                     <a style="padding-right: 0px;padding-left: 0px;" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Categorias<span class="caret"></span></a>
@@ -29,17 +29,17 @@
                     </ul>
                 </li>
                 <li>
-                    <a style="padding-right: 0px;"href="blog.html">Sitios</a>
+                    <a style="padding-right: 0px;"href="<?php echo url("home/sitios") ?>">Sitios</a>
                 </li>
                 <li>
-                    <a style="padding-right: 0px;"href="contact.html">Eventos</a>
+                    <a style="padding-right: 0px;"href="<?php echo url("home/eventos") ?>">Eventos</a>
                 </li>
                 <li>
-                    <a style="padding-right: 0px;"href="contact.html">Ingresar</a>
+                    <a style="padding-right: 0px;"href="<?php echo url("registro") ?>">Ingresar</a>
                 </li>
                 <li>
                     <a style="padding-right: 0px;" href="<?php echo url("registro") ?>" onClick="$('#loginbox').hide();
-                    $('#signupbox').show()">Registrar</a>
+                            $('#signupbox').show()">Registrar</a>
                 </li>
 
             </ul>

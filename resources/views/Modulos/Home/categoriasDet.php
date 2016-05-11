@@ -6,7 +6,7 @@
     <div class="box">
         <div>
             <div class="visitNav">
-               <div>
+                <div>
                     <h2 class="text-center size">Detalle Categoria</h2>
                 </div>
             </div>
