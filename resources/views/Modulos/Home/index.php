@@ -3,8 +3,8 @@
 <div class="container">
     <div class="row">
         <div class="box">
-            <div class="col-lg-12 text-center">
-                <header id="myCarousel" class="carousel slide">
+            <div class=" col-lg-12 text-center">
+                <header id="myCarousel" class="carou carousel slide">
                     <!-- Indicators -->
                     <ol class="carousel-indicators">
                         <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -129,37 +129,31 @@
 
                 <!-- Team Members Row -->
 
-                <div class="row">
+                <div class="row actividades">
 
                     <div class="col-lg-4 col-sm-4 text-center">
-                        <img class="img-circle img-responsive img-center" src="http://placehold.it/200x200" alt="">
-                        <h3>John Smith
-                            <small>Job Title</small>
+                        <img class="queHacerIcon img-circle img-responsive img-center" src="<?php echo asset("img/dormir.png")?>" alt="Descansar?">
+                        <h3>Donde Dormir?
+                            <small>Los mejores lugares</small>
                         </h3>
-                        <p>What does this team member to? Keep it short! This is also a great spot for social links!</p>
+                        <p>Buscas un lugar para descarsar? </p>
                     </div>
                     <div class="col-lg-4 col-sm-4 text-center">
-                        <img class="img-circle img-responsive img-center" src="http://placehold.it/200x200" alt="">
-                        <h3>John Smith
-                            <small>Job Title</small>
+                        <img class="queHacerIcon img-circle img-responsive img-center" src="<?php echo asset("img/comer.png")?>" alt="Comer?">
+                        <h3>Donde Comer?
+                            <small>La mejor comida</small>
                         </h3>
-                        <p>What does this team member to? Keep it short! This is also a great spot for social links!</p>
+                        <p>Buscas un lugar para comer?</p>
                     </div>
                     <div class="col-lg-4 col-sm-4 text-center">
-                        <img class="img-circle img-responsive img-center" src="http://placehold.it/200x200" alt="">
+                        <img class="queHacerIcon img-circle img-responsive img-center" src="<?php echo asset("img/diversion.png")?>" alt="">
                         <h3>John Smith
-                            <small>Job Title</small>
+                            <small>La mejor diverción</small>
                         </h3>
-                        <p>What does this team member to? Keep it short! This is also a great spot for social links!</p>
+                        <p>Buscas un lugar para divertirte?</p>
                     </div>
                 </div>
             </div>
 
-            <!-- Script to Activate the Carousel -->
-            <script>
-                $('.carousel').carousel({
-                    interval: 5000 //changes the speed
-                });
-            </script>
             <?php include ("/../../Templates/Frontend/footer.php") ?>
             <?php include ("/../../Templates/Frontend/foot.php") ?>

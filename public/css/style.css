@@ -297,7 +297,7 @@ hr {
 
 #tituloalz h2 {
     font-family:serif;
-text-transform: uppercase;
+    text-transform: uppercase;
     color: #fff;
     text-align: center;
     position: relative;
@@ -310,53 +310,53 @@ text-transform: uppercase;
 
 
 .btnalz {
-	-moz-box-shadow:inset 0px 1px 0px 0px #37303d;
-	-webkit-box-shadow:inset 0px 1px 0px 0px #37303d;
-	box-shadow:inset 0px 1px 0px 0px #37303d;
-	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #100d47), color-stop(1, #1c1b2e) );
-	background:-moz-linear-gradient( center top, #100d47 5%, #1c1b2e 100% );
-	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#100d47', endColorstr='#1c1b2e');
-	background-color:#100d47;
-	-webkit-border-top-left-radius:4px;
-	-moz-border-radius-topleft:4px;
-	border-top-left-radius:4px;
-	-webkit-border-top-right-radius:4px;
-	-moz-border-radius-topright:4px;
-	border-top-right-radius:4px;
-	-webkit-border-bottom-right-radius:4px;
-	-moz-border-radius-bottomright:4px;
-	border-bottom-right-radius:4px;
-	-webkit-border-bottom-left-radius:4px;
-	-moz-border-radius-bottomleft:4px;
-	border-bottom-left-radius:4px;
-	text-indent:1.92px;
-	display:inline-block;
-	color:#eaecf2;
-	font-family:Verdana;
-	font-size:12px;
-	font-weight:bold;
-	font-style:normal;
-	height:23px;
-	line-height:23px;
-	width:64px;
-	text-decoration:none;
-	text-align:center;
-	text-shadow:1px 1px 0px #0f0f0f;
+    -moz-box-shadow:inset 0px 1px 0px 0px #37303d;
+    -webkit-box-shadow:inset 0px 1px 0px 0px #37303d;
+    box-shadow:inset 0px 1px 0px 0px #37303d;
+    background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #100d47), color-stop(1, #1c1b2e) );
+    background:-moz-linear-gradient( center top, #100d47 5%, #1c1b2e 100% );
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#100d47', endColorstr='#1c1b2e');
+    background-color:#100d47;
+    -webkit-border-top-left-radius:4px;
+    -moz-border-radius-topleft:4px;
+    border-top-left-radius:4px;
+    -webkit-border-top-right-radius:4px;
+    -moz-border-radius-topright:4px;
+    border-top-right-radius:4px;
+    -webkit-border-bottom-right-radius:4px;
+    -moz-border-radius-bottomright:4px;
+    border-bottom-right-radius:4px;
+    -webkit-border-bottom-left-radius:4px;
+    -moz-border-radius-bottomleft:4px;
+    border-bottom-left-radius:4px;
+    text-indent:1.92px;
+    display:inline-block;
+    color:#eaecf2;
+    font-family:Verdana;
+    font-size:12px;
+    font-weight:bold;
+    font-style:normal;
+    height:23px;
+    line-height:23px;
+    width:64px;
+    text-decoration:none;
+    text-align:center;
+    text-shadow:1px 1px 0px #0f0f0f;
 }
 .btnalz:hover {
-	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #1c1b2e), color-stop(1, #100d47) );
-	background:-moz-linear-gradient( center top, #1c1b2e 5%, #100d47 100% );
-	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#1c1b2e', endColorstr='#100d47');
-	background-color:#1c1b2e;
+    background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #1c1b2e), color-stop(1, #100d47) );
+    background:-moz-linear-gradient( center top, #1c1b2e 5%, #100d47 100% );
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#1c1b2e', endColorstr='#100d47');
+    background-color:#1c1b2e;
 }
 .btnalz:active {
-	position:relative;
-	top:1px;
+    position:relative;
+    top:1px;
 }
 
 /*---Footer---*/
 footer {
-    margin-top: 100px;
+    margin-top: 50px;
     margin-bottom: -10px;
 }
 
@@ -564,17 +564,30 @@ footer {
 }
 
 b.icon-direction{
-   width: 20px;
+    width: 20px;
 }
 
 
 .tiempo {
     margin-left: 1080px;
-   
+
 }
 
 .tiempo:hover{
     background: rgba(255,255,255,0.7);
- border-radius: 20px;
- opacity: 0.9;
+    border-radius: 20px;
+    opacity: 0.9;
+}
+
+/*---Que Hacer?---*/
+.actividades{
+    margin-top: 40px;
+}
+.queHacerIcon{
+    width:100px;
+}
+.carou{
+    -webkit-box-shadow: 0px 4px 5px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 0px 4px 5px 0px rgba(0,0,0,0.75);
+box-shadow: 0px 4px 5px 0px rgba(0,0,0,0.75);
 }
