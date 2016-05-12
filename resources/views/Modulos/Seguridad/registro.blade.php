@@ -1,7 +1,7 @@
 @include('Templates.Frontend.register')
 
 <div class="container">
-
+  
   <!--  botones red social-->
   <div class="social">
     <span class="line"></span>
@@ -47,7 +47,9 @@
 
       <div class="panel-heading">
         <div class="panel-title">Login</div>
-        <div class="forget"><a href="#">Se te olvido tu contraseña?</a></div>
+        <div class="forget">
+          <a class="cr" href="#">Se te olvido tu contraseña?</a>
+        </div>
       </div> 
 
       <div  class="panel-body pad" >
@@ -106,8 +108,9 @@
     <div class="panel panel-info">
       <div class="panel-heading">
         <div class="panel-title">Registrese</div>
-        <div class="signinlink" style=""><a href="#" onclick="$('#loginbox').hide();
-            $('#signupbox').show()">Iniciar sesion</a></div>
+        <div class="signinlink" style="">
+          <a href="#" class="cr" onclick="$('#loginbox').hide(); $('#signupbox').show()">Iniciar sesion</a>
+        </div>
       </div>  
       <div class="panel-body" >
         <form id="signupform" class="form-horizontal" role="form">
