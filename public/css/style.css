@@ -566,3 +566,15 @@ footer {
 b.icon-direction{
    width: 20px;
 }
+
+
+.tiempo {
+    margin-left: 1080px;
+   
+}
+
+.tiempo:hover{
+    background: rgba(255,255,255,0.7);
+ border-radius: 20px;
+ opacity: 0.9;
+}
