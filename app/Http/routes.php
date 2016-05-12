@@ -9,6 +9,7 @@ Route::controllers([
     'home/eventos' => "Modulos\Home\EventosController",
     'home/sitios' => "Modulos\Home\SitiosController",
     'home/categorias' => "Modulos\Home\CategoriasController",
+    'home/subCat' => "Modulos\Home\subCatController",
     'itinerario' => "Modulos\Itinerario\ItinerarioController",
 ]);
 

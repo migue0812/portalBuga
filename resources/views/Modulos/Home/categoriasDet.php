@@ -67,7 +67,7 @@
                     <p class="text-justify">La ciudad de Guadalajara de Buga, cuenta con grandes escenarios deportivos, los cuales son utilizados 
                         también por los colegios públicos del municipio y todo con el propósito de que nuestros niños y jóvenes se 
                         beneficien del deporte y contribuyan al desarrollo social de la ciudad. </p>
-                    <a href="<?php echo asset("home/categorias/det") ?>">
+                    <a href="<?php echo asset("home/subCat") ?>">
                         <button type="button" class="btn btn-primary">Ver Mas</button>
                     </a>
                 </div>

@@ -60,7 +60,7 @@
                     </a>
                 </div>
                 <div class="col-sm-4 portfolio-item">
-                    <img class="img-responsive tam thumbnail" src="<?php echo asset("img/Imder.jpg") ?>" alt="">
+                    <img class="img-responsive tam thumbnail" src="<?php echo asset("img/imder.jpg") ?>" alt="">
                     <h3 style="color:blue;">
                         Imder
                     </h3>
