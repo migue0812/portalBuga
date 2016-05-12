@@ -15,30 +15,32 @@
         </div>
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav">
+            <ul id="ejm2"  class="nav navbar-nav">
                 <li>
                     <a  href="index"><span style="font-size: 23px;" class="homeIcon glyphicon glyphicon-home"></span></a>
                 </li>
                 <li class="dropdown">
-                    <a style="padding-right: 0px;padding-left: 0px;" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Categorias<span class="caret"></span></a>
+                    <a class="navPer" style="padding-right: 0px;padding-left: 0px;" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Categorias<span class="caret"></span></a>
                     <ul class="dropdown-menu">
                         <li><a href="<?php echo url("home/categorias") ?>">Todas</a></li>
                         <li role="separator" class="divider"></li>
                         <li><a href="<?php echo url("home/categorias/det") ?>">Deporte</a></li>
+                        <li role="separator" class="divider"></li>
                         <li><a href="">Religion</a></li>
+                        <li role="separator" class="divider"></li>
                     </ul>
                 </li>
                 <li>
-                    <a style="padding-right: 0px;"href="<?php echo url("home/sitios") ?>">Sitios</a>
+                    <a class="navPer" style="padding-right: 0px;padding-left: 0px;" href="<?php echo url("home/sitios") ?>">Sitios</a>
                 </li>
                 <li>
-                    <a style="padding-right: 0px;"href="<?php echo url("home/eventos") ?>">Eventos</a>
+                    <a class="navPer" style="padding-right: 0px;padding-left: 0px;"href="<?php echo url("home/eventos") ?>">Eventos</a>
                 </li>
                 <li>
-                    <a style="padding-right: 0px;"href="<?php echo url("registro") ?>">Ingresar</a>
+                    <a class="navPer" style="padding-right: 0px;padding-left: 0px;"href="<?php echo url("registro") ?>">Ingresar</a>
                 </li>
                 <li>
-                    <a style="padding-right: 0px;" href="<?php echo url("registro") ?>" onClick="$('#loginbox').hide();
+                    <a class="navPer" style="padding-right: 0px;padding-left: 0px;" href="<?php echo url("registro") ?>" onClick="$('#loginbox').hide();
                             $('#signupbox').show()">Registrar</a>
                 </li>
 

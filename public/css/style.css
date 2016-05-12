@@ -62,7 +62,7 @@ hr {
     font-family: "Lora";
     text-transform: uppercase;
     font-weight: 300;
-    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+   
 }
 .homeIcon{
     text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
@@ -603,4 +603,36 @@ b.icon-direction{
 .btn-primary:hover{ 
     background-color: #5bc0de;
     border-color: #5bc0de;
+}
+
+
+ul#ejm2 li a{
+    position: relative;
+
+
+}
+ul#ejm2 li a:hover{
+   text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+}
+ul#ejm2 li a:after{
+    position: absolute;
+    bottom: 7px;
+    left: 0px;
+    width: 100%;
+    height: 4px;
+    background-color: #5bc0de;
+    content: "";
+    opacity: 0;
+    transition: opacity 0.3s ease 0s, transform 0.3s ease 0s;
+    transform: translateY(20px);        
+}
+ul#ejm2 li a:hover:after{
+    opacity:1;
+    transform: translateY(15px);
+}
+.navPer{
+    padding-right: 0px;
+    padding-left: 0px;
+    margin-left: 20px;
+
 }
