@@ -1,4 +1,4 @@
-<div class="animated brand">Buga</div>
+<div class="brand">Buga</div>
 <!-- Navigation -->
 <nav class="navbar navbar-default" role="navigation">
     <div class="container">
