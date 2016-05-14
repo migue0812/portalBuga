@@ -40,7 +40,7 @@
                 <div class="row ">
                     <div class="col-md-6 portfolio-item">
                         <a href="#">
-                            <img style="float: right; border-radius: 20px;"  class="img-responsive" src="<?php echo asset("img/Holmes.png") ?>" alt="">
+                            <img style="float: right; border-radius: 20px;"  class="img-responsive" src="<?php echo asset("img/Basilica.jpg") ?>" alt="">
                         </a>
 
                     </div>

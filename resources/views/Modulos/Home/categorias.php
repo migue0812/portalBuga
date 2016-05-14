@@ -19,72 +19,23 @@
             <!-- Projects Row -->
             <div class="row">
                 <!-- Categoria 1-->
-
-                <div class="col-md-4 portfolio-item">
-                    <a href="#">
-                        <img class="img-responsive" src="<?php echo asset("img/fondo1_1.jpg") ?>" alt="">
-                    </a>
-                    <h3>
-                        <a href="#">Cultura y tradición</a>
-                    </h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
-                </div>
-
-                <!-- Categoria 2-->
-                <div class="col-md-4 portfolio-item">
-                    <a href="<?php echo url("home/categorias/det") ?>">
-                        <img class="img-responsive" src="<?php echo asset("img/Deportes_1.jpg") ?>" alt="">
-                    </a>
-                    <h3>
-                        <a href="<?php echo url("home/categorias/det") ?>">Deportes</a>
-                    </h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
-                </div>
-
-                <!-- Categoria 3-->
-                <div class="col-md-4 portfolio-item">
-                    <a href="#">
-                        <img class="img-responsive" src="<?php echo asset("img/natural_1.jpg") ?>" alt="">
-                    </a>
-                    <h3>
-                        <a href="#">Ecoturistico</a>
-                    </h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
-                </div>
-            </div>
+                <?php
+                foreach ($categorias as $categoria):
+                    ?>
+                    <div class="col-md-4 portfolio-item">
+                        <a href="#">
+                            <img class="img-responsive" src="<?php echo asset("$categoria->img_ruta") ?>" alt="">
+                        </a>
+                        <h3>
+                            <a href="<?php echo url("home/categorias/det/" . $categoria->cat_id) ?>"><?php echo $categoria->cat_nombre ?></a>
+                        </h3>
+                        <p style="text-align: justify"><?php echo ((strlen($categoria->cat_descripcion) > 100) ? substr(($categoria->cat_descripcion), 0, 100) . " ..." : ($categoria->cat_descripcion)) ?></p>
+                    </div>
+                <?php endforeach ?>
             <!-- /.row -->
 
             <!-- Projects Row -->
-            <div class="row">
-                <div class="col-md-4 portfolio-item">
-                    <a href="#">
-                        <img class="img-responsive" src="<?php echo asset("img/iglesias_1.jpg") ?>" alt="">
-                    </a>
-                    <h3>
-                        <a href="#">Religioso</a>
-                    </h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
-                </div>
-
-                <div class="col-md-4 portfolio-item">
-                    <a href="#">
-                        <img class="img-responsive" src="<?php echo asset("img/historico_1.jpg") ?>" alt="">
-                    </a>
-                    <h3>
-                        <a href="#">Historico</a>
-                    </h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
-                </div>
-
-                <div class="col-md-4 portfolio-item">
-                    <a href="#">
-                        <img class="img-responsive" src="<?php echo asset("img/piscinas_1.jpg") ?>" alt="">
-                    </a>
-                    <h3>
-                        <a href="#">Entretenimiento</a>
-                    </h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
-                </div>
+            
                 <div id="fb-root"></div>
                 <script>(function (d, s, id) {
                         var js, fjs = d.getElementsByTagName(s)[0];
