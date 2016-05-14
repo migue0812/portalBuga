@@ -23,7 +23,7 @@
 
                     <div class="col-sm-12  portfolio-item">
                         <h2 class="size marg"><?php echo $catDetalle->cat_nombre ?></h2>
-                        <p> <?php echo $catDetalle->cat_descripcion ?></p>
+                        <p class="text-justify"> <?php echo $catDetalle->cat_descripcion ?></p>
                     </div>
 
 
@@ -39,48 +39,27 @@
             <div class="col-lg-12">
                 <div class="visitNav">
                     <div>
-                        <h2 class="text-center size">¿Que Deporte Practicar?</h2>
+                        <h2 class="text-center size">Contenido relacionado a la Categoría</h2>
                     </div>
                 </div>
                 <hr class="tagline-divider-cont">
             </div>
-            <div class="portafolio">
+            <div class="portafolio row">
+                <?php
+                foreach ($subcategorias as $subcategoria):
+                    ?>
                 <div class="col-sm-4 portfolio-item">
-                    <img class="img-responsive tam thumbnail" src="<?php echo asset("img/BMX.jpg") ?>" alt="">
+                    <img class="img-responsive tam thumbnail" src="<?php echo asset("$subcategoria->img_ruta") ?>" alt="">
                     <h3 style="color:blue;">
-                        BMX
+                        <?php echo $subcategoria->subcat_nombre ?>
                     </h3>
-                    <p class="text-justify">La ciudad de Guadalajara de Buga, cuenta con grandes escenarios deportivos, los cuales son utilizados 
-                        también por los colegios públicos del municipio y todo con el propósito de que nuestros niños y jóvenes se 
-                        beneficien del deporte y contribuyan al desarrollo social de la ciudad. </p>
-                    <a href="<?php echo asset("home/categorias/det") ?>">
+                    <p class="text-justify"><?php echo ((strlen($subcategoria->subcat_descripcion) > 100) ? substr(($subcategoria->subcat_descripcion), 0, 100) . " ..." : ($subcategoria->subcat_descripcion)) ?></p>
+                    <a href="<?php echo asset("home/subCat/index/" . $subcategoria->subcat_id) ?>">
                         <button type="button" class="btn btn-primary">Ver Mas</button>
                     </a>
                 </div>
-                <div class="col-sm-4 portfolio-item">
-                    <img class="img-responsive tam thumbnail" src="<?php echo asset("img/futbol.jpg") ?>" alt="">
-                    <h3 style="color:blue;">
-                        Futbol
-                    </h3>
-                    <p class="text-justify">La ciudad de Guadalajara de Buga, cuenta con grandes escenarios deportivos, los cuales son utilizados 
-                        también por los colegios públicos del municipio y todo con el propósito de que nuestros niños y jóvenes se 
-                        beneficien del deporte y contribuyan al desarrollo social de la ciudad. </p>
-                    <a href="<?php echo asset("home/subCat") ?>">
-                        <button type="button" class="btn btn-primary">Ver Mas</button>
-                    </a>
-                </div>
-                <div class="col-sm-4 portfolio-item">
-                    <img class="img-responsive tam thumbnail" src="<?php echo asset("img/patinaje.jpg") ?>" alt="">
-                    <h3 style="color:blue;">
-                        Patinaje
-                    </h3>
-                    <p class="text-justify">La ciudad de Guadalajara de Buga, cuenta con grandes escenarios deportivos, los cuales son utilizados 
-                        también por los colegios públicos del municipio y todo con el propósito de que nuestros niños y jóvenes se 
-                        beneficien del deporte y contribuyan al desarrollo social de la ciudad. </p>
-                    <a href="<?php echo asset("home/categorias/det") ?>">
-                        <button type="button" class="btn btn-primary">Ver Mas</button>
-                    </a>
-                </div>
+                <?php endforeach ?>
+                
             </div>
         </div>
 

@@ -24,7 +24,10 @@ class CategoriasController extends controller {
                 . "bdp_categoria.cat_id = ? AND bdp_imagen.cat_id = ? AND "
                 . "bdp_imagen.cat_id = bdp_categoria.cat_id", array($id, $id));
         $catDetalle = $catDetalle[0];
-        return view('Modulos.Home.categoriasdet', compact("catDetalle"));
+        $subcategorias = DB::select("SELECT * FROM bdp_subcategoria, bdp_imagen WHERE "
+                . "bdp_subcategoria.cat_id = ? AND bdp_imagen.subcat_id = "
+                . "bdp_subcategoria.subcat_id", array($id));
+        return view('Modulos.Home.categoriasdet', compact("catDetalle"), compact("subcategorias"));
     }
 
 }
