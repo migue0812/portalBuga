@@ -34,6 +34,7 @@ Route::group(['prefix' => 'admin'], function () {
         'sitio' => "Modulos\Panel\SitioController",
         'evento' => "Modulos\Panel\EventoController",
         'configurar' => "Modulos\Panel\ConfigurarController",
+        'reporte' => "Modulos\Panel\ReporteController",
     ]);
 });
 

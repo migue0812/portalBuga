@@ -22,10 +22,17 @@ class SitiosController extends Controller {
     }
 
     function getDet($id) {
+        $ip = $_SERVER["REMOTE_ADDR"];
         $sitDetalle = DB::select("SELECT * FROM bdp_sitio, bdp_imagen WHERE "
                 . "bdp_sitio.sit_id = ? AND bdp_imagen.sit_id = bdp_sitio.sit_id", array($id));
         $sitDetalle = $sitDetalle[0];
-        return view('Modulos.Home.sitiosdet', compact("sitDetalle"));
+        $verificarVisita = DB::select("SELECT sit_id, vis_ip FROM bdp_visitas "
+                . "WHERE sit_id = ? AND vis_ip = ?" , array($id, $ip));
+       // if(empty($verificarVisita)){
+           $visitas = DB::insert("INSERT INTO bdp_visitas (sit_id, vis_ip) VALUES "
+                . "(?,?)", array($id, $ip));
+        //}
+        return view('Modulos.Home.sitiosdet', compact("sitDetalle")); 
     }
 
 }
