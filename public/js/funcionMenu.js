@@ -15,3 +15,9 @@ $(function () {
         interval: 5000 //changes the speed
     });
 });
+
+   $(window).load(function() {
+    $('#preloader').fadeOut('slow');
+    $('body').css({'overflow':'visible'});
+});
+    
