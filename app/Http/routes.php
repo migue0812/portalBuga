@@ -11,6 +11,7 @@ Route::controllers([
     'home/categorias' => "Modulos\Home\CategoriasController",
     'home/subCat' => "Modulos\Home\subCatController",
     'itinerario' => "Modulos\Itinerario\ItinerarioController",
+    'home/busqueda' => "Modulos\Home\BusquedaController",
 ]);
 
 

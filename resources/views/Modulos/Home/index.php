@@ -11,7 +11,6 @@
                         <li data-target="#myCarousel" data-slide-to="1"></li>
                         <li data-target="#myCarousel" data-slide-to="2"></li>
                     </ol>
-
                     <!-- Wrapper for Slides -->
                     <div class="carousel-inner">
                         <div class="item active">
@@ -132,21 +131,21 @@
                 <div class="row actividades">
 
                     <div class="col-lg-4 col-sm-4 text-center">
-                        <img class="queHacerIcon img-circle img-responsive img-center" src="<?php echo asset("img/dormir.png")?>" alt="Descansar?">
+                        <img class="queHacerIcon img-circle img-responsive img-center" src="<?php echo asset("img/dormir.png") ?>" alt="Descansar?">
                         <h3>Donde Dormir?
                             <small>Los mejores lugares</small>
                         </h3>
                         <p>Buscas un lugar para descarsar? </p>
                     </div>
                     <div class="col-lg-4 col-sm-4 text-center">
-                        <img class="queHacerIcon img-circle img-responsive img-center" src="<?php echo asset("img/comer.png")?>" alt="Comer?">
+                        <img class="queHacerIcon img-circle img-responsive img-center" src="<?php echo asset("img/comer.png") ?>" alt="Comer?">
                         <h3>Donde Comer?
                             <small>La mejor comida</small>
                         </h3>
                         <p>Buscas un lugar para comer?</p>
                     </div>
                     <div class="col-lg-4 col-sm-4 text-center">
-                        <img class="queHacerIcon img-circle img-responsive img-center" src="<?php echo asset("img/diversion.png")?>" alt="">
+                        <img class="queHacerIcon img-circle img-responsive img-center" src="<?php echo asset("img/diversion.png") ?>" alt="">
                         <h3>John Smith
                             <small>La mejor diverción</small>
                         </h3>
