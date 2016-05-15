@@ -15,7 +15,7 @@
         </div>
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul id="ejm2"  class="nav navbar-nav">
+            <ul id="lineShort"  class="nav navbar-nav">
                 <li>
                     <a  href="index"><span style="font-size: 23px;" class="homeIcon glyphicon glyphicon-home"></span></a>
                 </li>
