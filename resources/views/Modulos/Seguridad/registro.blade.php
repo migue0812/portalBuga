@@ -53,12 +53,15 @@
       </div> 
 
       <div  class="panel-body pad" >
-        <form id="loginform" class="form-horizontal" role="form" method="post" action="login">
+           @if (Session::has("usuarioInvalido"))
+                <div class="alert alert-danger center-block" role="alert">{{Session::get("usuarioInvalido")}}</div>
+                @endif 
+        <form id="loginform" class="form-horizontal" role="form" method="post" action="{{url('registro/login')}}">
           <input type="hidden" name="_token" value="<?php echo csrf_token(); ?>">
 
           <div class="input-group ingre">
-            <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
-            <input id="login-username" type="email" class="form-control" name="email" id="email" value="" placeholder="Example@gmail.com">                                        
+            <span class="input-group-addon"><i class="fa fa-user"></i></span>
+            <input id="login-username" type="text" class="form-control" name="user" id="user" value="" placeholder="Nombre de usuario">                                        
           </div>
 
           <div class="input-group ingre">
