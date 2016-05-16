@@ -87,11 +87,14 @@
     <section class="wrapper">
 
       <div class="row col-md-12">
-        <h1>No hay reportes</h1>
+        <h1>Generar Reporte</h1>
       </div>
-    </section>
-  </section>
-  
+        <div>
+            <h3>Usuarios Registrados <a class="btn  btn-default btn-md" href="{{url('admin/reporte/usuario')}}"><i class="fa fa-file"></i></a></h3>   
+        </div>
+        <div>
+            <h3>Visitas del Portal <a class="btn  btn-default btn-md" href="{{url('admin/reporte/visitasportal')}}"><i class="fa fa-file"></i></a></h3>   
+        </div>
   
 </section>
   <!--MENU CONTENIDO FIN-->
