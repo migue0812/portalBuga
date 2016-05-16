@@ -39,8 +39,28 @@ class EventoController extends Controller {
   }
 
   function getListar(Request $request) {
-    return view("Modulos.Panel.evento.listar");
+      $eventos=DB::select("SELECT * FROM bdp_evento,bdp_estado,bdp_categoria,bdp_subcategoria WHERE bdp_evento.est_id=bdp_estado.est_id and "
+                . "bdp_categoria.cat_id=bdp_evento.cat_id and bdp_subcategoria.subcat_id=bdp_evento.subcat_id");
+    return view("Modulos.Panel.evento.listar" , compact('eventos'));
   }
+  
+  function getInhabilitar($id) {
+            DB::update("UPDATE bdp_evento SET est_id = 0, eve_deleted_at = CURRENT_TIMESTAMP WHERE eve_id = ?", 
+                    array($id));
+
+           
+            return redirect(url("admin/evento/listar"));
+       
+    }
+    
+    function getHabilitar($id) {
+        
+            DB::update("UPDATE bdp_evento SET est_id = 1, eve_deleted_at = NULL WHERE eve_id = ?", array($id));
+
+           
+            return redirect(url("admin/evento/listar"));
+        
+    }
   
   //Funciones Post 
   function postCrear(Request $request){
@@ -73,7 +93,7 @@ class EventoController extends Controller {
       
       //Insertar imagen
        DB::insert("INSERT INTO bdp_imagen (eve_id,img_ruta) VALUES (?,?)", array($eve_id, $destino));
-       return view("Modulos.Panel.evento.crear");
+       return view("Modulos.Panel.evento.listar");
       
   }
 }

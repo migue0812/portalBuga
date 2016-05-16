@@ -93,8 +93,7 @@
                   <thead>
                     <tr>
                       <th><i class="fa fa-bullhorn"></i> Nombre</th>
-                      <th><i class="fa fa-bullhorn"></i> Sitio</th>
-                      <th><i class="fa fa-bullhorn"></i> Fecha</th>
+                      <th><i class="fa fa-bullhorn"></i> Direccion</th>
                       <th><i class="fa fa-bullhorn"></i> Nombre Contacto</th>
                       <th><i class="fa fa-bullhorn"></i> Correo</th>
                       <th><i class="fa fa-bullhorn"></i> Telefono</th>
@@ -106,150 +105,53 @@
                     </tr>
                   </thead>
                   <tbody>
+                      <?php 
+                      foreach ($eventos as $evento) { ?>
                     <tr>
                       <td>
-                        <a href="basic_table.html#">Company Ltd</a>
+                    <?php echo $evento->eve_nombre;?>
                       </td>
 
                       <td>
-                        <a href="basic_table.html#">historia</a>
+                         <?php echo $evento->eve_direccion;?>
+                      </td>
+                      <td>
+                        <?php echo $evento->eve_nombre_contacto;?>
+                      </td>
+                      <td>
+                        <?php echo $evento->eve_correo_contacto;?>
                       </td>
 
                       <td>
-                        <a href="basic_table.html#">22232</a>
+                        <?php echo $evento->eve_telefono_contacto;?>
                       </td>
 
                       <td>
-                        <a href="basic_table.html#">apolo</a>
+                        <?php echo $evento->eve_valor_boleta;?>
                       </td>
 
                       <td>
-                        <a href="basic_table.html#">dahdash@djsjdj</a>
+                        <?php echo $evento->eve_fecha_inicio;?>
                       </td>
 
                       <td>
-                        <a href="basic_table.html#">33232</a>
+                        <?php echo $evento->eve_fecha_fin;?>
+                      </td>
+                      
+                      <td>
+                        <?php echo $evento->est_nombre;?>
                       </td>
 
                       <td>
-                        <a href="basic_table.html#">ds3232</a>
-                      </td>
-
-                      <td>
-                        <a href="basic_table.html#">ds3232</a>
-                      </td>
-
-                      <td>
-                        <a href="basic_table.html#">ds3232</a>
-                      </td>
-
-
-
-                      <td>
-                        <span class="label label-info label-mini">Due</span>
-                      </td>
-
-                      <td>
-                        <button class="btn btn-success btn-xs"><i class="fa fa-check"></i></button>
-                        <button class="btn btn-primary btn-xs"><i class="fa fa-pencil"></i></button>
-                        <button class="btn btn-danger btn-xs"><i class="fa fa-trash-o "></i></button>
+                        <a title="Editar" class="btn btn-primary btn-xs" href="{{url('admin/evento/editar/' . $evento->eve_id)}}"><i class="fa fa-pencil"></i></a>
+                                                    @if($evento->est_nombre === 'Habilitado' )
+                                                    <a title="Inhabilitar" class="btn btn-danger btn-xs" href="{{url('admin/evento/inhabilitar/' . $evento->eve_id)}}"><i class="fa fa-remove"></i></a>
+                                                @else
+                                                <a title="Habilitar" class="btn btn-success btn-xs" href="{{url('admin/evento/habilitar/' . $evento->eve_id)}}"><i class="fa fa-check"></i></a>
+                                                @endif
                       </td>
                     </tr>
-
-                    <tr>
-                      <td>
-                        <a href="basic_table.html#">Dashgum co</a>
-                      </td>
-
-                      <td>
-                        <a href="basic_table.html#">historia</a>
-                      </td>
-
-                      <td>
-                        <a href="basic_table.html#">22232</a>
-                      </td>
-
-                      <td>
-                        <a href="basic_table.html#">apolo</a>
-                      </td>
-
-                      <td>
-                        <a href="basic_table.html#">dahdash@djsjdj</a>
-                      </td>
-
-                      <td>
-                        <a href="basic_table.html#">33232</a>
-                      </td>
-
-                      <td>
-                        <a href="basic_table.html#">ds3232</a>
-                      </td>
-
-                      <td>
-                        <a href="basic_table.html#">ds3232</a>
-                      </td>
-
-                      <td>
-                        <a href="basic_table.html#">ds3232</a>
-                      </td>
-
-                      <td>
-                        <span class="label label-warning label-mini">Due</span>
-                      </td>
-                      <td>
-                        <button class="btn btn-success btn-xs"><i class="fa fa-check"></i></button>
-                        <button class="btn btn-primary btn-xs"><i class="fa fa-pencil"></i></button>
-                        <button class="btn btn-danger btn-xs"><i class="fa fa-trash-o "></i></button>
-                      </td>
-                    </tr>
-
-                    <tr>
-                      <td>
-                        <a href="basic_table.html#">Another Co</a>
-                      </td>
-
-                      <td>
-                        <a href="basic_table.html#">historia</a>
-                      </td>
-
-                      <td>
-                        <a href="basic_table.html#">22232</a>
-                      </td>
-
-                      <td>
-                        <a href="basic_table.html#">apolo</a>
-                      </td>
-
-                      <td>
-                        <a href="basic_table.html#">dahdash@djsjdj</a>
-                      </td>
-
-                      <td>
-                        <a href="basic_table.html#">33232</a>
-                      </td>
-
-                      <td>
-                        <a href="basic_table.html#">ds3232</a>
-                      </td>
-
-                      <td>
-                        <a href="basic_table.html#">ds3232</a>
-                      </td>
-
-                      <td>
-                        <a href="basic_table.html#">ds3232</a>
-                      </td>
-
-                      <td>
-                        <span class="label label-success label-mini">Paid</span>
-                      </td>
-
-                      <td>
-                        <button class="btn btn-success btn-xs"><i class="fa fa-check"></i></button>
-                        <button class="btn btn-primary btn-xs"><i class="fa fa-pencil"></i></button>
-                        <button class="btn btn-danger btn-xs"><i class="fa fa-trash-o "></i></button>
-                      </td>
-                    </tr>
+                      <?php } ?>
                   </tbody>
                 </table>
               </div><!-- /content-panel -->
