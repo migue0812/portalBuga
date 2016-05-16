@@ -4,6 +4,8 @@
         margin-bottom: 40px;
     }
 
+    
+    
 }
 
 @media (min-width: 768px) and (max-width: 979px) {
@@ -23,13 +25,15 @@
     .header {
         position: absolute;
     }
+    
+
 
     /*sidebar*/
 
     #sidebar {
         height: auto;
         overflow: hidden;
-        position: absolute;
+
         width: 100%;
         z-index: 1001;
     }
@@ -37,7 +41,7 @@
 
     /* body container */
     #main-content {
-        margin: 0px!important;
+        margin: 0px 0px 10px 0px!important;
         position: none !important;
     }
 
