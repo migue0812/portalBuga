@@ -68,13 +68,13 @@
             </div>
             <div class="portafolio row">
                 <?php
-                    foreach ($sitios as $sitio):
-                        ?>
-                <div class="col-sm-4 text-center">
-                    <a href="<?php echo url("home/sitios/det/" . $sitio->sit_id) ?>"><img class="img-responsive" src="<?php echo asset("$sitio->img_ruta") ?>" alt=""></a>
-                    <h3><?php echo ($sitio->sit_nombre) ?></h3>
-                </div>
-                <div class=""></div>
+                foreach ($sitios as $sitio):
+                    ?>
+                    <div class="col-sm-4 text-center">
+                        <a href="<?php echo url("home/sitios/det/" . $sitio->sit_id) ?>"><img class="img-responsive" src="<?php echo asset("$sitio->img_ruta") ?>" alt=""></a>
+                        <h3><?php echo ($sitio->sit_nombre) ?></h3>
+                    </div>
+                    <div class=""></div>
                 <?php endforeach ?>
             </div>
 
@@ -121,6 +121,32 @@
                             <small>La mejor diverción</small>
                         </h3>
                         <p>Buscas un lugar para divertirte?</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-12 desarrollo">
+                <div class="visitNav">
+                    <div>
+                        <h2 style="text-align: center;">Desarrollo</h2>
+                    </div>
+                </div>
+                <hr class="tagline-divider-cont">
+            </div>
+            <div class="line"></div>
+            <!-- Page Content -->
+            <div class="container text-center">
+                <div class="row actividades">
+                    <div class="col-lg-6 col-sm-6">
+                        <img class="queHacerIcon img-circle img-responsive img-center" src="<?php echo asset("img/senaLog.png") ?>" alt="Descansar?">
+                        <h3>CDTI
+                            <small>Centro tecnologico industrial</small>
+                        </h3>
+                    </div>
+                    <div class="col-lg-6 col-sm-6">
+                        <img class="queHacerIcon img-circle img-responsive img-center" src="<?php echo asset("img/bugaLog.png") ?>" alt="Comer?">
+                        <h3>Alcaldia
+                            <small>Guadalajara De Buga</small>
+                        </h3>
                     </div>
                 </div>
             </div>

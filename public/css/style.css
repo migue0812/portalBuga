@@ -731,3 +731,7 @@ input[type="search"]:focus{
 	padding-left: 32px; /*espacio entre el icono lupa y el placeholder*/
 	color: #000;
 	background-color: #FFF;}
+.desarrollo{
+    margin-top:40px;
+    margin-bottom:10px; 
+}
