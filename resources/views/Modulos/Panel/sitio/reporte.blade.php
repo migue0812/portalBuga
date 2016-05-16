@@ -87,8 +87,15 @@
     <section class="wrapper">
 
       <div class="row col-md-12">
-        <h1>No hay reportes</h1>
+        <h1>Generar Reporte</h1>
       </div>
+        <div>
+            <h3>Mas Vistos <a class="btn  btn-default btn-md" href="{{url('admin/reporte/masvistos')}}"><i class="fa fa-file"></i></a></h3>   
+        </div>
+        <div>
+            <h3>Menos Vistos <a class="btn  btn-default btn-md" href="{{url('admin/reporte/menosvistos')}}"><i class="fa fa-file"></i></a></h3>   
+        </div>
+        
     </section>
   </section>
   
