@@ -19,11 +19,11 @@ $categorias = DB::select("SELECT * FROM bdp_categoria, bdp_imagen WHERE bdp_imag
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul id="lineShort"  class="nav navbar-nav">
-                <li>
+                <li class=""  >
                     <a  href="<?php echo url("home/index") ?>"><span style="font-size: 23px;" class="homeIcon glyphicon glyphicon-home"></span></a>
                 </li>
-                <li class="dropdown">
-                    <a class="navPer" style="padding-right: 0px;padding-left: 0px;" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Categorias<span class="caret"></span></a>
+                <li class="dropdown navPerCat" >
+                    <a style="padding-right: 0px;padding-left: 0px;" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Categorias<span class="caret"></span></a>
                     <ul class="dropdown-menu">
                         <li><a href="<?php echo url("home/categorias") ?>">Todas</a></li>
                         <li role="separator" class="divider"></li>
@@ -32,18 +32,18 @@ $categorias = DB::select("SELECT * FROM bdp_categoria, bdp_imagen WHERE bdp_imag
                         <?php endforeach ?>
                     </ul>
                 </li>
-                <li>
-                    <a class="navPer" style="padding-right: 0px;padding-left: 0px;" href="<?php echo url("home/sitios") ?>">Sitios</a>
+                <li class="navPer">
+                    <a  style="padding-right: 0px;padding-left: 0px;" href="<?php echo url("home/sitios") ?>">Sitios</a>
                 </li>
-                <li>
-                    <a class="navPer" style="padding-right: 0px;padding-left: 0px;"href="<?php echo url("home/eventos") ?>">Eventos</a>
+                <li class="navPer">
+                    <a  style="padding-right: 0px;padding-left: 0px;"href="<?php echo url("home/eventos") ?>">Eventos</a>
                 </li>
                 <?php if ((Session::has("usuarioLogueado") !== true) && (Session::has("usuarioAdmin") !== true)): ?>
-                    <li>
-                        <a class="navPer" style="padding-right: 0px;padding-left: 0px;"href="<?php echo url("login") ?>">Ingresar</a>
+                    <li class="navPer">
+                        <a  style="padding-right: 0px;padding-left: 0px;"href="<?php echo url("login") ?>">Ingresar</a>
                     </li>
-                    <li>
-                        <a class="navPer" style="padding-right: 0px;padding-left: 0px;" href="<?php echo url("registro") ?>" onClick="$('#loginbox').hide();
+                    <li class="navPer">
+                        <a style="padding-right: 0px;padding-left: 0px;" href="<?php echo url("registro") ?>" onClick="$('#loginbox').hide();
                                     $('#signupbox').show()">Registrar</a>
                     </li>
                     <li>

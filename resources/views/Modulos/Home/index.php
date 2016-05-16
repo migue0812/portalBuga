@@ -134,18 +134,16 @@
             </div>
             <div class="line"></div>
             <!-- Page Content -->
-            <div class="container text-center">
-                <div class="row actividades">
+            <div class="container text-center actividades">
+                <div class="row">
                     <div class="col-lg-6 col-sm-6">
                         <img class="queHacerIcon img-circle img-responsive img-center" src="<?php echo asset("img/senaLog.png") ?>" alt="Descansar?">
-                        <h3>CDTI
-                            <small>Centro tecnologico industrial</small>
+                        <h3 class="text-center">CDTI
                         </h3>
                     </div>
                     <div class="col-lg-6 col-sm-6">
                         <img class="queHacerIcon img-circle img-responsive img-center" src="<?php echo asset("img/bugaLog.png") ?>" alt="Comer?">
-                        <h3>Alcaldia
-                            <small>Guadalajara De Buga</small>
+                        <h3 class="text-center">Alcaldia
                         </h3>
                     </div>
                 </div>

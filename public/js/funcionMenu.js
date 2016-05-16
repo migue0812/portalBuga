@@ -1,7 +1,7 @@
 //Parallax 
-$(document).ready(function(){
-    
-    $(window).scroll(function(){
+$(document).ready(function () {
+
+    $(window).scroll(function () {
         var barra = $(window).scrollTop();
         var posicion = barra * 0.10;
         $('body').css({
@@ -16,8 +16,13 @@ $(function () {
     });
 });
 
-   $(window).load(function() {
+$(window).load(function () {
     $('#preloader').fadeOut('slow');
-    $('body').css({'overflow':'visible'});
+    $('body').css({'overflow': 'visible'});
 });
-    
+
+$(document).ready(function () {
+    $('#texto').click(function () {
+        $(this).toggleClass('.resaltar');
+    });
+});
