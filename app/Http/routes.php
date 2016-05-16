@@ -12,6 +12,7 @@ Route::controllers([
     'home/subCat' => "Modulos\Home\subCatController",
     'itinerario' => "Modulos\Itinerario\ItinerarioController",
     'home/busqueda' => "Modulos\Home\BusquedaController",
+    'usuario/cuenta' => "Modulos\Usuario\CuentaController"
 ]);
 
 

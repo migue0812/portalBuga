@@ -13,7 +13,10 @@
 <script src="{{asset('panel/js/sparkline-chart.js')}}"></script>    
 <script src="{{asset('panel/js/zabuto_calendar.js')}}"></script>	
 
-<script type="application/javascript">
+
+
+
+<!--<script type="application/javascript">
   $(document).ready(function () {
   $("#date-popover").popover({html: true, trigger: "manual"});
   $("#date-popover").hide();
@@ -46,7 +49,7 @@
   var to = $("#" + id).data("to");
   console.log('nav ' + nav + ' to: ' + to.month + '/' + to.year);
   }
-</script>
+</script>-->
 
 
 </body>
