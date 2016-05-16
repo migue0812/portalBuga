@@ -28,10 +28,10 @@ class SitiosController extends Controller {
         $sitDetalle = $sitDetalle[0];
         $verificarVisita = DB::select("SELECT sit_id, vis_ip FROM bdp_visitas "
                 . "WHERE sit_id = ? AND vis_ip = ?" , array($id, $ip));
-       // if(empty($verificarVisita)){
+        if(empty($verificarVisita)){
            $visitas = DB::insert("INSERT INTO bdp_visitas (sit_id, vis_ip) VALUES "
                 . "(?,?)", array($id, $ip));
-        //}
+        }
         return view('Modulos.Home.sitiosdet', compact("sitDetalle")); 
     }
 

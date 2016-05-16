@@ -37,6 +37,22 @@
                                 <div class="panel-heading">
                                     <i class="fa fa-map-marker fa-fw"></i> Sitios Elegidos
                                 </div>
+                                <?php if (Session::has("sitio")):?>
+    <div class="alert alert-success alert-dismissible center-block" role="alert"><?php echo Session::get("sitio") ?></div>
+                <?php endif ?>
+    <?php if (Session::has("sitioExistente")):?>
+    <div class="alert alert-danger alert-dismissible center-block" role="alert"><?php echo Session::get("sitioExistente") ?></div>
+                <?php endif ?>
+     <?php if (Session::has("sitioVisitado")):?>
+    <div class="alert alert-info alert-dismissible center-block" role="alert"><?php echo Session::get("sitioVisitado") ?></div>
+                <?php endif ?>
+     <?php if (Session::has("sitioNoVisitado")):?>
+    <div class="alert alert-warning alert-dismissible center-block" role="alert"><?php echo Session::get("sitioNoVisitado") ?></div>
+                <?php endif ?>
+    <?php if (Session::has("sitioEliminado")):?>
+    <div class="alert alert-danger alert-dismissible center-block" role="alert"><?php echo Session::get("sitioEliminado") ?></div>
+                <?php endif ?>
+
                                 <!-- /.panel-heading -->
                                 <div class="panel-body">
                                     <div class="table-responsive">
