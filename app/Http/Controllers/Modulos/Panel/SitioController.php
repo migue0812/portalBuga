@@ -84,7 +84,7 @@ class SitioController extends Controller {
 
         DB::insert("INSERT INTO bdp_imagen (sit_id, img_ruta) VALUES (?,?)", array($id, $sitioDest));
 
-        Session::flash("registrar", "Registro Exitoso");
+        Session::flash("registrar", "Sitio registrado exitosamente");
 
         return redirect(url('admin/sitio/crear'));
     }
@@ -145,7 +145,7 @@ class SitioController extends Controller {
                 array($sitNombre, $sitCategoria, $sitSubcategoria, $sitDireccion,
             $sitTelefono, $sitDescripcion, $sitId));
 
-        Session::flash("editar", "Edición Exitosa");
+        Session::flash("editar", "Sitio editado exitosamente");
         return redirect(url("admin/sitio/listar"));
     }
   
@@ -161,7 +161,7 @@ class SitioController extends Controller {
             DB::update("UPDATE bdp_sitio SET est_id = 0, sit_deleted_at = CURRENT_TIMESTAMP WHERE sit_id = ?", 
                     array($id));
 
-            Session::flash("inhabilitar", "Se ha inhabilitado exitosamente");
+            Session::flash("inhabilitar", "Se ha inhabilitado el sitio exitosamente");
             return redirect(url("admin/sitio/listar"));
        
     }
@@ -170,7 +170,7 @@ class SitioController extends Controller {
         
             DB::update("UPDATE bdp_sitio SET est_id = 1, sit_deleted_at = NULL WHERE sit_id = ?", array($id));
 
-            Session::flash("habilitar", "Se ha inhabilitado exitosamente");
+            Session::flash("habilitar", "Se ha habilitado el sitio exitosamente");
             return redirect(url("admin/sitio/listar"));
         
     }

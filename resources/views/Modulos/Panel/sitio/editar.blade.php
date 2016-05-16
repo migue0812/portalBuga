@@ -99,6 +99,9 @@
                              </ul>
                          </div>
                         @endif
+                        @if (Session::has("editar"))
+    <div class="alert alert-warning alert-dismissible center-block" role="alert">{{Session::get("editar")}}</div>
+                @endif 
             <form class="style-form" method="post" action="{{url('admin/sitio/editar')}}" enctype="multipart/form-data">
               
               <input type="hidden" name="_token" value="<?php echo csrf_token(); ?>">

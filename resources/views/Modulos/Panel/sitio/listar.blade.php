@@ -91,6 +91,12 @@
                     <div class="row mt">
                         <div class="col-md-12">
                             <div class="content-panel">
+                                @if (Session::has("inhabilitar"))
+    <div class="alert alert-danger alert-dismissible center-block" role="alert">{{Session::get("inhabilitar")}}</div>
+                @endif
+    @if (Session::has("habilitar"))
+    <div class="alert alert-info alert-dismissible center-block" role="alert">{{Session::get("habilitar")}}</div>
+                @endif 
                                 <table class="table table-striped table-advance table-hover">
                                     <h4><i class="fa fa-angle-right"></i> Sitio</h4>
                                     <hr>
