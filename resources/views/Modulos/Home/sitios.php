@@ -26,7 +26,9 @@
                             <hr class="tagline-divider-cont">
                             <p class="text-justify"><?php echo ((strlen($sitio->sit_descripcion) > 200) ? substr(($sitio->sit_descripcion), 0, 200) . " ..." : ($sitio->sit_descripcion)) ?></p>
                             <a href="<?php echo url("home/sitios/det/" . $sitio->sit_id) ?>" class="btn btn-primary"><b title="Ver mas"class="icon-plus fa-fw"></b></a>
-                            <a href="<?php echo url("itinerario/sitios") ?>" class="btn btn-primary"><b title="Itinerario" class="icon-direction fa-fw"></b></a>
+                            <?php if (Session::has("usuarioLogueado")): ?>
+                            <a href="<?php echo url("itinerario/sitio/" . $sitio->sit_id) ?>" class="btn btn-primary"><b title="Itinerario" class="icon-direction fa-fw"></b></a>
+                        <?php endif ?>
                         </div>
                     </div>
                 </div>
