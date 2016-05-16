@@ -111,6 +111,13 @@ class SitioController extends Controller {
         $sitTelefono = $_POST["telefono"];
         $sitDescripcion = $_POST["descripcion"];
         $sitId = $_POST["id"];
+        
+        $sitioImg = $_FILES["imagen"]["name"];
+        $sitioRuta = $_FILES["imagen"]["tmp_name"];
+        $sitioDest = "img/" . $sitioImg;
+        if ($sitioRuta !== "" && $sitioDest !== "") {
+          copy($sitioRuta, $sitioDest);  
+        }
 
         $reglas = array(
             "nombre" => "required | max:40",
@@ -144,6 +151,13 @@ class SitioController extends Controller {
                 . "sit_telefono = ?, sit_descripcion = ?, sit_updated_at = CURRENT_TIMESTAMP WHERE sit_id = ?", 
                 array($sitNombre, $sitCategoria, $sitSubcategoria, $sitDireccion,
             $sitTelefono, $sitDescripcion, $sitId));
+        
+        if ($sitioRuta !== "" && $sitioDest !== "") {
+            $img = DB::select("SELECT * FROM bdp_imagen WHERE sit_id = ?", array($sitId));
+            $img = $img[0]->img_ruta;
+            unlink($img);
+         DB::insert("UPDATE bdp_imagen SET img_ruta = ? WHERE sit_id = ?", array($sitioDest, $sitId)); 
+        }
 
         Session::flash("editar", "Sitio editado exitosamente");
         return redirect(url("admin/sitio/listar"));

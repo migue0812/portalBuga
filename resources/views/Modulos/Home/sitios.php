@@ -56,9 +56,9 @@ endforeach
                 <a href="#">
                     <img class="img-responsive" src="<?php echo asset("$sitio->img_ruta") ?>">
                 </a>        
-                <p>><?php echo ((strlen($sitio->sit_descripcion) > 100) ? substr(($sitio->sit_descripcion), 0, 100) . " ..." : ($sitio->sit_descripcion)) ?></p>
+                <p><?php echo ((strlen($sitio->sit_descripcion) > 100) ? substr(($sitio->sit_descripcion), 0, 100) . " ..." : ($sitio->sit_descripcion)) ?></p>
                 <a href="<?php echo url("home/sitios/det/" . $sitio->sit_id) ?>" class="btn btn-primary"><b title="Ver mas"class="icon-plus fa-fw"></b></a>
-                <a href="<?php echo url("itinerario/sitios") ?>" class="btn btn-primary"><b title="Itinerario" class="icon-direction fa-fw"></b></a>
+                <a href="<?php echo url("itinerario/sitio/" . $sitio->sit_id) ?>" class="btn btn-primary"><b title="Itinerario" class="icon-direction fa-fw"></b></a>
             </div>  
    <?php
 endforeach

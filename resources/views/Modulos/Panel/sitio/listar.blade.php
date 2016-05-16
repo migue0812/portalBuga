@@ -142,11 +142,11 @@
 
                                                 <td>
                                                     
-                                                    <a class="btn btn-primary btn-xs" href="{{url('admin/sitio/editar/' . $sitio->sit_id)}}"><i class="fa fa-pencil"></i></a>
-                                                    @if($sitio->est_id === 1)
-                                                    <a class="btn btn-danger btn-xs" href="{{url('admin/sitio/inhabilitar/' . $sitio->sit_id)}}"><i class="fa fa-trash-o"></i></a>
+                                                    <a title="Editar" class="btn btn-primary btn-xs" href="{{url('admin/sitio/editar/' . $sitio->sit_id)}}"><i class="fa fa-pencil"></i></a>
+                                                    @if($sitio->est_nombre === 'Habilitado' )
+                                                    <a title="Inhabilitar" class="btn btn-danger btn-xs" href="{{url('admin/sitio/inhabilitar/' . $sitio->sit_id)}}"><i class="fa fa-remove"></i></a>
                                                 @else
-                                                <a class="btn btn-success btn-xs" href="{{url('admin/sitio/habilitar/' . $sitio->sit_id)}}"><i class="fa fa-check"></i></a>
+                                                <a title="Habilitar" class="btn btn-success btn-xs" href="{{url('admin/sitio/habilitar/' . $sitio->sit_id)}}"><i class="fa fa-check"></i></a>
                                                 @endif
                                                 </td>
                                             </tr>
