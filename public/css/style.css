@@ -706,3 +706,11 @@ body {
     box-shadow: 0 2.5em 0 0 #FFF;
   }
 }
+
+
+audio, canvas, progress, video {
+    display: inline-block;
+    vertical-align: baseline;
+    margin-left: 1080px;
+    width: 259px;
+}
