@@ -17,9 +17,18 @@
     <link href="{{asset('panel/css/style-responsive.css')}}" rel="stylesheet">
 
     <script src="{{asset('panel/js/chart-master/Chart.js')}}"></script>
+
+    <script type="text/javascript">
+    $(function () {
+        $("[data-toggle='tooltip']").tooltip();
+    });
+</script>
+
+
   </head>
 
   <body>
+
 
     <section id="container" >
 
@@ -38,10 +47,12 @@
         <!--logo fin-->
 
         <div class="nav notify-row" id="top_menu">
+
+
           <!--  inicio notificaciones -->
           <ul class="nav top-menu">                    
-            <li id="header_inbox_bar" class="dropdown">
-              <a data-toggle="tooltip" data-placement="top" title="Pagina Principal" href="{{url('home/index')}}">
+            <li id="header_inbox_bar" class="dropdown ">
+              <a data-toggle="tooltip" data-placement="bottom" title="Pagina Principal" href="{{url('home/index')}}">
                 <i class="fa fa-home"  ></i>
               </a>
             </li>
