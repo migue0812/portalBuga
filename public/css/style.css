@@ -714,3 +714,20 @@ audio, canvas, progress, video {
     margin-left: 1080px;
     width: 259px;
 }
+/* Search Animated */
+input[type="search"]{
+	width: 45px; /*ancho por defecto*/
+	background: #ededed url('../img/search-icon.png') no-repeat 9px center; /*icono lupa*/
+	padding: 9px 10px 9px 32px;
+	border-radius: 15em;
+	-webkit-transition: all .5s; /* transición de .5seg a todos los elementos para chrome*/
+	-moz-transition: all .5s; /* transición de .5seg a todos los elementos para mozilla*/
+	-o-transition: all .5s; /* transición de .5seg a todos los elementos para ophera*/
+	transition: all .5s; /* transición de .5seg a todos los elementos*/
+	outline: none; /* ocultar el fucos automático de los input */
+}
+input[type="search"]:focus{
+	width: 130px; /*tamaño del boton buscar al hacer click*/
+	padding-left: 32px; /*espacio entre el icono lupa y el placeholder*/
+	color: #000;
+	background-color: #FFF;}

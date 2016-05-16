@@ -44,10 +44,14 @@ $categorias = DB::select("SELECT * FROM bdp_categoria, bdp_imagen WHERE bdp_imag
                     </li>
                     <li>
                         <a class="navPer" style="padding-right: 0px;padding-left: 0px;" href="<?php echo url("registro") ?>" onClick="$('#loginbox').hide();
-                                $('#signupbox').show()">Registrar</a>
+                                    $('#signupbox').show()">Registrar</a>
                     </li>
                     <li>
-                        <a  href="<?php echo url("home/index") ?>"><span style="font-size: 23px;" class="homeIcon glyphicon glyphicon-home"></span></a>
+                        <a>
+                            <form action="">
+                                <input type="search" name="nombre" placeholder="Buscar">
+                            </form>
+                        </a>
                     </li>
                 <?php elseif (Session::has("usuarioLogueado")): ?>
                     <?php if ((Session::get("usuarioGenero") === 'M')): ?>
