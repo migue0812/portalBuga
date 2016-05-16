@@ -58,53 +58,24 @@
 
                 </div>
             </div>
-
             <div class="col-lg-12">
                 <div class="visitNav">
                     <div>
-                        <h2 style="text-align: center;">Mas Visitados</h2>
+                        <h2 style="text-align: center;">Más Vistos</h2>
                     </div>
                 </div>
                 <hr class="tagline-divider-cont">
             </div>
-            <div class="portafolio">
+            <div class="portafolio row">
+                <?php
+                    foreach ($sitios as $sitio):
+                        ?>
                 <div class="col-sm-4 text-center">
-                    <img class="img-responsive" src="http://placehold.it/750x450" alt="">
-                    <h3>John Smith
-                        <small>Job Title</small>
-                    </h3>
+                    <a href="<?php echo url("home/sitios/det/" . $sitio->sit_id) ?>"><img class="img-responsive" src="<?php echo asset("$sitio->img_ruta") ?>" alt=""></a>
+                    <h3><?php echo ($sitio->sit_nombre) ?></h3>
                 </div>
-                <div class="col-sm-4 text-center">
-                    <img class="img-responsive" src="http://placehold.it/750x450" alt="">
-                    <h3>John Smith
-                        <small>Job Title</small>
-                    </h3>
-                </div>
-                <div class="col-sm-4 text-center">
-                    <img class="img-responsive" src="http://placehold.it/750x450" alt="">
-                    <h3>John Smith
-                        <small>Job Title</small>
-                    </h3>
-                </div>
-                <div class="col-sm-4 text-center">
-                    <img class="img-responsive" src="http://placehold.it/750x450" alt="">
-                    <h3>John Smith
-                        <small>Job Title</small>
-                    </h3>
-                </div>
-                <div class="col-sm-4 text-center">
-                    <img class="img-responsive" src="http://placehold.it/750x450" alt="">
-                    <h3>John Smith
-                        <small>Job Title</small>
-                    </h3>
-                </div>
-                <div class="col-sm-4 text-center">
-                    <img class="img-responsive" src="http://placehold.it/750x450" alt="">
-                    <h3>John Smith
-                        <small>Job Title</small>
-                    </h3>
-                </div>
-                <div class="clearfix"></div>
+                <div class=""></div>
+                <?php endforeach ?>
             </div>
 
             <div class="queHacer">

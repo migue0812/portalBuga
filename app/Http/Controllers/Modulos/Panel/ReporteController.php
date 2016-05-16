@@ -44,4 +44,16 @@ function getMasvistos(){
     //else {
             //return redirect(url("home/index"));
     //}}
+    
+    function getVisitasportal(){
+        //if (Session::has("usuarioAdmin")) {
+    
+        $visitas = DB::select("SELECT COUNT(vis_id) AS visita FROM bdp_visitas "
+                . "WHERE sit_id IS NULL");
+        $visitas = $visitas[0];
+    	return view('Modulos.Reportes.visitasPortal', compact("visitas"));
+    }
+    //else {
+            //return redirect(url("home/index"));
+    //}}
 }
