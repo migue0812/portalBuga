@@ -272,7 +272,7 @@ hr {
 }
 /*---Sitios---*/
 .imgarticleX{
-    width:100%;  
+    width:100%;
     position:relative;
     top: -20px;
     margin: 0 auto;
@@ -284,7 +284,7 @@ hr {
     text-align: center;
     font-size: 25px;
     text-shadow: 0px 4px #DFDEDE;
-    color: #4F4E4E; 
+    color: #4F4E4E;
 }
 
 #hrAlz {
@@ -600,14 +600,14 @@ b.icon-direction{
     -moz-box-shadow: 1px 2px 5px -1px rgba(0,0,0,0.75);
     box-shadow: 1px 2px 5px -1px rgba(0,0,0,0.75);
 }
-.btn-primary:hover{ 
+.btn-primary:hover{
     background-color: #5bc0de;
     border-color: #5bc0de;
 }
 
 
 ul#lineShort li a{
-  /*  position: relative;*/
+    /*  position: relative;*/
 
 
 }
@@ -627,7 +627,7 @@ ul#lineShort li a:after{
     content: "";
     opacity: 0;
     transition: opacity 0.3s ease 0s, transform 0.3s ease 0s;
-    transform: translateY(20px);        
+    transform: translateY(20px);
 }
 ul#lineShort li a:hover:after{
     opacity:1;
@@ -743,3 +743,7 @@ input[type="search"]:focus{
 .desarrollo{
     margin-top:40px;
 }
+/* iconos eventos detalle*/
+
+.grande{
+    height: 20px;}
