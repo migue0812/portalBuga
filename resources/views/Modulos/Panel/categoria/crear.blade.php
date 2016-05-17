@@ -85,7 +85,7 @@
         <div class="col-lg-12">
           <div class="form-panel">
             <h4 class="mb"><i class="fa fa-angle-right"></i> Crear Categoria</h4>
-            <form class="style-form" method="post">
+            <form class="style-form" method="post" action="{{url('admin/categoria/crear')}}" enctype="multipart/form-data">
 
               <input type="hidden" name="_token" value="<?php echo csrf_token(); ?>">
 
@@ -93,19 +93,26 @@
                 <div class="col-md-6">
                   <div class="form-group">
                     <label for="categoria[cat_nombre]">Nombre</label>
-                    <input type="text" class="form-control" id="cat_nombre" name="cat_nombre" placeholder="Nombre categoria" required="">
+                    <input type="text" class="form-control" id="cat_nombre" name="cat_nombre" placeholder="Nombre categoria" required="" style="margin: 0px 2px 0px 0px; width: 571px;">
+                  </div>
+                    <div class="form-group">
+                    <label for="activo[cat_descripcion]">Descripcion</label>
+                    <textarea type="text" class="form-control" id="cat_descripcion" name="cat_descripcion" placeholder="Descripcion" required="" style="margin: 0px 2px 0px 0px; height: 182px; width: 571px;"></textarea>  
+                  </div>
+                    <div class="form-group">
+                    <label for="imagen">Imagen</label>
+                    <input type="file" class="form-control" id="imagen" name="imagen" required="" placeholder="Descripción">
                   </div>
                 </div>
 
                 <div class="col-md-6">
                   <div class="form-group">
-                    <label for="activo[cat_activo]">Descripcion</label>
-                    <input>
-                  </div>
+                 </div>
                 </div> 
               </div>
-
-              <button type="submit" class="btn btn-info btn-fill pull-right">Guardar</button>
+              
+              <button type="submit" class="btn btn-info btn-md">Guardar</button>
+              
               <div class="clearfix"></div>
             </form>
           </div>

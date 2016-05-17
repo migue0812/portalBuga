@@ -48,7 +48,7 @@
                 <h2 class="brand-before">
 
                 </h2>
-                <h1 class="brand-name" style="text-shadow: 2px 1px 2px rgba(0,0,0,0.5);text-align: center;">Guadalajara De Buga</h1>
+                <h1 class="brand-name" style="text-shadow: 2px 1px 2px rgba(0,0,0,0.5);text-align: center;font-weight: 600;">Guadalajara De Buga</h1>
                 <hr class="tagline-divider">
                 <div>
 

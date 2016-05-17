@@ -20,12 +20,12 @@ $categorias = DB::select("SELECT * FROM bdp_categoria, bdp_imagen WHERE bdp_imag
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul id="lineShort"  class="nav navbar-nav">
                 <li class=""  >
-                    <a  href="<?php echo url("home/index") ?>"><span style="font-size: 23px;" class="homeIcon glyphicon glyphicon-home"></span></a>
+                    <a  href="<?php echo url("home/index") ?>"><span style="font-size: 23px;" class="homeIcon glyphicon glyphicon-home" title="Inicio"></span></a>
                 </li>
                 <li class="dropdown navPerCat" >
-                    <a style="padding-right: 0px;padding-left: 0px;" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Categorias<span class="caret"></span></a>
+                    <a style="padding-right: 0px;padding-left: 0px;" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" title="Categorias">Categorias<span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                        <li><a href="<?php echo url("home/categorias") ?>">Todas</a></li>
+                        <li><a href="<?php echo url("home/categorias") ?>" title="Todas">Todas</a></li>
                         <li role="separator" class="divider"></li>
                         <?php foreach ($categorias as $categoria): ?>
                             <li><a href="<?php echo url("home/categorias/det/" . $categoria->cat_id) ?>"><?php echo $categoria->cat_nombre ?></a></li>
@@ -49,7 +49,7 @@ $categorias = DB::select("SELECT * FROM bdp_categoria, bdp_imagen WHERE bdp_imag
                     <li>
                         <a>
                             <form action="">
-                                <input type="search" name="nombre" placeholder="Buscar">
+                                <input type="search" name="nombre" placeholder="Buscar" title="Busqueda">
                             </form>
                         </a>
                     </li>

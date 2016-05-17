@@ -7,4 +7,16 @@
     font-family:franchise;
     src:url(Franchise-Bold.ttf);
 }
+@font-face{
+    font-family:abril;
+    src:url(AbrilFatface.ttf);
+}
+@font-face{
+    font-family:akura;
+    src:url(AkuraPopo.ttf);
+}
 
+@font-face{
+    font-family:antique;
+    src:url(AntiqueBookCover.otf);
+}

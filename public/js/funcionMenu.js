@@ -20,9 +20,3 @@ $(window).load(function () {
     $('#preloader').fadeOut('slow');
     $('body').css({'overflow': 'visible'});
 });
-
-$(document).ready(function () {
-    $('#texto').click(function () {
-        $(this).toggleClass('.resaltar');
-    });
-});
