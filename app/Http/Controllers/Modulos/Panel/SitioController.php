@@ -3,14 +3,11 @@
 namespace App\Http\Controllers\Modulos\Panel;
 
 use App\Http\Controllers\Controller;
-
 use Illuminate\Http\Request;
-
 use DB;
-
 use Illuminate\Support\Facades\Validator;
-
 use Illuminate\Support\Facades\Session;
+
 /**
  * Description of SitioController
  *
@@ -18,20 +15,21 @@ use Illuminate\Support\Facades\Session;
  */
 class SitioController extends Controller {
 
-  function getIndex(Request $request) {
-    return view("Modulos.Panel.subcategoria.subcategoria");
-  }
+    function getIndex(Request $request) {
+        return view("Modulos.Panel.subcategoria.subcategoria");
+    }
 
+    function getSitio(Request $request) {
+        return view("Modulos.Panel.sitio.sitio");
+    }
 
-  function getSitio(Request $request) {
-    return view("Modulos.Panel.sitio.sitio");
-  }
-  
-  function getCrear(Request $request) {
-    return view("Modulos.Panel.sitio.crear");
-  }
-  
-  function postCrear() {
+    function getCrear(Request $request) {
+        $categorias = DB::select("SELECT * FROM bdp_categoria");
+        $subcategorias = DB::select("SELECT * FROM bdp_subcategoria");
+        return view("Modulos.Panel.sitio.crear", compact("categorias"), compact("subcategorias"));
+    }
+
+    function postCrear() {
         $sitNombre = $_POST["nombre"];
         $sitCategoria = $_POST["categoria"];
         $sitSubCategoria = $_POST["subcategoria"];
@@ -88,22 +86,22 @@ class SitioController extends Controller {
 
         return redirect(url('admin/sitio/crear'));
     }
-  
-  function getEditar($id) {
-      $sitios = DB::select("SELECT * FROM bdp_sitio, bdp_imagen, bdp_categoria, bdp_subcategoria WHERE bdp_sitio.sit_id = ? "
-                            . "AND bdp_imagen.sit_id = bdp_sitio.sit_id AND bdp_sitio.cat_id=bdp_categoria.cat_id "
-              . "AND bdp_sitio.subcat_id=bdp_subcategoria.subcat_id", array($id));
-            $sitios = $sitios[0];
-            $categorias = DB::select("SELECT * FROM bdp_categoria");
-            $subcategorias = DB::select("SELECT * FROM bdp_subcategoria");
-    return view("Modulos.Panel.sitio.editar", compact("sitios"), compact("categorias"), compact("subcategorias"));
-  }
-  
-  function getReporte(Request $request) {
-    return view("Modulos.Panel.sitio.reporte");
-  }
-  
-  function postEditar() {
+
+    function getEditar($id) {
+        $sitios = DB::select("SELECT * FROM bdp_sitio, bdp_imagen, bdp_categoria, bdp_subcategoria WHERE bdp_sitio.sit_id = ? "
+                        . "AND bdp_imagen.sit_id = bdp_sitio.sit_id AND bdp_sitio.cat_id=bdp_categoria.cat_id "
+                        . "AND bdp_sitio.subcat_id=bdp_subcategoria.subcat_id", array($id));
+        $sitios = $sitios[0];
+        $categorias = DB::select("SELECT * FROM bdp_categoria");
+        $subcategorias = DB::select("SELECT * FROM bdp_subcategoria");
+        return view("Modulos.Panel.sitio.editar", compact('sitios', 'categorias', 'subcategorias'));
+    }
+
+    function getReporte(Request $request) {
+        return view("Modulos.Panel.sitio.reporte");
+    }
+
+    function postEditar() {
         $sitNombre = $_POST["nombre"];
         $sitCategoria = $_POST["categoria"];
         $sitSubcategoria = $_POST["subcategoria"];
@@ -111,12 +109,12 @@ class SitioController extends Controller {
         $sitTelefono = $_POST["telefono"];
         $sitDescripcion = $_POST["descripcion"];
         $sitId = $_POST["id"];
-        
+
         $sitioImg = $_FILES["imagen"]["name"];
         $sitioRuta = $_FILES["imagen"]["tmp_name"];
         $sitioDest = "img/" . $sitioImg;
         if ($sitioRuta !== "" && $sitioDest !== "") {
-          copy($sitioRuta, $sitioDest);  
+            copy($sitioRuta, $sitioDest);
         }
 
         $reglas = array(
@@ -148,45 +146,41 @@ class SitioController extends Controller {
         }
 
         DB::update("UPDATE bdp_sitio SET sit_nombre = ?, cat_id = ?, subcat_id = ?, sit_direccion = ?, "
-                . "sit_telefono = ?, sit_descripcion = ?, sit_updated_at = CURRENT_TIMESTAMP WHERE sit_id = ?", 
-                array($sitNombre, $sitCategoria, $sitSubcategoria, $sitDireccion,
+                . "sit_telefono = ?, sit_descripcion = ?, sit_updated_at = CURRENT_TIMESTAMP WHERE sit_id = ?", array($sitNombre, $sitCategoria, $sitSubcategoria, $sitDireccion,
             $sitTelefono, $sitDescripcion, $sitId));
-        
+
         if ($sitioRuta !== "" && $sitioDest !== "") {
             $img = DB::select("SELECT * FROM bdp_imagen WHERE sit_id = ?", array($sitId));
             $img = $img[0]->img_ruta;
             unlink($img);
-         DB::insert("UPDATE bdp_imagen SET img_ruta = ? WHERE sit_id = ?", array($sitioDest, $sitId)); 
+            DB::insert("UPDATE bdp_imagen SET img_ruta = ? WHERE sit_id = ?", array($sitioDest, $sitId));
         }
 
         Session::flash("editar", "Sitio editado exitosamente");
         return redirect(url("admin/sitio/listar"));
     }
-  
-  function getListar(Request $request) {
-      $sitios = DB::select("SELECT * FROM bdp_sitio, bdp_estado, bdp_categoria, bdp_subcategoria"
-              . " WHERE bdp_sitio.est_id=bdp_estado.est_id AND "
-              . "bdp_sitio.cat_id=bdp_categoria.cat_id AND "
-              . "bdp_sitio.subcat_id=bdp_subcategoria.subcat_id");
-    return view("Modulos.Panel.sitio.listar", compact("sitios"));
-  }
-  
-  function getInhabilitar($id) {
-            DB::update("UPDATE bdp_sitio SET est_id = 0, sit_deleted_at = CURRENT_TIMESTAMP WHERE sit_id = ?", 
-                    array($id));
 
-            Session::flash("inhabilitar", "Se ha inhabilitado el sitio exitosamente");
-            return redirect(url("admin/sitio/listar"));
-       
+    function getListar(Request $request) {
+        $sitios = DB::select("SELECT * FROM bdp_sitio, bdp_estado, bdp_categoria, bdp_subcategoria"
+                        . " WHERE bdp_sitio.est_id=bdp_estado.est_id AND "
+                        . "bdp_sitio.cat_id=bdp_categoria.cat_id AND "
+                        . "bdp_sitio.subcat_id=bdp_subcategoria.subcat_id");
+        return view("Modulos.Panel.sitio.listar", compact("sitios"));
     }
-    
-    function getHabilitar($id) {
-        
-            DB::update("UPDATE bdp_sitio SET est_id = 1, sit_deleted_at = NULL WHERE sit_id = ?", array($id));
 
-            Session::flash("habilitar", "Se ha habilitado el sitio exitosamente");
-            return redirect(url("admin/sitio/listar"));
-        
+    function getInhabilitar($id) {
+        DB::update("UPDATE bdp_sitio SET est_id = 0, sit_deleted_at = CURRENT_TIMESTAMP WHERE sit_id = ?", array($id));
+
+        Session::flash("inhabilitar", "Se ha inhabilitado el sitio exitosamente");
+        return redirect(url("admin/sitio/listar"));
+    }
+
+    function getHabilitar($id) {
+
+        DB::update("UPDATE bdp_sitio SET est_id = 1, sit_deleted_at = NULL WHERE sit_id = ?", array($id));
+
+        Session::flash("habilitar", "Se ha habilitado el sitio exitosamente");
+        return redirect(url("admin/sitio/listar"));
     }
 
 }

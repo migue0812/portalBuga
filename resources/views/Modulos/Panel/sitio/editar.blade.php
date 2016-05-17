@@ -16,7 +16,6 @@
           </a>
           <ul class="sub">
             <li><a  href="{{url('admin/categoria/crear')}}">Crear</a></li>
-            <li><a  href="{{url('admin/categoria/editar')}}">Editar</a></li>
             <li><a  href="{{url('admin/categoria/reporte')}}">Reporte</a></li>
             <li><a  href="{{url('admin/categoria/listar')}}">Listar</a></li> 
           </ul>
@@ -29,7 +28,6 @@
           </a>
           <ul class="sub">
             <li><a  href="{{url('admin/subcategoria/crear')}}">Crear</a></li>
-            <li><a  href="{{url('admin/subcategoria/editar')}}">Editar</a></li>
             <li><a  href="{{url('admin/subcategoria/reporte')}}">Reporte</a></li>
             <li><a  href="{{url('admin/subcategoria/listar')}}">Listar</a></li>
           </ul>
@@ -42,7 +40,6 @@
           </a>
           <ul class="sub">
             <li><a  href="{{url('admin/sitio/crear')}}">Crear</a></li>
-            <li class="active"><a  href="{{url('admin/sitio/editar')}}">Editar</a></li>
             <li><a  href="{{url('admin/sitio/reporte')}}">Reporte</a></li>
             <li><a  href="{{url('admin/sitio/listar')}}">Listar</a></li>
           </ul>
@@ -55,7 +52,6 @@
           </a>
           <ul class="sub">
             <li><a  href="{{url('admin/evento/crear')}}">Crear</a></li>
-            <li><a  href="{{url('admin/evento/editar')}}">Editar</a></li>
             <li><a  href="{{url('admin/evento/reporte')}}">Reporte</a></li>
             <li><a  href="{{url('admin/evento/listar')}}">Listar</a></li>
           </ul>
@@ -68,7 +64,6 @@
           </a>
           <ul class="sub">
             <li><a  href="{{url('admin/configurar/crear')}}">Crear</a></li>
-            <li><a  href="{{url('admin/configurar/editar')}}">Editar</a></li>
             <li><a  href="{{url('admin/configurar/reporte')}}">Reporte</a></li>
             <li><a  href="{{url('admin/configurar/listar')}}">Listar</a></li>
           </ul>
@@ -113,8 +108,9 @@
                         <label for="categoria">Categoría</label>
                         <select class="form-control"  name="categoria" required="">
                             <option name="0" value="{{$sitios->cat_id}}">{{$sitios->cat_nombre}}</option>
-                          <option name="0" value="1">Histórico</option>
-                          <option name="0" value="2">Religioso</option>
+                          @foreach ($categorias as $categoria)
+                                            <option value="{{$categoria->cat_id}}">{{$categoria->cat_nombre}}</option>
+                                        @endforeach
                         </select>                       
                       </div>
                     </div>
@@ -124,8 +120,9 @@
                         <label for="subcategoria">Subcategoría</label>
                         <select class="form-control"  name="subcategoria" required="">
                             <option name="0" value="{{$sitios->subcat_id}}">{{$sitios->subcat_nombre}}</option>
-                          <option name="0" value="1">Parques</option>
-                          <option name="0" value="1">Iglesias</option>
+                          @foreach ($subcategorias as $subcategoria)
+                                            <option value="{{$subcategoria->subcat_id}}">{{$subcategoria->subcat_nombre}}</option>
+                                        @endforeach
                         </select>                       
                       </div>
                     </div> 
