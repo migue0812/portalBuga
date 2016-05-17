@@ -104,11 +104,8 @@
 
                 <div class="col-md-6">
                   <div class="form-group">
-                    <label for="activo[cat_activo]">Activo</label>
-                    <select class="form-control"  name="cat_activo" required="">
-                      <option name="0" value="0">0</option>
-                      <option name="1" value="1">1</option>
-                    </select>
+                    <label for="activo[cat_activo]">Descripcion</label>
+                    <input>
                   </div>
                 </div> 
               </div>
