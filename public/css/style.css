@@ -89,7 +89,7 @@ hr {
 }
 
 .brand-name {
-
+    font-weight: 600;
     font-size: 4em;
     font-family: "riesling"
 }
@@ -121,10 +121,8 @@ hr {
 }
 
 .intro-text {
-    text-transform: uppercase;
-    font-size: 1.25em;
-    font-weight: 400;
-    letter-spacing: 1px;
+ 
+  
 }
 
 .img-border {
@@ -272,7 +270,7 @@ hr {
 }
 /*---Sitios---*/
 .imgarticleX{
-    width:100%;  
+    width:100%;
     position:relative;
     top: -20px;
     margin: 0 auto;
@@ -284,7 +282,7 @@ hr {
     text-align: center;
     font-size: 25px;
     text-shadow: 0px 4px #DFDEDE;
-    color: #4F4E4E; 
+    color: #4F4E4E;
 }
 
 #hrAlz {
@@ -547,6 +545,7 @@ footer {
 .line{
     margin-top: 20px;
     border-bottom: 1px solid #AAAAAA;
+    margin-bottom: 20px;
 }
 .what {
     padding-top: 20px; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
@@ -600,14 +599,14 @@ b.icon-direction{
     -moz-box-shadow: 1px 2px 5px -1px rgba(0,0,0,0.75);
     box-shadow: 1px 2px 5px -1px rgba(0,0,0,0.75);
 }
-.btn-primary:hover{ 
+.btn-primary:hover{
     background-color: #5bc0de;
     border-color: #5bc0de;
 }
 
 
 ul#lineShort li a{
-  /*  position: relative;*/
+    /*  position: relative;*/
 
 
 }
@@ -627,7 +626,7 @@ ul#lineShort li a:after{
     content: "";
     opacity: 0;
     transition: opacity 0.3s ease 0s, transform 0.3s ease 0s;
-    transform: translateY(20px);        
+    transform: translateY(20px);
 }
 ul#lineShort li a:hover:after{
     opacity:1;
@@ -742,4 +741,44 @@ input[type="search"]:focus{
 /* Desarrollo*/
 .desarrollo{
     margin-top:40px;
+}
+/* iconos eventos detalle*/
+
+.grande{
+    height: 20px;}
+/*Rating*/
+.stars{
+    margin-bottom: 100px;
+}
+.ec-stars-wrapper {
+    /* Espacio entre los inline-block (los hijos, los `a`)
+       http://ksesocss.blogspot.com/2012/03/display-inline-block-y-sus-empeno-en.html */
+    font-size: 0;
+    /* Podríamos quitarlo,
+            pero de esta manera (siempre que no le demos padding),
+            sólo aplicará la regla .ec-stars-wrapper:hover a cuando
+            también se esté haciendo hover a alguna estrella */
+    display: inline-block;
+}
+.ec-stars-wrapper a {
+    text-decoration: none;
+    display: inline-block;
+    /* Volver a dar tamaño al texto */
+    font-size: 32px;
+    font-size: 2rem;
+
+    color: #888;
+}
+
+.ec-stars-wrapper:hover a {
+    color: rgb(39, 130, 228);
+}
+/*
+ * El selector de hijo, es necesario para aumentar la especifidad
+ */
+.ec-stars-wrapper > a:hover ~ a {
+    color: #888;
+}
+textarea {
+	resize: none;
 }

@@ -8,20 +8,10 @@
     
 }
 
-@media (min-width: 768px) and (max-width: 979px) {
+@media (max-width: 979px) {
 
     /*-----*/
-    .custom-bar-chart {
-        margin-bottom: 40px;
-    }
-
-    /*chat room*/
-
-
-}
-
-@media (max-width: 768px) {
-
+  
     .header {
         position: absolute;
     }

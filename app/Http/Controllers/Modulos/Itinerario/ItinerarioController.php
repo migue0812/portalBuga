@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\Session;
 class ItinerarioController extends Controller {
 
     function getIndex() {
-        // if (Session::has("usuarioLogueado")){
+        if (Session::has("usuarioLogueado")){
         $idUsuario = Session::get("usuarioId");
         
         $sitios = DB::select("SELECT * FROM bdp_sitio, bdp_itinerario WHERE "
@@ -18,11 +18,11 @@ class ItinerarioController extends Controller {
                 . "AND bdp_itinerario.usu_id=$idUsuario");
     	return view('Modulos.Itinerario.sitios', compact("sitios"));
     } 
-//    else {
-//            return redirect(url("home/index"));
-//        }
-//        return view('Modulos.Itinerario.sitios');
-    //}
+    else {
+           return redirect(url("home/index"));
+        }
+        return view('Modulos.Itinerario.sitios');
+    }
 
     function getEvento() {
         return view('Modulos.Itinerario.eventos');

@@ -10,9 +10,10 @@ Route::controllers([
     'home/sitios' => "Modulos\Home\SitiosController",
     'home/categorias' => "Modulos\Home\CategoriasController",
     'home/subCat' => "Modulos\Home\subCatController",
+    'home/contacto' => "Modulos\Home\ContactoController",
     'itinerario' => "Modulos\Itinerario\ItinerarioController",
     'home/busqueda' => "Modulos\Home\BusquedaController",
-    'usuario/cuenta' => "Modulos\Usuario\CuentaController"
+    'usuario/cuenta' => "Modulos\Usuario\CuentaController",
 ]);
 
 

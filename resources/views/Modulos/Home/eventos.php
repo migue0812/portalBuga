@@ -15,30 +15,17 @@
 
                 <!-- Slides -->
                 <div class="carousel-inner">
+                    <?php foreach($eventos2 as $evento2): ?>
                     <div class="item active">
                         <!-- Imagen 1 -->
-                        <div class="fill img-responsive" style="background-image:url('../..//..//..//public/img/1.jpg');"></div>
+                        <div class="fill img-responsive" style="background-image:url(<?php  echo asset("$evento2->img_ruta") ?>);"></div>
                         <div class="carousel-caption">
-                            <h2>Caption 1</h2>
+                            <h2><?php echo("$evento2->eve_nombre") ?></h2>
                             <span>Descripcion</span>
                         </div>
                     </div>
-                    <div class="item">
-                        <!-- Imagen 2 -->
-                        <div class="fill" style="background-image:url('../..//..//..//public/img/2.jpg');"></div>
-                        <div class="carousel-caption">
-                            <h2>Caption 2</h2>
-                            <span>Descripcion</span>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <!-- Imagen 3 -->
-                        <div class="fill" style="background-image:url('../..//..//..//public/img/3.jpg');"></div>
-                        <div class="carousel-caption">
-                            <h2>Caption 3</h2>
-                            <span>Descripcion</span>
-                        </div>
-                    </div>
+                    <?php endforeach; ?>
+                   
                 </div>
 
                 <!-- Controles -->
@@ -52,7 +39,7 @@
         </div>
     </div>
 </div>
-
+<?php foreach($eventos as $evento):?>
 <div class="container">
     <div class="row">
         <div class="box">
@@ -64,21 +51,21 @@
                 </div>
             </div>
             <hr>
+            
             <div class="container portImg">
                 <div class="row ">
                     <div class="col-md-6 portfolio-item">
-                        <a href="<?php echo url("home/eventos/det") ?>">
-                            <img style="float: right; border-radius: 20px;"  class="img-responsive" src="<?php echo asset("img/ferias.jpg") ?>" alt="">
+                        <a href="<?php echo url("home/eventos/det/. $evento->eve_id") ?>">
+                            <img style="float: right; border-radius: 20px;"  class="img-responsive" src="<?php echo asset("$evento->img_ruta") ?>" alt="">
                         </a>
 
                     </div>
                     <div class="col-md-5 portfolio-item">
-                        <h2 style="text-align: center">Ferias De Buga</h2>
+                        <h2 style="text-align: center"><?php echo ($evento->eve_nombre) ?></h2>
                         <hr class="hrWhat">
-                        <p class="text-justify">Los eventos inician el jueves 9 de julio con un gran concierto espiritual con el artista ganador del premio Grammy Alex Campos, reconocido en el mundo de la música cristiana.. Los eventos inician el jueves 9 de julio con un gran concierto espiritual con el artista ganador del premio Grammy Alex Campos, reconocido en e Los eventos inician el jueves 9 de julio con un gran concierto espiritual con el artista ganador del premio Grammy Ale
-                            Los eventos inician el jueves 9 de julio con un gran concierto espiritual con el artista ganador del premio Grammy Al </p>
-                                              <a href="<?php echo url("home/eventos/det") ?>" class="btn btn-primary"><b title="Ver mas"class="icon-plus fa-fw"></b></a>
-               <a href="<?php echo url("itinerario/evento") ?>" class="btn btn-primary"><b title="Itinerario" class="icon-direction fa-fw"></b></a>
+                        <p class="text-justify"><?php echo ((strlen($evento->eve_descripcion) > 100) ? substr(($evento->eve_descripcion), 0, 100) . " ..." : ($evento->eve_descripcion)) ?></p>
+                                              <a href="<?php echo url("home/eventos/det/" . $evento->eve_id) ?>" class="btn btn-primary"><b title="Ver mas"class="icon-plus fa-fw"></b></a>
+               <a href="<?php echo url("itinerario/evento/". $evento->eve_id) ?>" class="btn btn-primary"><b title="Itinerario" class="icon-direction fa-fw"></b></a>
                         
                     </div>
                 </div>
@@ -86,33 +73,7 @@
         </div>
     </div>
 </div>
-
-<div class="container">
-    <div class="row">
-        <div class="box">
-            <!-- Final Slides -->
-
-
-            <div class="container portImg">
-                <div class="row ">
-                    <div class="col-md-5 portfolio-item">
-                        <h2 style="text-align: center">Buga Innova</h2>
-                        <hr class="hrWhat">
-                        <p class="text-justify">Los eventos inician el jueves 9 de julio con un gran concierto espiritual con el artista ganador del premio Grammy Alex Campos, reconocido en el mundo de la música cristiana.. Los eventos inician el jueves 9 de julio con un gran concierto espiritual con el artista ganador del premio Grammy Alex Campos, reconocido en e Los eventos inician el jueves 9 de julio con un gran concierto espiritual con el artista ganador del premio Grammy Ale
-                            Los eventos inician el jueves 9 de julio con un gran concierto espiritual con el artista ganador del premio Grammy Al </p>
-                        <a href="<?php echo url("home/eventos/det") ?>" class="btn btn-primary"><b title="Ver mas"class="icon-plus fa-fw"></b></a>
-               <a href="<?php echo url("itinerario/evento") ?>" class="btn btn-primary"><b title="Itinerario" class="icon-direction fa-fw"></b></a>
-                    </div>
-                    <div class="col-md-6 portfolio-item">
-                        <a href="se devuleve al index">
-                            <img style="float: right; border-radius: 20px; " class="img-responsive" src="<?php echo asset("img/lol.jpg") ?>" alt="">
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+<?php endforeach ?>
 
 <div class="container">
     <div class="row">
@@ -126,37 +87,23 @@
                 <hr class="tagline-divider-cont">
             </div>
             <div class="portafolio">
+                <?php foreach ($eventos2 as $evento2):?>
                 <div class="col-sm-4 portfolio-item">
-                    <img class="img-responsive" src="<?php echo asset("img/ferias.jpg") ?>" alt="">
+                    <img class="img-responsive" src="<?php echo asset($evento2->img_ruta) ?>" alt="">
                     <h3 style="color:blue;">
-                        Ferias De Buga
+                        <?php echo ($evento2->eve_nombre) ?>
                     </h3>
-                    <p>Los eventos inician el jueves 9 de julio con un gran concierto espiritual con el artista ganador del premio Grammy Alex Campos, reconocido en el mundo de la música cristiana..... </p>
-                    <a href="<?php echo asset("home/eventos/det") ?>">
+                    <p><?php echo ((strlen($evento->eve_descripcion) > 30) ? substr(($evento->eve_descripcion), 0, 30) . " ..." : ($evento->eve_descripcion)) ?></p>
+                    <a href="<?php echo asset("home/eventos/det/".$evento->eve_id ) ?>">
                         <button type="button" class="btn btn-primary">Ver Mas</button>
-                         
+                         <a href="<?php echo url("itinerario/evento/". $evento->eve_id) ?>" class="btn btn-primary"><b title="Itinerario" class="icon-direction fa-fw"></b></a>
                     </a>
                 </div>
-                <div class="col-sm-4 portfolio-item">
-                    <img class="img-responsive" src="<?php echo asset("img/ferias.jpg") ?>" alt="">
-                    <h3 style="color:blue;">
-                        Ferias De Buga
-                    </h3>
-                    <p>Los eventos inician el jueves 9 de julio con un gran concierto espiritual con el artista ganador del premio Grammy Alex Campos, reconocido en el mundo de la música cristiana..... </p>
-                    <a href="<?php echo asset("home/eventos/det") ?>">
-                        <button type="button" class="btn btn-primary">Ver Mas</button>
-                    </a>
-                </div>
-                <div class="col-sm-4 portfolio-item">
-                    <img class="img-responsive" src="<?php echo asset("img/ferias.jpg") ?>" alt="">
-                    <h3 style="color:blue;">
-                        Ferias De Buga
-                    </h3>
-                    <p>Los eventos inician el jueves 9 de julio con un gran concierto espiritual con el artista ganador del premio Grammy Alex Campos, reconocido en el mundo de la música cristiana..... </p>
-                    <a href="<?php echo asset("home/eventos/det") ?>">
-                        <button type="button" class="btn btn-primary">Ver Mas</button>
-                    </a>
-                </div>
+                <?php endforeach; ?>
+            </div>
+        </div>
+    </div>
+</div>
   
 
 <script>
@@ -165,5 +112,11 @@
     });
 </script>
 
-<?php include ("/../../Templates/Frontend/footer.php") ?>
-<?php include ("/../../Templates/Frontend/foot.php") ?>
+<div class="container">
+   <div class="row">
+        <div class="box">
+            <?php include ("/../../Templates/Frontend/footer.php") ?>
+            <?php include ("/../../Templates/Frontend/foot.php") ?>
+        </div>
+   </div>
+</div>

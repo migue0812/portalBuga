@@ -13,7 +13,7 @@
             <div class="col-xs-5 col-sm-3 col-lg-3 contactanos">
                 <h3 class="div-h3" >Contacto</h3>
                 <div class="social-footer">
-                    <li class="social-contactanos"><a title="Contact Visit Greenland" href="">Acerca De..</a></li>
+                    <li class="social-contactanos"><a title="Contact Visit Greenland" href="<?php echo url("home/contacto") ?>">Contactanos</a></li>
                     <li class="social-contactanos"><a title="Contact Visit Greenland" href="">Informacion</a></li>
                 </div>
             </div>
