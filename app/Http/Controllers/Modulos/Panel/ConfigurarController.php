@@ -23,10 +23,10 @@ class ConfigurarController extends Controller {
     return view("Modulos.Panel.categoria.configurar");
   }
   
-  function getCrear(Request $request) {
-      $dato_usuario = DB::select("SELECT * FROM bdp_dato_usuario");
-    return view("Modulos.Panel.configurar.crear");
-  }
+//  function getCrear(Request $request) {
+//      $dato_usuario = DB::select("SELECT * FROM bdp_dato_usuario");
+//    return view("Modulos.Panel.configurar.crear");
+//  }
   
   function postCrear(Request $request) {
        $dus_nombre = $_POST['dus_nombre'];
@@ -50,9 +50,9 @@ class ConfigurarController extends Controller {
       
   }
           
-  function getEditar(Request $request) {
-    return view("Modulos.Panel.configurar.editar");
-  }
+//  function getEditar(Request $request) {
+//    return view("Modulos.Panel.configurar.editar");
+//  }
   
   function getReporte(Request $request) {
     return view("Modulos.Panel.configurar.reporte");

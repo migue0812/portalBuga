@@ -1,7 +1,22 @@
-@include('Templates.Backend.headPanel')
 
+<script>
+    $(document).ready(function () {
+        console.log("document loaded");
+        $('.usuario').addClass('active');
+
+    });
+
+    $(window).load(function () {
+        console.log("window loaded");
+        $('.usuario').addClass('active');
+    });
+
+</script>
+@include('Templates.Backend.headPanel')
+@include('Templates.Backend.asidePanel')
 
         <!-- MENU INICIO-->
+<!--        <div>
         <li class="mt">
           <a href="{{url('admin/bienvenido')}}">
             <i class="fa fa-dashboard"></i>
@@ -16,6 +31,7 @@
           </a>
           <ul class="sub">
             <li><a href="{{url('admin/categoria/crear')}}">Crear</a></li>
+            <li><a href="{{url('admin/categoria/editar')}}">Editar</a></li>
             <li><a href="{{url('admin/categoria/reporte')}}">Reporte</a></li>
             <li><a href="{{url('admin/categoria/listar')}}">Listar</a></li>
           </ul>
@@ -28,6 +44,7 @@
           </a>
           <ul class="sub">
             <li><a  href="{{url('admin/subcategoria/crear')}}">Crear</a></li>
+            <li><a  href="{{url('admin/subcategoria/editar')}}">Editar</a></li>
             <li><a  href="{{url('admin/subcategoria/reporte')}}">Reporte</a></li>
             <li class="active"><a  href="{{url('admin/subcategoria/listar')}}">Listar</a></li>
           </ul>
@@ -40,6 +57,7 @@
           </a>
           <ul class="sub">
             <li><a  href="{{url('admin/sitio/crear')}}">Crear</a></li>
+            <li><a  href="{{url('admin/sitio/editar')}}">Editar</a></li>
             <li><a  href="{{url('admin/sitio/reporte')}}">Reporte</a></li>
             <li><a  href="{{url('admin/sitio/listar')}}">Listar</a></li>
           </ul>
@@ -52,6 +70,7 @@
           </a>
           <ul class="sub">
             <li><a  href="{{url('admin/evento/crear')}}">Crear</a></li>
+            <li><a  href="{{url('admin/evento/editar')}}">Editar</a></li>
             <li><a  href="{{url('admin/evento/reporte')}}">Reporte</a></li>
             <li><a  href="{{url('admin/evento/listar')}}">Listar</a></li>
           </ul>
@@ -64,14 +83,15 @@
           </a>
           <ul class="sub">
             <li><a  href="{{url('admin/configurar/crear')}}">Crear</a></li>
+            <li><a  href="{{url('admin/configurar/editar')}}">Editar</a></li>
             <li><a  href="{{url('admin/configurar/reporte')}}">Reporte</a></li>
             <li><a  href="{{url('admin/configurar/listar')}}">Listar</a></li>
           </ul>
         </li>
       </ul>
-      <!-- BARRA LATERAL MENU FIN-->
-    </div>
-  </aside>
+       BARRA LATERAL MENU FIN
+    </div>-->
+ 
   <!--BARRA LATERAL FIN-->
 
   <!-- **********************************************************************************************************************************************************
@@ -92,13 +112,28 @@
                   <thead>
                     <tr>
                       <th><i class="fa fa-bullhorn"></i> Nombre</th>
-                      <th><i class="fa fa-bullhorn"></i> Categoria</th>
+                      <th style="width: 400px"><i class="fa fa-bullhorn"></i> Descripcion </th>
                       <th><i class=" fa fa-edit"></i> Activo</th>
                       <th></th>
                     </tr>
                   </thead>
                   <tbody>
+                      <?php foreach ($subcategorias as $subcategoria) {?>
                     <tr>
+                      <td><a href="basic_table.html#"><?php echo $subcategoria->subcat_nombre ?></a></td>
+
+                      <td><a href="basic_table.html#"><?php echo ((strlen($subcategoria->subcat_descripcion) > 50) ? substr(($subcategoria->subcat_descripcion), 0, 100) . " ..." : ($subcategoria->subcat_descripcion)) ?></a></td>
+                      
+                      <td><?php $act= $subcategoria->est_id;if ($act== '1'):?><span class="label label-info label-mini">Si</span><?php else:?><span class="label label-warning label-mini">No</span><?php endif ?></td>
+                      <td>
+                        <a href="<?php echo url("admin/subcategoria/detalle/" . $subcategoria->subcat_id); ?>" class="btn btn-success btn-xs"><i class="fa fa-check"></i></a>
+                        <a href="<?php echo url("admin/subcategoria/editar/" . $subcategoria->subcat_id); ?>" class="btn btn-primary btn-xs"><i class="fa fa-pencil"></i></a>
+                        <a href="<?php echo url("admin/subcategoria/desactivar/" . $subcategoria->subcat_id); ?>" class="btn btn-danger btn-xs"><i class="fa fa-trash-o "></i></a>
+                      </td>
+                    </tr>
+                    
+                    
+<!--                    <tr>
                       <td>
                         <a href="basic_table.html#">Company Ltd</a>
                       </td>
@@ -155,7 +190,8 @@
                         <button class="btn btn-primary btn-xs"><i class="fa fa-pencil"></i></button>
                         <button class="btn btn-danger btn-xs"><i class="fa fa-trash-o "></i></button>
                       </td>
-                    </tr>
+                    </tr>-->
+                     <?php } ?>
                   </tbody>
                 </table>
               </div><!-- /content-panel -->
@@ -182,7 +218,19 @@
 </footer>
 <!--PIE DE PAGINA FIN-->
 
+<script>
+    $(document).ready(function () {
+        console.log("document loaded");
+        $('.usuario').addClass('active');
 
+    });
+
+    $(window).load(function () {
+        console.log("window loaded");
+        $('.usuario').addClass('active');
+    });
+
+</script>
 @include('Templates.Backend.footPanel')
 
 
