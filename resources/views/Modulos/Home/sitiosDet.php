@@ -50,7 +50,6 @@
             </div>
 
 <!-- efecto imgs -->
-
             <h2 style="text-align: center;">Imagenes Del Sitio</h2>
             <hr class="tagline-divider-cont">
 <div class="col-md-4 col-sm-6 evento-item">
@@ -84,8 +83,6 @@
                 <img src="<?php echo asset("$sitDetalle->img_ruta") ?>" class="img-responsive" alt="">
             </a>            
         </div>
-            
-      
 
 <!-- efecto IMG GRANDE(modal1) -->
 <div class="portfolio-modal modal fade" id="eventoModal1" tabindex="-1" role="dialog" aria-hidden="true">
