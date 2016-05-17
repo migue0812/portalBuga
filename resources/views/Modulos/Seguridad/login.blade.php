@@ -52,6 +52,10 @@
                 </div>
             </div> 
             <div  class="panel-body pad" >
+                @if (Session::has("registroSuccess"))
+                <div class="alert alert-success center-block" role="alert">{{Session::get("registroSuccess")}}</div>
+                {{Session::forget("registroSuccess")}}
+                @endif 
                 @if (Session::has("usuarioInvalido"))
                 <div class="alert alert-danger center-block" role="alert">{{Session::get("usuarioInvalido")}}</div>
                 @endif 
@@ -109,12 +113,21 @@
     <div id="loginbox" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">                    
         <div class="panel panel-info">
             <div class="panel-heading">
-                <div class="panel-title">Registrace</div>
+                <div class="panel-title">Registrese</div>
                 <div class="signinlink" style=""><a href="#" class="cr" onclick="$('#loginbox').hide();
                 $('#signupbox').show()">Iniciar sesion</a></div>
             </div>  
             <div class="panel-body" >
-                <form id="signupform" class="form-horizontal" role="form">
+                @if ($errors->any())
+            <div class="alert alert-danger alert-dismissible center-block" role="alert">
+              <ul>
+                @foreach ($errors->all() as $error)  
+                <li>{{$error}}</li>
+                @endforeach
+              </ul>
+            </div>
+            @endif
+                <form id="signupform" class="form-horizontal" role="form" method="post" action="{{url('registro/registro')}}">
                     <input type="hidden" name="_token" value="<?php echo csrf_token(); ?>">
 
                     <div class="panel-title text-center title">Datos Usuario</div>
@@ -138,7 +151,7 @@
 
                     <div class="input-group ingre">
                         <span class="input-group-addon"><i class="fa fa-chain-broken"></i></span>
-                        <input type="text" class="form-control" name="password" id="password" placeholder="Confirmar Contraseña">                                        
+                        <input type="text" class="form-control" name="password_confirmation" id="password_confirmation" placeholder="Confirmar Contraseña">                                        
                     </div>
 
                     <hr>
@@ -151,6 +164,11 @@
                         <label for="nombre" class="col-md-12 ">Nombre</label>
                         <div class="col-md-12">
                             <input type="text" class="form-control" name="nombre" id="nombre" placeholder="Ingrese Nombre">
+                            <input type="hidden" class="form-control" value="2" name="rol">
+                            <input type="hidden" class="form-control" value="1" name="est_id">
+                            <input type="hidden" class="form-control" value="" name="twitter">
+                            <input type="hidden" class="form-control" value="" name="google">
+                            <input type="hidden" class="form-control" value="" name="facebook">
                         </div>
                     </div>
 
@@ -171,9 +189,9 @@
                     <div class="form-group">
                         <label for="genero" class="col-md-12">Genero</label>
                         <div class="col-md-12">
-                            <select class="form-control" name="" id="">
-                                <option value="">hombre</option>
-                                <option value="">mujer</option>
+                            <select class="form-control" name="genero" id="">
+                                <option value="M">hombre</option>
+                                <option value="F">mujer</option>
                             </select>
                         </div>
                     </div>
@@ -181,7 +199,7 @@
 
                     <div class="form-group">                                    
                         <div class="col-md-12">
-                            <button type="button" class="btn btn-success center-block"><i class="fa fa-sign-in"></i> &nbsp Ingresar</button>
+                            <button type="submit" class="btn btn-success center-block"><i class="fa fa-sign-in"></i> &nbsp Ingresar</button>
                         </div>
                     </div>
 

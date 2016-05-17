@@ -109,93 +109,106 @@
 
   <div id="loginbox" class="regbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">                    
     <div class="panel panel-info">
-      <div class="panel-heading">
-        <div class="panel-title">Registrese</div>
-        <div class="signinlink" style="">
-          <a href="#" class="cr" onclick="$('#loginbox').hide(); $('#signupbox').show()">Iniciar sesion</a>
+            <div class="panel-heading">
+                <div class="panel-title">Registrese</div>
+                <div class="signinlink" style=""><a href="#" class="cr" onclick="$('#loginbox').hide();
+                $('#signupbox').show()">Iniciar sesion</a></div>
+            </div>  
+            <div class="panel-body" >
+                @if ($errors->any())
+            <div class="alert alert-danger alert-dismissible center-block" role="alert">
+              <ul>
+                @foreach ($errors->all() as $error)  
+                <li>{{$error}}</li>
+                @endforeach
+              </ul>
+            </div>
+            @endif
+                <form id="signupform" class="form-horizontal" role="form" method="post" action="{{url('registro/registro')}}">
+                    <input type="hidden" name="_token" value="<?php echo csrf_token(); ?>">
+
+                    <div class="panel-title text-center title">Datos Usuario</div>
+
+                    <hr>
+
+                    <div class="input-group ingre">
+                        <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                        <input type="text" class="form-control" name="usuario" id="usuario" placeholder="Ingrese Nombre Usuario">                                        
+                    </div>
+
+                    <div class="input-group ingre">
+                        <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
+                        <input type="text" class="form-control" name="email" id="email" placeholder="Example@buga.com">                                        
+                    </div>
+
+                    <div class="input-group ingre">
+                        <span class="input-group-addon"><i class="fa fa-key"></i></span>
+                        <input type="text" class="form-control " name="password" id="password" placeholder="Ingrese Contraseña">                                        
+                    </div>
+
+                    <div class="input-group ingre">
+                        <span class="input-group-addon"><i class="fa fa-chain-broken"></i></span>
+                        <input type="text" class="form-control" name="password_confirmation" id="password_confirmation" placeholder="Confirmar Contraseña">                                        
+                    </div>
+
+                    <hr>
+                    <div class="panel-title text-center title">Datos Personales</div>
+
+                    <hr>
+
+
+                    <div class="form-group">
+                        <label for="nombre" class="col-md-12 ">Nombre</label>
+                        <div class="col-md-12">
+                            <input type="text" class="form-control" name="nombre" id="nombre" placeholder="Ingrese Nombre">
+                            <input type="hidden" class="form-control" value="2" name="rol">
+                            <input type="hidden" class="form-control" value="1" name="est_id">
+                            <input type="hidden" class="form-control" value="" name="twitter">
+                            <input type="hidden" class="form-control" value="" name="google">
+                            <input type="hidden" class="form-control" value="" name="facebook">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="apellidos" class="col-md-12">Apellidos</label>
+                        <div class="col-md-12">
+                            <input type="text" class="form-control" name="apellidos" id="apellidos" placeholder="Ingrese Apellidos">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="fecha_nacimiento" class="col-md-12">Fecha De Nacimiento</label>
+                        <div class="col-md-12">
+                            <input type="date" class="form-control" name="fecha_nacimiento" id="fecha_nacimiento" placeholder="Fecha Nacimiento" />
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="genero" class="col-md-12">Genero</label>
+                        <div class="col-md-12">
+                            <select class="form-control" name="genero" id="">
+                                <option value="M">hombre</option>
+                                <option value="F">mujer</option>
+                            </select>
+                        </div>
+                    </div>
+
+
+                    <div class="form-group">                                    
+                        <div class="col-md-12">
+                            <button type="submit" class="btn btn-success center-block"><i class="fa fa-sign-in"></i> &nbsp Ingresar</button>
+                        </div>
+                    </div>
+
+                    <hr>
+
+                    <div class="col-sm-12">
+                        <a id="btn-volver" href="{{url('home/index')}}" class="btn btn-info"><i class="fa fa-mail-reply"> Volver Inicio</i></a>
+                    </div>
+
+                </form>
+            </div>
         </div>
-      </div>  
-      <div class="panel-body" >
-        <form id="signupform" class="form-horizontal" role="form">
-          <input type="hidden" name="_token" value="<?php echo csrf_token(); ?>">
-
-          <div class="panel-title text-center title">Datos Usuario</div>
-
-          <hr>
-
-          <div class="input-group ingre">
-            <span class="input-group-addon"><i class="fa fa-user"></i></span>
-            <input type="text" class="form-control" name="usuario" id="usuario" placeholder="Ingrese Nombre Usuario">                                        
-          </div>
-
-          <div class="input-group ingre">
-            <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
-            <input type="text" class="form-control" name="email" id="email" placeholder="Example@buga.com">                                        
-          </div>
-
-          <div class="input-group ingre">
-            <span class="input-group-addon"><i class="fa fa-key"></i></span>
-            <input type="text" class="form-control " name="password" id="password" placeholder="Ingrese Contraseña">                                        
-          </div>
-
-          <div class="input-group ingre">
-            <span class="input-group-addon"><i class="fa fa-chain-broken"></i></span>
-            <input type="text" class="form-control" name="password" id="password" placeholder="Confirmar Contraseña">                                        
-          </div>
-
-          <hr>
-          <div class="panel-title text-center title">Datos Personales</div>
-
-          <hr>
-
-
-          <div class="form-group">
-            <label for="nombre" class="col-md-12 ">Nombre</label>
-            <div class="col-md-12">
-              <input type="text" class="form-control" name="nombre" id="nombre" placeholder="Ingrese Nombre">
-            </div>
-          </div>
-
-          <div class="form-group">
-            <label for="apellidos" class="col-md-12">Apellidos</label>
-            <div class="col-md-12">
-              <input type="text" class="form-control" name="apellidos" id="apellidos" placeholder="Ingrese Apellidos">
-            </div>
-          </div>
-
-          <div class="form-group">
-            <label for="fecha_nacimiento" class="col-md-12">Fecha De Nacimiento</label>
-            <div class="col-md-12">
-              <input type="date" class="form-control" name="fecha_nacimiento" id="fecha_nacimiento" placeholder="Fecha Nacimiento" />
-            </div>
-          </div>
-
-          <div class="form-group">
-            <label for="genero" class="col-md-12">Genero</label>
-            <div class="col-md-12">
-              <select class="form-control" name="" id="">
-                <option value="">hombre</option>
-                <option value="">mujer</option>
-              </select>
-            </div>
-          </div>
-
-
-          <div class="form-group">                                    
-            <div class="col-md-12">
-              <button type="button" class="btn btn-success center-block"><i class="fa fa-sign-in"></i> &nbsp Ingresar</button>
-            </div>
-          </div>
-
-          <hr>
-
-          <div class="col-sm-12">
-            <a id="btn-volver" href="{{url('home/index')}}" class="btn btn-info"><i class="fa fa-mail-reply"> Volver Inicio</i></a>
-          </div>
-
-        </form>
-      </div>
-    </div>
   </div>
 </div>
 
