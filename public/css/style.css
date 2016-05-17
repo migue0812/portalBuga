@@ -27,9 +27,9 @@ h1,
 h2,
 h5,
 h6 {
-    font-size: 3em;
-    font-weight: 600;
-    font-family: 'Franchise';
+    font-size: 2.5em;
+    font-weight: 400;
+    font-family: 'abril';
     margin: 0;
     color: #313131;
     text-transform: uppercase;
@@ -607,7 +607,7 @@ b.icon-direction{
 
 
 ul#lineShort li a{
-    position: relative;
+  /*  position: relative;*/
 
 
 }
@@ -641,7 +641,7 @@ ul#lineShort li a:hover:after{
 
 }
 .navPerCat{
-    margin-left: 10px;
+    margin-left: 0px;
     padding-top: 18px;
     padding-right: 10px;
     padding-left: 0px;
@@ -739,7 +739,7 @@ input[type="search"]:focus{
     padding-left: 32px; /*espacio entre el icono lupa y el placeholder*/
     color: #000;
     background-color: #FFF;}
+/* Desarrollo*/
 .desarrollo{
     margin-top:40px;
-
 }
