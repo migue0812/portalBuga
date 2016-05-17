@@ -43,7 +43,7 @@
         </div>
 
         <!--logo inico-->
-        <a href="index.html" class="logo"><b>Panel Control</b></a>
+        <a href="" class="logo"><b>Panel Control</b></a>
         <!--logo fin-->
 
         <div class="nav notify-row" id="top_menu">
@@ -80,6 +80,12 @@
           <!-- BARRA LATERAL MENU INICIO-->
           <ul class="sidebar-menu" id="nav-accordion">
             <!-- IMAGEN USUARIO INICIO-->
-            <p class="centered"><a href="profile.html"><img src="{{asset('img/a05.png')}}" class="img-circle" width="60"></a></p>
+            <p class="centered"><a href="">
+                    @if ((Session::get("usuarioGenero") === 'M'))
+                    <img src="{{asset('img/Male.png')}}" class="img-circle" width="60">
+                    @else
+                    <img src="{{asset('img/Female.png')}}" class="img-circle" width="60">
+                    @endif
+                </a></p>
             <h5 class="centered">TPS BUGA</h5>
             <!-- IMAGEN USUARIO FIN-->
