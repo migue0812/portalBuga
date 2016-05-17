@@ -27,6 +27,26 @@ class CategoriaController extends Controller {
     return view("Modulos.Panel.categoria.crear");
   }
   
+  function postCrear(Request $request){
+      $cat_nombre = $_POST['cat_nombre'];
+      $cat_descripcion = $_POST['cat_descripcion'];
+      
+      $categoriaImg = $_FILES["imagen"]["name"];
+        $categoriaRuta = $_FILES["imagen"]["tmp_name"];
+        $categoriaDest = "img/" . $categoriaImg;
+        copy($categoriaRuta, $categoriaDest);
+      
+      DB::insert("INSERT INTO bdp_categoria (cat_nombre, cat_descripcion) "
+              . "VALUES(?,?)", 
+              array($cat_nombre, $cat_descripcion));
+      
+      $id = DB::select('SELECT IFNULL(MAX(cat_id),0) AS id FROM bdp_categoria ORDER BY id DESC LIMIT 1');
+      $id = $id[0]->id;
+      
+      DB::insert("INSERT INTO bdp_imagen (cat_id, img_ruta) VALUES (?,?)", array($id, $categoriaDest));
+      
+  }
+  
   function getEditar(Request $request) {
     return view("Modulos.Panel.categoria.editar");
   }
