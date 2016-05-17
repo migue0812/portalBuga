@@ -85,6 +85,16 @@
         <div class="col-lg-12">
           <div class="form-panel">
             <h4 class="mb"><i class="fa fa-angle-right"></i> Crear Categoria</h4>
+            @if ($errors->any())
+                    <div class="alert alert-danger alert-dismissible center-block" role="alert">
+                        <ul>
+                            @foreach ($errors->all() as $error)  
+                            <li>{{$error}}</li>
+                            @endforeach
+                        </ul>
+                    </div>
+                    @endif
+                    
             <form class="style-form" method="post" action="{{url('admin/categoria/crear')}}" enctype="multipart/form-data">
 
               <input type="hidden" name="_token" value="<?php echo csrf_token(); ?>">
@@ -93,15 +103,15 @@
                 <div class="col-md-6">
                   <div class="form-group">
                     <label for="categoria[cat_nombre]">Nombre</label>
-                    <input type="text" class="form-control" id="cat_nombre" name="cat_nombre" placeholder="Nombre categoria" required="" style="margin: 0px 2px 0px 0px; width: 571px;">
+                    <input type="text" class="form-control" id="cat_nombre" required="" name="cat_nombre" placeholder="Nombre categoria"  style="margin: 0px 2px 0px 0px; width: 571px;">
                   </div>
                     <div class="form-group">
                     <label for="activo[cat_descripcion]">Descripcion</label>
-                    <textarea type="text" class="form-control" id="cat_descripcion" name="cat_descripcion" placeholder="Descripcion" required="" style="margin: 0px 2px 0px 0px; height: 182px; width: 571px;"></textarea>  
+                    <textarea type="text" class="form-control" id="cat_descripcion" name="cat_descripcion" required="" placeholder="Descripcion" style="margin: 0px 2px 0px 0px; height: 182px; width: 571px;"></textarea>  
                   </div>
                     <div class="form-group">
                     <label for="imagen">Imagen</label>
-                    <input type="file" class="form-control" id="imagen" name="imagen" required="" placeholder="Descripción">
+                    <input type="file" class="form-control" id="imagen" name="imagen"  placeholder="Descripción" required="">
                   </div>
                 </div>
 

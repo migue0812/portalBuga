@@ -86,30 +86,36 @@
         <div class="col-lg-12">
           <div class="form-panel">
             <h4 class="mb"><i class="fa fa-angle-right"></i> Editar Categoria</h4>
-            <form class="style-form" method="post">
+                    
+            <form class="style-form" method="post" action="{{url('admin/categoria/crear')}}" enctype="multipart/form-data">
 
               <input type="hidden" name="_token" value="<?php echo csrf_token(); ?>">
-
+              <input type="hidden" value="{{$categoria->cat_id}}" name="cat_id" id="cat_id">
+              
               <div class="row col-md-12">
                 <div class="col-md-6">
                   <div class="form-group">
                     <label for="categoria[cat_nombre]">Nombre</label>
-                    <input type="text" class="form-control" id="cat_nombre" name="cat_nombre" placeholder="Nombre categoria" required="">
+                    <input type="text" class="form-control" id="cat_nombre" required="" name="cat_nombre" value="{{$categoria->cat_nombre}}"  style="margin: 0px 2px 0px 0px; width: 571px;">
+                  </div>
+                    <div class="form-group">
+                    <label for="activo[cat_descripcion]">Descripcion</label>
+                    <textarea type="text" class="form-control" id="cat_descripcion" name="cat_descripcion" required="" style="margin: 0px 2px 0px 0px; height: 182px; width: 571px;">{{$categoria->cat_descripcion}}</textarea>  
+                  </div>
+                    <div class="form-group">
+                    <label for="imagen">Imagen</label>
+                    <input type="file" class="form-control" id="imagen" name="imagen" required="">
                   </div>
                 </div>
 
                 <div class="col-md-6">
                   <div class="form-group">
-                    <label for="activo[cat_activo]">Activo</label>
-                    <select class="form-control"  name="cat_activo" required="">
-                      <option name="0" value="0">0</option>
-                      <option name="1" value="1">1</option>
-                    </select>
-                  </div>
+                 </div>
                 </div> 
               </div>
-
-              <button type="submit" class="btn btn-info btn-fill pull-right">Guardar</button>
+              
+              <button type="submit" class="btn btn-info btn-md">Editar</button>
+              
               <div class="clearfix"></div>
             </form>
           </div>
