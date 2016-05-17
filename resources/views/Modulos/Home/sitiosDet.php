@@ -48,7 +48,6 @@
                                         <a href="#" data-value="5" title="Votar con 5 estrellas">&#9733;</a>
                                     </div>
             </div>
-               
 
 <!-- efecto imgs -->
 
@@ -57,8 +56,7 @@
 <div class="col-md-4 col-sm-6 evento-item">
             <a href="#eventoModal1" class="evento-link" data-toggle="modal">
                 <div class="evento-hover">
-                    <div class="evento-hover-content">
-                        
+                    <div class="evento-hover-content">                        
                     </div>
                 </div>
                 <img src="<?php echo asset("$sitDetalle->img_ruta") ?>" class="img-responsive" alt="">
