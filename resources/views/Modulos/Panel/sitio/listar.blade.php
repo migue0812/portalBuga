@@ -85,7 +85,7 @@
                 <div class="col-lg-12 main-chart">
                     <div class="row mt">
                         <div class="col-md-12">
-                            <div class="content-panel">
+                            <div class="content-panel table-responsive">
                                 @if (Session::has("inhabilitar"))
     <div class="alert alert-danger alert-dismissible center-block" role="alert">{{Session::get("inhabilitar")}}</div>
                 @endif

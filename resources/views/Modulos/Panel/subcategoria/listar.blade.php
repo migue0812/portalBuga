@@ -85,7 +85,7 @@
         <div class="col-lg-12 main-chart">
           <div class="row mt">
             <div class="col-md-12">
-              <div class="content-panel">
+              <div class="content-panel table-responsive">
                 <table class="table table-striped table-advance table-hover">
                   <h4><i class="fa fa-angle-right"></i> Subcategoria</h4>
                   <hr>

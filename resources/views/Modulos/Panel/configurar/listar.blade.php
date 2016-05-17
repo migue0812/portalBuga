@@ -87,7 +87,7 @@
         <div class="col-lg-12 main-chart">
           <div class="row mt">
             <div class="col-md-12">
-              <div class="content-panel">
+              <div class="content-panel table-responsive">
                   @if (Session::has("registroSuccess"))
                 <div class="alert alert-success center-block" role="alert">{{Session::get("registroSuccess")}}</div>
                 {{Session::forget("registroSuccess")}}
