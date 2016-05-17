@@ -30,6 +30,7 @@ class SitioController extends Controller {
     }
 
     function postCrear() {
+        $idUsuario = Session::get("usuarioId");
         $sitNombre = $_POST["nombre"];
         $sitCategoria = $_POST["categoria"];
         $sitSubCategoria = $_POST["subcategoria"];
@@ -75,7 +76,7 @@ class SitioController extends Controller {
                 . "cat_id, subcat_id, sit_direccion, sit_telefono, sit_latitud, sit_longitud,"
                 . "est_id, usu_id) VALUES (?,?,?,?,?,?,?,?,?,?)", array($sitNombre,
             $sitDescripcion, $sitCategoria, $sitSubCategoria, $sitDireccion,
-            $sitTelefono, 101010101010, 1100110011, 1, 1));
+            $sitTelefono, 101010101010, 1100110011, 1, $idUsuario));
 
         $id = DB::select('SELECT IFNULL(MAX(sit_id),0) AS id FROM bdp_sitio ORDER BY id DESC LIMIT 1');
         $id = $id[0]->id;
