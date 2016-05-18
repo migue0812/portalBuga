@@ -47,7 +47,8 @@ class RegistroController extends Controller {
         $google = filter_input(INPUT_POST, 'google');
 
 $exists = DB::table('bdp_usuario')->where('usu_usuario', '$usuario')->first();
-if(!$exists){ 
+var_dump($exists);
+if(is_null($exists)!== true){ 
     Session::flash('exist', 'Usuario ya existe.');
     Session::flash('usuario', $usuario);
     Session::flash('email', $email);
@@ -55,6 +56,7 @@ if(!$exists){
     Session::flash('apellido', $apellidos);
     Session::flash('fecha', $fecha);
     return redirect(url('registro/registro'));
+//    return view('welcome');
 }
     
     
