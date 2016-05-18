@@ -16,12 +16,12 @@
                                 <div class="list-group">
                                     <a href="<?php echo url("itinerario") ?>" class="list-group-item">
                                         <i class="fa fa-map-marker fa-fw"></i> Sitios
-                                        <span class="pull-right text-muted small"><em>4 minutes ago</em>
+                                        <span class="pull-right text-muted small"><em></em>
                                         </span>
                                     </a>
                                     <a href="<?php echo url("itinerario/evento") ?>" class="list-group-item">
                                         <i class="fa fa-puzzle-piece fa-fw"></i> Eventos
-                                        <span class="pull-right text-muted small"><em>12 minutes ago</em>
+                                        <span class="pull-right text-muted small"><em></em>
                                         </span>
                                     </a>
                                 </div>
@@ -108,32 +108,30 @@
                                                     <th>Opciones</th>
                                                 </tr>
                                             </thead>
+                                             <?php
+                            foreach ($eventos as $evento):
+                                ?>
                                             <tbody>
                                                 <tr>
-                                                    <td>Orgia</td>
-                                                    <td>Carrera 5 # 7-60</td>
-                                                    <td>29-04-16</td>
+                                                    <td><?php echo $evento->eve_nombre ?></td>
+                                                    <td><?php echo $evento->eve_direccion ?></td>
+                                                    <td><?php echo $evento->eve_fecha_inicio ?></td>
+                                                    <td><?php echo $evento->iti_visitado ?></td>
                                                     <td>
-                                                        <a title="Ver Sitio" href="" class="btn btn-xs btn-primary"><i class="fa fa-eye fa-fw"></i></a>
+                                                        <a title="Ver Evento" href="<?php echo url("home/eventos/det/" . $evento->eve_id) ?>" class="btn btn-xs btn-primary"><i class="fa fa-eye fa-fw"></i></a>
+                                                        <?php if ($evento->iti_visitado === 'Si'): ?>
 
-                                                        <a title="No Visitado" href="" class="btn btn-xs btn-success"><i class="fa fa-rocket fa-fw"></i></a>
-
-                                                        <a title="Visitado" href="" class="btn btn-xs btn-warning"><i class="fa fa-rocket fa-fw"></i></a>
-
-                                                        <a title="Eliminar" href="" class="btn btn-xs btn-danger"><i class="fa  fa-ban fa-fw"></i></a>
-                                                    </td>
+                                                        <a title="No Visitado" href="<?php echo url("itinerario/eventonovisitado/" . $evento->eve_id) ?>" class="btn btn-xs btn-success"><i class="fa fa-rocket fa-fw"></i></a>
+                                                        <?php else: ?>
+                                                        <a title="Visitado" href="<?php echo url("itinerario/eventovisitado/" . $evento->eve_id) ?>" class="btn btn-xs btn-warning"><i class="fa fa-rocket fa-fw"></i></a>
+                                                        <?php endif ?>
+                                                        <a title="Eliminar" href="<?php echo url("itinerario/eventoeliminar/" . $evento->eve_id) ?>" class="btn btn-xs btn-danger"><i class="fa  fa-ban fa-fw"></i></a></td>
                                                 </tr>
-                                                <tr>
-                                                    <td>Orgia</td>
-                                                    <td>Carrera 5 # 7-60</td>
-                                                    <td>29-04-16</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Orgia</td>
-                                                    <td>Carrera 5 # 7-60</td>
-                                                    <td>29-04-16</td>
-                                                </tr>
+                                                
                                             </tbody>
+                                            <?php
+                                 endforeach 
+                                ?>
                                         </table>
                                     </div>
                                     <!-- /.table-responsive -->

@@ -44,7 +44,10 @@ class ItinerarioController extends Controller {
         $sitios = DB::select("SELECT * FROM bdp_sitio, bdp_itinerario WHERE "
                 . "bdp_sitio.sit_id=bdp_itinerario.sit_id "
                 . "AND bdp_itinerario.usu_id=$idUsuario");
-    	return view('Modulos.Itinerario.verTodo', compact("sitios"));
+        $eventos = DB::select("SELECT * FROM bdp_evento, bdp_itinerario WHERE "
+                . "bdp_evento.eve_id=bdp_itinerario.eve_id "
+                . "AND bdp_itinerario.usu_id=$idUsuario");
+    	return view('Modulos.Itinerario.verTodo', compact("sitios"), compact("eventos"));
     } 
     else {
            return redirect(url("home/index"));
