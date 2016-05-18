@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.5.1
+-- version 4.1.12
 -- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 14-05-2016 a las 21:07:55
--- Versión del servidor: 10.1.13-MariaDB
--- Versión de PHP: 5.6.20
+-- Tiempo de generación: 18-05-2016 a las 03:39:25
+-- Versión del servidor: 5.6.16
+-- Versión de PHP: 5.5.11
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -14,7 +14,7 @@ SET time_zone = "+00:00";
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8mb4 */;
+/*!40101 SET NAMES utf8 */;
 
 --
 -- Base de datos: `portal_buga`
@@ -26,27 +26,31 @@ SET time_zone = "+00:00";
 -- Estructura de tabla para la tabla `bdp_categoria`
 --
 
-CREATE TABLE `bdp_categoria` (
-  `cat_id` int(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS `bdp_categoria` (
+  `cat_id` int(11) NOT NULL AUTO_INCREMENT,
   `cat_nombre` varchar(80) COLLATE utf8_spanish_ci NOT NULL,
   `cat_descripcion` text COLLATE utf8_spanish_ci NOT NULL,
   `est_id` int(11) NOT NULL,
   `cat_created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `cat_updated_at` timestamp NULL DEFAULT NULL,
-  `cat_deleted_at` timestamp NULL DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+  `cat_deleted_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`cat_id`),
+  KEY `est_id` (`est_id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci AUTO_INCREMENT=9 ;
 
 --
 -- Volcado de datos para la tabla `bdp_categoria`
 --
 
 INSERT INTO `bdp_categoria` (`cat_id`, `cat_nombre`, `cat_descripcion`, `est_id`, `cat_created_at`, `cat_updated_at`, `cat_deleted_at`) VALUES
-(1, 'Cultura y Tradición', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat. Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.', 1, '2016-05-14 16:29:38', NULL, NULL),
-(2, 'Deportes', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat. Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.', 1, '2016-05-14 16:30:40', NULL, NULL),
-(3, 'Ecoturístico', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat. Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.', 1, '2016-05-14 16:31:10', NULL, NULL),
-(4, 'Religioso', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat. Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.', 1, '2016-05-14 16:31:46', NULL, NULL),
-(5, 'Histórico', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat. Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.', 1, '2016-05-14 16:32:38', NULL, NULL),
-(6, 'Entretenimiento', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat. Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.', 1, '2016-05-14 16:33:03', NULL, NULL);
+(1, 'Cultura y Tradición', 'Contamos con una rica tradición gastronómica, unión de costumbres de las cocinas indígenas y africanas que se mezclaron en el pasado colonial de esta región. Una cocina en la que sobresalen sus dulces, dignos representantes de una región azucarera que en medio de la idiosincracia de sus tradiciones y el sincretismo de su cultura, le da cabida a uno de los destinos más bellos del occidente colombiano, un lugar que a pesar de su carácter religioso le da la bienvenida a todos los viajeros que como tú están dispuestos a descubrir la magia de las historias que esconde Colombia.', 1, '2016-05-14 16:29:38', NULL, NULL),
+(2, 'Deportes', 'La ciudad de Guadalajara de Buga, cuenta con grandes escenarios deportivos, de talla internacional como patinodromos profesionales y piscinas olímpicas, las cuales son utilizados también por los colegios públicos del municipio y todo con el propósito de que nuestros niños y jóvenes se beneficien del deporte y contribuyan al desarrollo social de la ciudad.', 1, '2016-05-14 16:30:40', NULL, NULL),
+(3, 'Ecoturístico', 'EL municipio ofrece un paisaje hermoso con un estupendo clima que permite visitar y tener contacto con la naturaleza en sitios recreativos como la maría, la floresta, la casa lago y demás lugares agradables que muestran lo maravilloso que es salir de la ciudad y disfrutar en familia de momentos inolvidables que no podemos dejar pasar  ', 1, '2016-05-14 16:31:10', NULL, NULL),
+(4, 'Religioso', 'Aunque no hay duda que es el santuario del Señor de los Milagros el principal atractivo de la población de Buga, su importancia histórica para la región y sus manifestaciones culturales también son parte de los elementos que convirtieron a esta ciudad en uno de los pueblos patrimonio de Colombia. Todo eso además enmarcado por los sabores de una región exuberante de valles y montañas con el océano Pacífico hacia el occidente, que ejerce su influencia natural sobre la biodiversidad y el encanto de los paisajes que rodean a Buga.', 1, '2016-05-14 16:31:46', NULL, NULL),
+(5, 'Histórico', 'Esta historia tiene como escenario una bella ciudad que guarda imponentes edificaciones que hacen parte del legado arquitectónico de Buga y que son considerados bienes de interés cultural para todo el país: edificaciones como la Estación del Ferrocarril, la Casa Hacienda La Julia, el Teatro Municipal de Buga y el sector antiguo de la ciudad, guardan parte de la historias que suceden alrededor del Señor de los Milagros. Más allá de tus creencias religiosas, la ciudad guarda todo un encanto histórico y cultural que podrás disfrutar sin importar cuál sea tu fe, todo mientras compartes y disfrutas de las manifestaciones culturales de miles de peregrinos que llegan de todos los rincones del país y del extranjero para conocer de cerca la historia y las leyendas que se cuentan sobre esta ciudad.', 1, '2016-05-14 16:32:38', NULL, NULL),
+(6, 'Entretenimiento', 'El municipio de Buga, es un lugar privilegiado por los paisajes que lo rodean y por su buen clima, que permiten a sus visitantes pasar un agradable rato con su familia y amigos.  Es ideal para hacer turismo religioso y complementarlo con un ambiente recreativo inigualable. \r\nBuga ofrece mucho entretenimiento en sus parques, piscinas y balnearios ', 1, '2016-05-14 16:33:03', NULL, NULL),
+(7, 'Hoteles', 'La hotelería, se concibe como el conjunto de actividades derivadas de la hospitalidad y el servicio de alojamiento a visitantes. La hotelería hoy es vista como una industria primordial e idónea para realizar una gestión eficaz y ser capaz de proponer estrategias competitivas así como desarrollar planes de acción que coadyuven al desarrollo  social de la localidad. En ese sentido  permitimos desarrollar  gestión eficaz de la hoteleria.', 0, '2016-05-18 01:01:01', NULL, NULL),
+(8, 'Restaurantes', 'Contamos con una rica tradición gastronómica, unión de costumbres de las cocinas indígenas y africanas que se mezclaron en el pasado colonial de esta región. Una cocina en la que sobresalen sus dulces, dignos representantes de una región azucarera que en medio de la idiosincracia de sus tradiciones y el sincretismo de su cultura, le da cabida a uno de los destinos más bellos del occidente colombiano, un lugar que a pesar de su carácter religioso le da la bienvenida a todos los viajeros que como tú están dispuestos a descubrir la magia de las historias que esconde Colombia.', 0, '2016-05-18 01:04:16', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -54,8 +58,8 @@ INSERT INTO `bdp_categoria` (`cat_id`, `cat_nombre`, `cat_descripcion`, `est_id`
 -- Estructura de tabla para la tabla `bdp_dato_usuario`
 --
 
-CREATE TABLE `bdp_dato_usuario` (
-  `dus_id` int(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS `bdp_dato_usuario` (
+  `dus_id` int(11) NOT NULL AUTO_INCREMENT,
   `usu_id` int(11) NOT NULL,
   `dus_nombre` varchar(80) COLLATE utf8_spanish_ci NOT NULL,
   `dus_apellidos` varchar(80) COLLATE utf8_spanish_ci NOT NULL,
@@ -68,8 +72,10 @@ CREATE TABLE `bdp_dato_usuario` (
   `dus_avatar` varchar(100) COLLATE utf8_spanish_ci DEFAULT NULL,
   `dus_created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `dus_updated_at` timestamp NULL DEFAULT NULL,
-  `dus_deleted_at` timestamp NULL DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+  `dus_deleted_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`dus_id`),
+  KEY `usu_id` (`usu_id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci AUTO_INCREMENT=3 ;
 
 --
 -- Volcado de datos para la tabla `bdp_dato_usuario`
@@ -85,12 +91,13 @@ INSERT INTO `bdp_dato_usuario` (`dus_id`, `usu_id`, `dus_nombre`, `dus_apellidos
 -- Estructura de tabla para la tabla `bdp_estado`
 --
 
-CREATE TABLE `bdp_estado` (
-  `est_id` int(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS `bdp_estado` (
+  `est_id` int(11) NOT NULL AUTO_INCREMENT,
   `est_nombre` varchar(50) COLLATE utf8_spanish_ci NOT NULL,
   `est_created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `est_updated_at` timestamp NULL DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+  `est_updated_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`est_id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci AUTO_INCREMENT=2 ;
 
 --
 -- Volcado de datos para la tabla `bdp_estado`
@@ -106,8 +113,8 @@ INSERT INTO `bdp_estado` (`est_id`, `est_nombre`, `est_created_at`, `est_updated
 -- Estructura de tabla para la tabla `bdp_evento`
 --
 
-CREATE TABLE `bdp_evento` (
-  `eve_id` int(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS `bdp_evento` (
+  `eve_id` int(11) NOT NULL AUTO_INCREMENT,
   `usu_id` int(11) NOT NULL,
   `cat_id` int(11) NOT NULL,
   `subcat_id` int(11) NOT NULL,
@@ -126,8 +133,13 @@ CREATE TABLE `bdp_evento` (
   `est_id` int(11) NOT NULL,
   `eve_created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `eve_updated_at` timestamp NULL DEFAULT NULL,
-  `eve_deleted_at` timestamp NULL DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+  `eve_deleted_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`eve_id`),
+  KEY `cat_id` (`cat_id`),
+  KEY `est_id` (`est_id`),
+  KEY `usu_id` (`usu_id`),
+  KEY `subcat_id` (`subcat_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -135,15 +147,20 @@ CREATE TABLE `bdp_evento` (
 -- Estructura de tabla para la tabla `bdp_imagen`
 --
 
-CREATE TABLE `bdp_imagen` (
-  `img_id` int(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS `bdp_imagen` (
+  `img_id` int(11) NOT NULL AUTO_INCREMENT,
   `eve_id` int(11) DEFAULT NULL,
   `sit_id` int(11) DEFAULT NULL,
   `cat_id` int(11) DEFAULT NULL,
   `subcat_id` int(11) DEFAULT NULL,
   `img_ruta` text COLLATE utf8_spanish_ci NOT NULL,
-  `img_created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+  `img_created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`img_id`),
+  KEY `sit_id` (`sit_id`),
+  KEY `eve_id` (`eve_id`),
+  KEY `cat_id` (`cat_id`),
+  KEY `subcat_id` (`subcat_id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci AUTO_INCREMENT=19 ;
 
 --
 -- Volcado de datos para la tabla `bdp_imagen`
@@ -165,7 +182,9 @@ INSERT INTO `bdp_imagen` (`img_id`, `eve_id`, `sit_id`, `cat_id`, `subcat_id`, `
 (13, NULL, NULL, NULL, 4, 'img/historico_1.jpg', '2016-05-14 18:30:33'),
 (14, NULL, NULL, NULL, 5, 'img/iglesias_1.jpg', '2016-05-14 18:30:57'),
 (15, NULL, 4, NULL, NULL, 'img/Ferro.jpg', '2016-05-14 18:36:22'),
-(16, NULL, 5, NULL, NULL, 'img/Basilica.jpg', '2016-05-14 18:37:24');
+(16, NULL, 5, NULL, NULL, 'img/Basilica.jpg', '2016-05-14 18:37:24'),
+(17, NULL, NULL, 7, NULL, 'img/hotel.jpg', '2016-05-18 01:01:03'),
+(18, NULL, NULL, 8, NULL, 'img/familiar.jpg', '2016-05-18 01:04:16');
 
 -- --------------------------------------------------------
 
@@ -173,8 +192,8 @@ INSERT INTO `bdp_imagen` (`img_id`, `eve_id`, `sit_id`, `cat_id`, `subcat_id`, `
 -- Estructura de tabla para la tabla `bdp_itinerario`
 --
 
-CREATE TABLE `bdp_itinerario` (
-  `iti_id` int(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS `bdp_itinerario` (
+  `iti_id` int(11) NOT NULL AUTO_INCREMENT,
   `usu_id` int(11) NOT NULL,
   `sit_id` int(11) DEFAULT NULL,
   `eve_id` int(11) DEFAULT NULL,
@@ -182,8 +201,12 @@ CREATE TABLE `bdp_itinerario` (
   `iti_visitado` varchar(2) COLLATE utf8_spanish_ci DEFAULT NULL,
   `iti_created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `iti_updated_at` timestamp NULL DEFAULT NULL,
-  `iti_deleted_at` timestamp NULL DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+  `iti_deleted_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`iti_id`),
+  KEY `usu_id` (`usu_id`),
+  KEY `sit_id` (`sit_id`),
+  KEY `eve_id` (`eve_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -191,13 +214,15 @@ CREATE TABLE `bdp_itinerario` (
 -- Estructura de tabla para la tabla `bdp_rating`
 --
 
-CREATE TABLE `bdp_rating` (
+CREATE TABLE IF NOT EXISTS `bdp_rating` (
   `rat_id` int(11) NOT NULL,
   `sit_id` int(11) NOT NULL,
   `rat_rating` double NOT NULL,
   `rat_ip` int(15) NOT NULL,
   `rat_cant_votos` int(11) NOT NULL,
-  `rat_created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
+  `rat_created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`rat_id`),
+  KEY `sit_id` (`sit_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
 -- --------------------------------------------------------
@@ -206,13 +231,14 @@ CREATE TABLE `bdp_rating` (
 -- Estructura de tabla para la tabla `bdp_rol`
 --
 
-CREATE TABLE `bdp_rol` (
-  `rol_id` int(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS `bdp_rol` (
+  `rol_id` int(11) NOT NULL AUTO_INCREMENT,
   `rol_rol` varchar(30) COLLATE utf8_spanish_ci NOT NULL,
   `rol_created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `rol_updated_at` timestamp NULL DEFAULT NULL,
-  `rol_deleted_at` timestamp NULL DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+  `rol_deleted_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`rol_id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci AUTO_INCREMENT=3 ;
 
 --
 -- Volcado de datos para la tabla `bdp_rol`
@@ -228,8 +254,8 @@ INSERT INTO `bdp_rol` (`rol_id`, `rol_rol`, `rol_created_at`, `rol_updated_at`, 
 -- Estructura de tabla para la tabla `bdp_sitio`
 --
 
-CREATE TABLE `bdp_sitio` (
-  `sit_id` int(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS `bdp_sitio` (
+  `sit_id` int(11) NOT NULL AUTO_INCREMENT,
   `sit_nombre` varchar(80) COLLATE utf8_spanish_ci NOT NULL,
   `sit_descripcion` text COLLATE utf8_spanish_ci NOT NULL,
   `cat_id` int(11) DEFAULT NULL,
@@ -245,8 +271,13 @@ CREATE TABLE `bdp_sitio` (
   `sit_updated_at` timestamp NULL DEFAULT NULL,
   `sit_deleted_at` timestamp NULL DEFAULT NULL,
   `usu_id` int(11) NOT NULL,
-  `subcat_id` int(11) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+  `subcat_id` int(11) DEFAULT NULL,
+  PRIMARY KEY (`sit_id`),
+  KEY `cat_id` (`cat_id`),
+  KEY `est_id` (`est_id`),
+  KEY `usu_id` (`usu_id`),
+  KEY `id_subcat` (`subcat_id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci AUTO_INCREMENT=6 ;
 
 --
 -- Volcado de datos para la tabla `bdp_sitio`
@@ -265,16 +296,19 @@ INSERT INTO `bdp_sitio` (`sit_id`, `sit_nombre`, `sit_descripcion`, `cat_id`, `s
 -- Estructura de tabla para la tabla `bdp_subcategoria`
 --
 
-CREATE TABLE `bdp_subcategoria` (
-  `subcat_id` int(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS `bdp_subcategoria` (
+  `subcat_id` int(11) NOT NULL AUTO_INCREMENT,
   `subcat_nombre` varchar(80) NOT NULL,
   `subcat_descripcion` text NOT NULL,
   `cat_id` int(11) NOT NULL,
   `est_id` int(11) NOT NULL,
   `subcat_created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `subcat_updated_at` timestamp NULL DEFAULT NULL,
-  `subcat_deleted_at` timestamp NULL DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `subcat_deleted_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`subcat_id`),
+  KEY `cat_id` (`cat_id`) USING BTREE,
+  KEY `est_id` (`est_id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=6 ;
 
 --
 -- Volcado de datos para la tabla `bdp_subcategoria`
@@ -293,16 +327,19 @@ INSERT INTO `bdp_subcategoria` (`subcat_id`, `subcat_nombre`, `subcat_descripcio
 -- Estructura de tabla para la tabla `bdp_usuario`
 --
 
-CREATE TABLE `bdp_usuario` (
-  `usu_id` int(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS `bdp_usuario` (
+  `usu_id` int(11) NOT NULL AUTO_INCREMENT,
   `usu_usuario` varchar(20) COLLATE utf8_spanish_ci NOT NULL,
   `usu_password` varchar(32) COLLATE utf8_spanish_ci NOT NULL,
   `rol_id` int(11) NOT NULL,
   `est_id` int(11) NOT NULL,
   `usu_created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `usu_updated_at` timestamp NULL DEFAULT NULL,
-  `usu_deleted_at` timestamp NULL DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+  `usu_deleted_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`usu_id`),
+  KEY `rol_id` (`rol_id`),
+  KEY `est_id` (`est_id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci AUTO_INCREMENT=3 ;
 
 --
 -- Volcado de datos para la tabla `bdp_usuario`
@@ -318,171 +355,22 @@ INSERT INTO `bdp_usuario` (`usu_id`, `usu_usuario`, `usu_password`, `rol_id`, `e
 -- Estructura de tabla para la tabla `bdp_visitas`
 --
 
-CREATE TABLE `bdp_visitas` (
-  `vis_id` int(11) NOT NULL,
-  `sit_id` int(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS `bdp_visitas` (
+  `vis_id` int(11) NOT NULL AUTO_INCREMENT,
+  `sit_id` int(11) DEFAULT NULL,
   `vis_ip` varchar(15) COLLATE utf8_spanish_ci NOT NULL,
-  `vis_created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+  `vis_created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`vis_id`),
+  KEY `sit_id` (`sit_id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci AUTO_INCREMENT=5 ;
 
 --
--- Índices para tablas volcadas
+-- Volcado de datos para la tabla `bdp_visitas`
 --
 
---
--- Indices de la tabla `bdp_categoria`
---
-ALTER TABLE `bdp_categoria`
-  ADD PRIMARY KEY (`cat_id`),
-  ADD KEY `est_id` (`est_id`);
+INSERT INTO `bdp_visitas` (`vis_id`, `sit_id`, `vis_ip`, `vis_created_at`) VALUES
+(4, NULL, '::1', '2016-05-18 00:00:43');
 
---
--- Indices de la tabla `bdp_dato_usuario`
---
-ALTER TABLE `bdp_dato_usuario`
-  ADD PRIMARY KEY (`dus_id`),
-  ADD KEY `usu_id` (`usu_id`);
-
---
--- Indices de la tabla `bdp_estado`
---
-ALTER TABLE `bdp_estado`
-  ADD PRIMARY KEY (`est_id`);
-
---
--- Indices de la tabla `bdp_evento`
---
-ALTER TABLE `bdp_evento`
-  ADD PRIMARY KEY (`eve_id`),
-  ADD KEY `cat_id` (`cat_id`),
-  ADD KEY `est_id` (`est_id`),
-  ADD KEY `usu_id` (`usu_id`),
-  ADD KEY `subcat_id` (`subcat_id`);
-
---
--- Indices de la tabla `bdp_imagen`
---
-ALTER TABLE `bdp_imagen`
-  ADD PRIMARY KEY (`img_id`),
-  ADD KEY `sit_id` (`sit_id`),
-  ADD KEY `eve_id` (`eve_id`),
-  ADD KEY `cat_id` (`cat_id`),
-  ADD KEY `subcat_id` (`subcat_id`);
-
---
--- Indices de la tabla `bdp_itinerario`
---
-ALTER TABLE `bdp_itinerario`
-  ADD PRIMARY KEY (`iti_id`),
-  ADD KEY `usu_id` (`usu_id`),
-  ADD KEY `sit_id` (`sit_id`),
-  ADD KEY `eve_id` (`eve_id`);
-
---
--- Indices de la tabla `bdp_rating`
---
-ALTER TABLE `bdp_rating`
-  ADD PRIMARY KEY (`rat_id`),
-  ADD KEY `sit_id` (`sit_id`);
-
---
--- Indices de la tabla `bdp_rol`
---
-ALTER TABLE `bdp_rol`
-  ADD PRIMARY KEY (`rol_id`);
-
---
--- Indices de la tabla `bdp_sitio`
---
-ALTER TABLE `bdp_sitio`
-  ADD PRIMARY KEY (`sit_id`),
-  ADD KEY `cat_id` (`cat_id`),
-  ADD KEY `est_id` (`est_id`),
-  ADD KEY `usu_id` (`usu_id`),
-  ADD KEY `id_subcat` (`subcat_id`);
-
---
--- Indices de la tabla `bdp_subcategoria`
---
-ALTER TABLE `bdp_subcategoria`
-  ADD PRIMARY KEY (`subcat_id`),
-  ADD KEY `cat_id` (`cat_id`) USING BTREE,
-  ADD KEY `est_id` (`est_id`);
-
---
--- Indices de la tabla `bdp_usuario`
---
-ALTER TABLE `bdp_usuario`
-  ADD PRIMARY KEY (`usu_id`),
-  ADD KEY `rol_id` (`rol_id`),
-  ADD KEY `est_id` (`est_id`);
-
---
--- Indices de la tabla `bdp_visitas`
---
-ALTER TABLE `bdp_visitas`
-  ADD PRIMARY KEY (`vis_id`),
-  ADD KEY `sit_id` (`sit_id`);
-
---
--- AUTO_INCREMENT de las tablas volcadas
---
-
---
--- AUTO_INCREMENT de la tabla `bdp_categoria`
---
-ALTER TABLE `bdp_categoria`
-  MODIFY `cat_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
---
--- AUTO_INCREMENT de la tabla `bdp_dato_usuario`
---
-ALTER TABLE `bdp_dato_usuario`
-  MODIFY `dus_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
---
--- AUTO_INCREMENT de la tabla `bdp_estado`
---
-ALTER TABLE `bdp_estado`
-  MODIFY `est_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
---
--- AUTO_INCREMENT de la tabla `bdp_evento`
---
-ALTER TABLE `bdp_evento`
-  MODIFY `eve_id` int(11) NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT de la tabla `bdp_imagen`
---
-ALTER TABLE `bdp_imagen`
-  MODIFY `img_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
---
--- AUTO_INCREMENT de la tabla `bdp_itinerario`
---
-ALTER TABLE `bdp_itinerario`
-  MODIFY `iti_id` int(11) NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT de la tabla `bdp_rol`
---
-ALTER TABLE `bdp_rol`
-  MODIFY `rol_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
---
--- AUTO_INCREMENT de la tabla `bdp_sitio`
---
-ALTER TABLE `bdp_sitio`
-  MODIFY `sit_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
---
--- AUTO_INCREMENT de la tabla `bdp_subcategoria`
---
-ALTER TABLE `bdp_subcategoria`
-  MODIFY `subcat_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
---
--- AUTO_INCREMENT de la tabla `bdp_usuario`
---
-ALTER TABLE `bdp_usuario`
-  MODIFY `usu_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
---
--- AUTO_INCREMENT de la tabla `bdp_visitas`
---
-ALTER TABLE `bdp_visitas`
-  MODIFY `vis_id` int(11) NOT NULL AUTO_INCREMENT;
 --
 -- Restricciones para tablas volcadas
 --
