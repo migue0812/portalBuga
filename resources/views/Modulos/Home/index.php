@@ -54,7 +54,12 @@
 
                     <div class="tituloWelcome" style="">Una de las mejores ciudades turisticas!</div>
 
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc placerat diam quis nisl vestibulum dignissim. In hac habitasse platea dictumst. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+                    <p>En el Centro del Valle del Cauca, específicamente en la parte media de la Cordillera Central, 
+                      fue fundado en 1573, el municipio de Guadalajara de Buga. 
+                      “La ciudad Señora” como también se le denomina, 
+                      posee un patrimonio arquitectónico e histórico que cuenta con diferentes bienes de interés cultural,
+                      entre estos, La Basílica del Señor de los Milagros la cual recibe y acoge a visitantes de todo el mundo.
+</p>
 
                 </div>
             </div>
@@ -93,7 +98,13 @@
                         <h3 class="visit">Visitanos
                             <small>Los Mejores Lugares Para Ti !</small>
                         </h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint, explicabo dolores ipsam aliquam inventore corrupti eveniet quisquam quod totam laudantium repudiandae obcaecati ea consectetur debitis velit facere nisi expedita vel?</p>
+                        <p>Rodeada por diferentes atractivos turísticos, 
+                          dentro de ellos el más importante de esta ciudad La Basílica del Señor de los Milagros, 
+                          la cual a bendecido a millones de turistas nacionales y extranjeros. 
+                          Ubicada en el centro de la ciudad de Buga. 
+                          Por su trayectoria histórica y milagrosa la Basílica es el lugar mas visitado en el Valle del Cauca y uno de los centros religiosos por excelencia de Colombia.<br>
+                          Ven y disfruta de la mejor Gastronomía Vallecaucana, Restaurantes, Fincas Campestres, 
+                          Hoteles, Balnearios y demás Destinos Turísticos para disfrutar en Familia.</p>
                     </div>
                 </div>
 
