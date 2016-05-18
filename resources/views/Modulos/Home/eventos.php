@@ -39,7 +39,7 @@
         </div>
     </div>
 </div>
-
+<?php foreach($eventos as $evento):?>
 <div class="container">
     <div class="row">
         <div class="box">
@@ -51,11 +51,11 @@
                 </div>
             </div>
             <hr>
-            <?php foreach($eventos as $evento):?>
+            
             <div class="container portImg">
                 <div class="row ">
                     <div class="col-md-6 portfolio-item">
-                        <a href="<?php echo url("home/eventos/det") ?>">
+                        <a href="<?php echo url("home/eventos/det/. $evento->eve_id") ?>">
                             <img style="float: right; border-radius: 20px;"  class="img-responsive" src="<?php echo asset("$evento->img_ruta") ?>" alt="">
                         </a>
 
@@ -63,18 +63,17 @@
                     <div class="col-md-5 portfolio-item">
                         <h2 style="text-align: center"><?php echo ($evento->eve_nombre) ?></h2>
                         <hr class="hrWhat">
-                        <p class="text-justify"><?php echo ($evento->eve_descripcion) ?></p>
-                                              <a href="<?php echo url("home/eventos/det") ?>" class="btn btn-primary"><b title="Ver mas"class="icon-plus fa-fw"></b></a>
-               <a href="<?php echo url("itinerario/evento") ?>" class="btn btn-primary"><b title="Itinerario" class="icon-direction fa-fw"></b></a>
+                        <p class="text-justify"><?php echo ((strlen($evento->eve_descripcion) > 100) ? substr(($evento->eve_descripcion), 0, 100) . " ..." : ($evento->eve_descripcion)) ?></p>
+                                              <a href="<?php echo url("home/eventos/det/" . $evento->eve_id) ?>" class="btn btn-primary"><b title="Ver mas"class="icon-plus fa-fw"></b></a>
+               <a href="<?php echo url("itinerario/evento/". $evento->eve_id) ?>" class="btn btn-primary"><b title="Itinerario" class="icon-direction fa-fw"></b></a>
                         
                     </div>
                 </div>
             </div>
-            <?php endforeach ?>
         </div>
     </div>
 </div>
-
+<?php endforeach ?>
 
 <div class="container">
     <div class="row">
@@ -94,10 +93,10 @@
                     <h3 style="color:blue;">
                         <?php echo ($evento2->eve_nombre) ?>
                     </h3>
-                    <p><?php echo ($evento2->eve_descripcion) ?></p>
-                    <a href="<?php echo asset("home/eventos/det") ?>">
+                    <p><?php echo ((strlen($evento->eve_descripcion) > 30) ? substr(($evento->eve_descripcion), 0, 30) . " ..." : ($evento->eve_descripcion)) ?></p>
+                    <a href="<?php echo asset("home/eventos/det/".$evento->eve_id ) ?>">
                         <button type="button" class="btn btn-primary">Ver Mas</button>
-                         
+                         <a href="<?php echo url("itinerario/evento/". $evento->eve_id) ?>" class="btn btn-primary"><b title="Itinerario" class="icon-direction fa-fw"></b></a>
                     </a>
                 </div>
                 <?php endforeach; ?>
@@ -118,6 +117,6 @@
         <div class="box">
             <?php include ("/../../Templates/Frontend/footer.php") ?>
             <?php include ("/../../Templates/Frontend/foot.php") ?>
-</div>
-    </div>
+        </div>
+   </div>
 </div>

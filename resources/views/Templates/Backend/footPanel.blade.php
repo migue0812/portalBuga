@@ -1,6 +1,7 @@
 
 <script src="{{asset('bootstrap/js/jquery.js')}}"></script>
 <script src="{{asset('bootstrap/js/jquery-1.8.3.min.js')}}"></script>
+<script src="{{asset('js/jquery-1.12.1.min.js')}}"></script> <!--verificar incompatibilidad versiones-->
 <script src="{{asset('bootstrap/js/bootstrap.min.js')}}"></script>
 
 <script src="{{asset('panel/js/jquery.dcjqaccordion.2.7.js')}}" class="include" type="text/javascript" ></script>

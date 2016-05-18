@@ -48,11 +48,11 @@
                 <h2 class="brand-before">
 
                 </h2>
-                <h1 class="brand-name" style="text-shadow: 2px 1px 2px rgba(0,0,0,0.5);text-align: center;font-weight: 600;">Guadalajara De Buga</h1>
+                <h1 class="brand-name" style="">Guadalajara De Buga</h1>
                 <hr class="tagline-divider">
                 <div>
 
-                    <div class="tituloWelcome" style="text-align: center;">Una de las mejores ciudades turisticas!</div>
+                    <div class="tituloWelcome" style="">Una de las mejores ciudades turisticas!</div>
 
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc placerat diam quis nisl vestibulum dignissim. In hac habitasse platea dictumst. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
 
@@ -117,7 +117,7 @@
                     </div>
                     <div class="col-lg-4 col-sm-4 text-center">
                         <img class="queHacerIcon img-circle img-responsive img-center" src="<?php echo asset("img/diversion.png") ?>" alt="">
-                        <h3>John Smith
+                        <h3>Diverción?
                             <small>La mejor diverción</small>
                         </h3>
                         <p>Buscas un lugar para divertirte?</p>

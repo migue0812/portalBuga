@@ -93,7 +93,7 @@ class EventoController extends Controller {
       
       //Insertar imagen
        DB::insert("INSERT INTO bdp_imagen (eve_id,img_ruta) VALUES (?,?)", array($eve_id, $destino));
-       return view("Modulos.Panel.evento.listar");
+       return redirect(url('admin/evento/listar'));
       
   }
 }

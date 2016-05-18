@@ -28,9 +28,11 @@ class EventosController extends Controller {
         return view('Modulos.Home.eventos', compact('eventos'),  compact('eventos2'));
     }
 
-    function getDet() {
-
-        return view('Modulos.Home.eventosdet');
+    function getDet($id) {
+        $eveDetalle = DB::select("SELECT * FROM bdp_evento, bdp_imagen WHERE "
+                . "bdp_evento.eve_id = ? AND bdp_imagen.eve_id = bdp_evento.eve_id", array($id));
+        $eveDetalle = $eveDetalle[0];
+        return view('Modulos.Home.eventosdet' , compact('eveDetalle'));
     }
 
 }

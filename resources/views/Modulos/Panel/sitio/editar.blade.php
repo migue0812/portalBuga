@@ -84,19 +84,8 @@
       <div class="row">
         <div class="col-lg-12">
           <div class="form-panel">
-            <h4 class="mb"><i class="fa fa-angle-right"></i> Crear Sitio</h4>
-             @if ($errors->any())
-                         <div class="alert alert-danger alert-dismissible center-block" role="alert">
-                             <ul>
-                              @foreach ($errors->all() as $error)  
-                                 <li>{{$error}}</li>
-                                 @endforeach
-                             </ul>
-                         </div>
-                        @endif
-                        @if (Session::has("editar"))
-    <div class="alert alert-warning alert-dismissible center-block" role="alert">{{Session::get("editar")}}</div>
-                @endif 
+            <h4 class="mb"><i class="fa fa-angle-right"></i> Editar Sitio</h4>
+             
             <form class="style-form" method="post" action="{{url('admin/sitio/editar')}}" enctype="multipart/form-data">
               
               <input type="hidden" name="_token" value="<?php echo csrf_token(); ?>">
@@ -169,7 +158,7 @@
                     </div>
                   </div>
 
-              <button type="submit" class="btn btn-info btn-fill pull-right">Guardar</button>
+              <button type="submit" class="btn btn-info btn-fill pull-right">Editar</button>
               <div class="clearfix"></div>
             </form>
           </div>
