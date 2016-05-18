@@ -48,8 +48,10 @@ $categorias = DB::select("SELECT * FROM bdp_categoria, bdp_imagen WHERE bdp_imag
                     </li>
                     <li>
                         <a>
-                            <form action="">
-                                <input type="search" name="nombre" placeholder="Buscar" title="Busqueda">
+                            <form action="<?php echo url("home/busqueda/buscar")?>" method="post">
+                                <input type="hidden" name="_token" value="<?php echo csrf_token(); ?>">
+                                <input type="search" id="nombre" name="nombre" placeholder="Buscar" title="Busqueda">
+                                
                             </form>
                         </a>
                     </li>
