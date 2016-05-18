@@ -15,9 +15,9 @@ class SitiosController extends Controller {
 
     function getIndex() {
         $sitios = DB::select("SELECT * FROM bdp_sitio, bdp_imagen WHERE "
-                        . "bdp_imagen.sit_id = bdp_sitio.sit_id ORDER BY RAND() LIMIT 2");
+                        . "bdp_imagen.sit_id = bdp_sitio.sit_id AND est_id = 1 ORDER BY RAND() LIMIT 2");
         $sitios2 = DB::select("SELECT * FROM bdp_sitio, bdp_imagen WHERE "
-                        . "bdp_imagen.sit_id = bdp_sitio.sit_id");
+                        . "bdp_imagen.sit_id = bdp_sitio.sit_id AND est_id = 1");
         return view('Modulos.Home.sitios', compact("sitios"), compact("sitios2"));
     }
 

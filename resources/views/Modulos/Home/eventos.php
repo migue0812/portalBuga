@@ -55,7 +55,7 @@
             <div class="container portImg">
                 <div class="row ">
                     <div class="col-md-6 portfolio-item">
-                        <a href="<?php echo url("home/eventos/det/. $evento->eve_id") ?>">
+                        <a href="<?php echo url("home/eventos/det/". $evento->eve_id) ?>">
                             <img style="float: right; border-radius: 20px;"  class="img-responsive" src="<?php echo asset("$evento->img_ruta") ?>" alt="">
                         </a>
 
@@ -63,10 +63,11 @@
                     <div class="col-md-5 portfolio-item">
                         <h2 style="text-align: center"><?php echo ($evento->eve_nombre) ?></h2>
                         <hr class="hrWhat">
-                        <p class="text-justify"><?php echo ((strlen($evento->eve_descripcion) > 100) ? substr(($evento->eve_descripcion), 0, 100) . " ..." : ($evento->eve_descripcion)) ?></p>
+                        <p class="text-justify"><?php echo ((strlen($evento->eve_descripcion) > 200) ? substr(($evento->eve_descripcion), 0, 200) . " ..." : ($evento->eve_descripcion)) ?></p>
                                               <a href="<?php echo url("home/eventos/det/" . $evento->eve_id) ?>" class="btn btn-primary"><b title="Ver mas"class="icon-plus fa-fw"></b></a>
-               <a href="<?php echo url("itinerario/evento/". $evento->eve_id) ?>" class="btn btn-primary"><b title="Itinerario" class="icon-direction fa-fw"></b></a>
-                        
+               <?php if (Session::has("usuarioLogueado")): ?>
+                                              <a href="<?php echo url("itinerario/eventos/". $evento->eve_id) ?>" class="btn btn-primary"><b title="Itinerario" class="icon-direction fa-fw"></b></a>
+                         <?php endif ?>
                     </div>
                 </div>
             </div>
@@ -96,7 +97,9 @@
                     <p><?php echo ((strlen($evento->eve_descripcion) > 30) ? substr(($evento->eve_descripcion), 0, 30) . " ..." : ($evento->eve_descripcion)) ?></p>
                     <a href="<?php echo asset("home/eventos/det/".$evento->eve_id ) ?>">
                         <button type="button" class="btn btn-primary">Ver Mas</button>
-                         <a href="<?php echo url("itinerario/evento/". $evento->eve_id) ?>" class="btn btn-primary"><b title="Itinerario" class="icon-direction fa-fw"></b></a>
+                         <?php if (Session::has("usuarioLogueado")): ?>
+                        <a href="<?php echo url("itinerario/eventos/". $evento->eve_id) ?>" class="btn btn-primary"><b title="Itinerario" class="icon-direction fa-fw"></b></a>
+                     <?php endif ?>
                     </a>
                 </div>
                 <?php endforeach; ?>

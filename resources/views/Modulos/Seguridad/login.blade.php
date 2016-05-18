@@ -48,7 +48,7 @@
             <div class="panel-heading">
                 <div class="panel-title">Login</div>
                 <div class="forget">
-                    <a class="cr" href="#">Se te olvido tu contraseña?</a>
+                    <!--<a class="cr" href="#">Se te olvido tu contraseña?</a>-->
                 </div>
             </div> 
             <div  class="panel-body pad" >
@@ -72,14 +72,13 @@
                         <input id="login-password" type="password" class="form-control" name="password" id="password" placeholder="******">
                     </div>
 
-                    <div class="input-group">
-                        <div class="checkbox">
-                            <label>
-                                <input id="login-remember" type="checkbox" name="remember" value="1"> Recordarme
-                            </label>
-                        </div>
-                    </div>
-
+                    <!--<div class="input-group">
+            <div class="checkbox">
+              <label>
+                <input id="login-remember" type="checkbox" name="remember" value="1"> Recordarme
+              </label>
+            </div>
+          </div>-->
                     <div class="form-group marg">
                         <div class="col-sm-12 controls">
                             <button type="submit" class="btn btn-success"><i class="fa fa-sign-in"></i> Entrar</button>
@@ -91,7 +90,7 @@
                             <div class="account">
                                 No tienes una cuenta! 
                                 <a href="#" onClick="$('#signupbox').hide();
-                        $('#loginbox').show()">
+                                        $('#loginbox').show()">
                                     Registrate Aqui!!
                                 </a>
                             </div>
@@ -115,21 +114,21 @@
             <div class="panel-heading">
                 <div class="panel-title">Registrese</div>
                 <div class="signinlink" style=""><a href="#" class="cr" onclick="$('#loginbox').hide();
-                $('#signupbox').show()">Iniciar sesion</a></div>
+                        $('#signupbox').show()">Iniciar sesion</a></div>
             </div>  
             <div class="panel-body" >
                 @if (Session::has("exist"))
                 <div class="alert alert-danger center-block" role="alert">{{Session::get("exist")}}</div>
                 @endif 
                 @if ($errors->any())
-            <div class="alert alert-danger alert-dismissible center-block" role="alert">
-              <ul>
-                @foreach ($errors->all() as $error)  
-                <li>{{$error}}</li>
-                @endforeach
-              </ul>
-            </div>
-            @endif
+                <div class="alert alert-danger alert-dismissible center-block" role="alert">
+                    <ul>
+                        @foreach ($errors->all() as $error)  
+                        <li>{{$error}}</li>
+                        @endforeach
+                    </ul>
+                </div>
+                @endif
                 <form id="signupform" class="form-horizontal" role="form" method="post" action="{{url('registro/registro')}}">
                     <input type="hidden" name="_token" value="<?php echo csrf_token(); ?>">
 

@@ -1,4 +1,6 @@
 <?php include ("/../../../../public/dompdf/dompdf_config.inc.php") ;
+date_default_timezone_set("America/Bogota");
+        $fecha = date("d-m-Y")." ".date("h:i:sa");
 
  $codigoHTML=' 
   <html>
@@ -15,10 +17,10 @@
 <h1 class="panel-title"><i class="fa fa-bar-chart-o fa-fw"></i>PORTAL BUGA</h1>
 <h2 class="panel-title"><i class="fa fa-bar-chart-o fa-fw"></i>Reporte de visitas del Portal</h2>
 <h4 class="panel-title"><i class="fa fa-bar-chart-o fa-fw"></i>Fecha y Hora: ' . 
- date("d-m-Y")." ".date("h:i:sa").'</h4>
+ ($fecha).'</h4>
      <br>
      <h3 style="text-align: center" class="panel-title"><i class="fa fa-bar-chart-o fa-fw"></i>El Portal tiene:</h3>
-     <h2 style="color: blue; text-align: center">'.' ' .$visitas->visita.' '.'visitas</h2>
+     <h2 style="color: blue; text-align: center">'.' ' .$visitas->visita.' '.'visita(s)</h2>
         </div>
          
     </div>

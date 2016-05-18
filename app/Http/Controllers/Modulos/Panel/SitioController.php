@@ -142,7 +142,7 @@ class SitioController extends Controller {
         $validacion = Validator::make($_POST, $reglas, $mensajes);
 
         if ($validacion->fails()) {
-            return redirect(url('admin/sitio/editar'))
+            return redirect(url('admin/sitio/editar/'.$sitId))
                             ->withErrors($validacion->errors());
         }
 

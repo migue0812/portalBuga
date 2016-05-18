@@ -48,7 +48,7 @@
       <div class="panel-heading">
         <div class="panel-title">Login</div>
         <div class="forget">
-          <a class="cr" href="#">Se te olvido tu contraseña?</a>
+          <!--<a class="cr" href="#">Se te olvido tu contraseña?</a>-->
         </div>
       </div> 
 
@@ -73,13 +73,13 @@
             <input id="login-password" type="password" class="form-control" name="password" id="password" placeholder="******">
           </div>
 
-          <div class="input-group">
+          <!--<div class="input-group">
             <div class="checkbox">
               <label>
                 <input id="login-remember" type="checkbox" name="remember" value="1"> Recordarme
               </label>
             </div>
-          </div>
+          </div>-->
 
           <div class="form-group marg">
             <div class="col-sm-12 controls">

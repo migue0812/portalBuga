@@ -1,6 +1,193 @@
 <?php include ("/../../Templates/Frontend/head.php") ?>
 <?php include ("/../../Templates/Frontend/header.php") ?>
 
+<script src="http://maps.google.com/maps/api/js?sensor=true&language=es"></script>
+<link  href="http://code.google.com//apis/maps/documentation/javascript/examples/default.css" rel="stylesheet" type="text/css">
+<style>
+    #directions-panel {
+        position: absolute;
+    height: 450px;
+    right: 0;
+    width: 400px;
+    overflow: auto;
+    background-color: rgba(0,0,0,.85);
+    z-index: 1;
+
+    }
+    
+     .directions-outpanelc {
+        position: absolute;
+    height: 450px;
+    right: 0;
+    width: 400px;
+    overflow: auto;
+    
+    z-index: 1;
+
+    }
+    .directions-outpanel {
+        float: right;
+
+    }
+    #from-link{
+        width: 100%;
+        position: absolute;
+    }
+
+    #map-canvas {
+        margin-right: 400px;
+    }
+
+    #map-canvas2 {
+        margin-right: 400px;
+    }
+.bigmap{
+       height: 450px;
+    
+    width: 450px !important; 
+    }
+    .smallmap{
+       height: 150px !important;
+    
+    width: 400px !important; 
+    }
+/*    #control #from {
+       max-width: 370px;
+}*/
+
+#control {
+       left: 0 !important;
+       white-space: nowrap !important;
+}
+.max-widthX{
+     max-width: 330px;
+}
+    .gmnoprint img { max-width: none !important; }
+    label.error {
+    position: absolute;
+    background-color: transparent;
+    right: 5%;
+    padding-top: 25px;
+    font-size: 16px !important;
+    color:red;
+}
+.gm-style-mtc div{
+          top: 20px !important;
+    left: -12px !important;
+    position: relative !important;
+    padding: 4px 4px 4px 4px !important;
+    height: 16px;
+    background-color: transparent !important;
+}
+.gm-style-mtc div div {
+            top: 0px !important;
+    width: 50px;
+/*    left: 100px !important;*/
+    padding: 0px 0px 0px 15px !important;
+    position: absolute !important;
+}
+.gm-style-mtc div div span label{
+    top:0px;
+}
+.gm-style .gm-style-mtc label{
+    color: rgba(0, 0, 0, .6);
+}
+.gm-style-mtc div div div {
+        
+     padding: 4px 4px 4px 4px !important;
+}
+.gm-svpc {
+/*    top: -6px !important;*/
+}
+.gmnoprint.gm-bundled-control.gm-bundled-control-on-bottom {
+    top: 40px;
+}
+/*.gmnoprint {
+    top: 30px !important;
+}*/
+    #control {
+        background: #fff;
+        padding: 5px;
+        font-size: 14px;
+        font-family: Arial;
+        border: 1px solid #ccc;
+        box-shadow: 0 2px 2px rgba(33, 33, 33, 0.4);
+        display: none;
+        
+    }
+/*    .gmnoprint{
+    top:15px;
+    }*/
+   
+
+    @media print {
+        #map-canvas {
+            height: 500px;
+            margin: 0;
+        }
+
+        #directions-panel {
+            float: none;
+            width: auto;
+        }
+    }
+    
+     /*---------ver sitio google maps-------------*/
+  /*---------ver sitio-------------*/
+  /*---------ver sitio-------------*/
+      
+ #map {position:relative;
+        width: 500px;
+        height: 400px;
+        margin-top: 10px;
+      }
+      #directions {
+      position:relative;
+      top: 300px;
+    width: 38%;
+    float: right; }
+      
+      .rutacont{
+             /* display: none; */
+    position: relative;
+    display: inline;
+    /* left: 490px; */
+    /* top: 600px; */
+    width: 400px;
+          
+      }      
+      #fbshare{
+  position: relative;
+    top: -22px;
+    }
+  .dircont{
+          display: inline;
+    width: 450px;
+  }
+      
+  .descricont{
+    position:relative;  
+    height: 100%
+  }
+  .diruti{
+/*      position: relative;
+    top: 130px;*/
+padding: 0px 20px 0px 20px;
+  }
+  #directions-panel {
+    
+    width: 450px !important;
+  }
+  .adp-substep .adp-stepicon {
+    
+    background-color: lightcyan !important;
+    border-radius: 2.5px ;
+    width: 17px !important;
+    height: 17px !important;
+}
+
+</style>
+
 <div class="container">
     <div class="row">
         <div class="box">
@@ -109,6 +296,130 @@
         </div>
     </div>
 </div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<!--inicio html geolocacion-->
+<!--inicio html geolocacion-->
+<!--inicio html geolocacion-->
+
+    <script src="http://maps.google.com/maps/api/js?sensor=true"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script>
+      function calculateRoute(from, to) {
+        // Center initialized to Naples, Italy
+        var myOptions = {
+          zoom: 10,
+          center: new google.maps.LatLng(40.84, 14.25),
+          mapTypeId: google.maps.MapTypeId.ROADMAP
+        };
+        // Draw the map
+        var mapObject = new google.maps.Map(document.getElementById("map"), myOptions);
+        var directionsService = new google.maps.DirectionsService();
+        var directionsRequest = {
+          origin: from,
+          destination: to,
+          travelMode: google.maps.DirectionsTravelMode.DRIVING,
+          unitSystem: google.maps.UnitSystem.METRIC
+        };
+        directionsService.route(
+          directionsRequest,
+          function(response, status)
+          {
+            if (status == google.maps.DirectionsStatus.OK)
+            {
+              new google.maps.DirectionsRenderer({
+                map: mapObject,
+                directions: response
+              });
+            }
+            else
+              $("#error").append("No se puede obtener su ruta<br />");
+          }
+        );
+      }
+      $(document).ready(function() {
+        // If the browser supports the Geolocation API
+        if (typeof navigator.geolocation == "undefined") {
+          $("#error").text("Your browser doesn't support the Geolocation API");
+          return;
+        }
+        $("#from-link, #to-link").click(function(event) {
+          event.preventDefault();
+          var addressId = this.id.substring(0, this.id.indexOf("-"));
+          navigator.geolocation.getCurrentPosition(function(position) {
+            var geocoder = new google.maps.Geocoder();
+            geocoder.geocode({
+              "location": new google.maps.LatLng(position.coords.latitude, position.coords.longitude)
+            },
+            function(results, status) {
+              if (status == google.maps.GeocoderStatus.OK)
+                $("#" + addressId).val(results[0].formatted_address);
+              else
+                $("#error").append("No se puede obtener su direccion<br />");
+            });
+          },
+          function(positionError){
+            $("#error").append("Error: " + positionError.message + "<br />");
+          },
+          {
+            enableHighAccuracy: true,
+            timeout: 10 * 1000 // 10 seconds
+          });
+        });
+        $("#calculate-route").submit(function(event) {
+          event.preventDefault();
+          calculateRoute($("#from").val(), $("#to").val());
+        });
+      });
+    </script>
+    <style type="text/css">
+      #map {
+        width: 500px;
+        height: 400px;
+        margin-top: 10px;
+      }
+      
+      #frommm {
+         margin-left: 20px;
+      }
+      
+      #to {
+         margin-left: 20px;
+      }
+      
+      
+    </style>
+
+    <center><h6 style="margin-top:20px; margin-right: 50px;">Calcular ruta</h6></center>
+    <center><form id="calculate-route" name="calculate-route" action="#" method="get">
+            <label for="from">Desde:
+      <input type="text" id="frommm" name="from" required="required" placeholder="Una dirección" size="60" />
+      <a id="" href="#">Obtener mi posición</a>
+      <br />
+      <label for="to">Hacia:</label>
+      <input type="text" id="to" name="to" required="required" placeholder="Otra dirección" size="60" />
+      <a id="to-link" href="#">Obtener mi posición</a>
+      <br />
+      <input type="submit" />
+      <input type="reset" />
+        </form></center>
+    <div id="map"></div>
+    <p id="error"></p>
+         
+
 
 <?php include ("/../../Templates/Frontend/footer.php") ?>
 <?php include ("/../../Templates/Frontend/foot.php") ?>

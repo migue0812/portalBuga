@@ -60,12 +60,12 @@
         <li class="sub-menu">
           <a href="javascript:;" >
             <i class="fa fa-th"></i>
-            <span>Configuracion</span>
-          </a>
-          <ul class="sub">
-            <li><a  href="{{url('admin/configurar/crear')}}">Crear</a></li>
+            <span>Configuracion de Usuarios</span>
+        </a>
+        <ul class="sub">
+            <li><a  href="{{url('registro/listar')}}">Listar</a></li>
+            <li><a  href="{{url('registro/registro')}}">Crear</a></li>
             <li><a  href="{{url('admin/configurar/reporte')}}">Reporte</a></li>
-            <li><a  href="{{url('admin/configurar/listar')}}">Listar</a></li>
           </ul>
         </li>
       </ul>
@@ -85,7 +85,15 @@
         <div class="col-lg-12">
           <div class="form-panel">
             <h4 class="mb"><i class="fa fa-angle-right"></i> Editar Sitio</h4>
-             
+              @if ($errors->any())
+                         <div class="alert alert-danger alert-dismissible center-block" role="alert">
+                             <ul>
+                              @foreach ($errors->all() as $error)  
+                                 <li>{{$error}}</li>
+                                 @endforeach
+                             </ul>
+                         </div>
+                        @endif
             <form class="style-form" method="post" action="{{url('admin/sitio/editar')}}" enctype="multipart/form-data">
               
               <input type="hidden" name="_token" value="<?php echo csrf_token(); ?>">
