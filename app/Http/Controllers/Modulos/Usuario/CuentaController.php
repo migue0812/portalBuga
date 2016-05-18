@@ -15,20 +15,16 @@ use DB;
 class CuentaController extends Controller {
 
   function getIndex(Request $request) {
-    return view("Modulos.Usuario.panel");
+    return view("Modulos.Usuario.editar");
   }
 
 
-  function getPanel(Request $request) {
-    return view("Modulos.Usuario.panel");
+  function getCuenta(Request $request) {
+    return view("Modulos.Usuario.editar");
   }
-  
-  function getEditar(Request $request) {
-    return view("Modulos.Usuario.cuenta.editar");
-  }
-  
+ 
   function getEliminar(Request $request) {
-    return view("Modulos.Usuario.cuenta.eliminar");
+    return view("Modulos.Usuario.eliminar");
   }
 
 }
