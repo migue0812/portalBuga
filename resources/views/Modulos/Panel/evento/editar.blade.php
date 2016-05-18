@@ -81,122 +81,145 @@
   <section id="main-content">
     <section class="wrapper">
 
-      <div class="row">
-        <div class="col-lg-12">
-          <div class="form-panel">
-            <h4 class="mb"><i class="fa fa-angle-right"></i> Editar Evento</h4>
-            <form class="style-form" method="post">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="form-panel">
+                    <h4 class="mb"><i class="fa fa-angle-right"></i> Editar Evento</h4>
+                    <form action="{{url('admin/evento/editar')}}" class="style-form" method="post" enctype="multipart/form-data">
 
-              <input type="hidden" name="_token" value="<?php echo csrf_token(); ?>">
+                        
+                        <input type="hidden" name="_token" value="<?php echo csrf_token(); ?>">
+                        <input type="hidden" value="{{$eventos->eve_id}}" name="id" id="id">
 
-                <div class="row col-md-12">
-                  <div class="col-md-12">
-                    <div class="form-group">
-                      <label for="sitio_id">Sitio</label>
-                      <select class="form-control"  name="sitio_id" required="">
-                        <option name="0" value=""></option>
-                      </select>                       
-                    </div>
-                  </div>
+                        <div class="row col-md-12">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label for="eve_nombre">Nombre Evento</label>
+                                    <input type="text" class="form-control" id="eve_nombre" name="eve_nombre" placeholder="Nombre evento" required="" value="{{$eventos->eve_nombre}}">                    
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row col-md-12">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="eve_cat">Categoria</label>
+                                    <select class="form-control"  name="eve_cat" required="">
+                                        <option name="0" value="{{$eventos->cat_id}}">{{$eventos->cat_nombre}}</option>
+                                        <?php foreach ($categorias as $categoria) { ?>
+                                            <option value="<?php echo $categoria->cat_id ?>"> <?php echo $categoria->cat_nombre ?></option>
+                                        <?php } // foreach ?>
+                                    </select>                       
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="eve_subcat">Subcategoria</label>
+                                    <select class="form-control"  name="eve_subcat" required="">
+                                        <option name="0" value="{{$eventos->subcat_id}}">{{$eventos->subcat_nombre}}</option>
+                                        <?php foreach ($subcategoria as $subcategorias) { ?>
+                                            <option value="<?php echo $subcategorias->subcat_id ?>"> <?php echo $subcategorias->subcat_nombre ?></option>
+                                        <?php } // foreach ?>
+                                    </select>                       
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row col-md-12">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="valor_boleta">Valor boleta</label>
+                                    <input type="text" class="form-control" id="eve_direccion" name="valor_boleta" placeholder="Valor Boleta" required="" value="{{$eventos->eve_valor_boleta}}">
+
+
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="eve_direccion">Direccion</label>
+                                    <input type="text" class="form-control" id="eve_direccion" name="eve_direccion" placiteholder="Ingresa Direccion" required="" value="{{$eventos->eve_direccion}}">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row col-md-12">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="eve_nombre_contacto">Nombre Contacto</label>
+                                    <input type="text" class="form-control" id="eve_nombre_contacto" name="eve_nombre_contacto" placeholder="Nombre Contacto" required="" value="{{$eventos->eve_nombre_contacto}}">
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="eve_correo_contacto">Correo Contacto</label>
+                                    <input type="email" class="form-control" id="eve_correo_contacto" name="eve_correo_contacto" placeholder="Example@tubuga.com" required="" value="{{$eventos->eve_correo_contacto}}">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row col-md-12">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="eve_telefono_contacto">Telefono Contacto</label>
+                                    <input type="tel" class="form-control" id="eve_telefono_contacto" name="eve_telefono_contacto" placeholder="Ingresa Telefono" required="" value="{{$eventos->eve_telefono_contacto}}">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row col-md-12">
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label for="eve_hora">Hora</label>
+                                    <input type="time" class="form-control" id="eve_hora" name="eve_hora" placeholder="HH:MM:SS" value="{{$eventos->eve_fecha_hora}}">
+                                </div>
+                            </div>
+
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label for="eve_fecha_inicio">Fecha Inicio</label>
+                                    <input type="date" class="form-control" id="eve_fecha_inicio" name="eve_fecha_inicio" placeholder="año-mes-dia" value="{{$eventos->eve_fecha_inicio}}">
+                                </div>
+                            </div>
+
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label for="eve_fecha_fin">Fecha Fin</label>
+                                    <input type="date" class="form-control" id="eve_fecha_fin" name="eve_fecha_fin" placeholder="año-mes-dia" value="{{$eventos->eve_fecha_fin}}">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row col-md-12">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="">Imagen</label>                       
+                                    <input type="file" class="form-control" id="eve_foto" name="eve_foto">
+                                </div>
+                            </div> 
+                        </div>
+
+                        <div class="row col-md-12">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label for="eve_descripcion">Descripcion</label>
+                                    <textarea rows="5" class="form-control" id="eve_descripcion" name="eve_descripcion" placeholder="Escriba una pequeña descripcion del evento">{{$eventos->eve_descripcion}}</textarea>
+                                </div>
+                            </div>
+                        </div>
+                        
+                       
+
+                        <button type="submit" class="btn btn-info btn-fill pull-right">Editar</button>
+                        <div class="clearfix"></div>
+                    </form>
                 </div>
-              
-                <div class="row col-md-12">
-                  <div class="col-md-6">
-                    <div class="form-group">
-                      <label for="eve_nombre">Nombre Evento</label>
-                      <input type="text" class="form-control" id="eve_nombre" name="eve_nombre" placeholder="Nombre evento" required="">
-                    </div>
-                  </div>
-
-                  <div class="col-md-6">
-                    <div class="form-group">
-                      <label for="eve_direccion">Direccion</label>
-                      <input type="text" class="form-control" id="eve_direccion" name="eve_direccion" placiteholder="Ingresa Direccion" required="">
-                    </div>
-                  </div>
-                </div>
-
-                <div class="row col-md-12">
-                  <div class="col-md-6">
-                    <div class="form-group">
-                      <label for="eve_nombre_contacto">Nombre Contacto</label>
-                      <input type="text" class="form-control" id="eve_nombre_contacto" name="eve_nombre_contacto" placeholder="Nombre Contacto" required="">
-                    </div>
-                  </div>
-
-                  <div class="col-md-6">
-                    <div class="form-group">
-                      <label for="eve_correo_contacto">Correo Contacto</label>
-                      <input type="email" class="form-control" id="eve_correo_contacto" name="eve_correo_contacto" placeholder="Example@tubuga.com" required="">
-                    </div>
-                  </div>
-                </div>
-
-                <div class="row col-md-12">
-                  <div class="col-md-6">
-                    <div class="form-group">
-                      <label for="eve_telefono_contacto">Telefono Contacto</label>
-                      <input type="tel" class="form-control" id="eve_telefono_contacto" name="eve_telefono_contacto" placeholder="Ingresa Telefono" required="">
-                    </div>
-                  </div>
-                  
-                  <div class="col-md-6">
-                    <div class="form-group">
-                      <label for="eve_valor_boleta">Valor Boleta</label>
-                      <input type="number" class="form-control" id="eve_valor_boleta" name="eve_valor_boleta" placeholder="Example '$3000'">
-                    </div>
-                  </div>
-                </div>
-
-                <div class="row col-md-12">
-                  <div class="col-md-4">
-                    <div class="form-group">
-                      <label for="eve_hora">Hora</label>
-                      <input type="time" class="form-control" id="eve_hora" name="eve_hora" placeholder="HH:MM:SS">
-                    </div>
-                  </div>
-                  
-                  <div class="col-md-4">
-                    <div class="form-group">
-                      <label for="fecha_inicio">Fecha Inicio</label>
-                      <input type="date" class="form-control" id="fecha_inicio" name="fecha_inicio" placeholder="año-mes-dia">
-                    </div>
-                  </div>
-                  
-                  <div class="col-md-4">
-                    <div class="form-group">
-                      <label for="fecha_fin">Fecha Fin</label>
-                      <input type="date" class="form-control" id="fecha_fin" name="fecha_fin" placeholder="año-mes-dia">
-                    </div>
-                  </div>
-                </div>
-
-                <div class="row col-md-12">
-                  <div class="col-md-6">
-                    <div class="form-group">
-                      <label for="">Imagen</label>                       
-                      <input type="file" class="form-control" id="path" name="path" required="">
-                    </div>
-                  </div> 
-                </div>
-
-                <div class="row col-md-12">
-                  <div class="col-md-12">
-                    <div class="form-group">
-                      <label for="descripcion">Descripcion</label>
-                      <textarea rows="5" class="form-control" id="descripcion" name="descripcion" placeholder="Escriba una pequeña descripcion del evento"></textarea>
-                    </div>
-                  </div>
-                </div>
-
-              <button type="submit" class="btn btn-info btn-fill pull-right">Guardar</button>
-              <div class="clearfix"></div>
-            </form>
-          </div>
+            </div>
         </div>
-      </div>
     </section>
-  </section>
+</section>
 
 
 </section>
