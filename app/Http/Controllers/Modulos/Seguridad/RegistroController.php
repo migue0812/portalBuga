@@ -46,25 +46,27 @@ class RegistroController extends Controller {
         $facebook = filter_input(INPUT_POST, 'facebook');
         $google = filter_input(INPUT_POST, 'google');
 
-
-//      $registro = filter_input_array(INPUT_POST)['registro'];
-//        extract($registro);
+$exists = DB::table('bdp_usuario')->where('usu_usuario', '$usuario')->first();
+if(!$exists){ 
+    Session::flash('exist', 'Usuario ya existe.');
+    Session::flash('usuario', $usuario);
+    Session::flash('email', $email);
+    Session::flash('nombre', $nombre);
+    Session::flash('apellido', $apellidos);
+    Session::flash('fecha', $fecha);
+    return redirect(url('registro/registro'));
+}
+    
+    
+ 
 
         $usuarios = DB::select('SELECT IFNULL(MAX(usu_id),0)+1 AS id FROM bdp_usuario ORDER BY id DESC LIMIT 1');
         $usu_id = $usuarios[0]->id;
-//        $new_arr[] = null;
-//        foreach ($usuarios as $usuario) {
-//            $new_arr[] = $usuario->id;
-//        }
-//        $usu_id = implode($new_arr);
+
 
         $usuarios = DB::select('SELECT IFNULL(MAX(dus_id),0)+1 AS id FROM bdp_dato_usuario ORDER BY id DESC LIMIT 1');
         $dus_id = $usuarios[0]->id;
-//        $new_arr2[] = null;
-//        foreach ($usuarios as $usuario) {
-//            $new_arr2[] = $usuario->id;
-//        }
-//        $dus_id = implode($new_arr2);
+
 
 
         $reglas = array(
@@ -218,8 +220,6 @@ class RegistroController extends Controller {
         if ((Session::has('usuarioAdmin') === true) or (Session::has('usuarioLogueado') === true)){
 
 
-            $registro = filter_input_array(INPUT_POST)['registro'];
-            extract($registro);
 
 
             if (($password) == ($password_confirmation)) {

@@ -53,6 +53,10 @@
       </div> 
 
       <div  class="panel-body pad" >
+          @if (Session::has("registroSuccess"))
+                <div class="alert alert-success center-block" role="alert">{{Session::get("registroSuccess")}}</div>
+                {{Session::forget("registroSuccess")}}
+                @endif 
            @if (Session::has("usuarioInvalido"))
                 <div class="alert alert-danger center-block" role="alert">{{Session::get("usuarioInvalido")}}</div>
                 @endif 
@@ -115,6 +119,9 @@
                 $('#signupbox').show()">Iniciar sesion</a></div>
             </div>  
             <div class="panel-body" >
+                @if (Session::has("exist"))
+                <div class="alert alert-danger center-block" role="alert">{{Session::get("exist")}}</div>
+                @endif 
                 @if ($errors->any())
             <div class="alert alert-danger alert-dismissible center-block" role="alert">
               <ul>
@@ -133,12 +140,17 @@
 
                     <div class="input-group ingre">
                         <span class="input-group-addon"><i class="fa fa-user"></i></span>
-                        <input type="text" class="form-control" name="usuario" id="usuario" placeholder="Ingrese Nombre Usuario">                                        
+                        @if (Session::has("usuario"))
+                <input type="text" class="form-control alert-danger" name="usuario" id="usuario" placeholder="Ingrese Nombre Usuario" value="{{Session::get("usuario")}}">
+                
+                          @else                                      
+                        <input type="text" class="form-control" name="usuario" id="usuario" placeholder="Ingrese Nombre Usuario" value="{{Session::get("usuario")}}">                                        
+                        @endif 
                     </div>
 
                     <div class="input-group ingre">
                         <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
-                        <input type="text" class="form-control" name="email" id="email" placeholder="Example@buga.com">                                        
+                        <input type="text" class="form-control" name="email" id="email" placeholder="Example@buga.com" value="{{Session::get("email")}}">                                        
                     </div>
 
                     <div class="input-group ingre">
@@ -172,14 +184,14 @@
                     <div class="form-group">
                         <label for="apellidos" class="col-md-12">Apellidos</label>
                         <div class="col-md-12">
-                            <input type="text" class="form-control" name="apellidos" id="apellidos" placeholder="Ingrese Apellidos">
+                            <input type="text" class="form-control" name="apellidos" id="apellidos" placeholder="Ingrese Apellidos" value="{{Session::get("apellidos")}}">
                         </div>
                     </div>
 
                     <div class="form-group">
                         <label for="fecha_nacimiento" class="col-md-12">Fecha De Nacimiento</label>
                         <div class="col-md-12">
-                            <input type="date" class="form-control" name="fecha_nacimiento" id="fecha_nacimiento" placeholder="Fecha Nacimiento" />
+                            <input type="date" class="form-control" name="fecha_nacimiento" id="fecha_nacimiento" placeholder="Fecha Nacimiento" value="{{Session::get("fecha")}}"/>
                         </div>
                     </div>
 
@@ -211,6 +223,16 @@
         </div>
   </div>
 </div>
-
+<!--Session::flash('exist', 'Usuario ya existe.');
+    Session::flash('usuario', $usuario);
+    Session::flash('email', $email);
+    Session::flash('nombre', $nombre);
+    Session::flash('apellido', $apellidos);
+    Session::flash('fecha', $fecha);
+{{Session::forget("registroSuccess")}}
+{{Session::forget("registroSuccess")}}
+{{Session::forget("registroSuccess")}}
+{{Session::forget("registroSuccess")}}
+{{Session::forget("registroSuccess")}}-->
 
 @include('Templates.Frontend.foot')

@@ -118,6 +118,9 @@
                 $('#signupbox').show()">Iniciar sesion</a></div>
             </div>  
             <div class="panel-body" >
+                @if (Session::has("exist"))
+                <div class="alert alert-danger center-block" role="alert">{{Session::get("exist")}}</div>
+                @endif 
                 @if ($errors->any())
             <div class="alert alert-danger alert-dismissible center-block" role="alert">
               <ul>

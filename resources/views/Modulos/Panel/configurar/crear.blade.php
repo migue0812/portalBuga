@@ -92,6 +92,9 @@ MENU DE CONTENIDO
             <div class="col-lg-12">
                 <div class="form-panel">
                     <h4 class="mb"><i class="fa fa-angle-right"></i> Crear Usuario</h4>
+                    @if (Session::has("exist"))
+                <div class="alert alert-danger center-block" role="alert">{{Session::get("exist")}}</div>
+                @endif
                     @if ($errors->any())
             <div class="alert alert-danger alert-dismissible center-block" role="alert">
               <ul>
