@@ -107,25 +107,22 @@ class CategoriaController extends Controller {
             return redirect(url('admin/categoria/editar'))
                             ->withErrors($validacion->errors());
         }
-        DB::update("UPDATE bdp_categoria SET cat_nombre = ?, cat_descripcion = ?,"
-                .  array($cat_nombre, $cat_descripcion));
+        DB::update("UPDATE bdp_categoria SET cat_nombre = ?, cat_descripcion = ?, cat_updated_at = CURRENT_TIMESTAMP WHERE cat_id= ?",
+                array($cat_nombre, $cat_descripcion, $cat_id));
 
-        if ($sitioRuta !== "" && $sitioDest !== "") {
-            $img = DB::select("SELECT * FROM bdp_imagen WHERE sit_id = ?", array($sitId));
+        if ($categoriaRuta !== "" && $categoriaDest !== "") {
+            $img = DB::select("SELECT * FROM bdp_imagen WHERE cat_id = ?", array($cat_id));
             $img = $img[0]->img_ruta;
             unlink($img);
-            DB::insert("UPDATE bdp_imagen SET img_ruta = ? WHERE sit_id = ?", array($sitioDest, $sitId));
+            DB::insert("UPDATE bdp_imagen SET img_ruta = ? WHERE cat_id = ?", array($categoriaDest, $cat_id));
         }
 
         Session::flash("editar", "Sitio editado exitosamente");
-        return redirect(url("admin/sitio/listar"));
+        return redirect(url("admin/categoria/listar"));
     
         
         
         }
-
-    
-    
     
     function getReporte(Request $request) {
         return view("Modulos.Panel.categoria.reporte");
