@@ -57,9 +57,9 @@
                 <?php
             endforeach
                 ?>
-            <div class="row">
+            
                 <div class="col-md-12 portfolio-item">
 <?php include ("/../../Templates/Frontend/footer.php") ?>
 <?php include ("/../../Templates/Frontend/foot.php") ?>
             </div>
-            </div>
+            

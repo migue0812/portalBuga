@@ -1,4 +1,7 @@
 <?php include ("/../../../../public/dompdf/dompdf_config.inc.php") ;
+date_default_timezone_set("America/Bogota");
+        $fecha = date("d-m-Y")." ".date("h:i:sa");
+        
 
  $codigoHTML=' 
   <html>
@@ -15,7 +18,7 @@
 <h1 class="panel-title"><i class="fa fa-bar-chart-o fa-fw"></i>PORTAL BUGA</h1>
 <h2 class="panel-title"><i class="fa fa-bar-chart-o fa-fw"></i>Reporte de usuarios registrados</h2>
 <h4 class="panel-title"><i class="fa fa-bar-chart-o fa-fw"></i>Fecha y Hora: ' . 
- date("d-m-Y")." ".date("h:i:sa").'</h4>
+ ($fecha).'</h4>
         </div>
         <div class="panel-body">
             <br>
