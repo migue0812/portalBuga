@@ -57,18 +57,9 @@
                 <?php
             endforeach
                 ?>
-            <!-- ESTE (DIV) SITIO ES QUEMADO  -->
-           <div class="col-md-4 portfolio-item">
-                    <div id="tituloalz"><h2><?php echo ($sitio->sit_nombre) ?></h2></div>
-                    <img class="img-responsive" src="<?php echo asset("$sitio->img_ruta") ?>">
-                    <p><?php echo ((strlen($sitio->sit_descripcion) > 100) ? substr(($sitio->sit_descripcion), 0, 100) . " ..." : ($sitio->sit_descripcion)) ?></p>
-                    <a href="<?php echo url("home/sitios/det/" . $sitio->sit_id) ?>" class="btn btn-primary"><b title="Ver mas"class="icon-plus fa-fw"></b></a>
-                    <?php if (Session::has("usuarioLogueado")): ?>
-                        <a href="<?php echo url("itinerario/sitio/" . $sitio->sit_id) ?>" class="btn btn-primary"><b title="Itinerario" class="icon-direction fa-fw"></b></a>
-                    <?php endif ?>
-                </div>  
-                
-
+            <div class="row">
+                <div class="col-md-12 portfolio-item">
 <?php include ("/../../Templates/Frontend/footer.php") ?>
 <?php include ("/../../Templates/Frontend/foot.php") ?>
-            
+            </div>
+            </div>
