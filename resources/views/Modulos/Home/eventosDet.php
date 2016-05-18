@@ -99,7 +99,7 @@
       }
     </style>
 
-    <center><h1 style="margin-top:20px;">Calcular ruta</h1></center>
+    <center><h6 style="margin-top:20px;">Calcular ruta</h6></center>
     <center><form id="calculate-route" name="calculate-route" action="#" method="get">
       <label for="from">Desde:</label>
       <input type="text" id="from" name="from" required="required" placeholder="Una dirección" size="40" />
