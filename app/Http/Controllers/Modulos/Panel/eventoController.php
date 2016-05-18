@@ -30,10 +30,10 @@ class EventoController extends Controller {
         return view("Modulos.Panel.evento.crear", compact('categorias', 'subcategoria', 'sitios'));
     }
 
-    function getEditar($id) {
+    function getEditar($id_eve) {
         $eventos = DB::select("SELECT * FROM bdp_evento, bdp_imagen, bdp_categoria, bdp_subcategoria WHERE bdp_evento.eve_id = ? "
                         . "AND bdp_imagen.eve_id = bdp_evento.eve_id AND bdp_evento.cat_id=bdp_categoria.cat_id "
-                        . "AND bdp_evento.subcat_id=bdp_subcategoria.subcat_id", array($id));
+                        . "AND bdp_evento.subcat_id=bdp_subcategoria.subcat_id", array($id_eve));
         $eventos = $eventos[0];
         $categorias = DB::select("SELECT * FROM bdp_categoria");
         $subcategoria = DB::select("SELECT * FROM bdp_subcategoria");
@@ -53,7 +53,7 @@ class EventoController extends Controller {
         $eve_fecha_inicio = $_POST['eve_fecha_inicio'];
         $eve_fecha_fin = $_POST['eve_fecha_fin'];
         $eve_descripcion = $_POST['eve_descripcion'];
-        $eveId = $_POST["id"];
+        $eveId = $_POST['id'];
 
         $eve_foto = $_FILES["eve_foto"]["name"];
         $ruta = $_FILES["eve_foto"]["tmp_name"];
@@ -64,7 +64,7 @@ class EventoController extends Controller {
 
 
        $reglas = array(
-            "eve_nombre" => "required | max:40 | unique:bdp_evento,eve_nombre",
+            "eve_nombre" => "required | max:40 ",
             "valor_boleta" => "required | integer",
             "eve_direccion" => "required | min:8",
             "eve_nombre_contacto" => "required| min:3",
@@ -74,7 +74,7 @@ class EventoController extends Controller {
             "eve_fecha_inicio" => "required",
             "eve_fecha_fin" => "required",
             "eve_descripcion" => "required  | min:30",
-            "eve_foto" => "image"
+            
         );
 
         $mensajes = [
@@ -102,7 +102,7 @@ class EventoController extends Controller {
         $validacion = Validator::make($_POST, $reglas, $mensajes);
 
         if ($validacion->fails()) {
-            return redirect(url('admin/evento/editar'))
+            return redirect(url('admin/evento/editar/'.$eveId))
                             ->withErrors($validacion->errors());
         }
 

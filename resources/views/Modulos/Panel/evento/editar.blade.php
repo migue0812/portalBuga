@@ -85,11 +85,21 @@
             <div class="col-lg-12">
                 <div class="form-panel">
                     <h4 class="mb"><i class="fa fa-angle-right"></i> Editar Evento</h4>
-                    <form action="{{url('admin/evento/editar')}}" class="style-form" method="post" enctype="multipart/form-data">
+                        @if ($errors->any())
+                         <div class="alert alert-danger alert-dismissible center-block" role="alert">
+                             <ul>
+                              @foreach ($errors->all() as $error)  
+                                 <li>{{$error}}</li>
+                                 @endforeach
+                             </ul>
+                         </div>
+                        @endif
+                    <form  class="style-form" method="post" action="{{url('admin/evento/editar')}}" enctype="multipart/form-data">
 
                         
                         <input type="hidden" name="_token" value="<?php echo csrf_token(); ?>">
                         <input type="hidden" value="{{$eventos->eve_id}}" name="id" id="id">
+                        
 
                         <div class="row col-md-12">
                             <div class="col-md-12">
