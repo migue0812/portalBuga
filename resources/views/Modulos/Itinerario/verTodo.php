@@ -35,6 +35,21 @@
                                 <div class="panel-heading">
                                     <i class="fa fa-map-marker fa-fw"></i> Sitios Elegidos
                                 </div>
+                                <?php if (Session::has("sitio")):?>
+    <div class="alert alert-success alert-dismissible center-block" role="alert"><?php echo Session::get("sitio") ?></div>
+                <?php endif ?>
+    <?php if (Session::has("sitioExistente")):?>
+    <div class="alert alert-danger alert-dismissible center-block" role="alert"><?php echo Session::get("sitioExistente") ?></div>
+                <?php endif ?>
+     <?php if (Session::has("sitioVisitado")):?>
+    <div class="alert alert-info alert-dismissible center-block" role="alert"><?php echo Session::get("sitioVisitado") ?></div>
+                <?php endif ?>
+     <?php if (Session::has("sitioNoVisitado")):?>
+    <div class="alert alert-warning alert-dismissible center-block" role="alert"><?php echo Session::get("sitioNoVisitado") ?></div>
+                <?php endif ?>
+    <?php if (Session::has("sitioEliminado")):?>
+    <div class="alert alert-danger alert-dismissible center-block" role="alert"><?php echo Session::get("sitioEliminado") ?></div>
+                <?php endif ?>
                                 <!-- /.panel-heading -->
                                 <div class="panel-body">
                                     <div class="table-responsive">
@@ -46,30 +61,27 @@
                                                     <th>Opciones</th>
                                                 </tr>
                                             </thead>
+                                            <?php
+                            foreach ($sitios as $sitio):
+                                ?>
                                             <tbody>
                                                 <tr>
-                                                    <td>Vertigito</td>
-                                                    <td>No</td>
+                                                    <td><?php echo $sitio->sit_nombre ?></td>
+                                                    <td><?php echo $sitio->iti_visitado ?></td>
                                                     <td>
-                                                        <a title="Ver Sitio" href="" class="btn btn-xs btn-primary"><i class="fa fa-eye fa-fw"></i></a>
+                                                        <a title="Ver Sitio" href="<?php echo url("home/sitios/det/" . $sitio->sit_id) ?>" class="btn btn-xs btn-primary"><i class="fa fa-eye fa-fw"></i></a>
+                                                        <?php if ($sitio->iti_visitado === 'Si'): ?>
 
-                                                        <a title="No Visitado" href="" class="btn btn-xs btn-success"><i class="fa fa-rocket fa-fw"></i></a>
-
-                                                        <a title="Visitado" href="" class="btn btn-xs btn-warning"><i class="fa fa-rocket fa-fw"></i></a>
-
-                                                        <a title="Eliminar" href="" class="btn btn-xs btn-danger"><i class="fa  fa-ban fa-fw"></i></a></td>
-                                                </tr>
-                                                <tr>
-                                                    <td>La 11</td>
-                                                    <td>No</td>
-                                                    <td>Thornton</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Desire</td>
-                                                    <td>No</td>
-                                                    <td>the Bird</td>
+                                                        <a title="No Visitado" href="<?php echo url("itinerario/sitionovisitado/" . $sitio->sit_id) ?>" class="btn btn-xs btn-success"><i class="fa fa-rocket fa-fw"></i></a>
+                                                        <?php else: ?>
+                                                        <a title="Visitado" href="<?php echo url("itinerario/sitiovisitado/" . $sitio->sit_id) ?>" class="btn btn-xs btn-warning"><i class="fa fa-rocket fa-fw"></i></a>
+                                                        <?php endif ?>
+                                                        <a title="Eliminar" href="<?php echo url("itinerario/sitioeliminar/" . $sitio->sit_id) ?>" class="btn btn-xs btn-danger"><i class="fa  fa-ban fa-fw"></i></a></td>
                                                 </tr>
                                             </tbody>
+                                            <?php
+                                 endforeach 
+                                ?>
                                         </table>
                                     </div>
                                     <!-- /.table-responsive -->
