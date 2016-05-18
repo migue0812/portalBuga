@@ -1,13 +1,13 @@
 <div>
     <li class="mt">
-        <a class="active" href="{{url('admin/bienvenido')}}">
+        <a class="bienvenido" href="{{url('admin/bienvenido')}}">
             <i class="fa fa-dashboard"></i>
             <span>Bienvenido</span>
         </a>
     </li>
 
     <li class="sub-menu">
-        <a href="javascript:;" >
+        <a class="categoria" href="javascript:;" >
             <i class="fa fa-desktop"></i>
             <span>Categoria</span>
         </a>
@@ -20,20 +20,20 @@
     </li>
 
     <li class="sub-menu">
-        <a href="javascript:;" >
+        <a class="subcategoria" href="javascript:;" >
             <i class="fa fa-cogs"></i>
             <span>Subcategoria</span>
         </a>
         <ul class="sub">
-            <li><a  href="{{url('admin/subcategoria/crear')}}">Crear</a></li>
-            <li><a  href="{{url('admin/subcategoria/editar')}}">Editar</a></li>
-            <li><a  href="{{url('admin/subcategoria/reporte')}}">Reporte</a></li>
             <li><a  href="{{url('admin/subcategoria/listar')}}">Listar</a></li>
+            <li><a  href="{{url('admin/subcategoria/crear')}}">Crear</a></li>
+            <li><a  href="{{url('admin/subcategoria/reporte')}}">Reporte</a></li>
+            
         </ul>
     </li>
 
     <li class="sub-menu">
-        <a href="javascript:;" >
+        <a class="sitio" href="javascript:;" >
             <i class="fa fa-book"></i>
             <span>Sitio</span>
         </a>
@@ -46,7 +46,7 @@
     </li>
 
     <li class="sub-menu">
-        <a href="javascript:;" >
+        <a class="evento" href="javascript:;" >
             <i class="fa fa-tasks"></i>
             <span>Evento</span>
         </a>
@@ -59,7 +59,7 @@
     </li>
 
     <li class="sub-menu">
-        <a href="javascript:;" >
+        <a class="usuario" href="javascript:;" >
             <i class="fa fa-th"></i>
             <span>Configuracion de Usuarios</span>
         </a>
