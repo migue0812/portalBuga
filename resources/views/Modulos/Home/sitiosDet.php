@@ -315,183 +315,110 @@ padding: 0px 20px 0px 20px;
 <!--inicio html geolocacion-->
 <!--inicio html geolocacion-->
 
-
-
-
-<div class="rutacont col-xs-3 col-sm-3 col-md-3 col-lg-3 ">
-    <h4 class="lightcyan"><strong>Calcular ruta</strong></h4>
-    <form id="calculate-route" name="calculate-route" action="#" method="get">
-<!--        <label for="from" style="color:#00ABEB">Desde:</label>-->
-        <!--<input type="text" id="from" name="from" required="required" placeholder="An address" size="30" /><br>-->
-        <!--<span>&nbsp<a id="from-link" href="#">Obtener mi posición<span class="glyphicon glyphicon-map-marker"></span></a></span>-->
-<!--        <br />-->
-        <div style='display: none'>
-            <label for="to">To:</label>
-            <input type="text" id="to" name="to" readonly value="<?php echo $sitDetalle->sit_direccion; ?>"  size="30" />
-            <!--      <a id="to-link" href="#">Get my position</a>-->
-<!--            <br />-->
-        </div>
-        
-        
-    
-    <!--    <div id="map" class="invisibleX"></div>-->
-    
-<!--    <br>-->
-
-
-
-
-    <div id="control">
-        <strong>Desde:</strong>
-        <!--<select id="start" onchange="calcRoute();">-->
-        <input type="text" id="from" name="from" class="max-widthX" style="max-height:20px" required="required" placeholder="Dirección o Ciudad" size="40" onchange="calcRoute();"/><br>
-        
-    </div>
-    
-    <a id="from-link" style="width: 100%" href="#">Obtener mi posición<span class="glyphicon glyphicon-map-marker"></span></a><br>
-    <select id="routeMode" name="routeMode">
-    <option value="DRIVING">Driving</option>
-    <option value="WALKING">Caminando</option>
-    <option value="BICYCLING">Bicicleta</option>
-    <option value="TRANSIT">Trans Publico</option>
-</select>
-    <input type="submit" id="calculate-route" />
-        <input type="reset" id="routeClear" />
-      <p id="error"></p>
-    
-    <div id="outmap-canvas2" style="overflow:hidden;" class="smallmap" >
-    <div id="map-canvas2" class="" style="height:450px;width:400px;"></div></div>
-    <!--<div style="position:absolute; " >-->
-</form>
-
-    <script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
-    </script> 
-    <script type="text/javascript">
-        _uacct = "UA-162157-1";
-        urchinTracker();
-    </script> 
-
-</div>
-
-
-
-
-<!--   <div style="clear:both;"></div>-->
-<div id="" class="directions-outpanel invisibleX col-xs-3 col-sm-3 col-md-3 col-lg-3" >
-    <center><h4 class="lightcyan center-block"><strong>Como llegar...</strong></h4></center>
-    <div id="directions-panel" class="contenedor-imgAl invisibleX" ></div>
-    
-</div>
-
-<!--fin html geolocacion-->
-<!--fin html geolocacion-->
-<!--fin html geolocacion-->
-<div style="height: 1000px"></div>
-<script>
-  var directionsDisplay;
-  var directionsService = new google.maps.DirectionsService();
-
-  function initialize() {
-      directionsDisplay = new google.maps.DirectionsRenderer();
-      var mapOptions = {
-          zoom: 12,
-          mapTypeId: google.maps.MapTypeId.ROADMAP,
-         // center: new google.maps.LatLng(<?php  echo   (empty($sitDetalle->sit_latitud)) ? 3.8908926 :($sitDetalle->sit_latitud) ;?> , <?php  echo (empty($sit->sit_latitud)) ? -76.2992179 : ($sit->sit_longitud)?>)
-        //  center: new google.maps.LatLng(<?php echo $sitDetalle->sit_latitud?> , <?php echo $sitDetalle->sit_longitud?>)
-          center: new google.maps.LatLng( 3.8605801 , -76.2960773)
-      };
-      var map = new google.maps.Map(document.getElementById('map-canvas2'),
-              mapOptions);
-      directionsDisplay.setMap(map);
-      directionsDisplay.setPanel(document.getElementById('directions-panel'));
-
-      var control = document.getElementById('control');
-      control.style.display = 'block';
-      map.controls[google.maps.ControlPosition.TOP_CENTER].push(control);
-  }
-
-  $(document).ready(function () {
-      // If the browser supports the Geolocation API
-      if (typeof navigator.geolocation == "undefined") {
+    <script src="http://maps.google.com/maps/api/js?sensor=true"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script>
+      function calculateRoute(from, to) {
+        // Center initialized to Naples, Italy
+        var myOptions = {
+          zoom: 10,
+          center: new google.maps.LatLng(40.84, 14.25),
+          mapTypeId: google.maps.MapTypeId.ROADMAP
+        };
+        // Draw the map
+        var mapObject = new google.maps.Map(document.getElementById("map"), myOptions);
+        var directionsService = new google.maps.DirectionsService();
+        var directionsRequest = {
+          origin: from,
+          destination: to,
+          travelMode: google.maps.DirectionsTravelMode.DRIVING,
+          unitSystem: google.maps.UnitSystem.METRIC
+        };
+        directionsService.route(
+          directionsRequest,
+          function(response, status)
+          {
+            if (status == google.maps.DirectionsStatus.OK)
+            {
+              new google.maps.DirectionsRenderer({
+                map: mapObject,
+                directions: response
+              });
+            }
+            else
+              $("#error").append("No se puede obtener su ruta<br />");
+          }
+        );
+      }
+      $(document).ready(function() {
+        // If the browser supports the Geolocation API
+        if (typeof navigator.geolocation == "undefined") {
           $("#error").text("Your browser doesn't support the Geolocation API");
           return;
-      }
-//        $("#from").onchange(function(event) { 
-//          event.preventDefault();
-//          calcRoute();
-//      });
-      $("#from-link, #to-link").click(function (event) {
+        }
+        $("#from-link, #to-link").click(function(event) {
           event.preventDefault();
           var addressId = this.id.substring(0, this.id.indexOf("-"));
-          navigator.geolocation.getCurrentPosition(function (position) {
-              var geocoder = new google.maps.Geocoder();
-              geocoder.geocode({
-                  "location": new google.maps.LatLng(position.coords.latitude, position.coords.longitude)
-              },
-              function (results, status) {
-                  if (status == google.maps.GeocoderStatus.OK)
-                      $("#" + addressId).val(results[0].formatted_address);
-                  else
-                      $("#error").append("No se puede obtener su direccion<br />");
-              });
+          navigator.geolocation.getCurrentPosition(function(position) {
+            var geocoder = new google.maps.Geocoder();
+            geocoder.geocode({
+              "location": new google.maps.LatLng(position.coords.latitude, position.coords.longitude)
+            },
+            function(results, status) {
+              if (status == google.maps.GeocoderStatus.OK)
+                $("#" + addressId).val(results[0].formatted_address);
+              else
+                $("#error").append("No se puede obtener su direccion<br />");
+            });
           },
-                  function (positionError) {
-                      $("#error").append("Error: " + positionError.message + "<br />");
-                  },
-                  {
-                      enableHighAccuracy: true,
-                      timeout: 10 * 1000 // 10 seconds
-                  });
-          calcRoute();
-      });
-      $("#calculate-route").submit(function (event) {
+          function(positionError){
+            $("#error").append("Error: " + positionError.message + "<br />");
+          },
+          {
+            enableHighAccuracy: true,
+            timeout: 10 * 1000 // 10 seconds
+          });
+        });
+        $("#calculate-route").submit(function(event) {
           event.preventDefault();
-//          calculateRoute($("#from").val(), $("#to").val());
-          calcRoute();
+          calculateRoute($("#from").val(), $("#to").val());
+        });
       });
+    </script>
+    <style type="text/css">
+      #map {
+        width: 500px;
+        height: 400px;
+        margin-top: 10px;
+      }
       
-       $("#routeMode").on("change", function() { calcRoute(); });
+      #frommm {
+         margin-left: 20px;
+      }
+      
+      #to {
+         margin-left: 20px;
+      }
       
       
-       $("#routeClear").on("click", function() { directionsDisplay.setDirections({ routes: [] }); 
-       $('#directions-panel').addClass("invisibleX");
-       $('#directions-outpanel').addClass("invisibleX");
-       $('#outmap-canvas2').addClass("smallmap");
-       $('input#from').addClass("max-widthX");
-              $('#outmap-canvas2').removeClass("bigmap");
-    });
-       
-  });
+    </style>
 
-
-
-  function calcRoute() {
-      var start = document.getElementById('from').value;
-      var end = document.getElementById('to').value;
-     // var routeMode = google.maps.TravelMode($('#routeMode').value);
-      
-      var request = {
-          origin: start,
-          destination: end,
-          travelMode: google.maps.TravelMode[$("#routeMode").val()]
-      };
-      directionsService.route(request, function (response, status) {
-          if (status == google.maps.DirectionsStatus.OK) {
-              directionsDisplay.setDirections(response);
-              $('#map-canvas2').removeClass("invisibleX");
-              $('.directions-outpanel').removeClass("invisibleX");
-              $('#outmap-canvas2').removeClass("smallmap");
-              $('#outmap-canvas2').addClass("bigmap");
-              $('#map-canvas2').addClass("bigmap");
-              $('#directions-panel').removeClass("invisibleX");
-              $('input#from').removeClass("max-widthX");
-          }
-      });
-  }
-
-  google.maps.event.addDomListener(window, 'load', initialize);
-
-</script>
+    <center><h6 style="margin-top:20px; margin-right: 50px;">Calcular ruta</h6></center>
+    <center><form id="calculate-route" name="calculate-route" action="#" method="get">
+            <label for="from">Desde:
+      <input type="text" id="frommm" name="from" required="required" placeholder="Una dirección" size="60" />
+      <a id="" href="#">Obtener mi posición</a>
+      <br />
+      <label for="to">Hacia:</label>
+      <input type="text" id="to" name="to" required="required" placeholder="Otra dirección" size="60" />
+      <a id="to-link" href="#">Obtener mi posición</a>
+      <br />
+      <input type="submit" />
+      <input type="reset" />
+        </form></center>
+    <div id="map"></div>
+    <p id="error"></p>
+         
 
 
 <?php include ("/../../Templates/Frontend/footer.php") ?>
