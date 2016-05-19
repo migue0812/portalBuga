@@ -782,10 +782,3 @@ input[type="search"]:focus{
 textarea {
 	resize: none;
 }
-
-.flotante{
-    display:scroll;
-        position:fixed;
-        bottom:570px;
-        right:0px;
-}
