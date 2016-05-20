@@ -782,3 +782,19 @@ input[type="search"]:focus{
 textarea {
 	resize: none;
 }
+
+
+.sonido{
+    position: absolute;
+    margin-top: -30px;
+    margin-left: 1170px;
+    
+}
+
+
+.mas{
+    position: absolute;
+    margin-top: -15px;
+    margin-left: 1030px;
+    
+}
