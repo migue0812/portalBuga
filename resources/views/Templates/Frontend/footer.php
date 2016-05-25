@@ -5,8 +5,8 @@
                 <h3 class="div-h3">Encuéntranos en</h3>
                 <div class="social-footer">
                     <div class="social-footer">
-                        <li class="social-contactanos"><a title="@More Buga" href="">Facebook</a></li>
-                        <li class="social-contactanos"><a title="@More Buga" href="">Google</a></li>
+                        <li class="social-contactanos"><a title="@More Buga" href="https://www.facebook.com/Portal-de-Turismo-Buga-130910880649308/?skip_nax_wizard=true">Facebook</a></li>
+                        <li class="social-contactanos"><a title="@More Buga" href="https://plus.google.com/?hl=es">Google +</a></li>
                     </div>
                 </div>
             </div>
@@ -31,8 +31,8 @@
             <div class="col-xs-5 col-sm-3 col-lg-3 sitiosReferidos">
                 <h3 class="div-h3">Sitios Referidos</h3>
                 <div class="social-footer">
-                    <li class="social-contactanos"><a title="Contact Visit Greenland" href="">Alcaldia</a></li>
-                    <li class="social-contactanos"><a title="Contact Visit Greenland" href="">Trips por el valle</a></li>
+                    <li class="social-contactanos"><a title="Contact Visit Greenland" href="http://www.guadalajaradebuga-valle.gov.co/index.shtml">Alcaldia</a></li>
+                    <li class="social-contactanos"><a title="Contact Visit Greenland" href="https://www.facebook.com/BienestarCDTI/?fref=ts">CDTI SENA</a></li>
                 </div>
             </div>
 
