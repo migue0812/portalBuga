@@ -783,7 +783,7 @@ textarea {
 	resize: none;
 }
 
-
+@media screen and (min-width:700px)
 .sonido{
     position: absolute;
     margin-top: -30px;
@@ -791,9 +791,14 @@ textarea {
     
 }
 
-
+@media screen and (min-width:700px)
 .mas{
     position: absolute;
     margin-top: -15px;
-    margin-left: 1030px;   
+    margin-left: 1040px;   
+}
+
+.lo {
+    position: absolute;
+    margin-top: 80px;
 }
