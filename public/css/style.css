@@ -801,3 +801,57 @@ textarea {
     position: absolute;
     margin-top: 80px;
 }
+
+//RESPOSIVE SITIOS Y EFECTO HOVER IMGS INDEX (SITIOS)
+
+@media screen and (min-device-width: 992px) and (max-device-width: 1199px) { 
+    .boxSitio {
+        height: 420%;
+    }
+}
+
+.hoverSitio:hover .img {
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  transform: translate(0px, 0px);
+  -ms-transform: translate(0px, 0px);
+  -moz-transform: translate(0px, 0px);
+  -webkit-transform: translate(0px, 0px);
+  -o-transform: translate(0px, 0px);
+  -webkit-transition: all 500ms ease-in-out;
+  -moz-transition: all 500ms ease-in-out;
+  -ms-transition: all 500ms ease-in-out;
+  -o-transition: all 500ms ease-in-out;
+    
+  transform: translate(0px, -25px);
+  -ms-transform: translate(0px, -25px);
+  -moz-transform: translate(0px, -25px);
+  -webkit-transform: translate(0px, -25px);
+  -o-transform: translate(0px, -25px);
+  
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  
+  overflow: hidden;
+}
+
+.textHover {
+  color: #000 ;
+  font-family: 'Open Sans';
+  position: absolute;
+  z-index: -1;
+  display: block;
+  bottom: 56px;
+  width: 100%;
+  text-align: center;
+  
+  
+}
+#botonHidden{
+    background-color: #000;
+    border-color: #000;
+    color: #ffffff;
+     }

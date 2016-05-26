@@ -75,11 +75,15 @@
                 <?php
                 foreach ($sitios as $sitio):
                     ?>
-                    <div class="col-sm-4 text-center">
-                        <a href="<?php echo url("home/sitios/det/" . $sitio->sit_id) ?>"><img class="img-responsive" src="<?php echo asset("$sitio->img_ruta") ?>" alt=""></a>
-                        <h3><?php echo ($sitio->sit_nombre) ?></h3>
+                    <div class="hoverSitio col-sm-4 text-center">
+                        <a href="<?php echo url("home/sitios/det/" . $sitio->sit_id) ?>"><img class="img img-responsive" src="<?php echo asset("$sitio->img_ruta") ?>" alt=""></a>
+                        <div class="textHover">
+                            <button id="botonHidden" type="submit">Ver Mas</button>
+                            
+                        </div> 
+                        <h3 style="font-family: Helvetica Neue;"><?php echo ($sitio->sit_nombre) ?></h3>
                     </div>
-                    <div class=""></div>
+                   
                 <?php endforeach ?>
             </div>
 
