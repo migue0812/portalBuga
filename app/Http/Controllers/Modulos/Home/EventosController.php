@@ -32,7 +32,7 @@ class EventosController extends Controller {
         $eveDetalle = DB::select("SELECT * FROM bdp_evento, bdp_imagen WHERE "
                 . "bdp_evento.eve_id = ? AND bdp_imagen.eve_id = bdp_evento.eve_id", array($id));
         $eveDetalle = $eveDetalle[0];
-        return view('Modulos.Home.eventosdet' , compact('eveDetalle'));
+        return view('Modulos.Home.eventosDet' , compact('eveDetalle'));
     }
 
 }

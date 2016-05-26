@@ -15,13 +15,21 @@ use DB;
 class ConfigurarController extends Controller {
 
   function getIndex(Request $request) {
+      if (Session::has("usuarioAdmin")) {
     return view("Modulos.Panel.configurar.configurar");
-  }
+  }else {
+            return redirect(url("home/index"));
+        }
+    }
 
 
   function getConfigurar(Request $request) {
+      if (Session::has("usuarioAdmin")) {
     return view("Modulos.Panel.categoria.configurar");
-  }
+  }else {
+            return redirect(url("home/index"));
+        }
+    }
   
 //  function getCrear(Request $request) {
 //      $dato_usuario = DB::select("SELECT * FROM bdp_dato_usuario");
@@ -55,11 +63,19 @@ class ConfigurarController extends Controller {
 //  }
   
   function getReporte(Request $request) {
+      if (Session::has("usuarioAdmin")) {
     return view("Modulos.Panel.configurar.reporte");
-  }
+  }else {
+            return redirect(url("home/index"));
+        }
+    }
   
   function getListar(Request $request) {
+      if (Session::has("usuarioAdmin")) {
     return view("Modulos.Panel.configurar.listar");
-  }
+  }else {
+            return redirect(url("home/index"));
+        }
+    }
 
 }

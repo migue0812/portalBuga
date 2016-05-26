@@ -55,7 +55,7 @@ class ItinerarioController extends Controller {
     }
     
     function getSitio($id) {
-        
+        if (Session::has("usuarioLogueado")){
         $idUsuario = Session::get("usuarioId");
         $verificar = DB::select("SELECT * FROM bdp_itinerario WHERE sit_id=? AND usu_id=?", 
                 array($id, $idUsuario));
@@ -69,7 +69,9 @@ class ItinerarioController extends Controller {
         Session::flash("sitio", "Se ha agregado exitosamente el sitio al itinerario");
         return redirect(url("itinerario"));   
         }
-    }
+    }else {
+           return redirect(url("home/index"));
+    }}
     
     function getSitiovisitado($id) {
         if (Session::has("usuarioLogueado")) {
@@ -111,7 +113,7 @@ function getSitioeliminar($id) {
 }
 
 function getEventos($id) {
-        
+        if (Session::has("usuarioLogueado")) {
         $idUsuario = Session::get("usuarioId");
         $verificar = DB::select("SELECT * FROM bdp_itinerario WHERE eve_id=? AND usu_id=?", 
                 array($id, $idUsuario));
@@ -125,7 +127,9 @@ function getEventos($id) {
         Session::flash("evento", "Se ha agregado exitosamente el evento al itinerario");
         return redirect(url("itinerario/evento"));   
         }
-    }
+    }else {
+           return redirect(url("home/index"));
+    }}
     
     function getEventovisitado($id) {
         if (Session::has("usuarioLogueado")) {

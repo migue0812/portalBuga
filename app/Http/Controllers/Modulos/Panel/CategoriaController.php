@@ -16,15 +16,27 @@ use Illuminate\Support\Facades\Validator;
 class CategoriaController extends Controller {
 
     function getIndex(Request $request) {
+        if (Session::has("usuarioAdmin")) {
         return view("Modulos.Panel.categoria.categoria");
+    }else {
+            return redirect(url("home/index"));
+        }
     }
 
     function getCategoria(Request $request) {
+        if (Session::has("usuarioAdmin")) {
         return view("Modulos.Panel.categoria.categoria");
+    }else {
+            return redirect(url("home/index"));
+        }
     }
 
     function getCrear(Request $request) {
+        if (Session::has("usuarioAdmin")) {
         return view("Modulos.Panel.categoria.crear");
+    }else {
+            return redirect(url("home/index"));
+        }
     }
 
     function postCrear(Request $request) {
@@ -70,10 +82,14 @@ class CategoriaController extends Controller {
     }
 
     function getEditar($id) {
+        if (Session::has("usuarioAdmin")) {
         $categoria = DB::select("SELECT * FROM bdp_categoria, bdp_imagen WHERE bdp_categoria.cat_id = ?"
                    . " AND bdp_imagen.cat_id = bdp_categoria.cat_id", array($id));
         $categoria = $categoria[0];
         return view("Modulos.Panel.categoria.editar", compact('categoria'));
+    }else {
+            return redirect(url("home/index"));
+        }
     }
 
     function postEditar(Request $request) {
@@ -125,30 +141,46 @@ class CategoriaController extends Controller {
         }
     
     function getReporte(Request $request) {
+        if (Session::has("usuarioAdmin")) {
         return view("Modulos.Panel.categoria.reporte");
+    }else {
+            return redirect(url("home/index"));
+        }
     }
 
     function getListar(Request $request) {
+        if (Session::has("usuarioAdmin")) {
         
         $categorias = DB::select("SELECT * FROM bdp_categoria, bdp_estado WHERE bdp_categoria.est_id=bdp_estado.est_id ");
         
         return view("Modulos.Panel.categoria.listar", compact("categorias"));
         
+    }else {
+            return redirect(url("home/index"));
+        }
     }
     
     function getInhabilitar($id) {
+        if (Session::has("usuarioAdmin")) {
         DB::update("UPDATE bdp_categoria SET est_id = 0, cat_deleted_at = CURRENT_TIMESTAMP WHERE cat_id = ?", array($id));
 
         Session::flash("inhabilitar", "Se ha inhabilitado la categoria exitosamente");
         return redirect(url("admin/categoria/listar"));
+    }else {
+            return redirect(url("home/index"));
+        }
     }
 
     function getHabilitar($id) {
+        if (Session::has("usuarioAdmin")) {
 
         DB::update("UPDATE bdp_categoria SET est_id = 1, cat_deleted_at = NULL WHERE cat_id = ?", array($id));
 
         Session::flash("habilitar", "Se ha habilitado la categoria exitosamente");
         return redirect(url("admin/categoria/listar"));
+    }else {
+            return redirect(url("home/index"));
+        }
     }
 
 }

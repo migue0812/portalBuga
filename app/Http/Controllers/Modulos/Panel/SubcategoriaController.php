@@ -16,16 +16,24 @@ use Validator;
 class SubcategoriaController extends Controller {
 
     function getIndex(Request $request) {
+        if (Session::has("usuarioAdmin")) {
         return view("Modulos.Panel.subcategoria.subcategoria");
+    }else {
+            return redirect(url("home/index"));
+        }
     }
 
     function getSubcategoria(Request $request) {
+        if (Session::has("usuarioAdmin")) {
         return view("Modulos.Panel.subcategoria.subcategoria");
+    }else {
+            return redirect(url("home/index"));
+        }
     }
 
     function getCrear(Request $request) {
 
-
+if (Session::has("usuarioAdmin")) {
         $categorias = DB::select("SELECT * FROM bdp_categoria");
 
         $subcategorias = array();
@@ -33,6 +41,9 @@ class SubcategoriaController extends Controller {
         return view("Modulos.Panel.subcategoria.crear", compact("categorias", "subcategorias"));
 
 //    return view("Modulos.Panel.subcategoria.crear");
+    }else {
+            return redirect(url("home/index"));
+        }
     }
 
     function postCrear() {
@@ -132,7 +143,7 @@ DB::insert("INSERT INTO bdp_subcategoria "
     }
 
     function getEditar($id) {
-        
+        if (Session::has("usuarioAdmin")) {
         $categorias = DB::select("SELECT * FROM bdp_categoria");
         $subcategoria = DB::select("SELECT * FROM bdp_subcategoria WHERE subcat_id = ?", array($id));
         $subcategoria = $subcategoria[0];
@@ -142,6 +153,9 @@ DB::insert("INSERT INTO bdp_subcategoria "
 
         return view("Modulos.Panel.subcategoria.editar", compact("categorias", "subcategoria"));
 //        return view("Modulos.Panel.subcategoria.editar");
+    }else {
+            return redirect(url("home/index"));
+        }
     }
     
 function getBorrar($id) {

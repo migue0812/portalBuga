@@ -27,7 +27,7 @@ class CategoriasController extends controller {
         $subcategorias = DB::select("SELECT * FROM bdp_subcategoria, bdp_imagen WHERE "
                 . "bdp_subcategoria.cat_id = ? AND bdp_imagen.subcat_id = "
                 . "bdp_subcategoria.subcat_id", array($id));
-        return view('Modulos.Home.categoriasdet', compact("catDetalle"), compact("subcategorias"));
+        return view('Modulos.Home.categoriasDet', compact("catDetalle"), compact("subcategorias"));
     }
 
 }

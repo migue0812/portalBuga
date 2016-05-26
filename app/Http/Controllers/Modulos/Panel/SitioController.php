@@ -16,17 +16,29 @@ use Illuminate\Support\Facades\Session;
 class SitioController extends Controller {
 
     function getIndex(Request $request) {
+        if (Session::has("usuarioAdmin")) {
         return view("Modulos.Panel.subcategoria.subcategoria");
+    }else {
+            return redirect(url("home/index"));
+        }
     }
 
     function getSitio(Request $request) {
+        if (Session::has("usuarioAdmin")) {
         return view("Modulos.Panel.sitio.sitio");
+    }else {
+            return redirect(url("home/index"));
+        }
     }
 
     function getCrear(Request $request) {
+        if (Session::has("usuarioAdmin")) {
         $categorias = DB::select("SELECT * FROM bdp_categoria");
         $subcategorias = DB::select("SELECT * FROM bdp_subcategoria");
         return view("Modulos.Panel.sitio.crear", compact("categorias"), compact("subcategorias"));
+    }else {
+            return redirect(url("home/index"));
+        }
     }
 
     function postCrear() {
@@ -89,6 +101,7 @@ class SitioController extends Controller {
     }
 
     function getEditar($id) {
+        if (Session::has("usuarioAdmin")) {
         $sitios = DB::select("SELECT * FROM bdp_sitio, bdp_imagen, bdp_categoria, bdp_subcategoria WHERE bdp_sitio.sit_id = ? "
                         . "AND bdp_imagen.sit_id = bdp_sitio.sit_id AND bdp_sitio.cat_id=bdp_categoria.cat_id "
                         . "AND bdp_sitio.subcat_id=bdp_subcategoria.subcat_id", array($id));
@@ -96,10 +109,17 @@ class SitioController extends Controller {
         $categorias = DB::select("SELECT * FROM bdp_categoria");
         $subcategorias = DB::select("SELECT * FROM bdp_subcategoria");
         return view("Modulos.Panel.sitio.editar", compact('sitios', 'categorias', 'subcategorias'));
+    }else {
+            return redirect(url("home/index"));
+        }
     }
 
     function getReporte(Request $request) {
+        if (Session::has("usuarioAdmin")) {
         return view("Modulos.Panel.sitio.reporte");
+    }else {
+            return redirect(url("home/index"));
+        }
     }
 
     function postEditar() {
@@ -162,26 +182,38 @@ class SitioController extends Controller {
     }
 
     function getListar(Request $request) {
+        if (Session::has("usuarioAdmin")) {
         $sitios = DB::select("SELECT * FROM bdp_sitio, bdp_estado, bdp_categoria, bdp_subcategoria"
                         . " WHERE bdp_sitio.est_id=bdp_estado.est_id AND "
                         . "bdp_sitio.cat_id=bdp_categoria.cat_id AND "
                         . "bdp_sitio.subcat_id=bdp_subcategoria.subcat_id");
         return view("Modulos.Panel.sitio.listar", compact("sitios"));
+    }else {
+            return redirect(url("home/index"));
+        }
     }
 
     function getInhabilitar($id) {
+        if (Session::has("usuarioAdmin")) {
         DB::update("UPDATE bdp_sitio SET est_id = 0, sit_deleted_at = CURRENT_TIMESTAMP WHERE sit_id = ?", array($id));
 
         Session::flash("inhabilitar", "Se ha inhabilitado el sitio exitosamente");
         return redirect(url("admin/sitio/listar"));
+    }else {
+            return redirect(url("home/index"));
+        }
     }
 
     function getHabilitar($id) {
+        if (Session::has("usuarioAdmin")) {
 
         DB::update("UPDATE bdp_sitio SET est_id = 1, sit_deleted_at = NULL WHERE sit_id = ?", array($id));
 
         Session::flash("habilitar", "Se ha habilitado el sitio exitosamente");
         return redirect(url("admin/sitio/listar"));
+    }else {
+            return redirect(url("home/index"));
+        }
     }
 
 }
