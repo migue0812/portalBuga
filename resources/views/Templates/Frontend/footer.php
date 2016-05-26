@@ -32,7 +32,7 @@
                 <h3 class="div-h3">Sitios Referidos</h3>
                 <div class="social-footer">
                     <li class="social-contactanos"><a title="Contact Visit Greenland" href="http://www.guadalajaradebuga-valle.gov.co/index.shtml">Alcaldia</a></li>
-                    <li class="social-contactanos"><a title="Contact Visit Greenland" href="https://www.facebook.com/BienestarCDTI/?fref=ts">CDTI SENA</a></li>
+                    <li class="social-contactanos"><a title="Contact Visit Greenland" href="https://www.facebook.com/BienestarCDTI/?fref=ts">CDTI</a></li>
                 </div>
             </div>
 
