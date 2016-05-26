@@ -76,7 +76,9 @@
                 foreach ($sitios as $sitio):
                     ?>
                     <div class="hoverSitio col-sm-4 text-center">
-                        <a href="<?php echo url("home/sitios/det/" . $sitio->sit_id) ?>"><img class="img img-responsive" src="<?php echo asset("$sitio->img_ruta") ?>" alt=""></a>
+                        <a href="<?php echo url("home/sitios/det/" . $sitio->sit_id) ?>">
+                          <img class="img img-responsive thumbnail tm" src="<?php echo asset("$sitio->img_ruta") ?>" alt="">
+                        </a>
                         <div class="textHover">
                             <button id="botonHidden" type="submit">Ver Mas</button>
                             
