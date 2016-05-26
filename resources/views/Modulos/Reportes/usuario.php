@@ -1,4 +1,4 @@
-<?php include ("/../../../../public/dompdf/dompdf_config.inc.php") ;
+<?php include ("dompdf/dompdf_config.inc.php") ;
 date_default_timezone_set("America/Bogota");
         $fecha = date("d-m-Y")." ".date("h:i:sa");
         
