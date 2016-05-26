@@ -567,15 +567,14 @@ b.icon-direction{
 }
 
 
-.tiempo {
-    margin-left: 1080px;
-
+@media screen and (min-width:900px) {
+  .tiempo {
+    margin-left: 0px;
+  }
 }
+@media screen and (max-width:768px) {
 
-.tiempo:hover{
-    background: rgba(255,255,255,0.7);
-    border-radius: 20px;
-    opacity: 0.9;
+  margin-left: 0px;
 }
 
 /*---Que Hacer?---*/
