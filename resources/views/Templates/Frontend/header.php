@@ -19,9 +19,20 @@ $categorias = DB::select("SELECT * FROM bdp_categoria, bdp_imagen WHERE bdp_imag
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul id="lineShort"  class="nav navbar-nav">
-        <li class=""  >
+        <li class="hidden-xs"  >
           <a  href="<?php echo url("home/index") ?>"><span style="font-size: 23px;" class="homeIcon glyphicon glyphicon-home" title="Inicio"></span></a>
         </li>
+
+        <?php if ((Session::get("usuarioGenero") === 'M')): ?>
+          <li class="centerImg visible-xs">
+            <img class="imgTam" src="<?php echo asset("img/Male.png") ?>" />
+          </li>
+        <?php else: ?>
+          <li class="centerImg visible-xs">
+            <img class="imgTam" src="<?php echo asset("img/Female.png") ?>" />
+          </li>
+        <?php endif ?>
+
         <li class="dropdown navPerCat" >
           <a style="padding-right: 0px;padding-left: 0px;" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" title="Categorias">Categorias<span class="caret"></span></a>
           <ul class="dropdown-menu">
@@ -61,9 +72,6 @@ $categorias = DB::select("SELECT * FROM bdp_categoria, bdp_imagen WHERE bdp_imag
             <li class="navPerImg hidden-xs">
               <img class="imgTam" src="<?php echo asset("img/Male.png") ?>" />
             </li> 
-            <li class="centerImg visible-xs">
-              <img class="imgTam" src="<?php echo asset("img/Male.png") ?>" />
-            </li>
             <li class="dropdown navPer" >
               <a style="padding-right: 0px;padding-left: 0px;" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" title="Categorias"><?php echo ' ' . Session::get("usuarioLogueado") ?><span class="caret"></span></a>             
               <ul class="dropdown-menu">
@@ -76,9 +84,6 @@ $categorias = DB::select("SELECT * FROM bdp_categoria, bdp_imagen WHERE bdp_imag
             </li>
           <?php else: ?>
             <li class="navPerImg hidden-xs">
-              <img class="imgTam" src="<?php echo asset("img/Female.png") ?>" />
-            </li>
-             <li class="centerImg visible-xs">
               <img class="imgTam" src="<?php echo asset("img/Female.png") ?>" />
             </li>
             <li class="dropdown navPer" >
