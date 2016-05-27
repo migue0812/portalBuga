@@ -22,17 +22,18 @@ $categorias = DB::select("SELECT * FROM bdp_categoria, bdp_imagen WHERE bdp_imag
         <li class="hidden-xs"  >
           <a  href="<?php echo url("home/index") ?>"><span style="font-size: 23px;" class="homeIcon glyphicon glyphicon-home" title="Inicio"></span></a>
         </li>
-
-        <?php if ((Session::get("usuarioGenero") === 'M')): ?>
-          <li class="centerImg visible-xs">
-            <img class="imgTam" src="<?php echo asset("img/Male.png") ?>" />
-          </li>
-        <?php else: ?>
-          <li class="centerImg visible-xs">
-            <img class="imgTam" src="<?php echo asset("img/Female.png") ?>" />
-          </li>
+        <?php if ((Session::has("usuarioLogueado") !== true) && (Session::has("usuarioAdmin") !== true)): ?>
+        <?php elseif (Session::has("usuarioLogueado") | (Session::has("usuarioAdmin"))): ?>
+          <?php if ((Session::get("usuarioGenero") === 'M')): ?>
+            <li class="centerImg visible-xs">
+              <img class="imgTam" src="<?php echo asset("img/Male.png") ?>" />
+            </li>
+          <?php else: ?>
+            <li class="centerImg visible-xs">
+              <img class="imgTam" src="<?php echo asset("img/Female.png") ?>" />
+            </li>
+          <?php endif ?>
         <?php endif ?>
-
         <li class="dropdown navPerCat" >
           <a style="padding-right: 0px;padding-left: 0px;" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" title="Categorias">Categorias<span class="caret"></span></a>
           <ul class="dropdown-menu">
@@ -102,19 +103,30 @@ $categorias = DB::select("SELECT * FROM bdp_categoria, bdp_imagen WHERE bdp_imag
         <ul id="ejm2"  class="nav navbar-nav">
         <?php elseif (Session::has("usuarioAdmin")): ?>
           <?php if ((Session::get("usuarioGenero") === 'M')): ?>
-            <img src="<?php echo asset("img/Male.png") ?>" /><?php echo ' ' . Session::get("usuarioAdmin") ?>
+            <li class="navPerImg hidden-xs">
+              <img class="imgTam" src="<?php echo asset("img/Male.png") ?>" />
+            </li>
+            <li class="dropdown navPer" >
+              <a style="padding-right: 0px;padding-left: 0px;" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" title="Categorias"><?php echo ' ' . Session::get("usuarioAdmin") ?><span class="caret"></span></a>              
+              <ul class="dropdown-menu">
+                <li><a href="<?php echo url("admin/bienvenido") ?>">Panel de control</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="<?php echo url("registro/logout") ?>">Cerrar Sesión</a></li>
+              </ul>
+            </li>
           <?php else: ?>
-            <img src="<?php echo asset("img/Female.png") ?>" /><?php echo ' ' . Session::get("usuarioAdmin") ?>
-          <?php endif ?>
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="caret"></span></a>
-            <ul class="dropdown-menu">
-              <li><a href="<?php echo url("admin/bienvenido") ?>">Panel de control</a></li>
-              <li role="separator" class="divider"></li>
-
-              <li><a href="<?php echo url("registro/logout") ?>">Cerrar Sesión</a></li>
-            </ul>
-          </li>
+            <li class="navPerImg hidden-xs">
+              <img class="imgTam" src="<?php echo asset("img/Female.png") ?>" />
+            </li>
+            <li class="dropdown navPer" >
+              <a style="padding-right: 0px;padding-left: 0px;" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" title="Categorias"><?php echo ' ' . Session::get("usuarioAdmin") ?><span class="caret"></span></a>              
+              <ul class="dropdown-menu">
+                <li><a href="<?php echo url("admin/bienvenido") ?>">Panel de control</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="<?php echo url("registro/logout") ?>">Cerrar Sesión</a></li>
+              </ul>
+            </li>
+          <?php endif ?>         
         </ul>
       <?php endif ?>
 
