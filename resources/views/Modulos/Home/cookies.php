@@ -24,7 +24,7 @@
             </p>
             <p>
                 <i>
-                    La información almacenada en las cookies de nuestro sitio web es utilizada exclusivamente con fines estadísticos.
+                    La información almacenada en las cookies de nuestro Portal web es utilizada exclusivamente con fines estadísticos.
                 </i>
             </p>
 

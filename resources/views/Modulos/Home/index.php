@@ -160,7 +160,7 @@
                     </div>
                     <div class="col-lg-4 col-sm-4">
                         <a href="<?php echo url("home/historia") ?>">
-                        <img class="queHacerIcon img-circle img-responsive img-center" src="<?php echo asset("img/histoBuga.png") ?>" alt="Descansar?">
+                        <img class="queHacerIcon  img-responsive img-center" src="<?php echo asset("img/histoBuga.png") ?>" alt="Descansar?">
                         </a>
                         <h3 class="text-center">
                         </h3>
