@@ -12,7 +12,7 @@
                     <h2 style="text-align: center;">Detalles del Eventos</h2>
                 </div>
             </div>
-            <hr class="tagline-divider-cont">
+            <hr>
 
             <!-- Projects Row -->
 

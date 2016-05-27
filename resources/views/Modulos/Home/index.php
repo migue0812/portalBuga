@@ -55,11 +55,11 @@
                     <div class="tituloWelcome" style="">Una de las mejores ciudades turisticas!</div>
 
                     <p>En el Centro del Valle del Cauca, específicamente en la parte media de la Cordillera Central, 
-                      fue fundado en 1573, el municipio de Guadalajara de Buga. 
-                      “La ciudad Señora” como también se le denomina, 
-                      posee un patrimonio arquitectónico e histórico que cuenta con diferentes bienes de interés cultural,
-                      entre estos, La Basílica del Señor de los Milagros la cual recibe y acoge a visitantes de todo el mundo.
-</p>
+                        fue fundado en 1573, el municipio de Guadalajara de Buga. 
+                        “La ciudad Señora” como también se le denomina, 
+                        posee un patrimonio arquitectónico e histórico que cuenta con diferentes bienes de interés cultural,
+                        entre estos, La Basílica del Señor de los Milagros la cual recibe y acoge a visitantes de todo el mundo.
+                    </p>
 
                 </div>
             </div>
@@ -77,15 +77,15 @@
                     ?>
                     <div class="hoverSitio col-sm-4 text-center">
                         <a href="<?php echo url("home/sitios/det/" . $sitio->sit_id) ?>">
-                          <img class="img img-responsive thumbnail tm" src="<?php echo asset("$sitio->img_ruta") ?>" alt="">
+                            <img class="img img-responsive thumbnail tm" src="<?php echo asset("$sitio->img_ruta") ?>" alt="">
                         </a>
                         <div class="textHover">
                             <button id="botonHidden" type="submit">Ver Mas</button>
-                            
+
                         </div> 
                         <h3 style="font-family: Helvetica Neue;"><?php echo ($sitio->sit_nombre) ?></h3>
                     </div>
-                   
+
                 <?php endforeach ?>
             </div>
 
@@ -105,12 +105,12 @@
                             <small>Los Mejores Lugares Para Ti !</small>
                         </h3>
                         <p>Rodeada por diferentes atractivos turísticos, 
-                          dentro de ellos el más importante de esta ciudad La Basílica del Señor de los Milagros, 
-                          la cual a bendecido a millones de turistas nacionales y extranjeros. 
-                          Ubicada en el centro de la ciudad de Buga. 
-                          Por su trayectoria histórica y milagrosa la Basílica es el lugar mas visitado en el Valle del Cauca y uno de los centros religiosos por excelencia de Colombia.<br>
-                          Ven y disfruta de la mejor Gastronomía Vallecaucana, Restaurantes, Fincas Campestres, 
-                          Hoteles, Balnearios y demás Destinos Turísticos para disfrutar en Familia.</p>
+                            dentro de ellos el más importante de esta ciudad La Basílica del Señor de los Milagros, 
+                            la cual a bendecido a millones de turistas nacionales y extranjeros. 
+                            Ubicada en el centro de la ciudad de Buga. 
+                            Por su trayectoria histórica y milagrosa la Basílica es el lugar mas visitado en el Valle del Cauca y uno de los centros religiosos por excelencia de Colombia.<br>
+                            Ven y disfruta de la mejor Gastronomía Vallecaucana, Restaurantes, Fincas Campestres, 
+                            Hoteles, Balnearios y demás Destinos Turísticos para disfrutar en Familia.</p>
                     </div>
                 </div>
 
@@ -154,17 +154,23 @@
             <div class="container text-center actividades">
                 <div class="row">
                     <div class="col-lg-4 col-sm-4">
-                        <img class="queHacerIcon img-circle img-responsive img-center" src="<?php echo asset("img/senaLog.png") ?>" alt="Descansar?">
+                        <a href="https://www.facebook.com/BienestarCDTI/?fref=ts">
+                            <img class="queHacerIcon img-circle img-responsive img-center" src="<?php echo asset("img/senaLog.png") ?>" alt="Descansar?">
+                        </a>
                         <h3 class="text-center">
                         </h3>
                     </div>
                     <div class="col-lg-4 col-sm-4">
-                        <img class="queHacerIcon img-circle img-responsive img-center" src="<?php echo asset("img/histoBuga.png") ?>" alt="Descansar?">
+                        <a href="<?php echo url("home/historia") ?>">
+                            <img class="queHacerIcon  img-responsive img-center" src="<?php echo asset("img/histoBuga.png") ?>" alt="Descansar?">
+                        </a>
                         <h3 class="text-center">
                         </h3>
                     </div>
                     <div class="col-lg-4 col-sm-4">
-                        <img class="queHacerIcon img-circle img-responsive img-center" src="<?php echo asset("img/bugaLog.png") ?>" alt="Comer?">
+                        <a href="http://www.guadalajaradebuga-valle.gov.co/index.shtml">
+                            <img class="queHacerIcon img-circle img-responsive img-center" src="<?php echo asset("img/bugaLog.png") ?>" alt="Comer?">
+                        </a>
                         <h3 class="text-center">
                         </h3>
                     </div>
