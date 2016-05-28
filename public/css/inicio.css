@@ -45,12 +45,13 @@
 
 body {
   font-family: "Lora","Helvetica Neue",Helvetica,Arial,sans-serif;
-  background: url('../img/vintagecom.jpg') no-repeat center center fixed;
+  background: url('../img/backUno.jpg') no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
   -o-background-size: cover;
 }
+
 
 /* Social Presentation */
 h2.title {
