@@ -237,20 +237,39 @@
                 <!-- efecto imgs -->
                 <h2 style="text-align: center;">Imagenes Del Sitio</h2>
                 <hr class="tagline-divider-cont">
-                <?php foreach ($imagen as $imagenes): ?>
+              
+
                     <div class="col-md-4 col-sm-6 evento-item">
-                        <a href="#eventoModal1" class="evento-link" data-toggle="modal">
+                        <a href="#1" class="evento-link" data-toggle="modal">
                             <div class="evento-hover">
                                 <div class="evento-hover-content">                        
                                 </div>
                             </div>
-                            <img src="<?php echo asset("$imagenes->img_ruta") ?>" class="img-responsive" alt="">
+                            <img src="<?php echo asset($imagenes[0]->img_ruta) ?>" class="img-responsive" alt="">
+                        </a>            
+                    </div>
+                <div class="col-md-4 col-sm-6 evento-item">
+                        <a href="#2" class="evento-link" data-toggle="modal">
+                            <div class="evento-hover">
+                                <div class="evento-hover-content">                        
+                                </div>
+                            </div>
+                            <img src="<?php echo asset($imagenes[1]->img_ruta) ?>" class="img-responsive" alt="">
+                        </a>            
+                    </div>
+                <div class="col-md-4 col-sm-6 evento-item">
+                        <a href="#3" class="evento-link" data-toggle="modal">
+                            <div class="evento-hover">
+                                <div class="evento-hover-content">                        
+                                </div>
+                            </div>
+                            <img src="<?php echo asset($imagenes[2]->img_ruta) ?>" class="img-responsive" alt="">
                         </a>            
                     </div>
 
 
                     <!-- efecto IMG GRANDE(modal1) -->
-                    <div class="portfolio-modal modal fade" id="eventoModal1" tabindex="-1" role="dialog" aria-hidden="true">
+                    <div class="portfolio-modal modal fade" id="1" tabindex="-1" role="dialog" aria-hidden="true">
                         <div class="box">
                             <div class="close-modal" data-dismiss="modal">
                                 <div class="lr">
@@ -265,16 +284,72 @@
                                             <!-- Project Details Go Here -->
                                             <h2 style="margin-top: 20px; text-align: center"><?php echo ($sitDetalle->sit_nombre) ?></h2>
 
-                                            <img class="img-responsive img-centered" src="<?php echo asset("$imagenes->img_ruta") ?>" class="img-responsive" alt="">
+                                            <img class="img-responsive img-centered" src="<?php echo asset($imagenes[0]->img_ruta) ?>" class="img-responsive" alt="">
 
                                             <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
                                         </div>
                                     </div>
                                 </div>
                             </div>
+
                         </div>
                     </div>
-                <?php endforeach ?>
+
+                    <!-- efecto IMG GRANDE(modal1) -->
+                    <div class="portfolio-modal modal fade" id="2" tabindex="-1" role="dialog" aria-hidden="true">
+                        <div class="box">
+                            <div class="close-modal" data-dismiss="modal">
+                                <div class="lr">
+                                    <div class="rl">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-lg-8 col-lg-offset-2">
+                                        <div class="modal-body">
+                                            <!-- Project Details Go Here -->
+                                            <h2 style="margin-top: 20px; text-align: center"><?php echo ($sitDetalle->sit_nombre) ?></h2>
+
+                                            <img class="img-responsive img-centered" src="<?php echo asset($imagenes[1]->img_ruta) ?>" class="img-responsive" alt="">
+
+                                            <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- efecto IMG GRANDE(modal1) -->
+                    <div class="portfolio-modal modal fade" id="3" tabindex="-1" role="dialog" aria-hidden="true">
+                        <div class="box">
+                            <div class="close-modal" data-dismiss="modal">
+                                <div class="lr">
+                                    <div class="rl">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-lg-8 col-lg-offset-2">
+                                        <div class="modal-body">
+                                            <!-- Project Details Go Here -->
+                                            <h2 style="margin-top: 20px; text-align: center"><?php echo ($sitDetalle->sit_nombre) ?></h2>
+
+                                            <img class="img-responsive img-centered" src="<?php echo asset($imagenes[2]->img_ruta) ?>" class="img-responsive" alt="">
+
+                                            <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+    
                 <br>
                 <br>
                 <br>
@@ -400,4 +475,4 @@
 
 
                 <?php include ("/../../Templates/Frontend/footer.php") ?>
-                <?php include ("/../../Templates/Frontend/foot.php") ?>
+<?php include ("/../../Templates/Frontend/foot.php") ?>
