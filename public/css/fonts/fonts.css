@@ -20,3 +20,7 @@
     font-family:antique;
     src:url(AntiqueBookCover.otf);
 }
+@font-face{
+    font-family:above;
+    src:url(AbrilFatface.ttf);
+}

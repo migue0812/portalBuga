@@ -45,25 +45,24 @@ $categorias = DB::select("SELECT * FROM bdp_categoria, bdp_imagen WHERE bdp_imag
           </ul>
         </li>
         <li class="navPer">
-          <a  style="padding-right: 0px;padding-left: 0px;" href="<?php echo url("home/sitios") ?>">Sitios</a>
+          <a  style="padding-right: 0px;padding-left: 0px;" href="<?php echo url("home/sitios") ?>" title="Sitios">Sitios</a>
         </li>
         <li class="navPer">
-          <a  style="padding-right: 0px;padding-left: 0px;"href="<?php echo url("home/eventos") ?>">Eventos</a>
+          <a  style="padding-right: 0px;padding-left: 0px;"href="<?php echo url("home/eventos") ?> " title="Eventos">Eventos</a>
         </li>
         <?php if ((Session::has("usuarioLogueado") !== true) && (Session::has("usuarioAdmin") !== true)): ?>
           <li class="navPer">
-            <a  style="padding-right: 0px;padding-left: 0px;"href="<?php echo url("login") ?>">Ingresar</a>
+            <a  style="padding-right: 0px;padding-left: 0px;"href="<?php echo url("login") ?>" title="Ingresar">Ingresar</a>
           </li>
           <li class="navPer">
-            <a style="padding-right: 0px;padding-left: 0px;" href="<?php echo url("registro") ?>" onClick="$('#loginbox').hide();
+            <a style="padding-right: 0px;padding-left: 0px;" href="<?php echo url("registro") ?>"title="Registar" onClick="$('#loginbox').hide();
                   $('#signupbox').show()">Registrar</a>
           </li>
           <li>
-            <a>
+            <a title="Busqueda">
               <form action="<?php echo url("home/busqueda/buscar") ?>" method="post">
                 <input type="hidden" name="_token" value="<?php echo csrf_token(); ?>">
                 <input type="search" id="nombre" name="nombre" placeholder="Buscar" title="Busqueda">
-
               </form>
             </a>
           </li>
@@ -76,11 +75,11 @@ $categorias = DB::select("SELECT * FROM bdp_categoria, bdp_imagen WHERE bdp_imag
             <li class="dropdown navPer" >
               <a style="padding-right: 0px;padding-left: 0px;" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" title="Categorias"><?php echo ' ' . Session::get("usuarioLogueado") ?><span class="caret"></span></a>             
               <ul class="dropdown-menu">
-                <li><a href="<?php echo url("itinerario") ?>">Mi itinerario</a></li>
+                <li><a href="<?php echo url("itinerario") ?>" title="Itinerario">Mi itinerario</a></li>
                 <li role="separator" class="divider"></li>
-                <li><a href="<?php echo url("usuario/cuenta") ?>">Configuración</a></li>
+                <li><a href="<?php echo url("usuario/cuenta") ?>" title="Configuración">Configuración</a></li>
                 <li role="separator" class="divider"></li>
-                <li><a href="<?php echo url("registro/logout") ?>">Cerrar Sesión</a></li>
+                <li><a href="<?php echo url("registro/logout") ?>" title="Cerrar Sesión">Cerrar Sesión</a></li>
               </ul>
             </li>
           <?php else: ?>
@@ -90,11 +89,11 @@ $categorias = DB::select("SELECT * FROM bdp_categoria, bdp_imagen WHERE bdp_imag
             <li class="dropdown navPer" >
               <a style="padding-right: 0px;padding-left: 0px;" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" title="Categorias"><?php echo ' ' . Session::get("usuarioLogueado") ?><span class="caret"></span></a>              
               <ul class="dropdown-menu">
-                <li><a href="<?php echo url("itinerario") ?>">Mi itinerario</a></li>
+                <li><a href="<?php echo url("itinerario") ?>" title="Mi itinerario">Mi itinerario</a></li>
                 <li role="separator" class="divider"></li>
-                <li><a href="<?php echo url("usuario/cuenta") ?>">Configuración</a></li>
+                <li><a href="<?php echo url("usuario/cuenta") ?>" title="Configuración">Configuración</a></li>
                 <li role="separator" class="divider"></li>
-                <li><a href="<?php echo url("registro/logout") ?>">Cerrar Sesión</a></li>
+                <li><a href="<?php echo url("registro/logout") ?>" title="Cerrar Sesión">Cerrar Sesión</a></li>
               </ul>
             </li>
           <?php endif ?>
@@ -109,9 +108,9 @@ $categorias = DB::select("SELECT * FROM bdp_categoria, bdp_imagen WHERE bdp_imag
             <li class="dropdown navPer" >
               <a style="padding-right: 0px;padding-left: 0px;" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" title="Categorias"><?php echo ' ' . Session::get("usuarioAdmin") ?><span class="caret"></span></a>              
               <ul class="dropdown-menu">
-                <li><a href="<?php echo url("admin/bienvenido") ?>">Panel de control</a></li>
+                <li><a href="<?php echo url("admin/bienvenido") ?>" title="Panel de control">Panel de control</a></li>
                 <li role="separator" class="divider"></li>
-                <li><a href="<?php echo url("registro/logout") ?>">Cerrar Sesión</a></li>
+                <li><a href="<?php echo url("registro/logout") ?>" title="Cerrar Sesión">Cerrar Sesión</a></li>
               </ul>
             </li>
           <?php else: ?>
@@ -121,9 +120,9 @@ $categorias = DB::select("SELECT * FROM bdp_categoria, bdp_imagen WHERE bdp_imag
             <li class="dropdown navPer" >
               <a style="padding-right: 0px;padding-left: 0px;" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" title="Categorias"><?php echo ' ' . Session::get("usuarioAdmin") ?><span class="caret"></span></a>              
               <ul class="dropdown-menu">
-                <li><a href="<?php echo url("admin/bienvenido") ?>">Panel de control</a></li>
+                <li><a href="<?php echo url("admin/bienvenido") ?>" title="Panel de control">Panel de control</a></li>
                 <li role="separator" class="divider"></li>
-                <li><a href="<?php echo url("registro/logout") ?>">Cerrar Sesión</a></li>
+                <li><a href="<?php echo url("registro/logout") ?>" title="Cerrar Sesión">Cerrar Sesión</a></li>
               </ul>
             </li>
           <?php endif ?>         
