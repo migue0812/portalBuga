@@ -20,7 +20,7 @@ class subCatController extends controller {
         $subcatDetalle = $subcatDetalle[0];
         $sitios = DB::select("SELECT * FROM bdp_sitio, bdp_imagen, bdp_subcategoria WHERE bdp_sitio.subcat_id = ? "
                 . "AND bdp_subcategoria.subcat_id = ? AND bdp_sitio.subcat_id = bdp_subcategoria.subcat_id AND "
-                . "bdp_imagen.sit_id = bdp_sitio.sit_id", array($id, $id));
+                . "bdp_imagen.sit_id = bdp_sitio.sit_id GROUP BY bdp_sitio.sit_id", array($id, $id));
         return view('Modulos.Home.subCat', compact("subcatDetalle"), compact("sitios"));
     }
 

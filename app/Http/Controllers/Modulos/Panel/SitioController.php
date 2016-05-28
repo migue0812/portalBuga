@@ -17,26 +17,26 @@ class SitioController extends Controller {
 
     function getIndex(Request $request) {
         if (Session::has("usuarioAdmin")) {
-        return view("Modulos.Panel.subcategoria.subcategoria");
-    }else {
+            return view("Modulos.Panel.subcategoria.subcategoria");
+        } else {
             return redirect(url("home/index"));
         }
     }
 
     function getSitio(Request $request) {
         if (Session::has("usuarioAdmin")) {
-        return view("Modulos.Panel.sitio.sitio");
-    }else {
+            return view("Modulos.Panel.sitio.sitio");
+        } else {
             return redirect(url("home/index"));
         }
     }
 
     function getCrear(Request $request) {
         if (Session::has("usuarioAdmin")) {
-        $categorias = DB::select("SELECT * FROM bdp_categoria");
-        $subcategorias = DB::select("SELECT * FROM bdp_subcategoria");
-        return view("Modulos.Panel.sitio.crear", compact("categorias"), compact("subcategorias"));
-    }else {
+            $categorias = DB::select("SELECT * FROM bdp_categoria");
+            $subcategorias = DB::select("SELECT * FROM bdp_subcategoria");
+            return view("Modulos.Panel.sitio.crear", compact("categorias"), compact("subcategorias"));
+        } else {
             return redirect(url("home/index"));
         }
     }
@@ -50,10 +50,26 @@ class SitioController extends Controller {
         $sitTelefono = $_POST["telefono"];
         $sitDescripcion = $_POST["descripcion"];
 
-        $sitioImg = $_FILES["imagen"]["name"];
-        $sitioRuta = $_FILES["imagen"]["tmp_name"];
-        $sitioDest = "img/" . $sitioImg;
-        copy($sitioRuta, $sitioDest);
+        $sitioImg1 = $_FILES["imagen1"]["name"];
+        $sitioRuta1 = $_FILES["imagen1"]["tmp_name"];
+        $sitioDest1 = "img/" . $sitioImg1;
+        if ($sitioRuta1 !== "" && $sitioDest1 !== "") {
+            copy($sitioRuta1, $sitioDest1);
+        }
+
+        $sitioImg2 = $_FILES["imagen2"]["name"];
+        $sitioRuta2 = $_FILES["imagen2"]["tmp_name"];
+        $sitioDest2 = "img/" . $sitioImg2;
+        if ($sitioRuta2 !== "" && $sitioDest2 !== "") {
+            copy($sitioRuta2, $sitioDest2);
+        }
+
+        $sitioImg3 = $_FILES["imagen3"]["name"];
+        $sitioRuta3 = $_FILES["imagen3"]["tmp_name"];
+        $sitioDest3 = "img/" . $sitioImg3;
+        if ($sitioRuta3 !== "" && $sitioDest3 !== "") {
+            copy($sitioRuta3, $sitioDest3);
+        }
 
         $reglas = array(
             "nombre" => "required | max:40 | unique:bdp_sitio,sit_nombre",
@@ -93,8 +109,15 @@ class SitioController extends Controller {
         $id = DB::select('SELECT IFNULL(MAX(sit_id),0) AS id FROM bdp_sitio ORDER BY id DESC LIMIT 1');
         $id = $id[0]->id;
 
-        DB::insert("INSERT INTO bdp_imagen (sit_id, img_ruta) VALUES (?,?)", array($id, $sitioDest));
-
+        if ($sitioRuta1 !== "" && $sitioDest1 !== "") {
+            DB::insert("INSERT INTO bdp_imagen (sit_id, img_ruta) VALUES (?,?)", array($id, $sitioDest1));
+        }
+        if ($sitioRuta2 !== "" && $sitioDest2 !== "") {
+            DB::insert("INSERT INTO bdp_imagen (sit_id, img_ruta) VALUES (?,?)", array($id, $sitioDest2));
+        }
+        if ($sitioRuta3 !== "" && $sitioDest3 !== "") {
+            DB::insert("INSERT INTO bdp_imagen (sit_id, img_ruta) VALUES (?,?)", array($id, $sitioDest3));
+        }
         Session::flash("registrar", "Sitio registrado exitosamente");
 
         return redirect(url('admin/sitio/crear'));
@@ -102,22 +125,22 @@ class SitioController extends Controller {
 
     function getEditar($id) {
         if (Session::has("usuarioAdmin")) {
-        $sitios = DB::select("SELECT * FROM bdp_sitio, bdp_imagen, bdp_categoria, bdp_subcategoria WHERE bdp_sitio.sit_id = ? "
-                        . "AND bdp_imagen.sit_id = bdp_sitio.sit_id AND bdp_sitio.cat_id=bdp_categoria.cat_id "
-                        . "AND bdp_sitio.subcat_id=bdp_subcategoria.subcat_id", array($id));
-        $sitios = $sitios[0];
-        $categorias = DB::select("SELECT * FROM bdp_categoria");
-        $subcategorias = DB::select("SELECT * FROM bdp_subcategoria");
-        return view("Modulos.Panel.sitio.editar", compact('sitios', 'categorias', 'subcategorias'));
-    }else {
+            $sitios = DB::select("SELECT * FROM bdp_sitio, bdp_imagen, bdp_categoria, bdp_subcategoria WHERE bdp_sitio.sit_id = ? "
+                            . "AND bdp_imagen.sit_id = bdp_sitio.sit_id AND bdp_sitio.cat_id=bdp_categoria.cat_id "
+                            . "AND bdp_sitio.subcat_id=bdp_subcategoria.subcat_id", array($id));
+            $sitios = $sitios[0];
+            $categorias = DB::select("SELECT * FROM bdp_categoria");
+            $subcategorias = DB::select("SELECT * FROM bdp_subcategoria");
+            return view("Modulos.Panel.sitio.editar", compact('sitios', 'categorias', 'subcategorias'));
+        } else {
             return redirect(url("home/index"));
         }
     }
 
     function getReporte(Request $request) {
         if (Session::has("usuarioAdmin")) {
-        return view("Modulos.Panel.sitio.reporte");
-    }else {
+            return view("Modulos.Panel.sitio.reporte");
+        } else {
             return redirect(url("home/index"));
         }
     }
@@ -162,7 +185,7 @@ class SitioController extends Controller {
         $validacion = Validator::make($_POST, $reglas, $mensajes);
 
         if ($validacion->fails()) {
-            return redirect(url('admin/sitio/editar/'.$sitId))
+            return redirect(url('admin/sitio/editar/' . $sitId))
                             ->withErrors($validacion->errors());
         }
 
@@ -183,23 +206,23 @@ class SitioController extends Controller {
 
     function getListar(Request $request) {
         if (Session::has("usuarioAdmin")) {
-        $sitios = DB::select("SELECT * FROM bdp_sitio, bdp_estado, bdp_categoria, bdp_subcategoria"
-                        . " WHERE bdp_sitio.est_id=bdp_estado.est_id AND "
-                        . "bdp_sitio.cat_id=bdp_categoria.cat_id AND "
-                        . "bdp_sitio.subcat_id=bdp_subcategoria.subcat_id");
-        return view("Modulos.Panel.sitio.listar", compact("sitios"));
-    }else {
+            $sitios = DB::select("SELECT * FROM bdp_sitio, bdp_estado, bdp_categoria, bdp_subcategoria"
+                            . " WHERE bdp_sitio.est_id=bdp_estado.est_id AND "
+                            . "bdp_sitio.cat_id=bdp_categoria.cat_id AND "
+                            . "bdp_sitio.subcat_id=bdp_subcategoria.subcat_id");
+            return view("Modulos.Panel.sitio.listar", compact("sitios"));
+        } else {
             return redirect(url("home/index"));
         }
     }
 
     function getInhabilitar($id) {
         if (Session::has("usuarioAdmin")) {
-        DB::update("UPDATE bdp_sitio SET est_id = 0, sit_deleted_at = CURRENT_TIMESTAMP WHERE sit_id = ?", array($id));
+            DB::update("UPDATE bdp_sitio SET est_id = 0, sit_deleted_at = CURRENT_TIMESTAMP WHERE sit_id = ?", array($id));
 
-        Session::flash("inhabilitar", "Se ha inhabilitado el sitio exitosamente");
-        return redirect(url("admin/sitio/listar"));
-    }else {
+            Session::flash("inhabilitar", "Se ha inhabilitado el sitio exitosamente");
+            return redirect(url("admin/sitio/listar"));
+        } else {
             return redirect(url("home/index"));
         }
     }
@@ -207,11 +230,11 @@ class SitioController extends Controller {
     function getHabilitar($id) {
         if (Session::has("usuarioAdmin")) {
 
-        DB::update("UPDATE bdp_sitio SET est_id = 1, sit_deleted_at = NULL WHERE sit_id = ?", array($id));
+            DB::update("UPDATE bdp_sitio SET est_id = 1, sit_deleted_at = NULL WHERE sit_id = ?", array($id));
 
-        Session::flash("habilitar", "Se ha habilitado el sitio exitosamente");
-        return redirect(url("admin/sitio/listar"));
-    }else {
+            Session::flash("habilitar", "Se ha habilitado el sitio exitosamente");
+            return redirect(url("admin/sitio/listar"));
+        } else {
             return redirect(url("home/index"));
         }
     }

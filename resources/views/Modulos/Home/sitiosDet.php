@@ -239,38 +239,18 @@ padding: 0px 20px 0px 20px;
 <!-- efecto imgs -->
             <h2 style="text-align: center;">Imagenes Del Sitio</h2>
             <hr class="tagline-divider-cont">
+            <?php foreach ($imagen as $imagenes): ?>
 <div class="col-md-4 col-sm-6 evento-item">
             <a href="#eventoModal1" class="evento-link" data-toggle="modal">
                 <div class="evento-hover">
                     <div class="evento-hover-content">                        
                     </div>
                 </div>
-                <img src="<?php echo asset("$sitDetalle->img_ruta") ?>" class="img-responsive" alt="">
+                <img src="<?php echo asset("$imagenes->img_ruta") ?>" class="img-responsive" alt="">
             </a>            
         </div>
 
-<div class="col-md-4 col-sm-6 evento-item">
-            <a href="#eventoModal1" class="evento-link" data-toggle="modal">
-                <div class="evento-hover">
-                    <div class="evento-hover-content">
-                        
-                    </div>
-                </div>
-                <img src="<?php echo asset("$sitDetalle->img_ruta") ?>" class="img-responsive" alt="">
-            </a>            
-        </div>
-
-<div class="col-md-4 col-sm-6 evento-item">
-            <a href="#eventoModal1" class="evento-link" data-toggle="modal">
-                <div class="evento-hover">
-                    <div class="evento-hover-content">
-                       
-                    </div>
-                </div>
-                <img src="<?php echo asset("$sitDetalle->img_ruta") ?>" class="img-responsive" alt="">
-            </a>            
-        </div>
-
+            
 <!-- efecto IMG GRANDE(modal1) -->
 <div class="portfolio-modal modal fade" id="eventoModal1" tabindex="-1" role="dialog" aria-hidden="true">
     <div class="box">
@@ -287,7 +267,7 @@ padding: 0px 20px 0px 20px;
                         <!-- Project Details Go Here -->
                         <h2 style="margin-top: 20px; text-align: center"><?php echo ($sitDetalle->sit_nombre) ?></h2>
                         
-                        <img class="img-responsive img-centered" src="<?php echo asset("$sitDetalle->img_ruta") ?>" class="img-responsive" alt="">
+                        <img class="img-responsive img-centered" src="<?php echo asset("$imagenes->img_ruta") ?>" class="img-responsive" alt="">
                         
                         <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
                     </div>
@@ -296,6 +276,7 @@ padding: 0px 20px 0px 20px;
         </div>
     </div>
 </div>
+<?php endforeach ?>
 <br>
 <br>
 <br>
