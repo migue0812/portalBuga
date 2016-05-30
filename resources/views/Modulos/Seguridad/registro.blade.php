@@ -48,7 +48,7 @@
       <div class="panel-heading">
         <div class="panel-title">Login</div>
         <div class="forget">
-          <!--<a class="cr" href="#">Se te olvido tu contraseña?</a>-->
+          <a class="cr" href="{{url('usuario/cuenta/recupass')}}">Se te olvido tu contraseña?</a>
         </div>
       </div> 
 
