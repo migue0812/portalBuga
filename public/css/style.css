@@ -196,7 +196,7 @@ hr {
   .navbar-default {
     border: none;
     background: #fff;
-    background: rgba(255,255,255,0.7);
+    background: rgba(255,255,255,0.9);
     -webkit-box-shadow: 0px 4px 5px -1px rgba(0,0,0,0.59);
     -moz-box-shadow: 0px 4px 5px -1px rgba(0,0,0,0.59);
     box-shadow: 0px 4px 5px -1px rgba(0,0,0,0.59);
@@ -799,20 +799,6 @@ textarea {
   resize: none;
 }
 
-@media screen and (min-width:700px)
-.sonido{
-  position: absolute;
-  margin-top: -30px;
-  margin-left: 1170px;
-
-}
-
-@media screen and (min-width:700px)
-.mas{
-  position: absolute;
-  margin-top: -15px;
-  margin-left: 1040px;   
-}
 
 .lo {
   position: absolute;
