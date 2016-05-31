@@ -156,27 +156,30 @@
             <!-- Page Content -->
             <div class="container text-center actividades">
                 <div class="row">
-                    <div class="col-lg-4 col-sm-4">
-                        <a href="https://www.facebook.com/BienestarCDTI/?fref=ts">
-                            <img class="queHacerIcon img-circle img-responsive img-center" src="<?php echo asset("img/senaLog.png") ?>" alt="Descansar?">
-                        </a>
-                        <h3 class="text-center">
-                        </h3>
+                   <div class="view col-lg-4 col-sm-4">  
+                        <img class="queHacerIcon img-circle img-responsive img-center" src="<?php echo asset("img/senaLog.png") ?>" alt="Descansar?">
+                        <div class="mask">  
+                            <h2 style="color:whitesmoke">centro de diseño tecnologico industrial</h2>  
+                            <p style="color:whitesmoke">Regional Valle del Cauca</p>  
+                            <a href="https://www.facebook.com/BienestarCDTI/?fref=ts" class="info">Leer Más</a>  
+                        </div>  
                     </div>
-                    <div class="col-lg-4 col-sm-4">
-                        <a href="<?php echo url("home/historia") ?>">
-                            <img class="queHacerIcon  img-responsive img-center" src="<?php echo asset("img/histoBuga.png") ?>" alt="Descansar?">
-                        </a>
-                        <h3 class="text-center">
-                        </h3>
+                    <div class="view col-lg-4 col-sm-4">  
+                        <img class="queHacerIcon  img-responsive img-center" src="<?php echo asset("img/histoBuga.png") ?>">  
+                        <div class="mask">  
+                            <h2 style="color:whitesmoke">Patrimonio historico de Colombia</h2>  
+                            <p style="color:whitesmoke">Rodeada por diferentes atractivos turísticos</p>  
+                            <a href="<?php echo url("home/historia") ?>" class="info">Leer Más</a>  
+                        </div>  
                     </div>
-                    <div class="col-lg-4 col-sm-4">
-                        <a href="http://www.guadalajaradebuga-valle.gov.co/index.shtml">
-                            <img class="queHacerIcon img-circle img-responsive img-center" src="<?php echo asset("img/bugaLog.png") ?>" alt="Comer?">
-                        </a>
-                        <h3 class="text-center">
-                        </h3>
-                    </div>
+                    <div class="view col-lg-4 col-sm-4">  
+                        <img class="queHacerIcon img-circle img-responsive img-center" src="<?php echo asset("img/bugaLog.png") ?>" alt="Comer?">
+                        <div class="mask">  
+                            <h2 style="color:whitesmoke">alcaldia municipal de Buga</h2>  
+                            <p style="color:whitesmoke">Buga Renovada</p>  
+                            <a href="http://www.guadalajaradebuga-valle.gov.co/index.shtml" class="info">Leer Más</a>  
+                        </div> 
+                </div>
                 </div>
             </div>
 
