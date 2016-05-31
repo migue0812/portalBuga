@@ -253,8 +253,6 @@
                 </div>
                 <br>
 
-
-
                 <!-- efecto imgs -->
                 <div> <h2 style="text-align: center;">Imagenes Del Sitio</h2>
                     <hr class="tagline-divider-cont"></div>
