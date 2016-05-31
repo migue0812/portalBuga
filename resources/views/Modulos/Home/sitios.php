@@ -3,7 +3,7 @@
 
     <div class="container">
         <div class="row">
-            <div class="box">
+            <div class="box boxSitio">
                 <div class="visitNav">
                     <h2 style="text-align: center">SITIOS TURISTICOS DE BUGA</h2>
                 </div>

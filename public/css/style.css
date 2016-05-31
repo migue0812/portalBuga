@@ -805,16 +805,6 @@ textarea {
   margin-top: 80px;
 }
 
-/* ¬¬ asi no se comenta en css //RESPOSIVE SITIOS Y EFECTO HOVER IMGS INDEX (SITIOS) */
-
-@media screen and (min-device-width: 992px) and (max-device-width: 1199px) { 
-  .boxSitio {
-    height: 420%;
-  }
-}
-
-
-
 .hoverSitio:hover .img {
   display: block;
   margin-left: auto;
@@ -895,4 +885,18 @@ textarea {
 
 #starPosition2{
     left: 300px;
+}
+
+
+@media (min-width:1200px) {
+  .boxSitio{
+    height:2140px;
+  }
+}
+
+@media (min-width:1000px) and (max-width:1199px) {
+  .boxSitio{
+   
+    height: 1990px;
+  }
 }
