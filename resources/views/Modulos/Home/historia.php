@@ -138,7 +138,7 @@
                         <div class="fill" style="background-image:url('../img/cabal.jpg.jpg');"></div>
                         <div class="carousel-caption">
                             
-                        </div>
+                       </div>
                     </div>
                 </div>
 
