@@ -15,23 +15,26 @@
                     <div class="carousel-inner">
                         <div class="item active">
                             <!-- Set the first background image using inline CSS below. -->
-                            <div class="fill" style="background-image:url('../img/vintagecom.jpg');"></div>
+                            <div class="fill" style="background-image:url('../img/Basilica.jpg');"></div>
                             <div class="carousel-caption">
-                                <h2>Caption 1</h2>
+                                <p style="color: #FFF; font: 180% sans-serif;">Basilica Del Señor De Los Milagros </p>
+                                <p>La palabra Basílica significa “Casa donde vive el Rey”. La iglesia católica le concede el título de “Basílicas” a unos cuantos templos muy celebres de Roma. </p>
                             </div>
                         </div>
                         <div class="item">
                             <!-- Set the second background image using inline CSS below. -->
                             <div class="fill" style="background-image:url('../img/Ferro.jpg');"></div>
                             <div class="carousel-caption">
-                                <h2>Caption 2</h2>
+                                <p style="color: #FFF; font: 180% sans-serif">Estacion Del Ferrocarril</p>
+                                <p>La Estación del Ferrocarril, espectacular conjunto arquitectónico, declarado Bien de Interés Cultural (BIC) de la Nación por el Ministerio de Cultura. Posee una arquitectura colonial, buscando uniformidad en cada uno de los elementos y detalles que la componen. Todos los espacios externos e internos son atribuidos a una función o actividad específica, por lo cual es un monumento digno de apreciar.</p>
                             </div>
                         </div>
                         <div class="item">
                             <!-- Set the third background image using inline CSS below. -->
-                            <div class="fill" style="background-image:url('../img/Basilica.jpg');"></div>
+                            <div class="fill" style="background-image:url('../img/bugio.png');"></div>
                             <div class="carousel-caption">
-                                <h2>Caption 3</h2>
+                                <p style="color: #FFF; font: 180% sans-serif">Buga</p>
+                                <p>Cuenta la leyenda que en 1550 a las manos de una indígena que lavaba ropa en el río Guadalajara llegó un pequeño Cristo, traído por las aguas. Dios recompensaba así un acto caritativo de la mujer hacia un vecino. Tras ser puesta en un altar, la imagen comenzó a crecer y la gente a venerarla.</p>
                             </div>
                         </div>
                     </div>

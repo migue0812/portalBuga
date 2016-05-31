@@ -67,21 +67,21 @@
                         <!-- Set the first background image using inline CSS below. -->
                         <div class="fill" style="background-image:url('../img/AVENIDABASILICA.jpg');"></div>
                         <div class="carousel-caption">
-                            <h2>Basilica Avenida</h2>
+                            
                         </div>
                     </div>
                     <div class="item">
                         <!-- Set the second background image using inline CSS below. -->
                         <div class="fill" style="background-image:url('../img/AVENIDA DE LA BASILICA.jpg');"></div>
                         <div class="carousel-caption">
-                            <h2>Avenida de la Basilica</h2>
+                            
                         </div>
                     </div>
                     <div class="item">
                         <!-- Set the third background image using inline CSS below. -->
                         <div class="fill" style="background-image:url('../img/INTERIORBASILICA.jpg');"></div>
                         <div class="carousel-caption">
-                            <h2>Interior Basilica</h2>
+                            
                         </div>
                     </div>
                 </div>
@@ -121,23 +121,23 @@
                 <div class="carousel-inner">
                     <div class="item active">
                         <!-- Set the first background image using inline CSS below. -->
-                        <div class="fill" style="background-image:url('../img/PARQUECABAL.png');"></div>
+                        <div class="fill" style="background-image:url('../img/PARQUE CABAL AÑOS.jpg');"></div>
                         <div class="carousel-caption">
-                            <h2>Parque Cabal</h2>
+                           
                         </div>
                     </div>
                     <div class="item">
                         <!-- Set the second background image using inline CSS below. -->
                         <div class="fill" style="background-image:url('../img/INAGURACION.jpg');"></div>
                         <div class="carousel-caption">
-                            <h2>Inaguracion Parque Cabal</h2>
+                        
                         </div>
                     </div>
                     <div class="item">
                         <!-- Set the third background image using inline CSS below. -->
                         <div class="fill" style="background-image:url('../img/cabal.jpg.jpg');"></div>
                         <div class="carousel-caption">
-                            <h2>Cabal</h2>
+                            
                         </div>
                     </div>
                 </div>
@@ -179,21 +179,21 @@
                         <!-- Set the first background image using inline CSS below. -->
                         <div class="fill" style="background-image:url('../img/IGLESIA SANTA BARBARA.jpg');"></div>
                         <div class="carousel-caption">
-                            <h2>Iglesia Santa Barbara</h2>
+                            
                         </div>
                     </div>
                     <div class="item">
                         <!-- Set the second background image using inline CSS below. -->
                         <div class="fill" style="background-image:url('../img/PARQUE SANTA BARBARA.jpg');"></div>
                         <div class="carousel-caption">
-                            <h2>Santa Barbara</h2>
+                           
                         </div>
                     </div>
                     <div class="item">
                         <!-- Set the third background image using inline CSS below. -->
                         <div class="fill" style="background-image:url('../img/LOS CARNAVALES DEL PUEBLO.jpg');"></div>
                         <div class="carousel-caption">
-                            <h2>Carnavales</h2>
+                            
                         </div>
                     </div>
                 </div>
@@ -238,21 +238,21 @@
                         <!-- Set the first background image using inline CSS below. -->
                         <div class="fill" style="background-image:url('../img/PUENTE DE LA LIBERTAD SENTIDO NORTE SUR.jpg');"></div>
                         <div class="carousel-caption">
-                            <h2>Puente De La Libertad Sentido Norte Sur</h2>
+                           
                         </div>
                     </div>
                     <div class="item">
                         <!-- Set the second background image using inline CSS below. -->
                         <div class="fill" style="background-image:url('../img/PUENTE DE LA LIBERTAD.jpg');"></div>
                         <div class="carousel-caption">
-                            <h2>Puente De La Libertad </h2>
+                            
                         </div>
                     </div>
                     <div class="item">
                         <!-- Set the third background image using inline CSS below. -->
                         <div class="fill" style="background-image:url('../img/PUENTE.png');"></div>
                         <div class="carousel-caption">
-                            <h2>Puente</h2>
+                            
                         </div>
                     </div>
                 </div>
@@ -295,21 +295,21 @@
                         <!-- Set the first background image using inline CSS below. -->
                         <div class="fill" style="background-image:url('../img/ferro-jpg.jpg');"></div>
                         <div class="carousel-caption">
-                            <h2>Ferro Carril</h2>
+                          
                         </div>
                     </div>
                     <div class="item">
                         <!-- Set the second background image using inline CSS below. -->
                         <div class="fill" style="background-image:url('../img/PUENTE MEDIACANOA.jpg');"></div>
                         <div class="carousel-caption">
-                            <h2>Antiguo Puente De MediaCanoa</h2>
+                         
                         </div>
                     </div>
                     <div class="item">
                         <!-- Set the third background image using inline CSS below. -->
                         <div class="fill" style="background-image:url('../img/PALACIO DE JUSTICIA.jpg');"></div>
                         <div class="carousel-caption">
-                            <h2>Palacio De Justicia</h2>
+                        
                         </div>
                     </div>
                 </div>
