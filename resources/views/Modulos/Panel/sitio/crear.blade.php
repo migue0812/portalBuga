@@ -150,19 +150,19 @@ MENU DE CONTENIDO
 
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <label for="">Imagen</label>                       
-                                    <input type="file" class="form-control" id="imagen1" name="imagen1">
+                                    <label for="">Imagen 1</label>                       
+                                    <input type="file" class="form-control" id="imagen1" name="imagen1" required="">
                                 </div>
                             </div> 
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <label for="">Imagen</label>                       
+                                    <label for="">Imagen 2</label>                       
                                     <input type="file" class="form-control" id="imagen2" name="imagen2">
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <label for="">Imagen</label>                       
+                                    <label for="">Imagen 3</label>                       
                                     <input type="file" class="form-control" id="imagen3" name="imagen3">
                                 </div>
                             </div>

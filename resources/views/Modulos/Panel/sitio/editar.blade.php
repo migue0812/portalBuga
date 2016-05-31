@@ -150,11 +150,32 @@
                     </div>
                     
                     <div class="col-md-6">
-                      <div class="form-group">
-                        <label for="">Imagen</label>                       
-                        <input type="file" class="form-control" id="imagen" name="imagen">
-                      </div>
-                    </div> 
+                                <div class="form-group">
+                                    <label for="">Imagen 1</label>                       
+                                    <input type="file" class="form-control" id="imagen1" name="imagen1">
+                                    <?php if (!empty($imagenes[0]->img_id)): ?>
+                                    <input type="hidden" value="{{$imagenes[0]->img_id}}" name="img1">
+                                    <?php endif ?>
+                                </div>
+                            </div> 
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="">Imagen 2</label>                       
+                                    <input type="file" class="form-control" id="imagen2" name="imagen2">
+                                    <?php if (!empty($imagenes[1]->img_id)): ?>
+                                    <input type="hidden" value="{{$imagenes[1]->img_id}}" name="img2">
+                                    <?php endif ?>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="">Imagen 3</label>                       
+                                    <input type="file" class="form-control" id="imagen3" name="imagen3">
+                                    <?php if (!empty($imagenes[2]->img_id)): ?>
+                                    <input type="hidden" value="{{$imagenes[2]->img_id}}" name="img3">
+                                    <?php endif ?>
+                                </div>
+                            </div>
                   </div>
 
                   <div class="row col-md-12">

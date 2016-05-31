@@ -131,7 +131,8 @@ class SitioController extends Controller {
             $sitios = $sitios[0];
             $categorias = DB::select("SELECT * FROM bdp_categoria");
             $subcategorias = DB::select("SELECT * FROM bdp_subcategoria");
-            return view("Modulos.Panel.sitio.editar", compact('sitios', 'categorias', 'subcategorias'));
+            $imagenes = DB::select("SELECT * FROM bdp_imagen WHERE sit_id = ?", array($id));
+            return view("Modulos.Panel.sitio.editar", compact('sitios', 'categorias', 'subcategorias', 'imagenes'));
         } else {
             return redirect(url("home/index"));
         }
@@ -153,12 +154,35 @@ class SitioController extends Controller {
         $sitTelefono = $_POST["telefono"];
         $sitDescripcion = $_POST["descripcion"];
         $sitId = $_POST["id"];
+        if (!empty($_POST["img1"])){
+         $imgId1 = $_POST["img1"];   
+        }
+        if (!empty($_POST["img2"])){
+         $imgId2 = $_POST["img2"];   
+        }
+        if (!empty($_POST["img3"])){
+         $imgId3 = $_POST["img3"];   
+        }
 
-        $sitioImg = $_FILES["imagen"]["name"];
-        $sitioRuta = $_FILES["imagen"]["tmp_name"];
-        $sitioDest = "img/" . $sitioImg;
-        if ($sitioRuta !== "" && $sitioDest !== "") {
-            copy($sitioRuta, $sitioDest);
+        $sitioImg1 = $_FILES["imagen1"]["name"];
+        $sitioRuta1 = $_FILES["imagen1"]["tmp_name"];
+        $sitioDest1 = "img/" . $sitioImg1;
+        if ($sitioRuta1 !== "" && $sitioDest1 !== "") {
+            copy($sitioRuta1, $sitioDest1);
+        }
+
+        $sitioImg2 = $_FILES["imagen2"]["name"];
+        $sitioRuta2 = $_FILES["imagen2"]["tmp_name"];
+        $sitioDest2 = "img/" . $sitioImg2;
+        if ($sitioRuta2 !== "" && $sitioDest2 !== "") {
+            copy($sitioRuta2, $sitioDest2);
+        }
+
+        $sitioImg3 = $_FILES["imagen3"]["name"];
+        $sitioRuta3 = $_FILES["imagen3"]["tmp_name"];
+        $sitioDest3 = "img/" . $sitioImg3;
+        if ($sitioRuta3 !== "" && $sitioDest3 !== "") {
+            copy($sitioRuta3, $sitioDest3);
         }
 
         $reglas = array(
@@ -193,15 +217,46 @@ class SitioController extends Controller {
                 . "sit_telefono = ?, sit_descripcion = ?, sit_updated_at = CURRENT_TIMESTAMP WHERE sit_id = ?", array($sitNombre, $sitCategoria, $sitSubcategoria, $sitDireccion,
             $sitTelefono, $sitDescripcion, $sitId));
 
-        if ($sitioRuta !== "" && $sitioDest !== "") {
-            $img = DB::select("SELECT * FROM bdp_imagen WHERE sit_id = ?", array($sitId));
-            $img = $img[0]->img_ruta;
-            unlink($img);
-            DB::insert("UPDATE bdp_imagen SET img_ruta = ? WHERE sit_id = ?", array($sitioDest, $sitId));
+        $img = DB::select("SELECT img_ruta FROM bdp_imagen WHERE sit_id = ?", array($sitId));
+
+        if ($sitioRuta1 !== "" && $sitioDest1 !== "") {
+            if(!empty($img[0]->img_ruta)){
+            $img1 = $img[0]->img_ruta;
+            unlink($img1);
+            DB::update("UPDATE bdp_imagen SET img_ruta = ? WHERE img_id = ?", 
+                    array($sitioDest1, $imgId1));
+            } else {
+                DB::insert("INSERT INTO bdp_imagen (sit_id, img_ruta) VALUES (?,?)", 
+                        array($sitId, $sitioDest1));
+            }
+        }
+        if ($sitioRuta2 !== "" && $sitioDest2 !== "") {
+            if(!empty($img[1]->img_ruta)){
+               $img2 = $img[1]->img_ruta;
+            unlink($img2);
+            DB::update("UPDATE bdp_imagen SET img_ruta = ? WHERE img_id = ?", 
+                    array($sitioDest2, $imgId2)); 
+            }  else {
+                DB::insert("INSERT INTO bdp_imagen (sit_id, img_ruta) VALUES (?,?)", 
+                        array($sitId, $sitioDest2));
+            }
+            
+        }
+        if ($sitioRuta3 !== "" && $sitioDest3 !== "") {
+             if(!empty($img[2]->img_ruta)){
+            $img3 = $img[2]->img_ruta;
+            unlink($img3);
+            DB::update("UPDATE bdp_imagen SET img_ruta = ? WHERE img_id = ?", 
+                    array($sitioDest3, $imgId3));
+             } else {
+                  DB::insert("INSERT INTO bdp_imagen (sit_id, img_ruta) VALUES (?,?)", 
+                        array($sitId, $sitioDest3));
+             }
         }
 
         Session::flash("editar", "Sitio editado exitosamente");
         return redirect(url("admin/sitio/listar"));
+        //print_r($img);
     }
 
     function getListar(Request $request) {
