@@ -8,23 +8,32 @@
             <h2 class="text-center ">Información</h2>
             <hr>
             <br>
-            <p class="text-justify">Una cookie es un fichero que se descarga en su ordenador/smartphone/tablet al acceder a determinadas páginas web. Las cookies permiten a una página web, entre otras cosas, almacenar y recuperar información sobre las hábitos de navegación de un usuario o de su equipo y, dependiendo de la información que contenga y de la forma en que utilice su equipo, pueden utilizarse para recononcer al usuario.
-                ¿Qué tipos de cookies utiliza esta página web?
+            <p class="text-justify">Nuestro Portal de Turismo es un sistema de información web que ofrece a nuestros usuarios, 
+                de forma fácil e integrada, el acceso a una serie de recursos y de servicios relacionados con el turismo, creencias, 
+                historia,  cultura, y  gastronomía de Guadalajara de Buga. Incluye: enlaces webs, buscadores, foros, documentos, etc.
+                Principalmente estamos dirigidos a resolver las necesidades de información de los visitantes y habitantes de la ciudad.
             </p>
+            <h3 class="text-center">FUNCIONES Y OBJECTIVOS</h3>
             <p class="text-justify">
-                Cookies técnicos: Son aquellas creadas y gestionadas únicamente por nosotros, y permiten al usuario la navegación a través de nuestra página web y la utilización de las diferentes opciones como, por ejemplo, identificar la sesión, personalizar información o acceder a zonas de acceso restringido.
-                Cookies de análisis: Son aquellas que, ya sea por nuestra parte o por terceros, permiten cuantificar el número de usuarios y así realizar una medición y análisis estadístico del uso que hacen los usuarios del servicio ofertado. Por ello se analiza navegación en nuestra página web, con el fin de mejorar la oferta de productos o servicios que le ofrecemos.
-                Vista Camacho no tiene cookies publicitarias de terceros.
+                Nuestro Portal de Turismo, es un Centro de contenido intermediario entre Iglesias, Hoteles, Restaurantes, Balneareos,
+                Escenarios deportivos, entre otros. Que satisfacen las necesidades de los turistas, Informamos sobre los diferentes eventos
+                que se realizaran en nuestra ciudad mostrando detalles de ubicación, cobros, horarios y contactos relacionados con los mismos.
             </p>
 
-            <h3 class="text-center">¿Cómo desactivar cookies?</h3>
+            <h3 class="text-center">SERVICIOS ADICIONALES</h3>
             <p class="text-justify">
-                Puede permitir, bloquear o eliminar las cookies instaladas en su equipo mediante la configuración de las opciones del navegador instalado en su ordenador. </p>
-            <p>
+            <p> Nuestro Portal de Turismo también ofrece:
             </p>
+            <ul>
+                <li>Mapas de ubicación con servicios de búsqueda para localizar negocios o servicios con gran exactitud a través de google map</li>
+                <li>Pronósticos de clima</li>
+                <li>Listas de eventos locales</li>
+                <li>Opciones de entretenimiento</li>
+                <li>Estaciones de radio local</li>
+            </ul>
             <p>
                 <i>
-                    La información almacenada en las cookies de nuestro Portal web es utilizada exclusivamente con fines estadísticos.
+                    Todos los derechos reservados © 2016 Desarrollado por TPS Buga
                 </i>
             </p>
 
