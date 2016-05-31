@@ -888,3 +888,12 @@ textarea {
 
 }
 
+/* raiting position stars (SitioDetalle)  */
+#starPosition{
+    left: 160px;
+}
+
+#starPosition2{
+   
+    left: 300px;
+}

@@ -218,14 +218,32 @@
                         <p class="text-justify"><?php echo ($sitDetalle->sit_descripcion) ?></p>
                     </div>
                 </div>
+                <br>
 
-                <i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i> Encuentranos en Facebook Como: <br>
-                <i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i> Siguenos en Twitter: <br>
-                <i class="fa fa-google-plus-square fa-2x" aria-hidden="true"></i> Tambien estamos En Google Plus: <br>           
+                <div class="fb-share-button" data-href="https://www.facebook.com/Portal-de-Turismo-Buga-130910880649308/?fref=ts" data-layout="button_count" data-mobile-iframe="true"></div>
+                <a href="https://twitter.com/share" class="twitter-share-button" data-url="https://www.facebook.com/Portal-de-Turismo-Buga-130910880649308/?fref=ts" data-via="Diego21Alzate">Tweet</a>
+                <div class="g-plus" data-action="share" data-href="https://www.facebook.com/Portal-de-Turismo-Buga-130910880649308/?fref=ts"></div>
 
+                <br>
                 <div class="stars">
-                    <div class="ec-stars-wrapper col-lg-10">
-                        <spam  class="tittlePunt">Atención :</spam>
+                    <div class="ec-stars-wrapper col-lg-3">
+                        <h3>Atención :</h3>
+                        <a href="#" data-value="1" title="Votar con 1 estrellas">&#9733;</a>
+                        <a href="#" data-value="2" title="Votar con 2 estrellas">&#9733;</a>
+                        <a href="#" data-value="3" title="Votar con 3 estrellas">&#9733;</a>
+                        <a href="#" data-value="4" title="Votar con 4 estrellas">&#9733;</a>
+                        <a href="#" data-value="5" title="Votar con 5 estrellas">&#9733;</a>
+                    </div>
+                    <div id="starPosition" class="ec-stars-wrapper col-lg-3">
+                        <h3>Precio:</h3>
+                        <a href="#" data-value="1" title="Votar con 1 estrellas">&#9733;</a>
+                        <a href="#" data-value="2" title="Votar con 2 estrellas">&#9733;</a>
+                        <a href="#" data-value="3" title="Votar con 3 estrellas">&#9733;</a>
+                        <a href="#" data-value="4" title="Votar con 4 estrellas">&#9733;</a>
+                        <a href="#" data-value="5" title="Votar con 5 estrellas">&#9733;</a>
+                    </div>
+                    <div id="starPosition2" class="ec-stars-wrapper col-lg-3">
+                        <h3>Calidad:</h3>
                         <a href="#" data-value="1" title="Votar con 1 estrellas">&#9733;</a>
                         <a href="#" data-value="2" title="Votar con 2 estrellas">&#9733;</a>
                         <a href="#" data-value="3" title="Votar con 3 estrellas">&#9733;</a>
@@ -233,10 +251,13 @@
                         <a href="#" data-value="5" title="Votar con 5 estrellas">&#9733;</a>
                     </div>
                 </div>
+                <br>
+
+
 
                 <!-- efecto imgs -->
-                <h2 style="text-align: center;">Imagenes Del Sitio</h2>
-                <hr class="tagline-divider-cont">
+                <div> <h2 style="text-align: center;">Imagenes Del Sitio</h2>
+                    <hr class="tagline-divider-cont"></div>
 
                 <?php if (!empty($imagenes[0]->img_ruta)): ?>
                     <div class="col-md-4 col-sm-6 evento-item">
@@ -275,92 +296,92 @@
                 <?php endif ?>
                 <?php if (!empty($imagenes[0]->img_ruta)): ?>
 
-                <!-- efecto IMG GRANDE(modal1) -->
-                <div class="portfolio-modal modal fade" id="1" tabindex="-1" role="dialog" aria-hidden="true">
-                    <div class="box">
-                        <div class="close-modal" data-dismiss="modal">
-                            <div class="lr">
-                                <div class="rl">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-lg-8 col-lg-offset-2">
-                                    <div class="modal-body">
-                                        <!-- Project Details Go Here -->
-                                        <h2 style="margin-top: 20px; text-align: center"><?php echo ($sitDetalle->sit_nombre) ?></h2>
-
-                                        <img class="img-responsive img-centered" src="<?php echo asset($imagenes[0]->img_ruta) ?>" class="img-responsive" alt="">
-
-                                        <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                    <!-- efecto IMG GRANDE(modal1) -->
+                    <div class="portfolio-modal modal fade" id="1" tabindex="-1" role="dialog" aria-hidden="true">
+                        <div class="box">
+                            <div class="close-modal" data-dismiss="modal">
+                                <div class="lr">
+                                    <div class="rl">
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-lg-8 col-lg-offset-2">
+                                        <div class="modal-body">
+                                            <!-- Project Details Go Here -->
+                                            <h2 style="margin-top: 20px; text-align: center"><?php echo ($sitDetalle->sit_nombre) ?></h2>
 
+                                            <img class="img-responsive img-centered" src="<?php echo asset($imagenes[0]->img_ruta) ?>" class="img-responsive" alt="">
+
+                                            <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
                     </div>
-                </div>
-                <?php endif?>
+                <?php endif ?>
                 <?php if (!empty($imagenes[1]->img_ruta)): ?>
 
-                <!-- efecto IMG GRANDE(modal1) -->
-                
-                <div class="portfolio-modal modal fade" id="2" tabindex="-1" role="dialog" aria-hidden="true">
-                    <div class="box">
-                        <div class="close-modal" data-dismiss="modal">
-                            <div class="lr">
-                                <div class="rl">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-lg-8 col-lg-offset-2">
-                                    <div class="modal-body">
-                                        <!-- Project Details Go Here -->
-                                        <h2 style="margin-top: 20px; text-align: center"><?php echo ($sitDetalle->sit_nombre) ?></h2>
+                    <!-- efecto IMG GRANDE(modal1) -->
 
-                                        <img class="img-responsive img-centered" src="<?php echo asset($imagenes[1]->img_ruta) ?>" class="img-responsive" alt="">
-
-                                        <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                    <div class="portfolio-modal modal fade" id="2" tabindex="-1" role="dialog" aria-hidden="true">
+                        <div class="box">
+                            <div class="close-modal" data-dismiss="modal">
+                                <div class="lr">
+                                    <div class="rl">
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-lg-8 col-lg-offset-2">
+                                        <div class="modal-body">
+                                            <!-- Project Details Go Here -->
+                                            <h2 style="margin-top: 20px; text-align: center"><?php echo ($sitDetalle->sit_nombre) ?></h2>
 
+                                            <img class="img-responsive img-centered" src="<?php echo asset($imagenes[1]->img_ruta) ?>" class="img-responsive" alt="">
+
+                                            <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
                     </div>
-                </div>
-                <?php endif?>
+                <?php endif ?>
                 <?php if (!empty($imagenes[2]->img_ruta)): ?>
 
-                <!-- efecto IMG GRANDE(modal1) -->
-                <div class="portfolio-modal modal fade" id="3" tabindex="-1" role="dialog" aria-hidden="true">
-                    <div class="box">
-                        <div class="close-modal" data-dismiss="modal">
-                            <div class="lr">
-                                <div class="rl">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-lg-8 col-lg-offset-2">
-                                    <div class="modal-body">
-                                        <!-- Project Details Go Here -->
-                                        <h2 style="margin-top: 20px; text-align: center"><?php echo ($sitDetalle->sit_nombre) ?></h2>
-
-                                        <img class="img-responsive img-centered" src="<?php echo asset($imagenes[2]->img_ruta) ?>" class="img-responsive" alt="">
-
-                                        <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                    <!-- efecto IMG GRANDE(modal1) -->
+                    <div class="portfolio-modal modal fade" id="3" tabindex="-1" role="dialog" aria-hidden="true">
+                        <div class="box">
+                            <div class="close-modal" data-dismiss="modal">
+                                <div class="lr">
+                                    <div class="rl">
                                     </div>
                                 </div>
                             </div>
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-lg-8 col-lg-offset-2">
+                                        <div class="modal-body">
+                                            <!-- Project Details Go Here -->
+                                            <h2 style="margin-top: 20px; text-align: center"><?php echo ($sitDetalle->sit_nombre) ?></h2>
+
+                                            <img class="img-responsive img-centered" src="<?php echo asset($imagenes[2]->img_ruta) ?>" class="img-responsive" alt="">
+
+                                            <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
                         </div>
-
                     </div>
-                </div>
-                <?php endif?>
+                <?php endif ?>
 
 
                 <br>
@@ -378,6 +399,47 @@
                 <br>
                 <br>
                 <br>
+                <!--inicio script compartir twitter-->
+                <script>!function (d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https';
+        if (!d.getElementById(id)) {
+            js = d.createElement(s);
+            js.id = id;
+            js.src = p + '://platform.twitter.com/widgets.js';
+            fjs.parentNode.insertBefore(js, fjs);
+        }
+    }(document, 'script', 'twitter-wjs');</script>
+                 <!--fin script compartir twitter-->
+                
+                
+                <!--inicio script compartir googleplus-->
+                <!--inicio script compartir googleplus-->
+                <script src="https://apis.google.com/js/platform.js" async defer>
+    {
+        lang: 'es-419'
+    }
+                </script>
+                <!--fin script compartir googleplus-->
+                <!--fin script compartir googleplus-->
+
+                
+                
+                <!--inicio script compartir facebook-->
+                <!--inicio script compartir facebook-->
+                <div id="fb-root"></div>
+                <script>(function (d, s, id) {
+                        var js, fjs = d.getElementsByTagName(s)[0];
+                        if (d.getElementById(id))
+                            return;
+                        js = d.createElement(s);
+                        js.id = id;
+                        js.src = "//connect.facebook.net/es_ES/sdk.js#xfbml=1&version=v2.6";
+                        fjs.parentNode.insertBefore(js, fjs);
+                    }(document, 'script', 'facebook-jssdk'));</script>
+                <!--inicio script compartir facebook-->
+                <!--inicio script compartir facebook-->
+
+
                 <!--inicio html geolocacion-->
                 <!--inicio html geolocacion-->
                 <!--inicio html geolocacion-->
@@ -385,71 +447,71 @@
                 <script src="http://maps.google.com/maps/api/js?sensor=true"></script>
                 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
                 <script>
-                    function calculateRoute(from, to) {
-                        // Center initialized to Naples, Italy
-                        var myOptions = {
-                            zoom: 10,
-                            center: new google.maps.LatLng(40.84, 14.25),
-                            mapTypeId: google.maps.MapTypeId.ROADMAP
-                        };
-                        // Draw the map
-                        var mapObject = new google.maps.Map(document.getElementById("map"), myOptions);
-                        var directionsService = new google.maps.DirectionsService();
-                        var directionsRequest = {
-                            origin: from,
-                            destination: to,
-                            travelMode: google.maps.DirectionsTravelMode.DRIVING,
-                            unitSystem: google.maps.UnitSystem.METRIC
-                        };
-                        directionsService.route(
-                                directionsRequest,
-                                function (response, status)
-                                {
-                                    if (status == google.maps.DirectionsStatus.OK)
-                                    {
-                                        new google.maps.DirectionsRenderer({
-                                            map: mapObject,
-                                            directions: response
-                                        });
-                                    } else
-                                        $("#error").append("No se puede obtener su ruta<br />");
-                                }
-                        );
-                    }
-                    $(document).ready(function () {
-                        // If the browser supports the Geolocation API
-                        if (typeof navigator.geolocation == "undefined") {
-                            $("#error").text("Your browser doesn't support the Geolocation API");
-                            return;
-                        }
-                        $("#from-link, #to-link").click(function (event) {
-                            event.preventDefault();
-                            var addressId = this.id.substring(0, this.id.indexOf("-"));
-                            navigator.geolocation.getCurrentPosition(function (position) {
-                                var geocoder = new google.maps.Geocoder();
-                                geocoder.geocode({
-                                    "location": new google.maps.LatLng(position.coords.latitude, position.coords.longitude)
-                                },
-                                        function (results, status) {
-                                            if (status == google.maps.GeocoderStatus.OK)
-                                                $("#" + addressId).val(results[0].formatted_address);
-                                            else
-                                                $("#error").append("No se puede obtener su direccion<br />");
-                                        });
-                            },
-                                    function (positionError) {
-                                        $("#error").append("Error: " + positionError.message + "<br />");
-                                    },
-                                    {
-                                        enableHighAccuracy: true,
-                                        timeout: 10 * 1000 // 10 seconds
-                                    });
+    function calculateRoute(from, to) {
+        // Center initialized to Naples, Italy
+        var myOptions = {
+            zoom: 10,
+            center: new google.maps.LatLng(40.84, 14.25),
+            mapTypeId: google.maps.MapTypeId.ROADMAP
+        };
+        // Draw the map
+        var mapObject = new google.maps.Map(document.getElementById("map"), myOptions);
+        var directionsService = new google.maps.DirectionsService();
+        var directionsRequest = {
+            origin: from,
+            destination: to,
+            travelMode: google.maps.DirectionsTravelMode.DRIVING,
+            unitSystem: google.maps.UnitSystem.METRIC
+        };
+        directionsService.route(
+                directionsRequest,
+                function (response, status)
+                {
+                    if (status == google.maps.DirectionsStatus.OK)
+                    {
+                        new google.maps.DirectionsRenderer({
+                            map: mapObject,
+                            directions: response
                         });
-                        $("#calculate-route").submit(function (event) {
-                            event.preventDefault();
-                            calculateRoute($("#from").val(), $("#to").val());
-                        });
+                    } else
+                        $("#error").append("No se puede obtener su ruta<br />");
+                }
+        );
+    }
+    $(document).ready(function () {
+        // If the browser supports the Geolocation API
+        if (typeof navigator.geolocation == "undefined") {
+            $("#error").text("Your browser doesn't support the Geolocation API");
+            return;
+        }
+        $("#from-link, #to-link").click(function (event) {
+            event.preventDefault();
+            var addressId = this.id.substring(0, this.id.indexOf("-"));
+            navigator.geolocation.getCurrentPosition(function (position) {
+                var geocoder = new google.maps.Geocoder();
+                geocoder.geocode({
+                    "location": new google.maps.LatLng(position.coords.latitude, position.coords.longitude)
+                },
+                function (results, status) {
+                    if (status == google.maps.GeocoderStatus.OK)
+                        $("#" + addressId).val(results[0].formatted_address);
+                    else
+                        $("#error").append("No se puede obtener su direccion<br />");
+                });
+            },
+                    function (positionError) {
+                        $("#error").append("Error: " + positionError.message + "<br />");
+                    },
+                    {
+                        enableHighAccuracy: true,
+                        timeout: 10 * 1000 // 10 seconds
                     });
+        });
+        $("#calculate-route").submit(function (event) {
+            event.preventDefault();
+            calculateRoute($("#from").val(), $("#to").val());
+        });
+    });
                 </script>
                 <style type="text/css">
                     #map {
