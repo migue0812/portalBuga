@@ -14,7 +14,7 @@
                 <h3 class="div-h3" >Contacto</h3>
                 <div class="social-footer">
                     <li class="social-contactanos"><a href="<?php echo url("home/contacto") ?>" title="Contáctanos">Contáctanos</a></li>
-                    <li class="social-contactanos"><a href="" title="Información">Información</a></li>
+                    <li class="social-contactanos"><a href="<?php echo url("home/informacion") ?>" title="Información">Información</a></li>
                 </div>
             </div>
 
@@ -22,7 +22,7 @@
             <div class="col-xs-7 col-sm-3 col-lg-3 acerca">
                 <h3 class="div-h3">Acerca</h3>
                 <div class="social-footer">
-                    <li class="social-contactanos"><a href="" title="Renuncia">Renuncia</a></li>
+                    <li class="social-contactanos"><a href="<?php echo url("home/renuncia") ?>" title="Renuncia">Renuncia</a></li>
                     <li class="social-contactanos"><a href="<?php echo url("home/cookies") ?>" title="Política Cookie y Privacidad">Política Cookie y Privacidad</a></li>
                 </div>
             </div>
