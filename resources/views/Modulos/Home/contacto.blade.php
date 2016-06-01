@@ -1,5 +1,5 @@
-<?php include ("/../../Templates/Frontend/head.php") ?>
-<?php include ("/../../Templates/Frontend/header.php") ?>
+@include('Templates.Frontend.head')
+@include('Templates.Frontend.header')
 <div class="container">
     <div class="row">
         <div class="box">
@@ -16,29 +16,31 @@
                     <hr class="tagline-divider-cont">
                 </div>
              
-                <form role="form">
+                <form role="form" method="post" action="{{url('home/contacto/crear')}}">
+                    <input type="hidden" name="_token" value="<?php echo csrf_token(); ?>">
                     <div class="row">
                         <div class="form-group col-lg-4">
                             <label>Nombre</label>
-                            <input type="text" class="form-control">
+                            <input type="text" class="form-control" name="nombre" id="nombre">
                         </div>
                         <div class="form-group col-lg-4">
                             <label>Correo Electrónico</label>
-                            <input type="email" class="form-control">
+                            <input type="email" class="form-control" name="email" id="email">
                         </div>
                         <div class="form-group col-lg-4">
-                            <label for="sel1">Pqrs</label>
-                            <select class="form-control" id="sel1">
-                                <option>Pregunta</option>
-                                <option>Queja</option>
-                                <option>Reclamacion</option>
-                                <option>No Se e_e"</option>
+                            <label for="sel1">Motivo</label>
+                            <select class="form-control" id="sel1" name="motivo" id="motivo">
+                                <option value="Pregunta">Pregunta</option>
+                                <option value="Queja">Queja</option>
+                                <option value="Reclamación">Reclamación</option>
+                                <option value="Sugerencia">Sugerencia</option>
+                                <option value="Felicitación">Felicitación</option>
                             </select>
                         </div>
                         <div class="clearfix"></div>
                         <div class="form-group col-lg-12">
                             <label>Mensaje</label>
-                            <textarea class="form-control" rows="6"></textarea>
+                            <textarea class="form-control" rows="6" name="descripcion" id=""></textarea>
                         </div>
                         <div class="form-group col-lg-12">
                             <input type="hidden" name="save" value="contact">
@@ -47,5 +49,5 @@
                     </div>
                 </form>
             </div>
-            <?php include ("/../../Templates/Frontend/footer.php") ?>
-            <?php include ("/../../Templates/Frontend/foot.php") ?>
+ @include('Templates.Frontend.footer')
+ @include('Templates.Frontend.foot')
