@@ -44,9 +44,9 @@
             <?php
             foreach ($sitios2 as $sitio):
                 ?>
-                <div class="col-md-4 portfolio-item">
+            <div class="col-md-4 portfolio-item imgSitios">
                     <div id="tituloalz"><h2><?php echo ($sitio->sit_nombre) ?></h2></div>
-                    <img class="img-responsive" src="<?php echo asset("$sitio->img_ruta") ?>">
+                    <img class="img-responsive img-Sitios" src="<?php echo asset("$sitio->img_ruta") ?>">
                     <p><?php echo ((strlen($sitio->sit_descripcion) > 100) ? substr(($sitio->sit_descripcion), 0, 100) . " ..." : ($sitio->sit_descripcion)) ?></p>
                     <a href="<?php echo url("home/sitios/det/" . $sitio->sit_id) ?>" class="btn btn-primary"><b title="Ver mas"class="fa fa-eye"></b></a>
                     <?php if (Session::has("usuarioLogueado")): ?>

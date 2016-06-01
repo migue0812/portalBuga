@@ -889,18 +889,34 @@ textarea {
 
 
 @media (min-width:1200px) {
-    .boxSitio{
-        height:2140px;
-    }
+  .boxSitio{
+    height:3100px;
+  }
+  .imgSitios{
+    height: 460px;
+    width: 380px
+  }
+  .img-Sitios{
+      height: 300px; 
+      width: 350px;
+  }
 }
 
 @media (min-width:1000px) and (max-width:1199px) {
-    .boxSitio{
-
-        height: 1990px;
-    }
+  .boxSitio{
+   
+    height: 1990px;
+  }
+  .imgSitios{
+      height: 150px;
+      width: 150px;
+  }
+  .img-Sitios{
+      height: 300px; 
+      width: 350px;
+  }
 }
-
+/* fin raiting position stars e imgs sitios todos (SitioDetalle)*/
 
 .carousel-caption{
     background: rgba(0,0,0,0.5);

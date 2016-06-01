@@ -530,12 +530,12 @@
                 <center><h6 style="margin-top:20px; margin-right: 50px;">Calcular ruta</h6></center>
                 <center><form id="calculate-route" name="calculate-route" action="#" method="get">
                         <label for="from">Desde:
-                            <input type="text" id="frommm" name="from" required="required" placeholder="Una dirección" size="60" />
-                            <a id="" href="#">Obtener mi posición</a>
+                            <input type="text" id="frommm" name="from" required="required" placeholder="Una direcciÃ³n" size="60" />
+                            <a id="" href="#">Obtener mi posiciÃ³n</a>
                             <br />
                             <label for="to">Hacia:</label>
-                            <input type="text" id="to" name="to" required="required" placeholder="Otra dirección" size="60" />
-                            <a id="to-link" href="#">Obtener mi posición</a>
+                            <input type="text" id="to" name="to" required="required" placeholder="Otra direcciÃ³n" size="60" />
+                            <a id="to-link" href="#">Obtener mi posiciÃ³n</a>
                             <br />
                             <input type="submit" />
                             <input type="reset" />
