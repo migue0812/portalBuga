@@ -161,7 +161,7 @@
                     fjs.parentNode.insertBefore(js, fjs);
                 }(document, 'script', 'facebook-jssdk'));</script>
 
-            <div class="fb-comments" data-href="https://www.facebook.com/groups/860979787324031/?fref=ts" data-numposts="5"></div>
+            <div class="fb-comments" data-href="<?php echo url("home/eventos/det/" . $eveDetalle->eve_id) ?>" data-numposts="5"></div>
 
             
             <?php include ("/../../Templates/Frontend/footer.php") ?>
