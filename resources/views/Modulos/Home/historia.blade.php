@@ -65,12 +65,12 @@
         <div class="carousel-inner">
           <div class="item active">
             <!-- Set the first background image using inline CSS below. -->
-            <div class="fill" style="background-image:url('../img/AVENIDABASILICA.jpg');"></div>
+            <div class="fill" style="background-image:url('../img/avenidalabasilica.jpg');"></div>
 
           </div>
           <div class="item">
             <!-- Set the second background image using inline CSS below. -->
-            <div class="fill" style="background-image:url('../img/AVENIDA DE LA BASILICA.jpg');"></div>
+            <div class="fill" style="background-image:url('../img/avenidabasilica.jpg');"></div>
 
           </div>
           <div class="item">
@@ -115,12 +115,12 @@
         <div class="carousel-inner">
           <div class="item active">
             <!-- Set the first background image using inline CSS below. -->
-            <div class="fill" style="background-image:url('../img/PARQUE CABAL AÑOS.jpg');"></div>
+            <div class="fill" style="background-image:url('../img/parquecabalaños.jpg');"></div>
 
           </div>
           <div class="item">
             <!-- Set the second background image using inline CSS below. -->
-            <div class="fill" style="background-image:url('../img/INAGURACION.jpg');"></div>
+            <div class="fill" style="background-image:url('../img/inaguracion.jpg');"></div>
 
           </div>
           <div class="item">
@@ -165,17 +165,17 @@
         <div class="carousel-inner">
           <div class="item active">
             <!-- Set the first background image using inline CSS below. -->
-            <div class="fill" style="background-image:url('../img/IGLESIA SANTA BARBARA.jpg');"></div>
+            <div class="fill" style="background-image:url('../img/iglesiasantabarbara.jpg');"></div>
 
           </div>
           <div class="item">
             <!-- Set the second background image using inline CSS below. -->
-            <div class="fill" style="background-image:url('../img/PARQUE SANTA BARBARA.jpg');"></div>
+            <div class="fill" style="background-image:url('../img/parquesantabarbara.jpg');"></div>
 
           </div>
           <div class="item">
             <!-- Set the third background image using inline CSS below. -->
-            <div class="fill" style="background-image:url('../img/LOS CARNAVALES DEL PUEBLO.jpg');"></div>
+            <div class="fill" style="background-image:url('../img/loscarnavalesdelpueblo.jpg');"></div>
 
           </div>
         </div>
@@ -218,17 +218,17 @@
         <div class="carousel-inner">
           <div class="item active">
             <!-- Set the first background image using inline CSS below. -->
-            <div class="fill" style="background-image:url('../img/PUENTE DE LA LIBERTAD SENTIDO NORTE SUR.jpg');"></div>
+            <div class="fill" style="background-image:url('../img/puentee.jpg');"></div>
 
           </div>
           <div class="item">
             <!-- Set the second background image using inline CSS below. -->
-            <div class="fill" style="background-image:url('../img/PUENTE DE LA LIBERTAD.jpg');"></div>
+            <div class="fill" style="background-image:url('../img/lalibertad.jpg');"></div>
 
           </div>
           <div class="item">
             <!-- Set the third background image using inline CSS below. -->
-            <div class="fill" style="background-image:url('../img/PUENTE.png');"></div>
+            <div class="fill" style="background-image:url('../img/puente.png');"></div>
 
           </div>
         </div>
