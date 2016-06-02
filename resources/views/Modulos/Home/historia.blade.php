@@ -256,7 +256,7 @@
       <hr>
       </p>
 
-      <h2 style="text-align: center; margin-top: 40px;"> La Estación del Ferrocarril Y PALACIO DE JUSTICIA</h2>
+      <h2 style="text-align: center; margin-top: 40px;"> La Estación del Ferrocarril</h2>
       <hr>
       <header id="myCarousel" class="carou carousel slide">
         <!-- Indicators -->
@@ -274,12 +274,12 @@
           </div>
           <div class="item">
             <!-- Set the second background image using inline CSS below. -->
-            <div class="fill" style="background-image:url('../img/PUENTE MEDIACANOA.jpg');"></div>
+            <div class="fill" style="background-image:url('../img/Ferroo.jpg');"></div>
 
           </div>
           <div class="item">
             <!-- Set the third background image using inline CSS below. -->
-            <div class="fill" style="background-image:url('../img/PALACIO DE JUSTICIA.jpg');"></div>
+            <div class="fill" style="background-image:url('../img/histor.jpg');"></div>
 
           </div>
         </div>
