@@ -125,7 +125,7 @@
           </div>
           <div class="item">
             <!-- Set the third background image using inline CSS below. -->
-            <div class="fill" style="background-image:url('../img/cabal.jpg.jpg');"></div>
+            <div class="fill" style="background-image:url('../img/cabal.jpg');"></div>
 
           </div>
         </div>
@@ -269,7 +269,7 @@
         <div class="carousel-inner">
           <div class="item active">
             <!-- Set the first background image using inline CSS below. -->
-            <div class="fill" style="background-image:url('../img/ferro-jpg.jpg');"></div>
+            <div class="fill" style="background-image:url('../img/ferro.jpg');"></div>
 
           </div>
           <div class="item">
