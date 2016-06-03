@@ -906,14 +906,15 @@ textarea {
     height: 1990px;
   }
   .imgSitios{
-      height: 150px;
-      width: 150px;
+    height: 460px;
+    width: 313px
   }
   .img-Sitios{
       height: 300px; 
       width: 350px;
   }
 }
+
 /* fin raiting position stars e imgs sitios todos (SitioDetalle)*/
 
 .carousel-caption{
@@ -964,3 +965,20 @@ textarea {
     opacity: 1;
     transition-delay: 0.5s;
 }
+
+.contenedor-imgX{
+    width: 100%;
+    height: 231px;
+}
+.imgback{
+     width: 100%;
+    height: 100%;
+    background-image: url("http://i.stack.imgur.com/2OrtT.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    position:relative
+}
+.img-contenido{
+  width:100%;
+}   
