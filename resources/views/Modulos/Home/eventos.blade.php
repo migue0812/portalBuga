@@ -19,10 +19,7 @@
             <div class="item active">
               <!-- Imagen 1 -->
               <div class="fill img-responsive" style="background-image:url(<?php echo asset("$evento2->img_ruta") ?>);"></div>
-              <div class="carousel-caption">
-                <h2><?php echo("$evento2->eve_nombre") ?></h2>
-                <span>Descripcion</span>
-              </div>
+            
             </div>
           <?php endforeach; ?>
 
@@ -36,21 +33,18 @@
           <span class="icon-next"></span>
         </a>
       </header>
-    </div>
-  </div>
-</div>
-<?php foreach ($eventos as $evento): ?>
-  <div class="container">
-    <div class="row">
-      <div class="box">
-        <!-- Final Slides -->
-
-        <div class="visitNav">
+         <div class="visitNav">
           <div>
             <h2 style="text-align: center;">Eventos Principales</h2>
           </div>
         </div>
         <hr>
+
+<?php foreach ($eventos as $evento): ?>
+  
+        <!-- Final Slides -->
+
+       
 
         <div class="container portImg">
           <div class="row ">
@@ -69,16 +63,11 @@
                 <a href="<?php echo url("itinerario/eventos/" . $evento->eve_id) ?>" class="btn btn-primary"><b title="Itinerario" class="icon-direction fa-fw"></b></a>
               <?php endif ?>
             </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+        
+ 
 <?php endforeach ?>
 
-<div class="container">
-  <div class="row">
-    <div class="box">
+
       <div class="col-lg-12">
         <div class="visitNav">
           <div>
@@ -97,6 +86,8 @@
             <p><?php echo ((strlen($evento->eve_descripcion) > 30) ? substr(($evento->eve_descripcion), 0, 30) . " ..." : ($evento->eve_descripcion)) ?></p>
             <a href="<?php echo asset("home/eventos/det/" . $evento->eve_id) ?>">
               <button type="button" class="btn btn-primary">Ver Mas</button>
+              <br>
+              <br>
               <?php if (Session::has("usuarioLogueado")): ?>
                 <a href="<?php echo url("itinerario/eventos/" . $evento->eve_id) ?>" class="btn btn-primary"><b title="Itinerario" class="icon-direction fa-fw"></b></a>
               <?php endif ?>
@@ -104,10 +95,10 @@
           </div>
         <?php endforeach; ?>
       </div>
-    </div>
-  </div>
-</div>
+    
+  
 
+          </div>
 
 <script>
   $('.carousel').carousel({
@@ -115,12 +106,6 @@
   });
 </script>
 
-<div class="container">
-  <div class="row">
-    <div class="box">
 
       @include('Templates.Frontend.footer')
       @include('Templates.Frontend.foot')
-    </div>
-  </div>
-</div>
