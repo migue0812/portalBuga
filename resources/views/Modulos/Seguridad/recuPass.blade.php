@@ -20,6 +20,9 @@
                  @if (Session::has("correoNoExiste"))
                 <div class="alert alert-danger center-block" role="alert">{{Session::get("correoNoExiste")}}</div>
                 @endif 
+                @if (Session::has("correoEnviado"))
+                <div class="alert alert-info center-block" role="alert">{{Session::get("correoEnviado")}}</div>
+                @endif 
                 <form id="loginform" class="form-horizontal" role="form" method="post" action="{{url('usuario/cuenta/recupass')}}">
                     <input type="hidden" name="_token" value="<?php echo csrf_token(); ?>">
 

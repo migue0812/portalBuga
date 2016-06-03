@@ -15,7 +15,9 @@
                     </div>
                     <hr class="tagline-divider-cont">
                 </div>
-             
+             @if (Session::has("mensaje"))
+                    <div class="alert alert-success alert-dismissible center-block" role="alert">{{Session::get("mensaje")}}</div>
+                    @endif
                 <form role="form" method="post" action="{{url('home/contacto/crear')}}">
                     <input type="hidden" name="_token" value="<?php echo csrf_token(); ?>">
                     <div class="row">

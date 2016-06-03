@@ -43,6 +43,7 @@ class ContactoController extends Controller {
 //        
 //        
 //        echo "Hemos recibido su Mensaje";
+    Session::flash("mensaje", "Mensaje enviado, gracias por contactarnos");
         return redirect(url("home/contacto"));
     }
     
