@@ -982,3 +982,22 @@ textarea {
 .img-contenido{
   width:100%;
 }   
+/*efecto iconos giran inicio */
+
+.socialicons img{ /* Primer set de iconos. Gira 360 grados y regresa */
+-moz-transition: all 0.8s ease-in-out;
+-webkit-transition: all 0.8s ease-in-out;
+-o-transition: all 0.8s ease-in-out;
+-ms-transition: all 0.8s ease-in-out;
+transition: all 0.8s ease-in-out;
+}
+
+.socialicons img:hover{
+-moz-transform: rotate(360deg);
+-webkit-transform: rotate(360deg);
+-o-transform: rotate(360deg);
+-ms-transform: rotate(360deg);
+transform: rotate(360deg);
+}
+
+/*efecto iconos giran fin*/

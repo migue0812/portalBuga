@@ -119,27 +119,33 @@
 
                     <div class="col-lg-4 col-sm-4 text-center">
                         <a href="<?php echo url("home/categorias/det/7") ?>" class="info">
-                            <img class="queHacerIcon img-circle img-responsive img-center" src="<?php echo asset("img/dormir.png") ?>" alt="Descansar?"></a>
-                        <h3>Donde Dormir?
-                            <small>La mejor guia Hotelera</small>
-                        </h3>
-                        <p>Dejate consentir</p>
+                            <diV class="socialicons">
+                                <img class="queHacerIcon img-circle img-responsive img-center" src="<?php echo asset("img/dormir.png") ?>" alt="Descansar?"></a>
+                            </div>
+                            <h3>Donde Dormir?
+                                <small>La mejor guia Hotelera</small>
+                            </h3>
+                            <p>Dejate consentir</p>
                     </div>
                     <div class="col-lg-4 col-sm-4 text-center">
                         <a href="<?php echo url("home/categorias/det/8") ?>" class="info">
-                            <img class="queHacerIcon img-circle img-responsive img-center" src="<?php echo asset("img/comer.png") ?>" alt="Comer?"></a>
-                        <h3>Donde Comer?
-                            <small>Los mejores Restaurantes</small>
-                        </h3>
-                        <p>Deleita tu paladar</p>
+                            <div class="socialicons">
+                                <img class="queHacerIcon img-circle img-responsive img-center" src="<?php echo asset("img/comer.png") ?>" alt="Comer?"></a>
+                            </div>
+                            <h3>Donde Comer?
+                                <small>Los mejores Restaurantes</small>
+                            </h3>
+                            <p>Deleita tu paladar</p>
                     </div>
                     <div class="col-lg-4 col-sm-4 text-center">
                         <a href="<?php echo url("home/categorias/det/6") ?>" class="info">
-                            <img class="queHacerIcon img-circle img-responsive img-center" src="<?php echo asset("img/diversion.png") ?>" alt=""></a>
-                        <h3>Diverción?
-                            <small>Que hacer en Buga?</small>
-                        </h3>
-                        <p>Los mejores sitios para divertirte?</p>
+                            <div class="socialicons">
+                                <img class="queHacerIcon img-circle img-responsive img-center" src="<?php echo asset("img/diversion.png") ?>" alt=""></a>
+                            </div>
+                            <h3>Diverción?
+                                <small>Que hacer en Buga?</small>
+                            </h3>
+                            <p>Los mejores sitios para divertirte?</p>
                     </div>
                 </div>
             </div>
@@ -155,29 +161,23 @@
             <!-- Page Content -->
             <div class="container text-center actividades">
                 <div class="row">
-                    <div class="view col-lg-4 col-sm-4">  
+                    <div class="col-lg-4 col-sm-4"> 
+                        <a href="https://www.facebook.com/BienestarCDTI/?fref=ts" title="CDTI SENA" target="_blank" class="info">
+                        <div class="socialicons">
                         <img class="queHacerIcon img-circle img-responsive img-center" src="<?php echo asset("img/senaLog.png") ?>" alt="Descansar?">
-                        <div class="mask">  
-                            <h2 style="color:whitesmoke">centro de diseño tecnologico industrial</h2>  
-                            <p style="color:whitesmoke">Regional Valle del Cauca</p>  
-                            <a href="https://www.facebook.com/BienestarCDTI/?fref=ts" class="info" target="_blank">Leer Más</a>  
-                        </div>  
+                        </div>
                     </div>
-                    <div class="view col-lg-4 col-sm-4">  
-                        <img class="queHacerIcon  img-responsive img-center" src="<?php echo asset("img/histoBuga.png") ?>">  
-                        <div class="mask">  
-                            <h2 style="color:whitesmoke">Patrimonio historico de Colombia</h2>  
-                            <p style="color:whitesmoke">Rodeada por diferentes atractivos turísticos</p>  
-                            <a href="<?php echo url("home/historia") ?>" class="info">Leer Más</a>  
-                        </div>  
+                    <div class="col-lg-4 col-sm-4"> 
+                        <a href="<?php echo url("home/historia") ?>" class="info">
+                        <div class="socialicons">
+                        <img class="queHacerIcon  img-responsive img-center" src="<?php echo asset("img/histoBuga.png") ?>"> 
+                        </div>
                     </div>
-                    <div class="view col-lg-4 col-sm-4">  
+                    <div class="col-lg-4 col-sm-4"> 
+                         <a href="<?php echo url("home/sitios/det/9") ?>" class="info">
+                        <div class="socialicons">
                         <img class="queHacerIcon img-circle img-responsive img-center" src="<?php echo asset("img/bugaLog.png") ?>" alt="Comer?">
-                        <div class="mask">  
-                            <h2 style="color:whitesmoke">alcaldia municipal de Buga</h2>  
-                            <p style="color:whitesmoke">Buga Renovada</p>  
-                            <a href="<?php echo url("home/sitios/det/9") ?>" class="info">Leer Más</a> 
-                        </div> 
+                       </div>
                     </div>
                 </div>
             </div>
