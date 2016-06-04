@@ -30,9 +30,9 @@
 
             <div class="col-xs-5 col-sm-3 col-lg-3 sitiosReferidos">
                 <h3 class="div-h3">Sitios Referidos</h3>
-                <div class="social-footer">
-                    <li class="social-contactanos"><a href="http://www.guadalajaradebuga-valle.gov.co/index.shtml" title="Alcaldia">Alcaldia</a></li>
-                    <li class="social-contactanos"><a href="https://www.facebook.com/BienestarCDTI/?fref=ts" title="CDTI SENA">CDTI SENA</a></li>
+                <div class="social-footer">              
+                    <li class="social-contactanos"><a href="http://www.guadalajaradebuga-valle.gov.co/index.shtml" title="Alcaldia" target="_blank">Alcaldia</a></li>
+                    <li class="social-contactanos"><a href="https://www.facebook.com/BienestarCDTI/?fref=ts" title="CDTI SENA" target="_blank">CDTI SENA</a></li>
                 </div>
             </div>
 
