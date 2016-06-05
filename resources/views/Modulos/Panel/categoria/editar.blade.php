@@ -87,7 +87,7 @@
           <div class="form-panel">
             <h4 class="mb"><i class="fa fa-angle-right"></i> Editar Categoria</h4>
                     
-            <form class="style-form" method="post" action="{{url('admin/categoria/crear')}}" enctype="multipart/form-data">
+            <form class="style-form" method="post" action="{{url('admin/categoria/editar')}}" enctype="multipart/form-data">
 
               <input type="hidden" name="_token" value="<?php echo csrf_token(); ?>">
               <input type="hidden" value="{{$categoria->cat_id}}" name="cat_id" id="cat_id">

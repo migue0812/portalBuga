@@ -105,7 +105,7 @@ class CategoriaController extends Controller {
         }
         
          $reglas = array(
-            "cat_nombre" => "required| unique:bdp_categoria,cat_nombre",
+            "cat_nombre" => "required",
             "cat_descripcion" => "required",
             "imagen" => "image"
         );

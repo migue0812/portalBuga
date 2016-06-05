@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 
 use DB;
 
+use Illuminate\Support\Facades\Session;
 class ReporteController extends Controller {
 
 function getMasvistos(){

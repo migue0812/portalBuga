@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use DB;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Validator;
+use Mail;
 
 /**
  * Description of CuentaController
@@ -94,19 +95,25 @@ class CuentaController extends Controller {
         return view("Modulos.Seguridad.recuPass");
     }
 
-    function postRecupass() {
+    function postRecupass(Request $request) {
         $email = $_POST['email'];
-        $verificarEmail = DB::select('SELECT dus_correo FROM bdp_dato_usuario WHERE dus_correo = ?', array($email));
+         
+$verificarEmail = DB::select('SELECT dus_correo FROM bdp_dato_usuario WHERE dus_correo = ?', array($email));
 
-        if (!empty($verificarEmail)) {
+       if (!empty($verificarEmail)) {
             $datos = DB::select("SELECT usu_usuario, usu_password FROM "
                             . "bdp_usuario, bdp_dato_usuario WHERE dus_correo = ? "
                             . "AND bdp_usuario.usu_id=bdp_dato_usuario.usu_id", array($email));
             $usuario = $datos[0]->usu_usuario;
             $password = $datos[0]->usu_password;
-            $mensaje = "Estimado usuario, sus datos de ingreso al Portal Buga, "
+            $mensaje = "Estimado usuario; sus datos de ingreso al Portal Buga, "
                     . "son: Usuario = $usuario, Contraseña = $password";
-            $cabecera = 'From: portalbuga@gmail.com';
+            
+            $data = array(
+            'usuario' => $usuario,
+            'password' => $password,
+            'mensaje' => $mensaje);
+
 //               $longitud = 10;
 //               $cadena = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
 //               $cantCaracteres = strlen($cadena);
@@ -119,12 +126,19 @@ class CuentaController extends Controller {
 //               DB::update("UPDATE bdp_usuario, bdp_dato_usuario SET usu_password = ? "
 //                       . "WHERE dus_correo = ? AND bdp_usuario.usu_id=bdp_dato_usuario.usu_id", 
 //                       array($password, $email));
-            mail($email, "Recuperación de Contraseña", $mensaje, $cabecera);
+            
+             Mail::send('Modulos.Seguridad.password', $data, function($msj){
+                 $email = $_POST['email'];
+            $msj->subject('Recuperación de Contraseña');
+            $msj->to($email);        
+    });
+
             Session::flash("correoEnviado", "Se han enviado los datos de usuario al correo");
         } else {
             Session::flash("correoNoExiste", "Este correo no se encuentra registrado");
         };
         return redirect(url('usuario/cuenta/recupass'));
+            
     }
 
 }
