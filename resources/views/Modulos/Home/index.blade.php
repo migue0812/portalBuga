@@ -82,7 +82,7 @@
                         <a href="<?php echo url("home/sitios/det/" . $sitio->sit_id) ?>">
                             <img class="img img-responsive thumbnail tm" src="<?php echo asset("$sitio->img_ruta") ?>" alt="">
                         </a>
-                        <h3 style="font-family: Helvetica Neue;"><?php echo ($sitio->sit_nombre) ?></h3>
+                        <h3 style="font-family: Helvetica Neue;"><?php echo ((strlen($sitio->sit_nombre) > 30) ? substr(($sitio->sit_nombre), 0, 30) . " ..." : ($sitio->sit_nombre)) ?></h3>
                     </div>
 
                 <?php endforeach ?>

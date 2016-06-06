@@ -34,7 +34,7 @@ class SitiosController extends Controller {
            $visitas = DB::insert("INSERT INTO bdp_visitas (sit_id, vis_ip) VALUES "
                 . "(?,?)", array($id, $ip));
         }
-        return view('Modulos.Home.sitiosdet', compact("sitDetalle"), compact("imagenes")); 
+        return view('Modulos.Home.sitiosDet', compact("sitDetalle"), compact("imagenes")); 
     }
 
 }
