@@ -133,7 +133,7 @@ MENU DE CONTENIDO
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="telefono">Teléfono</label>
-                                    <input type="tel" class="form-control" id="telefono" name="telefono" placeholder="Ingresa Teléfono" value="" required="">
+                                    <input type="tel" class="form-control" id="telefono" name="telefono" placeholder="Ingresa Teléfono" value="">
                                 </div>
                             </div>
                         </div>

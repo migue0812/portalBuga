@@ -127,7 +127,7 @@
                     <div class="col-md-6">
                       <div class="form-group">
                         <label for="nombre">Nombre</label>
-                        <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Nombre Sitio" required="" value="{{$sitios->sit_nombre}}">
+                        <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Nombre Sitio" value="{{$sitios->sit_nombre}}">
                       </div>
                     </div>
                     
