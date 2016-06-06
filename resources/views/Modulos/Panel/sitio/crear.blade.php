@@ -104,7 +104,7 @@ MENU DE CONTENIDO
                             <div class="col-md-6">                     
                                 <div class="form-group">
                                     <label for="categoria">Categoría</label>
-                                    <select class="form-control"  name="categoria" required="">
+                                    <select class="form-control"  name="categoria" required="" id="categoria">
                                         @foreach ($categorias as $categoria)
                                             <option value="{{$categoria->cat_id}}">{{$categoria->cat_nombre}}</option>
                                         @endforeach
@@ -115,10 +115,8 @@ MENU DE CONTENIDO
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="subcategoria">Subcategoría</label>
-                                    <select class="form-control"  name="subcategoria" required="">
-                                       @foreach ($subcategorias as $subcategoria)
-                                            <option value="{{$subcategoria->subcat_id}}">{{$subcategoria->subcat_nombre}}</option>
-                                        @endforeach
+                                    <select class="form-control"  name="subcategoria" required="" id="subcategoria">
+                                       
                                     </select>                       
                                 </div>
                             </div> 

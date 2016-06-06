@@ -114,7 +114,7 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="eve_cat">Categoria</label>
-                                    <select class="form-control"  name="eve_cat" required="">
+                                    <select class="form-control"  name="eve_cat" required="" id="categoriaE">
                                         <option name="0" value="{{$eventos->cat_id}}">{{$eventos->cat_nombre}}</option>
                                         <?php foreach ($categorias as $categoria) { ?>
                                             <option value="<?php echo $categoria->cat_id ?>"> <?php echo $categoria->cat_nombre ?></option>
@@ -126,11 +126,9 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="eve_subcat">Subcategoria</label>
-                                    <select class="form-control"  name="eve_subcat" required="">
+                                    <select class="form-control"  name="eve_subcat" required="" id="subcategoriaE">
                                         <option name="0" value="{{$eventos->subcat_id}}">{{$eventos->subcat_nombre}}</option>
-                                        <?php foreach ($subcategoria as $subcategorias) { ?>
-                                            <option value="<?php echo $subcategorias->subcat_id ?>"> <?php echo $subcategorias->subcat_nombre ?></option>
-                                        <?php } // foreach ?>
+
                                     </select>                       
                                 </div>
                             </div>

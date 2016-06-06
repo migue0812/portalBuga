@@ -7,6 +7,8 @@ use Illuminate\Http\Request;
 use DB;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Session;
+use Illuminate\Support\Facades\Response;
+use Illuminate\Support\Facades\Input;
 
 /**
  * Description of SitioController
@@ -292,6 +294,13 @@ class SitioController extends Controller {
         } else {
             return redirect(url("home/index"));
         }
+    }
+    
+    function getSubcategoria() {
+        $cat_id = Input::get("cat_id");
+        $subcategorias = DB::select("SELECT subcat_id, subcat_nombre FROM "
+                . "bdp_subcategoria WHERE cat_id = ?", array($cat_id));
+        return Response::json($subcategorias);
     }
 
 }

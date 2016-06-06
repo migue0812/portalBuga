@@ -103,7 +103,7 @@
                     <div class="col-md-6">                     
                       <div class="form-group">
                         <label for="categoria">Categoría</label>
-                        <select class="form-control"  name="categoria" required="">
+                        <select class="form-control"  name="categoria" required="" id="categoriaE">
                             <option name="0" value="{{$sitios->cat_id}}">{{$sitios->cat_nombre}}</option>
                           @foreach ($categorias as $categoria)
                                             <option value="{{$categoria->cat_id}}">{{$categoria->cat_nombre}}</option>
@@ -115,11 +115,9 @@
                     <div class="col-md-6">
                       <div class="form-group">
                         <label for="subcategoria">Subcategoría</label>
-                        <select class="form-control"  name="subcategoria" required="">
+                        <select class="form-control"  name="subcategoria" required="" id="subcategoriaE">
                             <option name="0" value="{{$sitios->subcat_id}}">{{$sitios->subcat_nombre}}</option>
-                          @foreach ($subcategorias as $subcategoria)
-                                            <option value="{{$subcategoria->subcat_id}}">{{$subcategoria->subcat_nombre}}</option>
-                                        @endforeach
+                            
                         </select>                       
                       </div>
                     </div> 

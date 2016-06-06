@@ -13,7 +13,7 @@
 <script src="{{asset('panel/js/gritter-conf.js')}}" type="text/javascript" ></script>
 <script src="{{asset('panel/js/sparkline-chart.js')}}"></script>    
 <script src="{{asset('panel/js/zabuto_calendar.js')}}"></script>	
-
+<script src="{{asset('panel/js/listas.js')}}"></script>
 
 
 
