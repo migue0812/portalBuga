@@ -36,9 +36,7 @@ class SubcategoriaController extends Controller {
 if (Session::has("usuarioAdmin")) {
         $categorias = DB::select("SELECT * FROM bdp_categoria");
 
-        $subcategorias = array();
-
-        return view("Modulos.Panel.subcategoria.crear", compact("categorias", "subcategorias"));
+        return view("Modulos.Panel.subcategoria.crear", compact("categorias"));
 
 //    return view("Modulos.Panel.subcategoria.crear");
     }else {
@@ -50,97 +48,42 @@ if (Session::has("usuarioAdmin")) {
 
         $nombre = filter_input(INPUT_POST, 'nombre');
         $descripcion = filter_input(INPUT_POST, 'descripcion');
-        $activado = filter_input(INPUT_POST, 'est_id');
         $cat_id = filter_input(INPUT_POST, 'cat_id');
-//        $usuario = filter_input(INPUT_POST, 'usuario');
-
-//        $cat_id = DB::select('SELECT IFNULL(MAX(cat_id),0)+1 AS id FROM bdp_categoria ORDER BY id DESC LIMIT 1');
-//        $cat_id = $cat_id[0]->id;
-
-        $subcat_id = DB::select('SELECT IFNULL(MAX(subcat_id),0)+1 AS id FROM bdp_subcategoria ORDER BY id DESC LIMIT 1');
-        $subcat_id = $subcat_id[0]->id;
-
-
-DB::insert("INSERT INTO bdp_subcategoria "
-                . "( subcat_id, cat_id, subcat_nombre,  subcat_descripcion, est_id"
-                . " ) VALUES (?,?,?,?,?)", array($subcat_id, $cat_id,
-            $nombre, $descripcion, $activado,));
-
-        $target_dir = dirname(getcwd());
-//print_r($target_dir);
-//echo "<br />";
-        $target_file = $target_dir . "\public\img\subcategorias\\" . basename($_FILES["fileToUpload"]["name"]);
-//        print_r($target_file);
-        $filename = ($_FILES["fileToUpload"]["name"]);
-
-//        echo "<br />";
-        $uploadOk = 1;
-        $imageFileType = pathinfo($target_file, PATHINFO_EXTENSION);
-
-//        print_r($imageFileType);
-// Check if image file is a actual image or fake image
-        if (isset($_POST["submit"])) {
-            $check = getimagesize($_FILES["fileToUpload"]["tmp_name"]);
-            if ($check !== false) {
-                echo "File is an image - " . $check["mime"] . ".";
-                $uploadOk = 1;
-            } else {
-                echo "File is not an image.";
-                $uploadOk = 0;
-            }
-        }
-// Check if file already exists
-        if (file_exists($target_file)) {
-            echo "Sorry, file already exists.";
-            $uploadOk = 0;
-        }
-// Check file size
-        if ($_FILES["fileToUpload"]["size"] > 1000000) {
-            echo "Sorry, your file is too large.";
-            $uploadOk = 0;
-        }
-// Allow certain file formats
-        if ($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg" && $imageFileType != "gif") {
-            echo "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
-            $uploadOk = 0;
-        }
-// Check if $uploadOk is set to 0 by an error
-        if ($uploadOk == 0) {
-            echo "Sorry, your file was not uploaded.";
-// if everything is ok, try to upload file
-        } else {
-            if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
-                echo "The file " . basename($_FILES["fileToUpload"]["name"]) . " has been uploaded.";
-            } else {
-                echo "Sorry, there was an error uploading your file.";
-            }
-        }
-
-
-
-
-
-
         
-        
-        if (empty($filename)!==true) {
-//    $filename =($_FILES["fileToUpload"]["name"]);
-        DB::insert("INSERT INTO bdp_imagen "
-                . "( subcat_id , img_ruta ) VALUES (?,?)", array($subcat_id,
-            $filename));
- }else{
-     DB::insert("INSERT INTO bdp_imagen "
-                . "( subcat_id , img_ruta ) VALUES (?,'comodin.jpg')", array($subcat_id));
- }
+        $subcategoriaImg = $_FILES["imagen"]["name"];
+        $subcategoriaRuta = $_FILES["imagen"]["tmp_name"];
+        $subcategoriaDest = "img/" . $subcategoriaImg;
+        copy($subcategoriaRuta, $subcategoriaDest);
 
+         $reglas = array(
+            "nombre" => "required",
+            "descripcion" => "required",
+            "imagen" => "image"
+        );
 
+        $mensajes = [
+            "nombre.required" => "El campo 'nombre' debe ser obligarorio",
+            "descripcion.required" => "El campo 'descripciÃ³n' debe ser obligarorio",
+            "imagen.image" => "El campo 'imagen' debe contener una imagen",
+        ];
 
-        Session::put('success', 'categoria creada exitosamente');
+        $validacion = Validator::make($_POST, $reglas, $mensajes);
 
-//    DB::insert("INSERT INTO usuario (nombre, apellido) VALUES(?,?)", array($nombre, $apellido));
+        if ($validacion->fails()) {
+            return redirect(url('admin/subcategoria/crear'))
+                            ->withErrors($validacion->errors());
+        }
 
-        return redirect(url("admin/subcategoria/listar"));
-    }
+DB::insert("INSERT INTO bdp_subcategoria (subcat_nombre, subcat_descripcion, cat_id, est_id) "
+                . "VALUES(?,?,?,?)", array($nombre, $descripcion, $cat_id, 1));
+
+        $id = DB::select('SELECT IFNULL(MAX(subcat_id),0) AS id FROM bdp_subcategoria ORDER BY id DESC LIMIT 1');
+        $id = $id[0]->id;
+
+        DB::insert("INSERT INTO bdp_imagen (subcat_id, img_ruta) VALUES (?,?)", array($id, $subcategoriaDest));
+
+return redirect(url('admin/subcategoria/listar'));
+}
 
     function getEditar($id) {
         if (Session::has("usuarioAdmin")) {
