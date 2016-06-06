@@ -207,24 +207,27 @@
               <img class="img-responsive" src="<?php echo asset("$sitDetalle->img_ruta") ?>" alt="">
             </a>
           </div>
-          <div class="col-md-2 portfolio-item">
+          <div class="col-md-3 portfolio-item">
             <h4 class="icon-location"><b>:</b></h4>
             <p><?php echo ($sitDetalle->sit_direccion) ?></p>
           </div>
-          <div class="col-md-2 portfolio-item">
+          <div class="col-md-3 portfolio-item">
             <h4 class=" icon-phone"><b>:</b></h4><p><?php echo ($sitDetalle->sit_telefono) ?></p>
           </div>
           <div class="col-md-5 col-sm-11 portfolio-item">
-            <h2 style="margin-top: 60px;"><?php echo ($sitDetalle->sit_nombre) ?></h2>
+              <center><h2 style="margin-top: 30px;"><?php echo ($sitDetalle->sit_nombre) ?></h2></center>
+            <br>
             <p class="text-justify"><?php echo ($sitDetalle->sit_descripcion) ?></p>
           </div>
         </div>
         <br>
-
+        
+        <div class="buttonRedes">
         <div class="fb-share-button" data-href="https://www.facebook.com/Portal-de-Turismo-Buga-130910880649308/?fref=ts" data-layout="button_count" data-mobile-iframe="true"></div>
         <a href="https://twitter.com/share" class="twitter-share-button" data-url="https://www.facebook.com/Portal-de-Turismo-Buga-130910880649308/?fref=ts" data-via="Diego21Alzate">Tweet</a>
         <div class="g-plus" data-action="share" data-href="https://www.facebook.com/Portal-de-Turismo-Buga-130910880649308/?fref=ts"></div>
-
+        </div>
+        
         <br>
         <div class="stars">
           <div class="ec-stars-wrapper col-lg-3">

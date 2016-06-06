@@ -831,6 +831,12 @@ textarea {
     margin-right: auto;
 
     overflow: hidden;
+    
+  
+}
+
+.hoverSitio{
+    margin-top: 22px;
 }
 
 .textHover {
