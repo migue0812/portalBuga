@@ -295,17 +295,21 @@ hr {
     height: 2px;
 }
 
-#tituloalz h2 {
+#tituloalz{
+    
+    margin-top: 10px !important ;
+    background: rgba(0, 0, 0, 0.8);
+    margin-bottom: 0px !important;
+    height: 38px;
+}
+#tituloalz h2{
     font-family:serif;
     text-transform: uppercase;
     color: #fff;
     text-align: center;
     position: relative;
-    font-size: 15px;
-    margin-top: 10px !important ;
-    background: rgba(0, 0, 0, 0.8);
-    margin-bottom: 0px !important;
-    height: 20px;
+    font-size: 12px;
+    top: 9px;
 }
 
 
@@ -909,7 +913,7 @@ textarea {
 @media (min-width:1000px) and (max-width:1199px) {
   .boxSitio{
    
-    height: 1990px;
+    height: 5763px;
   }
   .imgSitios{
     height: 460px;
@@ -920,6 +924,103 @@ textarea {
       width: 350px;
   }
 }
+
+@media (min-width:992px) and (max-width:999px){
+    
+    .boxSitio{
+   
+    height: 5763px;
+  }
+  .imgSitios{
+    height: 460px;
+    width: 313px
+  }
+  .img-Sitios{
+      height: 300px; 
+      width: 350px;
+  }
+
+}
+
+
+@media (min-width:768px) and (max-width:991px){
+       .boxSitio{
+    height: 12288px;
+  }
+  .imgSitios{
+   height: 364px;
+    
+  }
+  .img-Sitios{
+      height: 300px; 
+      width: 350px; 
+}
+.text-justify{
+    height: 248px;
+    width: 351px; 
+}
+}
+
+@media (min-width:637px) and (max-width:767px){
+       .boxSitio{
+    height: 12422px;
+  }
+  .imgSitios{
+   height: 364px;
+    
+  }
+  .img-Sitios{
+      height: 300px; 
+      width: 350px; 
+}
+.text-justify{
+    height: 248px;
+    width: 351px; 
+}
+}
+
+@media (max-width:320px){
+   .boxSitio{
+    height: 14746px;
+  }
+  .imgSitios{
+   height: 417px;
+    
+  }
+  .img-Sitios{
+      height: 300px; 
+      width: 350px; 
+}
+.text-justify{
+    height: 248px;
+    width: 351px; 
+} 
+}
+
+@media (min-width:630px) and (max-width:636px){
+   .boxSitio{
+    height: 13995px;
+  }
+  .imgSitios{
+   height: 417px;
+    
+  }
+  .img-Sitios{
+      height: 300px; 
+      width: 350px; 
+}
+.text-justify{
+    height: 248px;
+    width: 351px; 
+} 
+}
+@media (max-width:589px){
+    
+    .boxSitio{
+        height: 14206px;
+    }
+}
+
 
 /* fin raiting position stars e imgs sitios todos (SitioDetalle)*/
 
