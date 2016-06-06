@@ -23,7 +23,7 @@
                         </div>
                         <div class="item">
                             <!-- Set the second background image using inline CSS below. -->
-                            <div class="fill" style="background-image:url('../img/Ferro.jpg');"></div>
+                            <div class="fill" style="background-image:url('../img/bugio.jpg');"></div>
                             <div class="carousel-caption">
                                 <p style="color: #FFF; font: 180% sans-serif">Estacion Del Ferrocarril</p>
                                 <p>La Estación del Ferrocarril, espectacular conjunto arquitectónico, declarado Bien de Interés Cultural (BIC) de la Nación por el Ministerio de Cultura. Posee una arquitectura colonial, buscando uniformidad en cada uno de los elementos y detalles que la componen. Todos los espacios externos e internos son atribuidos a una función o actividad específica, por lo cual es un monumento digno de apreciar.</p>
@@ -31,7 +31,7 @@
                         </div>
                         <div class="item">
                             <!-- Set the third background image using inline CSS below. -->
-                            <div class="fill" style="background-image:url('../img/bugio.png');"></div>
+                            <div class="fill" style="background-image:url('../img/vintagecom.jpg');"></div>
                             <div class="carousel-caption">
                                 <p style="color: #FFF; font: 180% sans-serif">Buga</p>
                                 <p>Cuenta la leyenda que en 1550 a las manos de una indígena que lavaba ropa en el río Guadalajara llegó un pequeño Cristo, traído por las aguas. Dios recompensaba así un acto caritativo de la mujer hacia un vecino. Tras ser puesta en un altar, la imagen comenzó a crecer y la gente a venerarla.</p>
@@ -57,9 +57,9 @@
 
                     <div class="tituloWelcome" style="">Una de las mejores ciudades turisticas!</div>
 
-                    <p>En el Centro del Valle del Cauca, específicamente en la parte media de la Cordillera Central, 
-                        fue fundado en 1573, el municipio de Guadalajara de Buga. 
-                        “La ciudad Señora” como también se le denomina, 
+                    <p>En el Centro del Valle del Cauca, específicamente en la parte media de la Cordillera Central,
+                        fue fundado en 1573, el municipio de Guadalajara de Buga.
+                        “La ciudad Señora” como también se le denomina,
                         posee un patrimonio arquitectónico e histórico que cuenta con diferentes bienes de interés cultural,
                         entre estos, La Basílica del Señor de los Milagros la cual recibe y acoge a visitantes de todo el mundo.
                     </p>
@@ -103,12 +103,12 @@
                         <h3 class="visit">Visitanos
                             <small>Los Mejores Lugares Para Ti !</small>
                         </h3>
-                        <p>Rodeada por diferentes atractivos turísticos, 
-                            dentro de ellos el más importante de esta ciudad La Basílica del Señor de los Milagros, 
-                            la cual a bendecido a millones de turistas nacionales y extranjeros. 
-                            Ubicada en el centro de la ciudad de Buga. 
+                        <p>Rodeada por diferentes atractivos turísticos,
+                            dentro de ellos el más importante de esta ciudad La Basílica del Señor de los Milagros,
+                            la cual a bendecido a millones de turistas nacionales y extranjeros.
+                            Ubicada en el centro de la ciudad de Buga.
                             Por su trayectoria histórica y milagrosa la Basílica es el lugar mas visitado en el Valle del Cauca y uno de los centros religiosos por excelencia de Colombia.<br>
-                            Ven y disfruta de la mejor Gastronomía Vallecaucana, Restaurantes, Fincas Campestres, 
+                            Ven y disfruta de la mejor Gastronomía Vallecaucana, Restaurantes, Fincas Campestres,
                             Hoteles, Balnearios y demás Destinos Turísticos para disfrutar en Familia.</p>
                     </div>
                 </div>
@@ -161,23 +161,23 @@
             <!-- Page Content -->
             <div class="container text-center actividades">
                 <div class="row">
-                    <div class="col-lg-4 col-sm-4"> 
+                    <div class="col-lg-4 col-sm-4">
                         <a href="https://www.facebook.com/BienestarCDTI/?fref=ts" title="CDTI SENA" target="_blank" class="info">
-                        <div class="socialicons">
-                        <img class="queHacerIcon img-circle img-responsive img-center" src="<?php echo asset("img/senaLog.png") ?>" alt="Descansar?">
-                        </div>
+                            <div class="socialicons">
+                                <img class="queHacerIcon img-circle img-responsive img-center" src="<?php echo asset("img/senaLog.png") ?>" alt="Descansar?">
+                            </div>
                     </div>
-                    <div class="col-lg-4 col-sm-4"> 
+                    <div class="col-lg-4 col-sm-4">
                         <a href="<?php echo url("home/historia") ?>" class="info">
-                        <div class="socialicons">
-                        <img class="queHacerIcon  img-responsive img-center" src="<?php echo asset("img/histoBuga.png") ?>"> 
-                        </div>
+                            <div class="socialicons">
+                                <img class="queHacerIcon  img-responsive img-center" src="<?php echo asset("img/histoBuga.png") ?>">
+                            </div>
                     </div>
-                    <div class="col-lg-4 col-sm-4"> 
-                         <a href="<?php echo url("home/sitios/det/9") ?>" class="info">
-                        <div class="socialicons">
-                        <img class="queHacerIcon img-circle img-responsive img-center" src="<?php echo asset("img/bugaLog.png") ?>" alt="Comer?">
-                       </div>
+                    <div class="col-lg-4 col-sm-4">
+                        <a href="<?php echo url("home/sitios/det/9") ?>" class="info">
+                            <div class="socialicons">
+                                <img class="queHacerIcon img-circle img-responsive img-center" src="<?php echo asset("img/bugaLog.png") ?>" alt="Comer?">
+                            </div>
                     </div>
                 </div>
             </div>
