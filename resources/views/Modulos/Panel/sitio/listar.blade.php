@@ -148,7 +148,7 @@
                                                 </td>
 
                                                 <td>
-                                                    
+                                                    <a title="Ver" href="{{url('home/sitios/det/' . $sitio->sit_id)}}" class="btn btn-default btn-xs"><i class="fa fa-eye"></i></a>
                                                     <a title="Editar" class="btn btn-primary btn-xs" href="{{url('admin/sitio/editar/' . $sitio->sit_id)}}"><i class="fa fa-pencil"></i></a>
                                                     @if($sitio->est_nombre === 'Habilitado' )
                                                     <a title="Inhabilitar" class="btn btn-danger btn-xs" href="{{url('admin/sitio/inhabilitar/' . $sitio->sit_id)}}"><i class="fa fa-remove"></i></a>

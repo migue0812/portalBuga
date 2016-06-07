@@ -1,22 +1,7 @@
-
-<script>
-    $(document).ready(function () {
-        console.log("document loaded");
-        $('.usuario').addClass('active');
-
-    });
-
-    $(window).load(function () {
-        console.log("window loaded");
-        $('.usuario').addClass('active');
-    });
-
-</script>
 @include('Templates.Backend.headPanel')
-@include('Templates.Backend.asidePanel')
 
         <!-- MENU INICIO-->
-<!--        <div>
+      <div>
         <li class="mt">
           <a href="{{url('admin/bienvenido')}}">
             <i class="fa fa-dashboard"></i>
@@ -31,7 +16,6 @@
           </a>
           <ul class="sub">
             <li><a href="{{url('admin/categoria/crear')}}">Crear</a></li>
-            <li><a href="{{url('admin/categoria/editar')}}">Editar</a></li>
             <li><a href="{{url('admin/categoria/reporte')}}">Reporte</a></li>
             <li><a href="{{url('admin/categoria/listar')}}">Listar</a></li>
           </ul>
@@ -44,7 +28,6 @@
           </a>
           <ul class="sub">
             <li><a  href="{{url('admin/subcategoria/crear')}}">Crear</a></li>
-            <li><a  href="{{url('admin/subcategoria/editar')}}">Editar</a></li>
             <li><a  href="{{url('admin/subcategoria/reporte')}}">Reporte</a></li>
             <li class="active"><a  href="{{url('admin/subcategoria/listar')}}">Listar</a></li>
           </ul>
@@ -57,7 +40,6 @@
           </a>
           <ul class="sub">
             <li><a  href="{{url('admin/sitio/crear')}}">Crear</a></li>
-            <li><a  href="{{url('admin/sitio/editar')}}">Editar</a></li>
             <li><a  href="{{url('admin/sitio/reporte')}}">Reporte</a></li>
             <li><a  href="{{url('admin/sitio/listar')}}">Listar</a></li>
           </ul>
@@ -70,7 +52,6 @@
           </a>
           <ul class="sub">
             <li><a  href="{{url('admin/evento/crear')}}">Crear</a></li>
-            <li><a  href="{{url('admin/evento/editar')}}">Editar</a></li>
             <li><a  href="{{url('admin/evento/reporte')}}">Reporte</a></li>
             <li><a  href="{{url('admin/evento/listar')}}">Listar</a></li>
           </ul>
@@ -83,14 +64,13 @@
           </a>
           <ul class="sub">
             <li><a  href="{{url('admin/configurar/crear')}}">Crear</a></li>
-            <li><a  href="{{url('admin/configurar/editar')}}">Editar</a></li>
             <li><a  href="{{url('admin/configurar/reporte')}}">Reporte</a></li>
             <li><a  href="{{url('admin/configurar/listar')}}">Listar</a></li>
           </ul>
         </li>
       </ul>
-       BARRA LATERAL MENU FIN
-    </div>-->
+       <!--BARRA LATERAL MENU FIN-->
+    </div>
  
   <!--BARRA LATERAL FIN-->
 
@@ -106,29 +86,51 @@
           <div class="row mt">
             <div class="col-md-12">
               <div class="content-panel table-responsive">
+                  @if ($errors->any())
+                         <div class="alert alert-danger alert-dismissible center-block" role="alert">
+                             <ul>
+                              @foreach ($errors->all() as $error)  
+                                 <li>{{$error}}</li>
+                                 @endforeach
+                             </ul>
+                         </div>
+                        @endif
+                        @if (Session::has("editar"))
+    <div class="alert alert-warning alert-dismissible center-block" role="alert">{{Session::get("editar")}}</div>
+                @endif 
+                                @if (Session::has("inhabilitar"))
+    <div class="alert alert-danger alert-dismissible center-block" role="alert">{{Session::get("inhabilitar")}}</div>
+                @endif
+    @if (Session::has("habilitar"))
+    <div class="alert alert-info alert-dismissible center-block" role="alert">{{Session::get("habilitar")}}</div>
+                @endif 
                 <table class="table table-striped table-advance table-hover">
                   <h4><i class="fa fa-angle-right"></i> Subcategoria</h4>
                   <hr>
                   <thead>
                     <tr>
                       <th><i class="fa fa-bullhorn"></i> Nombre</th>
-                      <th style="width: 400px"><i class="fa fa-bullhorn"></i> Descripcion </th>
-                      <th><i class=" fa fa-edit"></i> Activo</th>
+                      <th style="width: 400px"><i class="fa fa-bullhorn"></i> Categoría </th>
+                      <th><i class=" fa fa-edit"></i> Estado</th>
                       <th></th>
                     </tr>
                   </thead>
                   <tbody>
                       <?php foreach ($subcategorias as $subcategoria) {?>
                     <tr>
-                      <td><a href="basic_table.html#"><?php echo $subcategoria->subcat_nombre ?></a></td>
+                      <td><?php echo $subcategoria->subcat_nombre ?></td>
 
-                      <td><a href="basic_table.html#"><?php echo ((strlen($subcategoria->subcat_descripcion) > 50) ? substr(($subcategoria->subcat_descripcion), 0, 100) . " ..." : ($subcategoria->subcat_descripcion)) ?></a></td>
+                      <td><?php echo $subcategoria->cat_nombre ?></td>
                       
-                      <td><?php $act= $subcategoria->est_id;if ($act== '1'):?><span class="label label-info label-mini">Si</span><?php else:?><span class="label label-warning label-mini">No</span><?php endif ?></td>
+                      <td><?php echo $subcategoria->est_nombre ?></td>
                       <td>
-                        <a href="<?php echo url("admin/subcategoria/detalle/" . $subcategoria->subcat_id); ?>" class="btn btn-success btn-xs"><i class="fa fa-check"></i></a>
-                        <a href="<?php echo url("admin/subcategoria/editar/" . $subcategoria->subcat_id); ?>" class="btn btn-primary btn-xs"><i class="fa fa-pencil"></i></a>
-                        <a href="<?php echo url("admin/subcategoria/desactivar/" . $subcategoria->subcat_id); ?>" class="btn btn-danger btn-xs"><i class="fa fa-trash-o "></i></a>
+                          <a title="Ver" href="<?php echo url("home/subCat/index/" . $subcategoria->subcat_id); ?>" class="btn btn-default btn-xs"><i class="fa fa-eye"></i></a>
+                          <a title="Editar" href="<?php echo url("admin/subcategoria/editar/" . $subcategoria->subcat_id); ?>" class="btn btn-primary btn-xs"><i class="fa fa-pencil"></i></a>
+                        @if($subcategoria->est_nombre === 'Habilitado' )
+                                                    <a title="Inhabilitar" class="btn btn-danger btn-xs" href="{{url('admin/subcategoria/inhabilitar/' . $subcategoria->subcat_id)}}"><i class="fa fa-remove"></i></a>
+                                                @else
+                                                <a title="Habilitar" class="btn btn-success btn-xs" href="{{url('admin/subcategoria/habilitar/' . $subcategoria->subcat_id)}}"><i class="fa fa-check"></i></a>
+                                                @endif
                       </td>
                     </tr>
                     

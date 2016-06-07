@@ -70,7 +70,7 @@
           </ul>
         </li>
       </ul>
-       BARRA LATERAL MENU FIN
+       <!--BARRA LATERAL MENU FIN-->
     </div>
 </aside>
 <!--BARRA LATERAL FIN-->
@@ -95,6 +95,9 @@ MENU DE CONTENIDO
                         </ul>
                     </div>
                     @endif
+                    @if (Session::has("registrar"))
+    <div class="alert alert-warning alert-dismissible center-block" role="alert">{{Session::get("registrar")}}</div>
+                @endif 
                     <form class="style-form" method="post" action="{{url('admin/subcategoria/crear')}}" enctype="multipart/form-data">
 
                         <input type="hidden" name="_token" value="<?php echo csrf_token(); ?>">

@@ -63,7 +63,7 @@ if (Session::has("usuarioAdmin")) {
 
         $mensajes = [
             "nombre.required" => "El campo 'nombre' debe ser obligarorio",
-            "descripcion.required" => "El campo 'descripciÃ³n' debe ser obligarorio",
+            "descripcion.required" => "El campo 'descripción' debe ser obligarorio",
             "imagen.image" => "El campo 'imagen' debe contener una imagen",
         ];
 
@@ -81,6 +81,8 @@ DB::insert("INSERT INTO bdp_subcategoria (subcat_nombre, subcat_descripcion, cat
         $id = $id[0]->id;
 
         DB::insert("INSERT INTO bdp_imagen (subcat_id, img_ruta) VALUES (?,?)", array($id, $subcategoriaDest));
+        
+      Session::flash("registrar", "Subcategoría registrada exitosamente");
 
 return redirect(url('admin/subcategoria/listar'));
 }
@@ -88,7 +90,8 @@ return redirect(url('admin/subcategoria/listar'));
     function getEditar($id) {
         if (Session::has("usuarioAdmin")) {
         $categorias = DB::select("SELECT * FROM bdp_categoria");
-        $subcategoria = DB::select("SELECT * FROM bdp_subcategoria WHERE subcat_id = ?", array($id));
+        $subcategoria = DB::select("SELECT * FROM bdp_subcategoria, bdp_categoria "
+                . "WHERE subcat_id = ? AND bdp_subcategoria.cat_id=bdp_categoria.cat_id", array($id));
         $subcategoria = $subcategoria[0];
 
 
@@ -122,25 +125,14 @@ function getBorrar($id) {
         }
     }
     
-    function getDesactivar($id) {
+    function getInhabilitar($id) {
+        if (Session::has("usuarioAdmin")) {
+        DB::update("UPDATE bdp_subcategoria SET est_id = 0, subcat_deleted_at = CURRENT_TIMESTAMP WHERE "
+                . "subcat_id = ?", array($id));
 
-        if (Session::has('usuarioAdmin') === true) {
-
-$activado = DB::select("SELECT est_id FROM bdp_subcategoria WHERE subcat_id = ?", array($id));
-$activado = $activado[0]->est_id;
- if ($activado == 1): $est_id=0; else: $est_id=1; endif;
-//            UPDATE `bdp_sitio` SET `sit_deleted_at` = NULL WHERE `bdp_sitio`.`sit_id` = 23
-
-//            $usu_deleted_at = date("Y-m-d\TH:i:s");
-
-
-            DB::update("UPDATE bdp_subcategoria SET est_id = ? "
-                    . " WHERE subcat_id = ?", array($est_id, $id));
-
-           return redirect(url("admin/subcategoria/listar"));
-//            return view("Modulos.Panel.subcategoria.listar");
-        } else {
-            echo 'Permiso denegado';
+        Session::flash("inhabilitar", "Se ha inhabilitado la subcategoria exitosamente");
+        return redirect(url("admin/subcategoria/listar"));
+    }else {
             return redirect(url("home/index"));
         }
     }
@@ -152,7 +144,9 @@ $activado = $activado[0]->est_id;
     function getListar(Request $request) {
         
         if (Session::has('usuarioAdmin') === true) {
-            $subcategorias = DB::select("SELECT * FROM bdp_subcategoria");
+            $subcategorias = DB::select("SELECT * FROM bdp_subcategoria, bdp_categoria, "
+                    . "bdp_estado WHERE bdp_subcategoria.cat_id=bdp_categoria.cat_id "
+                    . "AND bdp_subcategoria.est_id=bdp_estado.est_id");
 //            $dato_usuario = DB::select("SELECT * FROM bdp_dato_usuario");
 
             return view("Modulos.Panel.subcategoria.listar", compact("subcategorias", "dato_usuario"));
@@ -163,6 +157,67 @@ $activado = $activado[0]->est_id;
         
         
         return view("Modulos.Panel.subcategoria.listar");
+    }
+    
+     function postEditar() {
+
+        $nombre = filter_input(INPUT_POST, 'nombre');
+        $descripcion = filter_input(INPUT_POST, 'descripcion');
+        $cat_id = filter_input(INPUT_POST, 'cat_id');
+        $subcat_id = filter_input(INPUT_POST, 'subcat_id');
+        
+        $subcategoriaImg = $_FILES["imagen"]["name"];
+        $subcategoriaRuta = $_FILES["imagen"]["tmp_name"];
+        $subcategoriaDest = "img/" . $subcategoriaImg;
+        if ($subcategoriaRuta !== "" && $subcategoriaDest !== "") {
+            copy($subcategoriaRuta, $subcategoriaDest);
+        }
+
+         $reglas = array(
+            "nombre" => "required",
+            "descripcion" => "required",
+            "imagen" => "image"
+        );
+
+        $mensajes = [
+            "nombre.required" => "El campo 'nombre' debe ser obligarorio",
+            "descripcion.required" => "El campo 'descripción' debe ser obligarorio",
+            "imagen.image" => "El campo 'imagen' debe contener una imagen",
+        ];
+
+        $validacion = Validator::make($_POST, $reglas, $mensajes);
+
+        if ($validacion->fails()) {
+            return redirect(url('admin/subcategoria/editar/' . $subcat_id))
+                            ->withErrors($validacion->errors());
+        }
+
+DB::update("UPDATE bdp_subcategoria SET cat_id = ?, subcat_nombre = ?, subcat_descripcion = ?, "
+        . "subcat_updated_at = CURRENT_TIMESTAMP WHERE subcat_id = ?",
+                array($cat_id, $nombre, $descripcion, $subcat_id));
+
+       if ($subcategoriaRuta !== "" && $subcategoriaDest !== "") {
+            $img = DB::select("SELECT * FROM bdp_imagen WHERE subcat_id = ?", array($subcat_id));
+            $img = $img[0]->img_ruta;
+            unlink($img);
+            DB::insert("UPDATE bdp_imagen SET img_ruta = ? WHERE subcat_id = ?", array($subcategoriaDest, $subcat_id));
+        }
+
+        Session::flash("editar", "Subcategoría editada exitosamente");
+        return redirect(url("admin/subcategoria/listar"));
+}
+
+function getHabilitar($id) {
+        if (Session::has("usuarioAdmin")) {
+
+        DB::update("UPDATE bdp_subcategoria SET est_id = 1, subcat_deleted_at = NULL WHERE "
+                . "subcat_id = ?", array($id));
+
+        Session::flash("habilitar", "Se ha habilitado la subcategoria exitosamente");
+        return redirect(url("admin/subcategoria/listar"));
+    }else {
+            return redirect(url("home/index"));
+        }
     }
 
 }
