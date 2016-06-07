@@ -33,6 +33,9 @@ class RegistroController extends Controller {
   function postRegistro(Request $request) {
 
     $usuario = filter_input(INPUT_POST, 'usuario');
+//    $usuario = $_POST['usuario'];
+//    $usuario= array();
+//    $usuario = 'admin';
     $password = filter_input(INPUT_POST, 'password');
     $password_confirmation = filter_input(INPUT_POST, 'password_confirmation');
     $nombre = filter_input(INPUT_POST, 'nombre');
@@ -46,9 +49,14 @@ class RegistroController extends Controller {
     $facebook = filter_input(INPUT_POST, 'facebook');
     $google = filter_input(INPUT_POST, 'google');
 
-    $exists = DB::table('bdp_usuario')->where('usu_usuario', '$usuario')->first();
-    var_dump($exists);
-    if (is_null($exists) !== true) {
+    
+//    $exists = DB::select('SELECT IFNULL(MAX(usu_id),0)+1 AS id FROM bdp_usuario ORDER BY id DESC LIMIT 1');
+    $exists1 = DB::select("SELECT usu_usuario FROM bdp_usuario WHERE usu_usuario = ? limit 1", array($usuario));
+// 
+//    var_dump($exists1);
+    if (!empty($exists1)){
+
+
       Session::flash('exist', 'Usuario ya existe.');
       Session::flash('usuario', $usuario);
       Session::flash('email', $email);
@@ -59,7 +67,20 @@ class RegistroController extends Controller {
 //    return view('welcome');
     }
 
+//$existsP = DB::table('bdp_dato_usuario')->where('dus_correo', '$email')->count();
+    $existsP = DB::select("SELECT dus_correo FROM bdp_dato_usuario WHERE dus_correo = ? limit 1", array($email));
 
+//    var_dump($existsP);
+    if (!empty($existsP)) {
+      Session::flash('exist', 'Correo ya está en uso.');
+      Session::flash('usuario', $usuario);
+      Session::flash('email', $email);
+      Session::flash('nombre', $nombre);
+      Session::flash('apellido', $apellidos);
+      Session::flash('fecha', $fecha);
+      return redirect(url('registro/registro'));
+//    return view('welcome');
+    }
 
 
     $usuarios = DB::select('SELECT IFNULL(MAX(usu_id),0)+1 AS id FROM bdp_usuario ORDER BY id DESC LIMIT 1');
