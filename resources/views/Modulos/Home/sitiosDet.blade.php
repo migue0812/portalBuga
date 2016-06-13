@@ -213,6 +213,21 @@
     .glyphicon-thumbs-down:hover{ color: #E10000; cursor:pointer;}
     .counter{ color:#333333;}
     .thumbnail img{height:200px;}
+    span.glyphicon-thumbs-up{
+    font-size: 30px;
+    }
+    span.glyphicon-thumbs-down{
+    font-size: 30px;
+    }
+    .dedo{
+        font-size: 30px;
+        color:green;
+    }
+    .dedo2{
+        font-size: 30px;
+        color:red;
+    }
+    A:link, A:visited { text-decoration: none }
 </style>
 
 <div class="container">
@@ -264,12 +279,12 @@
                                     <!-- Like Icon HTML -->
                                     <a href="<?php echo url("home/sitios/like/". $sitDetalle->sit_id) ?>"><span class="glyphicon glyphicon-thumbs-up"></span>&nbsp;</a>
                                     <!-- Like Counter -->
-                                    <span class="counter" id="like_count<?php ?>"><?php echo $sitDetalle->like_num ?></span>&nbsp;&nbsp;&nbsp;
+                                    <span class="dedo" id="like_count<?php ?>"><?php echo $sitDetalle->like_num ?></span>&nbsp;&nbsp;&nbsp;
 
                                     <!-- Dislike Icon HTML -->
                                     <a href="<?php echo url("home/sitios/dislike/". $sitDetalle->sit_id) ?>"><span class="glyphicon glyphicon-thumbs-down"></span>&nbsp;
                                     <!-- Dislike Counter -->
-                                    <span class="counter" id="dislike_count<?php ?>"><?php echo $sitDetalle->dislike_num ?></span>
+                                    <span class="dedo2" id="dislike_count<?php ?>"><?php echo $sitDetalle->dislike_num ?></span>
                                   
 
                             </p>
