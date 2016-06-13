@@ -64,9 +64,9 @@
             <span>Configuracion</span>
           </a>
           <ul class="sub">
-            <li><a  href="{{url('admin/configurar/crear')}}">Crear</a></li>
+            <li><a  href="{{url('registro/listar')}}">Listar</a></li>
+            <li><a  href="{{url('registro/registro')}}">Crear</a></li>
             <li><a  href="{{url('admin/configurar/reporte')}}">Reporte</a></li>
-            <li><a  href="{{url('admin/configurar/listar')}}">Listar</a></li>
           </ul>
         </li>
       </ul>
