@@ -1,9 +1,8 @@
 @include('Templates.Backend.headPanel')
-@include('Templates.Backend.asidePanel')
 
 
 <!-- MENU INICIO-->
-<!--        <div>
+<div>
         <li class="mt">
           <a href="{{url('admin/bienvenido')}}">
             <i class="fa fa-dashboard"></i>
@@ -18,7 +17,6 @@
           </a>
           <ul class="sub">
             <li><a  href="{{url('admin/categoria/crear')}}">Crear</a></li>
-            <li><a  href="{{url('admin/categoria/editar')}}">Editar</a></li>
             <li><a  href="{{url('admin/categoria/reporte')}}">Reporte</a></li>
             <li><a  href="{{url('admin/categoria/listar')}}">Listar</a></li> 
           </ul>
@@ -31,7 +29,6 @@
           </a>
           <ul class="sub">
             <li class="active"><a  href="{{url('admin/subcategoria/crear')}}">Crear</a></li>
-            <li><a  href="{{url('admin/subcategoria/editar')}}">Editar</a></li>
             <li><a  href="{{url('admin/subcategoria/reporte')}}">Reporte</a></li>
             <li><a  href="{{url('admin/subcategoria/listar')}}">Listar</a></li>
           </ul>
@@ -44,7 +41,6 @@
           </a>
           <ul class="sub">
             <li><a  href="{{url('admin/sitio/crear')}}">Crear</a></li>
-            <li><a  href="{{url('admin/sitio/editar')}}">Editar</a></li>
             <li><a  href="{{url('admin/sitio/reporte')}}">Reporte</a></li>
             <li><a  href="{{url('admin/sitio/listar')}}">Listar</a></li>
           </ul>
@@ -57,7 +53,6 @@
           </a>
           <ul class="sub">
             <li><a  href="{{url('admin/evento/crear')}}">Crear</a></li>
-            <li><a  href="{{url('admin/evento/editar')}}">Editar</a></li>
             <li><a  href="{{url('admin/evento/reporte')}}">Reporte</a></li>
             <li><a  href="{{url('admin/evento/listar')}}">Listar</a></li>
           </ul>
@@ -70,14 +65,13 @@
           </a>
           <ul class="sub">
             <li><a  href="{{url('admin/configurar/crear')}}">Crear</a></li>
-            <li><a  href="{{url('admin/configurar/editar')}}">Editar</a></li>
             <li><a  href="{{url('admin/configurar/reporte')}}">Reporte</a></li>
             <li><a  href="{{url('admin/configurar/listar')}}">Listar</a></li>
           </ul>
         </li>
       </ul>
-       BARRA LATERAL MENU FIN
-    </div>-->
+       <!--BARRA LATERAL MENU FIN-->
+    </div>
 </aside>
 <!--BARRA LATERAL FIN-->
 
@@ -101,6 +95,9 @@ MENU DE CONTENIDO
                         </ul>
                     </div>
                     @endif
+                    @if (Session::has("registrar"))
+    <div class="alert alert-warning alert-dismissible center-block" role="alert">{{Session::get("registrar")}}</div>
+                @endif 
                     <form class="style-form" method="post" action="{{url('admin/subcategoria/crear')}}" enctype="multipart/form-data">
 
                         <input type="hidden" name="_token" value="<?php echo csrf_token(); ?>">
@@ -126,13 +123,9 @@ MENU DE CONTENIDO
                                 <div class="form-group">
                                     <label for="">Categoria</label>
                                     <select class="form-control"  name="cat_id" required="">
-                                        <option></option>
-                                        <?php
-                                        foreach ($categorias as $categoria) {
-                                            ?>
-                                            <option  name="cat_id"  style="font-family: BankGothicMdBT" value="<?php echo $categoria->cat_id ?>">&nbsp<?php echo $categoria->cat_nombre ?>&nbsp</option>
-
-                                        <?php } ?>
+                                      @foreach ($categorias as $categoria)
+                                            <option value="{{$categoria->cat_id}}">{{$categoria->cat_nombre}}</option>
+                                        @endforeach
                                     </select>
 
                                 </div>
@@ -141,7 +134,7 @@ MENU DE CONTENIDO
                                 <div class="form-group">
                                     <label for="">Imagen</label>                       
                                     <!--<input type="file" class="form-control" id="path" name="path" required>-->
-                                    <input type="file" class="form-control" name="fileToUpload" id="fileToUpload" required>
+                                    <input type="file" class="form-control" name="imagen" id="imagen" required>
                                 </div>
                             </div> 
                         </div>
@@ -165,7 +158,6 @@ MENU DE CONTENIDO
                                     </select>                        
                                 </div>
                             </div>-->
-                            <input type="hidden" name="est_id" value="1">
 
                         </div>
 

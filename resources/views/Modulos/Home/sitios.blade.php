@@ -15,14 +15,16 @@
 
             <div class="col-md-6 portfolio-item">
               <a href="<?php echo url("home/sitios/det/" . $sitio->sit_id) ?>">
-                <img style="float: right;"  class="img-responsive img-Sitios" src="<?php echo asset("$sitio->img_ruta") ?>" alt="">
+              <img style="float: right;"  class="img-responsive img-Sitios" src="<?php echo asset("$sitio->img_ruta") ?>" alt="">
               </a>
 
             </div>
 
+              
             <div class="col-md-5 portfolio-item">
               <h2 style="text-align: center"><?php echo ($sitio->sit_nombre) ?></h2>
               <hr class="tagline-divider-cont">
+              <br>
               <p class="text-justify"><?php echo ((strlen($sitio->sit_descripcion) > 200) ? substr(($sitio->sit_descripcion), 0, 200) . " ..." : ($sitio->sit_descripcion)) ?></p>
               <a href="<?php echo url("home/sitios/det/" . $sitio->sit_id) ?>" class="btn btn-primary"><b title="Ver mas"class="fa fa-eye"></b></a>
               <?php if (Session::has("usuarioLogueado")): ?>

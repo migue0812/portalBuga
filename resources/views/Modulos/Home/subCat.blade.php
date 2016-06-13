@@ -53,7 +53,8 @@
             <h3 style="color:blue;">
               <?php echo $sitio->sit_nombre ?>
             </h3>
-            <p class="text-justify"><?php echo $sitio->sit_descripcion ?></p>
+          
+            <p class="text-justify"><?php echo ((strlen($sitio->sit_descripcion) > 100) ? substr(($sitio->sit_descripcion), 0, 100) . " ..." : ($sitio->sit_descripcion)) ?></p>
             <a href="<?php echo asset("home/sitios/det/" . $sitio->sit_id) ?>">
               <button type="button" class="btn btn-primary">Ver Mas</button>
             </a>

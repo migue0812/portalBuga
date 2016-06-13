@@ -138,22 +138,29 @@
 
           <div class="input-group ingre">
             <span class="input-group-addon"><i class="fa fa-user"></i></span>
-            <input type="text" class="form-control" name="usuario" id="usuario" placeholder="Ingrese Nombre Usuario">                                        
+            
+          @if (Session::has("usuario"))
+                        
+                <input type="text" class="form-control alert-danger" name="usuario" id="usuario" placeholder="Ingrese Nombre Usuario" value="{{Session::get("usuario")}}">
+                
+                          @else                                      
+                        <input type="text" class="form-control" name="usuario" id="usuario" placeholder="Ingrese Nombre Usuario" value="{{Session::get("usuario")}}">                                        
+                        @endif 
           </div>
 
           <div class="input-group ingre">
             <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
-            <input type="text" class="form-control" name="email" id="email" placeholder="Example@buga.com">                                        
+            <input type="text" class="form-control" name="email" autocomplete="off" id="email" placeholder="Example@buga.com">                                        
           </div>
 
           <div class="input-group ingre">
             <span class="input-group-addon"><i class="fa fa-key"></i></span>
-            <input type="text" class="form-control " name="password" id="password" placeholder="Ingrese Contraseña">                                        
+            <input type="password" autocomplete="off" class="form-control " name="password" id="password" placeholder="Ingrese Contraseña">                                        
           </div>
 
           <div class="input-group ingre">
             <span class="input-group-addon"><i class="fa fa-chain-broken"></i></span>
-            <input type="text" class="form-control" name="password_confirmation" id="password_confirmation" placeholder="Confirmar Contraseña">                                        
+            <input type="password" autocomplete="off" class="form-control" name="password_confirmation" id="password_confirmation" placeholder="Confirmar Contraseña">                                        
           </div>
 
           <hr>

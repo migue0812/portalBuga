@@ -117,7 +117,7 @@
                                         <th><i class="fa fa-bullhorn"></i> Valor Boleta</th>
                                         <th><i class="fa fa-bullhorn"></i> Fecha Inicio</th>
                                         <th><i class="fa fa-bullhorn"></i> Fecha Fin</th>
-                                        <th><i class=" fa fa-edit"></i> Activo</th>
+                                        <th><i class=" fa fa-edit"></i> Estado</th>
                                         <th></th>
                                     </tr>
                                 </thead>
@@ -159,6 +159,7 @@
                                             </td>
 
                                             <td>
+                                                <a title="Ver" href="{{url('home/eventos/det/' . $evento->eve_id)}}" class="btn btn-default btn-xs"><i class="fa fa-eye"></i></a>
                                                 <a title="Editar" class="btn btn-primary btn-xs" href="{{url('admin/evento/editar/' . $evento->eve_id)}}"><i class="fa fa-pencil"></i></a>
                                                 @if($evento->est_nombre === 'Habilitado' )
                                                 <a title="Inhabilitar" class="btn btn-danger btn-xs" href="{{url('admin/evento/inhabilitar/' . $evento->eve_id)}}"><i class="fa fa-remove"></i></a>

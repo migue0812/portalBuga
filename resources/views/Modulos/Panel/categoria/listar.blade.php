@@ -124,6 +124,7 @@ MENU DE CONTENIDO
                                         </td>
 
                                         <td>
+                                            <a title="Ver" href="{{url('home/categorias/det/' . $categoria->cat_id)}}" class="btn btn-default btn-xs"><i class="fa fa-eye"></i></a>
                                             <a title="Editar" class="btn btn-primary btn-xs" href="{{url('admin/categoria/editar/' . $categoria->cat_id)}}"><i class="fa fa-pencil"></i></a>
                                             @if($categoria->est_nombre === 'Habilitado' )
                                             <a title="Inhabilitar" class="btn btn-danger btn-xs" href="{{url('admin/categoria/inhabilitar/' . $categoria->cat_id)}}"><i class="fa fa-remove"></i></a>

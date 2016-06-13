@@ -141,26 +141,27 @@
                     <div class="input-group ingre">
                         <span class="input-group-addon"><i class="fa fa-user"></i></span>
                         @if (Session::has("usuario"))
-                <input type="text" class="form-control alert-danger" name="usuario" id="usuario" placeholder="Ingrese Nombre Usuario" value="{{Session::get("usuario")}}">
+                        
+                <input type="text" class="form-control alert-danger" name="usuario"  autocomplete="off" id="usuario" placeholder="Ingrese Nombre Usuario" value="{{Session::get("usuario")}}">
                 
                           @else                                      
-                        <input type="text" class="form-control" name="usuario" id="usuario" placeholder="Ingrese Nombre Usuario" value="{{Session::get("usuario")}}">                                        
+                        <input type="text" class="form-control" name="usuario" autocomplete="off" id="usuario" placeholder="Ingrese Nombre Usuario" value="{{Session::get("usuario")}}">                                        
                         @endif 
                     </div>
 
                     <div class="input-group ingre">
                         <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
-                        <input type="text" class="form-control" name="email" id="email" placeholder="Example@buga.com" value="{{Session::get("email")}}">                                        
+                        <input type="text" class="form-control" name="email" autocomplete="off" id="email" placeholder="example@buga.com" value="{{Session::get("email")}}">                                        
                     </div>
 
                     <div class="input-group ingre">
                         <span class="input-group-addon"><i class="fa fa-key"></i></span>
-                        <input type="text" class="form-control " name="password" id="password" placeholder="Ingrese Contraseña">                                        
+                        <input type="password" autocomplete="off"  class="form-control " name="password" id="password" placeholder="Ingrese Contraseña">                                        
                     </div>
 
                     <div class="input-group ingre">
                         <span class="input-group-addon"><i class="fa fa-chain-broken"></i></span>
-                        <input type="text" class="form-control" name="password_confirmation" id="password_confirmation" placeholder="Confirmar Contraseña">                                        
+                        <input type="password" autocomplete="off"  class="form-control" name="password_confirmation" id="password_confirmation" placeholder="Confirmar Contraseña">                                        
                     </div>
 
                     <hr>
@@ -172,7 +173,15 @@
                     <div class="form-group">
                         <label for="nombre" class="col-md-12 ">Nombre</label>
                         <div class="col-md-12">
-                            <input type="text" class="form-control" name="nombre" id="nombre" placeholder="Ingrese Nombre">
+                             @if (Session::has("usuario"))
+                        
+                <input type="text" class="form-control alert-danger" name="nombre" id="nombre" placeholder="Ingrese Nombre" value="{{Session::get("nombre")}}">
+                
+                          @else                                      
+                        <input type="text" class="form-control" name="nombre" id="nombre" placeholder="Ingrese Nombre" >                                        
+                        @endif 
+                            
+                            <!--<input type="text" class="form-control" name="nombre" id="nombre" placeholder="Ingrese Nombre">-->
                             <input type="hidden" class="form-control" value="2" name="rol">
                             <input type="hidden" class="form-control" value="1" name="est_id">
                             <input type="hidden" class="form-control" value="" name="twitter">
@@ -184,7 +193,14 @@
                     <div class="form-group">
                         <label for="apellidos" class="col-md-12">Apellidos</label>
                         <div class="col-md-12">
-                            <input type="text" class="form-control" name="apellidos" id="apellidos" placeholder="Ingrese Apellidos" value="{{Session::get("apellidos")}}">
+                            @if (Session::has("usuario"))
+                        
+                <input type="text" class="form-control alert-danger" name="apellidos" autocomplete="off" id="apellidos" placeholder="Ingrese Apellidos" value="{{Session::get("apellido")}}">
+                
+                          @else                                      
+                        <input type="text" class="form-control" name="apellidos" autocomplete="off" id="apellidos" placeholder="Ingrese Apellidos" >                                        
+                        @endif 
+                            <!--<input type="text" class="form-control" name="apellidos" id="apellidos" placeholder="Ingrese Apellidos" value="{{Session::get("apellidos")}}">-->
                         </div>
                     </div>
 

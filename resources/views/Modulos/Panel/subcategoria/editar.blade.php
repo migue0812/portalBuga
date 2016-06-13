@@ -1,15 +1,7 @@
 @include('Templates.Backend.headPanel')
-@include('Templates.Backend.asidePanel')
-<script>
-  
-  $(document).ready(function () {
-        var valdesc = ("<?php echo $subcategoria->subcat_descripcion ?>");
 
-        document.getElementById("subcat_desc").value = valdesc;
-    });
-  </script>
         <!-- MENU INICIO-->
-<!--        <div>
+<div>
         <li class="mt">
           <a href="{{url('admin/bienvenido')}}">
             <i class="fa fa-dashboard"></i>
@@ -37,7 +29,6 @@
           </a>
           <ul class="sub">
             <li><a  href="{{url('admin/subcategoria/crear')}}">Crear</a></li>
-            <li class="active"><a  href="{{url('admin/subcategoria/editar')}}">Editar</a></li>
             <li><a  href="{{url('admin/subcategoria/reporte')}}">Reporte</a></li>
             <li><a  href="{{url('admin/subcategoria/listar')}}">Listar</a></li>
           </ul>
@@ -50,7 +41,6 @@
           </a>
           <ul class="sub">
             <li><a  href="{{url('admin/sitio/crear')}}">Crear</a></li>
-            <li><a  href="{{url('admin/sitio/editar')}}">Editar</a></li>
             <li><a  href="{{url('admin/sitio/reporte')}}">Reporte</a></li>
             <li><a  href="{{url('admin/sitio/listar')}}">Listar</a></li>
           </ul>
@@ -63,7 +53,6 @@
           </a>
           <ul class="sub">
             <li><a  href="{{url('admin/evento/crear')}}">Crear</a></li>
-            <li><a  href="{{url('admin/evento/editar')}}">Editar</a></li>
             <li><a  href="{{url('admin/evento/reporte')}}">Reporte</a></li>
             <li><a  href="{{url('admin/evento/listar')}}">Listar</a></li>
           </ul>
@@ -76,14 +65,13 @@
           </a>
           <ul class="sub">
             <li><a  href="{{url('admin/configurar/crear')}}">Crear</a></li>
-            <li><a  href="{{url('admin/configurar/editar')}}">Editar</a></li>
             <li><a  href="{{url('admin/configurar/reporte')}}">Reporte</a></li>
             <li><a  href="{{url('admin/configurar/listar')}}">Listar</a></li>
           </ul>
         </li>
       </ul>
-       BARRA LATERAL MENU FIN
-    </div>-->
+        <!--BARRA LATERAL MENU FIN-->
+    </div>
   </aside>
   <!--BARRA LATERAL FIN-->
 
@@ -107,7 +95,7 @@
                         </ul>
                     </div>
                     @endif
-                    <form class="style-form" method="post" action="{{url('admin/subcategoria/crear')}}" enctype="multipart/form-data">
+                    <form class="style-form" method="post" action="{{url('admin/subcategoria/editar')}}" enctype="multipart/form-data">
 
                         <input type="hidden" name="_token" value="<?php echo csrf_token(); ?>">
 
@@ -118,11 +106,12 @@
                                     <input type="text" class="form-control" id="cat_nombre" name="nombre" value="{{ $subcategoria->subcat_nombre }}" placeholder="Nombre Subcategoria" required="">
                                 </div>
                             </div>
+                                    <input type="hidden" class="form-control" id="subcat_id" name="subcat_id" value="{{ $subcategoria->subcat_id }}">
 
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="descripcion">Descripcion</label>
-                                    <textarea class="form-control" id="subcat_desc" name="descripcion"></textarea>
+                                    <textarea class="form-control" id="subcat_desc" name="descripcion">{{ $subcategoria->subcat_descripcion }}</textarea>
                                 </div>
                             </div>
                         </div>
@@ -132,13 +121,10 @@
                                 <div class="form-group">
                                     <label for="">Categoria</label>
                                     <select class="form-control"  name="cat_id" required="">
-                                        <option></option>
-                                        <?php
-                                        foreach ($categorias as $categoria) {
-                                            ?>
-                                            <option  name="cat_id"  style="font-family: BankGothicMdBT" value="<?php echo $categoria->cat_id ?>">&nbsp<?php echo $categoria->cat_nombre ?>&nbsp</option>
-
-                                        <?php } ?>
+                                        <option name="0" value="{{$subcategoria->cat_id}}">{{$subcategoria->cat_nombre}}</option>
+                          @foreach ($categorias as $categoria)
+                                            <option value="{{$categoria->cat_id}}">{{$categoria->cat_nombre}}</option>
+                                        @endforeach
                                     </select>
 
                                 </div>
@@ -147,7 +133,7 @@
                                 <div class="form-group">
                                     <label for="">Imagen</label>                       
                                     <!--<input type="file" class="form-control" id="path" name="path" required>-->
-                                    <input type="file" class="form-control" name="fileToUpload" id="fileToUpload" required>
+                                    <input type="file" class="form-control" name="imagen" id="imagen" >
                                 </div>
                             </div> 
                         </div>
@@ -162,15 +148,7 @@
                                     </select>
                                 </div>
                             </div>-->
-                            <div class="col-md-6">                     
-                                <div class="form-group">
-                                    <label for="est_id">Estado</label>
-                                    <select class="form-control"  name="est_id" required>
-                                        <option  value="1" checked>Habilitado</option>
-                                        <option  value="0">Inhabilitado</option>
-                                    </select>                        
-                                </div>
-                            </div>
+                            
                         </div>
 
 
