@@ -23,6 +23,9 @@ class SitiosController extends Controller {
     }
 
     function getDet($id) {
+         $sitios = DB::select("SELECT * FROM bdp_sitio, bdp_imagen WHERE "
+                        . "bdp_imagen.sit_id = bdp_sitio.sit_id AND est_id = 1 "
+                . "GROUP BY bdp_sitio.sit_id ORDER BY RAND() LIMIT 2");
         $ip = $_SERVER["REMOTE_ADDR"];
         $imagenes = DB::select("SELECT * FROM bdp_imagen WHERE sit_id = ?", array($id));
         $sitDetalle = DB::select("SELECT * FROM bdp_sitio, bdp_imagen WHERE "
@@ -34,7 +37,11 @@ class SitiosController extends Controller {
            $visitas = DB::insert("INSERT INTO bdp_visitas (sit_id, vis_ip) VALUES "
                 . "(?,?)", array($id, $ip));
         }
-        return view('Modulos.Home.sitiosDet', compact("sitDetalle"), compact("imagenes")); 
+        return view('Modulos.Home.sitiosDet', compact("sitDetalle","imagenes","sitios")); 
+    }
+    
+    function getLike($id){
+        
     }
 
 }
