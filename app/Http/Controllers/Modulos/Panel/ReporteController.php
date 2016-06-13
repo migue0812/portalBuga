@@ -16,7 +16,7 @@ function getMasvistos(){
     
         $sitios = DB::select("SELECT sit_nombre, COUNT(bdp_visitas.sit_id) AS visita FROM "
                 . "bdp_sitio, bdp_visitas WHERE bdp_sitio.sit_id=bdp_visitas.sit_id "
-                . "GROUP BY bdp_visitas.sit_id ORDER BY bdp_visitas.sit_id DESC LIMIT 10");
+                . "GROUP BY bdp_visitas.sit_id ORDER BY visita DESC LIMIT 10");
     	return view('Modulos.Reportes.masVistos', compact("sitios"));
     }
     else {
@@ -28,7 +28,7 @@ function getMasvistos(){
     
         $sitios = DB::select("SELECT sit_nombre, COUNT(bdp_visitas.sit_id) AS visita FROM "
                 . "bdp_sitio, bdp_visitas WHERE bdp_sitio.sit_id=bdp_visitas.sit_id "
-                . "GROUP BY bdp_visitas.sit_id ORDER BY bdp_visitas.sit_id ASC LIMIT 10");
+                . "GROUP BY bdp_visitas.sit_id ORDER BY visita ASC LIMIT 10");
     	return view('Modulos.Reportes.menosVistos', compact("sitios"));
     }
     else {

@@ -247,13 +247,13 @@ class RegistroController extends Controller {
 
       if (($password) == ($password_confirmation)) {
 
-        DB::update("UPDATE bdp_usuario SET usu_usuario = ?, usu_password = ? , est_id = ? , rol_id = ? , usu_updated_at = ? "
-                . " WHERE usu_id = ?", array($usuario, $password, $activado, $rol, $usu_updated_at, $id1));
+        DB::update("UPDATE bdp_usuario SET usu_usuario = ?, usu_password = ? , est_id = ? , rol_id = ? , usu_updated_at = CURRENT_TIMESTAMP "
+                . " WHERE usu_id = ?", array($usuario, $password, $activado, $rol, $id1));
 
         DB::update("UPDATE bdp_dato_usuario SET  dus_nombre = ?, dus_apellidos = ?, dus_correo = ?, dus_genero = ?,"
                 . " dus_fecha_nacimiento = ?, dus_facebook = ?, dus_twitter = ?,"
-                . " dus_google_plus = ?, dus_updated_at = ? WHERE usu_id = ?", array($nombre, $apellidos, $email, $genero, $fecha, $facebook,
-            $twitter, $google, $usu_updated_at, $id1));
+                . " dus_google_plus = ?, dus_updated_at = CURRENT_TIMESTAMP WHERE usu_id = ?", array($nombre, $apellidos, $email, $genero, $fecha, $facebook,
+            $twitter, $google, $id1));
 
 //                if (Session::has('usuarioAdmin') !== true) {
         Session::put('registroSuccess', 'Datos editados exitosamente');
