@@ -262,12 +262,12 @@
                             <p>
                              
                                     <!-- Like Icon HTML -->
-                                    <a href="<?php echo url("home/sitios/like/". $sitios->sit_id) ?>"><span class="glyphicon glyphicon-thumbs-up " onClick="cwRating(<?php ?>)"></span>&nbsp;</a>
+                                    <a href="<?php echo url("home/sitios/like/". $sitDetalle->sit_id) ?>"><span class="glyphicon glyphicon-thumbs-up"></span>&nbsp;</a>
                                     <!-- Like Counter -->
                                     <span class="counter" id="like_count<?php ?>"><?php echo $sitDetalle->like_num ?></span>&nbsp;&nbsp;&nbsp;
 
                                     <!-- Dislike Icon HTML -->
-                                    <span class="glyphicon glyphicon-thumbs-down" onClick="cwRating(<?php ?>')"></span>&nbsp;
+                                    <a href="<?php echo url("home/sitios/dislike/". $sitDetalle->sit_id) ?>"><span class="glyphicon glyphicon-thumbs-down"></span>&nbsp;
                                     <!-- Dislike Counter -->
                                     <span class="counter" id="dislike_count<?php ?>"><?php echo $sitDetalle->dislike_num ?></span>
                                   

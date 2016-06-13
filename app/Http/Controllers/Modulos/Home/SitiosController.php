@@ -41,7 +41,20 @@ class SitiosController extends Controller {
     }
     
     function getLike($id){
-        
+        $sitDetalle = DB::select("SELECT * FROM bdp_sitio, bdp_imagen WHERE "
+                . "bdp_sitio.sit_id = ? AND bdp_imagen.sit_id = bdp_sitio.sit_id", array($id));
+        $sitDetalle = $sitDetalle[0];
+      DB::update("UPDATE bdp_sitio SET like_num = ".(($sitDetalle->like_num)+1)." WHERE sit_id = ?", array($id));  
+    return redirect(url("home/sitios/det/".$id));
+      
+    }
+    
+        function getDislike($id){
+        $sitDetalle = DB::select("SELECT * FROM bdp_sitio, bdp_imagen WHERE "
+                . "bdp_sitio.sit_id = ? AND bdp_imagen.sit_id = bdp_sitio.sit_id", array($id));
+        $sitDetalle = $sitDetalle[0];
+      DB::update("UPDATE bdp_sitio SET dislike_num = ".(($sitDetalle->dislike_num)+1)." WHERE sit_id = ?", array($id));  
+    return redirect(url("home/sitios/det/".$id));
     }
 
 }
