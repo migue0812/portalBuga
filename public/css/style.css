@@ -235,27 +235,27 @@ hr {
 }
 
 .border-img{
-  float: right; 
-  border-radius: 20px;
+    float: right;
+    border-radius: 20px;
 }
 .color-enlace{
-  color: black;
-  cursor:pointer ;
-  text-decoration: none;
-  
-  
+    color: black;
+    cursor:pointer ;
+    text-decoration: none;
+
+
 }
 .color-enlace:hover{
-  
-  text-decoration: none;
-color: #fff;
-text-shadow:
--2px -2px 0 #000, 
-1px -2px 0 #000,
--2px 2px 0 #000,
-2px 2px 0 #000;
-font-size: 25px;
-font-family: 'Boogaloo', cursive;
+
+    text-decoration: none;
+    color: #fff;
+    text-shadow:
+        -2px -2px 0 #000,
+        1px -2px 0 #000,
+        -2px 2px 0 #000,
+        2px 2px 0 #000;
+    font-size: 25px;
+    font-family: 'Boogaloo', cursive;
 }
 
 @media screen and (min-width:1200px) {
@@ -320,7 +320,7 @@ font-family: 'Boogaloo', cursive;
 }
 
 #tituloalz{
-    
+
     margin-top: 10px !important ;
     background: rgba(0, 0, 0, 0.8);
     margin-bottom: 0px !important;
@@ -783,9 +783,7 @@ input[type="search"]:focus{
     color: #000;
     background-color: #FFF;}
 /* Desarrollo*/
-.desarrollo{
-    margin-top:40px;
-}
+
 /* iconos eventos detalle*/
 
 .grande{
@@ -859,8 +857,8 @@ textarea {
     margin-right: auto;
 
     overflow: hidden;
-    
-  
+
+
 }
 
 .hoverSitio{
@@ -924,122 +922,122 @@ textarea {
 
 @media (min-width:1200px) {
 
-  .imgSitios{
-    height: 460px;
-    width: 380px
-  }
-  .img-Sitios{
-      height: 300px; 
-      width: 350px;
-  }
+    .imgSitios{
+        height: 460px;
+        width: 380px
+    }
+    .img-Sitios{
+        height: 300px;
+        width: 350px;
+    }
 }
 
 @media (min-width:1000px) and (max-width:1199px) {
-  .boxSitio{
-   
-    height: 5763px;
-  }
-  .imgSitios{
-    height: 460px;
-    width: 313px
-  }
-  .img-Sitios{
-      height: 300px; 
-      width: 350px;
-  }
+    .boxSitio{
+
+        height: 5763px;
+    }
+    .imgSitios{
+        height: 460px;
+        width: 313px
+    }
+    .img-Sitios{
+        height: 300px;
+        width: 350px;
+    }
 }
 
 @media (min-width:992px) and (max-width:999px){
-    
+
     .boxSitio{
-   
-    height: 5763px;
-  }
-  .imgSitios{
-    height: 460px;
-    width: 313px
-  }
-  .img-Sitios{
-      height: 300px; 
-      width: 350px;
-  }
+
+        height: 5763px;
+    }
+    .imgSitios{
+        height: 460px;
+        width: 313px
+    }
+    .img-Sitios{
+        height: 300px;
+        width: 350px;
+    }
 
 }
 
 
 @media (min-width:768px) and (max-width:991px){
-       .boxSitio{
-    height: 12288px;
-  }
-  .imgSitios{
-   height: 364px;
-    
-  }
-  .img-Sitios{
-      height: 300px; 
-      width: 350px; 
-}
-.text-justify{
-    height: 248px;
-    width: 351px; 
-}
+    .boxSitio{
+        height: 12288px;
+    }
+    .imgSitios{
+        height: 364px;
+
+    }
+    .img-Sitios{
+        height: 300px;
+        width: 350px;
+    }
+    .text-justify{
+        height: 248px;
+        width: 351px;
+    }
 }
 
 @media (min-width:637px) and (max-width:767px){
-       .boxSitio{
-    height: 12422px;
-  }
-  .imgSitios{
-   height: 364px;
-    
-  }
-  .img-Sitios{
-      height: 300px; 
-      width: 350px; 
-}
-.text-justify{
-    height: 248px;
-    width: 351px; 
-}
+    .boxSitio{
+        height: 12422px;
+    }
+    .imgSitios{
+        height: 364px;
+
+    }
+    .img-Sitios{
+        height: 300px;
+        width: 350px;
+    }
+    .text-justify{
+        height: 248px;
+        width: 351px;
+    }
 }
 
 @media (max-width:320px){
-   .boxSitio{
-    height: 14746px;
-  }
-  .imgSitios{
-   height: 417px;
-    
-  }
-  .img-Sitios{
-      height: 300px; 
-      width: 350px; 
-}
-.text-justify{
-    height: 248px;
-    width: 351px; 
-} 
+    .boxSitio{
+        height: 14746px;
+    }
+    .imgSitios{
+        height: 417px;
+
+    }
+    .img-Sitios{
+        height: 300px;
+        width: 350px;
+    }
+    .text-justify{
+        height: 248px;
+        width: 351px;
+    }
 }
 
 @media (min-width:630px) and (max-width:636px){
-   .boxSitio{
-    height: 13995px;
-  }
-  .imgSitios{
-   height: 417px;
-    
-  }
-  .img-Sitios{
-      height: 300px; 
-      width: 350px; 
-}
-.text-justify{
-    height: 248px;
-    width: 351px; 
-} 
+    .boxSitio{
+        height: 13995px;
+    }
+    .imgSitios{
+        height: 417px;
+
+    }
+    .img-Sitios{
+        height: 300px;
+        width: 350px;
+    }
+    .text-justify{
+        height: 248px;
+        width: 351px;
+    }
 }
 @media (max-width:589px){
-    
+
     .boxSitio{
         height: 14206px;
     }
@@ -1080,16 +1078,16 @@ textarea {
     transition:all 0.5s ease-in-out;
 }
 
-.view:hover .mask { 
+.view:hover .mask {
     opacity: 1;
     transform: scale(1) rotate(0deg);
     transition-delay: 0.2s;
 }
-.view:hover img    { 
-    transform: scale(0); 
+.view:hover img    {
+    transform: scale(0);
     opacity: 0;
     transition-delay: 0s;
-}  
+}
 .view:hover h2,
 .view:hover p,
 .view:hover a.info {
@@ -1102,7 +1100,7 @@ textarea {
     height: 231px;
 }
 .imgback{
-     width: 100%;
+    width: 100%;
     height: 100%;
     background-image: url("http://i.stack.imgur.com/2OrtT.jpg");
     background-size: cover;
@@ -1111,24 +1109,24 @@ textarea {
     position:relative
 }
 .img-contenido{
-  width:100%;
-}   
+    width:100%;
+}
 /*efecto iconos giran inicio */
 
 .socialicons img{ /* Primer set de iconos. Gira 360 grados y regresa */
--moz-transition: all 0.8s ease-in-out;
--webkit-transition: all 0.8s ease-in-out;
--o-transition: all 0.8s ease-in-out;
--ms-transition: all 0.8s ease-in-out;
-transition: all 0.8s ease-in-out;
+    -moz-transition: all 0.8s ease-in-out;
+    -webkit-transition: all 0.8s ease-in-out;
+    -o-transition: all 0.8s ease-in-out;
+    -ms-transition: all 0.8s ease-in-out;
+    transition: all 0.8s ease-in-out;
 }
 
 .socialicons img:hover{
--moz-transform: rotate(360deg);
--webkit-transform: rotate(360deg);
--o-transform: rotate(360deg);
--ms-transform: rotate(360deg);
-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg);
 }
 
 /*efecto iconos giran fin*/

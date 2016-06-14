@@ -12,6 +12,7 @@ Route::controllers([
     'home/subCat' => "Modulos\Home\subCatController",
     'home/contacto' => "Modulos\Home\ContactoController",
     'home/cookies' => "Modulos\Home\CookiesController",
+    'home/desarrollo' => "Modulos\Home\DesarrolloController",
     'home/informacion' => "Modulos\Home\InformacionController",
     'home/renuncia' => "Modulos\Home\RenunciaController",
     'home/historia' => "Modulos\Home\HistoriaController",
