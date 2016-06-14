@@ -103,5 +103,3 @@
       <!-- Menu Toggle Script -->
       @include('Templates.Frontend.footer')
       @include('Templates.Frontend.foot')
-      <?php include ("/../../Templates/Frontend/footer.php") ?>
-      <?php include ("/../../Templates/Frontend/foot.php") ?>

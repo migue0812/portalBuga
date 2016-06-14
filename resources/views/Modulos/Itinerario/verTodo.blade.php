@@ -105,6 +105,7 @@
                           <th>Evento</th>
                           <th>Lugar</th>
                           <th>Fecha</th>
+                          <th>Asistió</th>
                           <th>Opciones</th>
                         </tr>
                       </thead>
