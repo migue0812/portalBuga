@@ -29,7 +29,6 @@
                 <div class="social-footer">
                     <li class="social-contactanos"><a href="<?php echo url("home/renuncia") ?>" title="Renuncia">Renuncia</a></li>
                     <li class="social-contactanos"><a href="<?php echo url("home/desarrollo") ?>" title="Desarrollo">Desarrollo</a></li>
-                    <li class="social-contactanos"><a href="<?php echo url("home/cookies") ?>" title="Política y Privacidad">Política Cookie y Privacidad</a></li>
                 </div>
             </div>
         </nav>
