@@ -49,7 +49,8 @@
           foreach ($sitios2 as $sitio):
             ?>
 
-            <div class="col-md-4 portfolio-item imgSitios">
+            <div class="col-md-4 portfolio-item">
+                <div class="imgSitios">
               <div class="contenedor-imgX fxX">
                 <div id="tituloalz"><h2><?php echo ($sitio->sit_nombre) ?></h2></div>
                 <div class="imgback img-contenido" style=" background-image: url('<?php echo asset("$sitio->img_ruta") ?>');"> </div>
@@ -60,6 +61,7 @@
                 <?php endif ?>
 
               </div>
+            </div>
             </div>
 
             <?php
