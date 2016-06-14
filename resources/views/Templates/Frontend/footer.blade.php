@@ -5,8 +5,8 @@
                 <h3 class="div-h3">Encuéntranos en</h3>
                 <div class="social-footer">
                     <div class="social-footer">
-                        <li class="social-contactanos"><a href="https://www.facebook.com/Portal-de-Turismo-Buga-130910880649308/?skip_nax_wizard=true" title="Facebook">Facebook</a></li>
-                        <li class="social-contactanos"><a href="https://plus.google.com/?hl=es" title="Google +">Google +</a></li>
+                        <li class="social-contactanos"><a href="https://www.facebook.com/Portal-de-Turismo-Buga-130910880649308/?skip_nax_wizard=true" title="Facebook" target="_blank">Facebook</a></li>
+                        <li class="social-contactanos"><a href="https://plus.google.com/?hl=es" title="Google +" target="_blank">Google +</a></li>
                     </div>
                 </div>
             </div>
