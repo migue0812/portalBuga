@@ -16,10 +16,9 @@
         <!-- Slides -->
         <div class="carousel-inner">
           <?php foreach ($eventos2 as $evento2): ?>
-            <div class="item active">
+            <div class="item-active">
               <!-- Imagen 1 -->
               <div class="fill img-responsive" style="background-image:url(<?php echo asset("$evento2->img_ruta") ?>);"></div>
-
             </div>
           <?php endforeach; ?>
 
@@ -87,15 +86,15 @@
                 <div class="col-sm-4 portfolio-item">
                   <img class="img-responsive thumbnail" src="<?php echo asset($evento2->img_ruta) ?>" alt="">
                   <h3>
-                    <a class="color-enlace" href="<?php echo asset("home/eventos/det/" . $evento->eve_id) ?>"><?php echo ($evento2->eve_nombre) ?></a>
+                    <a class="color-enlace" href="<?php echo asset("home/eventos/det/" . $evento2->eve_id) ?>"><?php echo ($evento2->eve_nombre) ?></a>
                   </h3>
-                  <p><?php echo ((strlen($evento->eve_descripcion) > 30) ? substr(($evento->eve_descripcion), 0, 30) . " ..." : ($evento->eve_descripcion)) ?></p>
-                  <a href="<?php echo asset("home/eventos/det/" . $evento->eve_id) ?>">
+                  <p><?php echo ((strlen($evento2->eve_descripcion) > 30) ? substr(($evento2->eve_descripcion), 0, 30) . " ..." : ($evento2->eve_descripcion)) ?></p>
+                  <a href="<?php echo asset("home/eventos/det/" . $evento2->eve_id) ?>">
                     <button type="button" class="btn btn-primary">Ver Mas</button>
                     <br>
                     <br>
                     <?php if (Session::has("usuarioLogueado")): ?>
-                      <a href="<?php echo url("itinerario/eventos/" . $evento->eve_id) ?>" class="btn btn-primary"><b title="Itinerario" class="icon-direction fa-fw"></b></a>
+                      <a href="<?php echo url("itinerario/eventos/" . $evento2->eve_id) ?>" class="btn btn-primary"><b title="Itinerario" class="icon-direction fa-fw"></b></a>
                       <?php endif ?>
                   </a>
                 </div>
