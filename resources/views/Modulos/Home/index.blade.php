@@ -152,7 +152,7 @@
             <div class="col-lg-12 desarrollo">
                 <div class="visitNav">
                     <div>
-                        <h2 style="text-align: center;">Desarrollo</h2>
+                        <h2 style="text-align: center;">Agencias De Viajes</h2>
                     </div>
                 </div>
                 <hr class="tagline-divider-cont">

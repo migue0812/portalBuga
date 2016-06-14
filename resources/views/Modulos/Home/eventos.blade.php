@@ -51,13 +51,21 @@
 
           <div class="container portImg">
             <div class="row ">
-              <div class="col-md-6 portfolio-item">
+              <div class="col-md-7 portfolio-item">
+                  <br>
+                   <br>
+                    <br>
                 <a href="<?php echo url("home/eventos/det/" . $evento->eve_id) ?>">
                   <img class="img-responsive border-img" src="<?php echo asset("$evento->img_ruta") ?>" alt="">
                 </a>
 
               </div>
               <div class="col-md-5 portfolio-item">
+                  <br>
+                  <br>
+                   <br>
+                    <br>
+                     
                 <h2 class="text-center"><?php echo ($evento->eve_nombre) ?></h2>
                 <hr class="tagline-divider-cont">
                 <p class="text-justify"><?php echo ((strlen($evento->eve_descripcion) > 200) ? substr(($evento->eve_descripcion), 0, 200) . " ..." : ($evento->eve_descripcion)) ?></p>
