@@ -1001,12 +1001,13 @@ textarea {
     }
 }
 
-@media (max-width:320px){
+@media (min-width:320px) and (max-width:420px){
     .boxSitio{
         height: 14746px;
     }
     .imgSitios{
         height: 417px;
+        
 
     }
     .img-Sitios{

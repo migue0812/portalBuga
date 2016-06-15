@@ -251,12 +251,15 @@
                             <img class="img-responsive" src="<?php echo asset("$sitDetalle->img_ruta") ?>" alt="">
                         </a>
                     </div>
-                    <div class="col-md-3 portfolio-item">
-                        <h4 class="icon-location"><b>:</b></h4>
+
+                    <div class="col-md-2 portfolio-item">
+                        <h3 title="Direccion" class="fa fa-map-marker fa-2x" style="color:#C91414" aria-hidden="true"><b></b></h3>
                         <p><?php echo ($sitDetalle->sit_direccion) ?></p>
                     </div>
-                    <div class="col-md-3 portfolio-item">
-                        <h4 class=" icon-phone"><b>:</b></h4><p><?php echo ($sitDetalle->sit_telefono) ?></p>
+
+                    <div class="col-md-2 portfolio-item">
+                        <h3 title="Celular" class="fa fa-mobile fa-2x" aria-hidden="true"><b></b></h3>
+                        <p><?php echo ($sitDetalle->sit_telefono) ?></p>
                     </div>
 
                     <div class="row">

@@ -6,7 +6,7 @@
   <div class="box">
     <section class="container">
       <div class="container-page">				    
-        <form method="post" action="{{url('usuario/cuenta/editar')}}">
+        <form method="post" action="{{url('usuario/cuenta/editar')}}" enctype="multipart/form-data">
           <input type="hidden" name="_token" value="<?php echo csrf_token(); ?>">
 
           @if ($errors->any())
@@ -79,6 +79,12 @@
                 <option value="F">mujer</option>
               </select>
             </div>
+            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label for="">Foto</label>                       
+                                    <input type="file" class="form-control" id="imagen" name="imagen">
+                                </div>
+                            </div>
             <div class="form-group col-lg-12 text-right">
               <button class="btn btn-info btn-md" type="submit">Actualizar</button>
             </div>

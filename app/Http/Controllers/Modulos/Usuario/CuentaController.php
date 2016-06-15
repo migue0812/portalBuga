@@ -48,6 +48,12 @@ class CuentaController extends Controller {
         $email = $_POST['email'];
         $fecha = $_POST['fecha'];
         $genero = $_POST['genero'];
+        $fotoImg = $_FILES["imagen"]["name"];
+        $fotoRuta = $_FILES["imagen"]["tmp_name"];
+        $fotoDest = "img/" . $fotoImg;
+        if ($fotoRuta !== "" && $fotoDest !== "") {
+            copy($fotoRuta, $fotoDest);
+        }
 
         $reglas = array(
             "password" => "required | confirmed",
@@ -56,6 +62,7 @@ class CuentaController extends Controller {
             "email" => "required | email",
             "fecha" => "required | date",
             "genero" => "required",
+            "imagen" => "image",
         );
 
         $mensajes = [
@@ -70,6 +77,8 @@ class CuentaController extends Controller {
             "fecha.required" => "El campo 'fecha de nacimiento' debe ser obligarorio",
             "fecha.date" => "El campo 'fecha de nacimiento' no contiene una fecha válida",
             "genero.required" => "El campo 'género' debe ser obligarorio",
+            "imagen.image" => "El campo 'imagen' debe contener una imagen",
+
         ];
 
         $validacion = Validator::make($_POST, $reglas, $mensajes);
@@ -84,9 +93,25 @@ class CuentaController extends Controller {
 
         DB::update('UPDATE bdp_dato_usuario SET '
                 . 'dus_nombre = ?, dus_apellidos = ?, dus_correo = ?, '
-                . 'dus_genero = ?, dus_fecha_nacimiento = ?, dus_updated_at = CURRENT_TIMESTAMP WHERE usu_id = ?', array($pass1, $nombre, $apellidos,
+                . 'dus_genero = ?, dus_fecha_nacimiento = ?, dus_updated_at = CURRENT_TIMESTAMP '
+                . 'WHERE usu_id = ?', array($nombre, $apellidos,
             $email, $genero, $fecha, $idUsuario));
-
+        
+        if ($fotoRuta !== "" && $fotoDest !== "") {
+            $img = DB::select("SELECT dus_avatar FROM bdp_dato_usuario WHERE "
+                    . "usu_id = ?", array($idUsuario));
+            $img = $img[0]->dus_avatar;
+            if(!empty($img)){
+            unlink($img);
+            }
+            DB::update("UPDATE bdp_dato_usuario SET dus_avatar = ? WHERE usu_id = ?", 
+                    array($fotoDest, $idUsuario));
+            $foto = DB::select("SELECT dus_avatar FROM bdp_dato_usuario WHERE "
+                    . "usu_id = ?", array($idUsuario));
+        $foto = $foto[0]->dus_avatar;
+        Session::put("usuarioAvatar", $foto);
+        }
+        
         Session::flash("usuarioEditado", "Se han editado los datos exitosamente");
         return redirect(url('usuario/cuenta'));
     }

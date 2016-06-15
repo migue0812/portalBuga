@@ -304,7 +304,7 @@ class RegistroController extends Controller {
     $user = $_POST['user'];
     $password = $_POST['password'];
 
-    $verificarUsuario = DB::select("SELECT bdp_usuario.usu_id, dus_genero, rol_id FROM "
+    $verificarUsuario = DB::select("SELECT bdp_usuario.usu_id, dus_genero, dus_avatar, rol_id FROM "
                     . "bdp_usuario, bdp_dato_usuario WHERE usu_deleted_at IS NULL "
                     . "AND est_id = '1' AND usu_usuario = ? AND "
                     . "usu_password = ? AND bdp_usuario.usu_id=bdp_dato_usuario.usu_id", array($user, $password));
@@ -315,6 +315,7 @@ class RegistroController extends Controller {
     } elseif ($verificarUsuario[0]->rol_id !== 1) {
       Session::put("usuarioLogueado", $user);
       Session::put("usuarioId", $verificarUsuario[0]->usu_id);
+      Session::put("usuarioAvatar", $verificarUsuario[0]->dus_avatar);
       Session::put("usuarioGenero", $verificarUsuario[0]->dus_genero);
       return redirect('home/index');
     } elseif ($verificarUsuario[0]->rol_id === 1) {
@@ -330,6 +331,7 @@ class RegistroController extends Controller {
     Session::forget("usuarioId");
     Session::forget("usuarioGenero");
     Session::forget("usuarioAdmin");
+    Session::forget("usuarioAvatar");
     return redirect('home/index');
   }
 
