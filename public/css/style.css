@@ -929,6 +929,8 @@ textarea {
     .img-Sitios{
         height: 300px;
         width: 350px;
+        left: 109px;
+    position: relative;
     }
     
     .ratings {
@@ -998,6 +1000,8 @@ textarea {
     .text-justify2{
         text-align:justify;
     }
+    
+    
 }
 
 @media (min-width:637px) and (max-width:800px){
@@ -1047,7 +1051,20 @@ textarea {
         position: relative;
         right: 45px;
     }
+    
+    .imgModals{
+    position: relative;
+    width: 226px !important;
+    height: 225px !important;
+    margin-left: -32px;
+    border: 1px solid #A2A793;
+    border-radius: 10px;
+    padding: 5px;
+    
 }
+    
+}
+
 
 @media (min-width:630px) and (max-width:636px){
     .boxSitio{
@@ -1079,6 +1096,16 @@ textarea {
         top: 7px;
         left: 121px;
     }
+    .imgModals{
+    position: relative;
+    width: 315px;
+    height: 315px;
+    margin-left: -32px;
+    border: 1px solid #A2A793;
+    border-radius: 10px;
+    padding: 5px;    
+}
+
 }
 
 
@@ -1089,12 +1116,21 @@ textarea {
     }
 }
 @media (min-width:768px){
-    img-responsiv{
+    .img-responsiv{
         position: relative;
     }
+
+    .imgModals{
+    position: relative;
+    width: 253px !important;
+    height: 283px !important;
+    margin-left: -32px;
+    border: 1px solid #A2A793;
+    border-radius: 10px;
+    padding: 5px;
+    
 }
-
-
+}
 /* fin raiting position stars e imgs sitios todos (SitioDetalle)*/
 
 .carousel-caption{
@@ -1183,6 +1219,18 @@ textarea {
 /*efecto iconos giran fin*/
 
 .boxModal{
-    background-color: #a2a79a ;
-    opacity: 0.7 ;
+    background-color: rgba(255,255,255,0.9);
+    opacity: 0.9 ;
 }
+
+.imgModals{
+    position: relative;
+    width: 315px;
+    height: 315px;
+    margin-left: -32px;
+    border: 1px solid #A2A793;
+    border-radius: 10px;
+    padding: 5px;
+    
+}
+ 

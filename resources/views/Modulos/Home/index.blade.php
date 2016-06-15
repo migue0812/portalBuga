@@ -63,6 +63,7 @@
                         posee un patrimonio arquitectónico e histórico que cuenta con diferentes bienes de interés cultural,
                         entre estos, La Basílica del Señor de los Milagros la cual recibe y acoge a visitantes de todo el mundo.
                     </p>
+                    <button class="text-center btn btn-primary">Ver mas</button>
 
                 </div>
             </div>
@@ -147,10 +148,38 @@
                             <h3>Emergencias?
                                 <small>Clinicas las 24 horas</small>
                             </h3>
-                            <p>Las mejores clinicas de Buga?</p>
+                            <p>Las mejores clinicas de Buga</p>
                     </div>
                 </div>
             </div>
+            <div class="col-lg-12 desarrollo">
+                <div class="visitNav">
+                    <div>
+                        <h2 style="text-align: center;">Desarrollo</h2>
+                    </div>
+                </div>
+                <hr class="tagline-divider-cont">
+            </div>
+            
+            <!-- Page Content -->
+            <div class="container text-center actividades">
+                <div class="row">
+                    <div class="col-lg-6 col-sm-6">
+                        <a href="https://www.facebook.com/BienestarCDTI/?fref=ts" title="CDTI SENA" target="_blank" class="info">
+                            <div class="socialicons">
+                                <img class="queHacerIcon img-circle img-responsive img-center" src="<?php echo asset("img/senaLog.png") ?>" alt="Descansar?">
+                            </div>
+                    </div>
+                    <div class="col-lg-6 col-sm-6">
+                        <a href="<?php echo url("home/historia") ?>" class="info">
+                            <div class="socialicons">
+                                <img class="queHacerIcon  img-responsive img-center" src="<?php echo asset("img/histoBuga.png") ?>">
+                            </div>
+                    </div>
+                  
+                </div>
+            </div>
+
             <div class="col-lg-12 desarrollo">
                 <div class="visitNav">
                     <div>
@@ -159,7 +188,7 @@
                 </div>
                 <hr class="tagline-divider-cont">
             </div>
-            <div class="line"></div>
+           
             <!-- Page Content -->
             <div class="container text-center actividades">
                 <div class="row">

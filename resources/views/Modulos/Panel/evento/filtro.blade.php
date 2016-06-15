@@ -83,36 +83,14 @@
                 <div class="row mt">
                     <div class="col-md-12">
                         <div class="content-panel table-responsive">
-                            @if ($errors->any())
-                            <div class="alert alert-danger alert-dismissible center-block" role="alert">
-                                <ul>
-                                    @foreach ($errors->all() as $error)  
-                                    <li>{{$error}}</li>
-                                    @endforeach
-                                </ul>
-                            </div>
-                            @endif
-                             @if (Session::has("registrar"))
-                            <div class="alert alert-warning alert-dismissible center-block" role="alert">{{Session::get("registrar")}}</div>
-                            @endif
+
                             @if (Session::has("editar"))
                             <div class="alert alert-warning alert-dismissible center-block" role="alert">{{Session::get("editar")}}</div>
                             @endif
-                            @if (Session::has("inhabilitar"))
-                            <div class="alert alert-danger alert-dismissible center-block" role="alert">{{Session::get("inhabilitar")}}</div>
-                            @endif
-                            @if (Session::has("habilitar"))
-                            <div class="alert alert-info alert-dismissible center-block" role="alert">{{Session::get("habilitar")}}</div>
-                            @endif 
+
                             <table class="table table-striped table-advance table-hover">
                                 <h4><i class="fa fa-angle-right"></i> Evento</h4>
                                 <hr>
-                                <form class="navbar-form navbar-left" role="search" method="post" action="{{url('admin/evento/filtro')}}">
-        <div class="form-group col-md-4">
-            <input type="hidden" name="_token" value="<?php echo csrf_token(); ?>">
-            <input type="text" class="form-control " placeholder="Buscar" id="buscar" name="buscar">
-        </div>
-      </form>
                                 <thead>
                                     <tr>
                                         <th><i class="fa fa-bullhorn"></i> Nombre</th>

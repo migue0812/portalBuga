@@ -35,6 +35,22 @@ class EventoController extends Controller {
             return redirect(url("home/index"));
         }
     }
+    
+    function getFiltro(Request $request) {
+        if (Session::has("usuarioAdmin")) {
+            return view("Modulos.Panel.evento.filtro");
+        } else {
+            return redirect(url("home/index"));
+        }
+    }
+    
+    function postFiltro(Request $request) {
+        $buscar = $_POST['buscar'];
+        $eventos = DB::select("SELECT * FROM bdp_evento,bdp_estado,bdp_categoria,bdp_subcategoria WHERE bdp_evento.est_id=bdp_estado.est_id and "
+                        . "bdp_categoria.cat_id=bdp_evento.cat_id and bdp_subcategoria.subcat_id=bdp_evento.subcat_id AND eve_nombre LIKE '%$buscar%'");
+        return view("Modulos.Panel.evento.listar", compact('eventos'));
+        }
+        
     function getEditar($id_eve) {
         if (Session::has("usuarioAdmin")) {
         $eventos = DB::select("SELECT * FROM bdp_evento, bdp_imagen, bdp_categoria, bdp_subcategoria WHERE bdp_evento.eve_id = ? "
