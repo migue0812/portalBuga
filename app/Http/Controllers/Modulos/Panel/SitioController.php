@@ -33,15 +33,15 @@ class SitioController extends Controller {
         }
     }
     
-    function getFiltrositio(Request $request) {
+    function getFiltro(Request $request) {
         if (Session::has("usuarioAdmin")) {
-            return view("Modulos.Panel.sitio.filtroSitio");
+            return view("Modulos.Panel.sitio.filtro");
         } else {
             return redirect(url("home/index"));
         }
     }
     
-    function postFiltrositio(Request $request) {
+    function postFiltro(Request $request) {
         $buscar = $_POST['buscar'];
         $sitios = DB::select("SELECT * FROM bdp_sitio, bdp_estado, bdp_categoria, bdp_subcategoria"
                             . " WHERE bdp_sitio.est_id=bdp_estado.est_id AND "

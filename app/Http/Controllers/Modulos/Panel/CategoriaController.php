@@ -38,6 +38,22 @@ class CategoriaController extends Controller {
             return redirect(url("home/index"));
         }
     }
+    
+     function getFiltro(Request $request) {
+        if (Session::has("usuarioAdmin")) {
+            return view("Modulos.Panel.categoria.filtro");
+        } else {
+            return redirect(url("home/index"));
+        }
+    }
+    
+    function postFiltro(Request $request) {
+        $buscar = $_POST['buscar'];
+        $categorias = DB::select("SELECT * FROM bdp_categoria, bdp_estado WHERE "
+                . "bdp_categoria.est_id=bdp_estado.est_id AND cat_nombre LIKE '%$buscar%'");
+        
+        return view("Modulos.Panel.categoria.listar", compact("categorias"));
+        }
 
     function postCrear(Request $request) {
         $cat_nombre = $_POST['cat_nombre'];
