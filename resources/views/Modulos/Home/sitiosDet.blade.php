@@ -195,14 +195,7 @@
         width: 100%;
     }
 
-    .ratings {
-        padding-right: 10px;
-        padding-left: 10px;
-        color: #d17581;
-        position: relative;
-        top: 58px;
-        left: 141px
-    }
+    
 
     .thumbnail {
         padding: 0;
@@ -258,7 +251,7 @@
                     </div>
 
                     <div class="col-md-2 portfolio-item">
-                        <h3 title="Celular" class="fa fa-mobile fa-2x" aria-hidden="true"><b></b></h3>
+                        <h3 title="Telefono" class="fa fa-mobile fa-2x" aria-hidden="true"><b></b></h3>
                         <p><?php echo ($sitDetalle->sit_telefono) ?></p>
                     </div>
 
@@ -291,9 +284,9 @@
 
                     <div class="col-md-11 col-sm-11 portfolio-item">
                         <div class="parrafoSitio">
-                            <center><h2 style="margin-top: 30px;"><?php echo ($sitDetalle->sit_nombre) ?></h2></center>
+                           <h2 class="tituloSitio text-center"><?php echo ($sitDetalle->sit_nombre) ?></h2>
                             <br>
-                            <p class="text-justify"><?php echo ($sitDetalle->sit_descripcion) ?></p>
+                            <p class="text-justify2"><?php echo ($sitDetalle->sit_descripcion) ?></p>
                         </div>
                     </div>
                 </div>
@@ -348,7 +341,7 @@
 
                     <!-- efecto IMG GRANDE(modal1) -->
                     <div class="portfolio-modal modal fade" id="1" tabindex="-1" role="dialog" aria-hidden="true">
-                        <div class="box">
+                        <div class="boxModal">
                             <div class="close-modal" data-dismiss="modal">
                                 <div class="lr">
                                     <div class="rl">
@@ -378,7 +371,7 @@
                     <!-- efecto IMG GRANDE(modal1) -->
 
                     <div class="portfolio-modal modal fade" id="2" tabindex="-1" role="dialog" aria-hidden="true">
-                        <div class="box">
+                        <div class="boxModal">
                             <div class="close-modal" data-dismiss="modal">
                                 <div class="lr">
                                     <div class="rl">
@@ -407,7 +400,7 @@
 
                     <!-- efecto IMG GRANDE(modal1) -->
                     <div class="portfolio-modal modal fade" id="3" tabindex="-1" role="dialog" aria-hidden="true">
-                        <div class="box">
+                        <div class="boxModal">
                             <div class="close-modal" data-dismiss="modal">
                                 <div class="lr">
                                     <div class="rl">
