@@ -9,7 +9,21 @@
 @import url(http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css);
 
 /* Basic Reset */
-
+.text-title{
+   font-family: sans-serif;
+  font-size: 30px;
+/*  padding: 80px 50px;*/
+  text-align: center;
+  text-transform: uppercase;
+  text-rendering: optimizeLegibility;
+  color: #2c2c2c;
+/*    background-color: #d5d5d5;*/
+    letter-spacing: .05em;
+    text-shadow: 
+      4px 4px 0px #d5d5d5, 
+      7px 7px 0px rgba(0, 0, 0, 0.2);
+ position: relative;
+}
 .box {
   margin-bottom: 20px;
   padding: 30px 15px;
@@ -23,23 +37,23 @@
 
 
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 .btn-success {
-    color: #000;
-    background-color: rgba(255,255,255,0.7);
-    border-color: #888;
-    -webkit-box-shadow: 1px 2px 5px -1px rgba(0,0,0,0.75);
-    -moz-box-shadow: 1px 2px 5px -1px rgba(0,0,0,0.75);
-    box-shadow: 1px 2px 5px -1px rgba(0,0,0,0.75);
+  color: #000;
+  background-color: rgba(255,255,255,0.7);
+  border-color: #888;
+  -webkit-box-shadow: 1px 2px 5px -1px rgba(0,0,0,0.75);
+  -moz-box-shadow: 1px 2px 5px -1px rgba(0,0,0,0.75);
+  box-shadow: 1px 2px 5px -1px rgba(0,0,0,0.75);
 }
 
 
 .btn-success:hover {
-    color: #000;
-    background-color: #15eba4;
-    border-color: #888;
+  color: #000;
+  background-color: #15eba4;
+  border-color: #888;
 
 }
 
@@ -55,16 +69,16 @@ body {
 
 /* Social Presentation */
 h2.title {
-    font-family: "Quicksand", sans-serif;
-    font-size: 24px;
-    font-weight: 200;
-    font-weight: 300;
-    color: #000000;
-    text-align: center;
-    padding: 100px 0 0 0;
-    margin: -5px 0 -5px 0;
-    text-transform: uppercase;
-    text-shadow: 0 0 1px rgba(0, 0, 0, 0.1);
+  font-family: "Quicksand", sans-serif;
+  font-size: 24px;
+  font-weight: 200;
+  font-weight: 300;
+  color: #000000;
+  text-align: center;
+  padding: 100px 0 0 0;
+  margin: -5px 0 -5px 0;
+  text-transform: uppercase;
+  text-shadow: 0 0 1px rgba(0, 0, 0, 0.1);
 }
 .social .line {
   position: absolute;
@@ -74,7 +88,7 @@ h2.title {
   background: rgba(255,255,255,0.7);
   border: 27px solid rgba(255,255,255,0.2);
   box-shadow: 0px 4px 5px -1px rgba(0,0,0,0.59);
-  z-index: 0;
+  z-index: -0;
 }
 .social ul {
   position: absolute;
@@ -92,13 +106,13 @@ h2.title {
   float: left;
   background: transparent;
   width: 48px; 
-/*  height: 80px;*/
+  /*  height: 80px;*/
   text-align: center;
   color: #000;
   padding: 0 0 30px 0;
 }
 .social ul li a:hover {
-    color: #fff;
+  color: #fff;
 }
 .fa-facebook,
 .fa-twitter,
@@ -106,7 +120,7 @@ h2.title {
 .fa-instagram,
 .fa-pinterest
 {
-    padding: 10px 0 0 0;
+  padding: 10px 0 0 0;
 
 }
 
@@ -124,33 +138,33 @@ h2.title {
 
 /* Hover */
 .social ul li.facebook a:hover {
-    background: #3b5998;
+  background: #3b5998;
 }
 .social ul li.twitter a:hover {
-    background: #44ccf6;
+  background: #44ccf6;
 }
 .social ul li.codepen a:hover {
-    background: #cccccc;
+  background: #cccccc;
 }
 .social ul li.youtube a:hover {
-    background: #da2d2e;
+  background: #da2d2e;
 }
 .social ul li.instagram a:hover {
-    background: #66269e;
+  background: #66269e;
 }
 .social ul li.pinterest a:hover {
-    background: #c3042b;
+  background: #c3042b;
 }
 
 
 .pad{
-    padding-top:30px
+  padding-top:30px
 }
 
 .account{
-    border-top: 1px solid#888;
-    padding-top:15px;
-    font-size:85%
+  border-top: 1px solid#888;
+  padding-top:15px;
+  font-size:85%
 }
 .cr{
   color: #fff;
@@ -158,51 +172,51 @@ h2.title {
 .forget{
   float:right;
   font-size: 80%;
-  
+
   position: relative;
   top:-10px
 
 }
 
 .ingre{
-    margin-bottom: 25px
+  margin-bottom: 25px
 }
 
 .title{
-    text-shadow:1px 2px 13px rgba(13,255,182,1);
-    font-weight:normal;
-    /*  text-decoration:underline overline;*/
-    font-style:italic;
-    color:#31708F;
-    letter-spacing:4pt;
-    word-spacing:4pt;
-    font-size:15px;
-    text-align:center;
-    font-family:comic sans, comic sans ms, cursive, verdana, arial, sans-serif;
-    line-height:2;
-    margin:0px;
-    padding:0px;
+  text-shadow:1px 2px 13px rgba(13,255,182,1);
+  font-weight:normal;
+  /*  text-decoration:underline overline;*/
+  font-style:italic;
+  color:#31708F;
+  letter-spacing:4pt;
+  word-spacing:4pt;
+  font-size:15px;
+  text-align:center;
+  font-family:comic sans, comic sans ms, cursive, verdana, arial, sans-serif;
+  line-height:2;
+  margin:0px;
+  padding:0px;
 }
 #btn-volver{
-    margin-left: -15px;
+  margin-left: -15px;
 }
 
 .marg{
-    margin-top:10px;
+  margin-top:10px;
 }
 
 .mainbox{
-    display:none;
-    margin-top:50px
+  display:none;
+  margin-top:50px
 }
 
 .regbox{
-    margin-top:50px
+  margin-top:50px
 }
 
 .signinlink{
-    float:right;
-    font-size: 100%;
-    position: relative;
-    top:-21.5px
+  float:right;
+  font-size: 100%;
+  position: relative;
+  top:-21.5px
 }

@@ -2,41 +2,10 @@
 
 <div class="container">
   
-  <!--  botones red social-->
   <div class="social">
     <span class="line"></span>
-    <ul>
-      <li class="facebook">
-        <a href="" target="_blank">
-          <i class="fa fa-facebook fa-2x"></i>
-        </a>
-      </li>
-      <li class="twitter">
-        <a href="" target="_blank">
-          <i class="fa fa-twitter fa-2x"></i>
-        </a>
-      </li>
-      <li class="youtube">
-        <a href="#" target="_blank">
-          <i class="fa fa-youtube fa-2x"></i>
-        </a>
-      </li>
-      <li class="instagram">
-        <a href="#" target="_blank">
-          <i class="fa fa-instagram fa-2x"></i>
-        </a>
-      </li>
-      <li class="pinterest">
-        <a href="#" target="_blank">
-          <i class="fa fa-pinterest fa-2x"></i>
-        </a>
-      </li>
-    </ul>
+    <h2 class="text-center text-title">BIENVENIDO</h2>
   </div>
-
-  <h2 class="title">Ingresa Con</h2>
-
-  <!-- FIN botones red social-->
 
   <!--  ----------------------------------------------------------------------->
 
