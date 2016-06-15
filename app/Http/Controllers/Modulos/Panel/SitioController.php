@@ -32,6 +32,23 @@ class SitioController extends Controller {
             return redirect(url("home/index"));
         }
     }
+    
+    function getFiltro(Request $request) {
+        if (Session::has("usuarioAdmin")) {
+            return view("Modulos.Panel.sitio.filtro");
+        } else {
+            return redirect(url("home/index"));
+        }
+    }
+    
+    function postFiltro(Request $request) {
+        $buscar = $_POST['buscar'];
+        $sitios = DB::select("SELECT * FROM bdp_sitio, bdp_estado, bdp_categoria, bdp_subcategoria"
+                            . " WHERE bdp_sitio.est_id=bdp_estado.est_id AND "
+                            . "bdp_sitio.cat_id=bdp_categoria.cat_id AND "
+                            . "bdp_sitio.subcat_id=bdp_subcategoria.subcat_id AND sit_nombre LIKE '%$buscar%'");
+            return view("Modulos.Panel.sitio.listar", compact("sitios"));
+        }
 
     function getCrear(Request $request) {
         if (Session::has("usuarioAdmin")) {

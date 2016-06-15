@@ -924,11 +924,20 @@ textarea {
 
     .imgSitios{
         height: 460px;
-        width: 380px
+        width: 330px;
     }
     .img-Sitios{
         height: 300px;
         width: 350px;
+    }
+    
+    .ratings {
+        padding-right: 10px;
+        padding-left: 10px;
+        color: #d17581;
+        position: relative;
+        top: 55px;
+        left: 121px;
     }
 }
 
@@ -939,11 +948,14 @@ textarea {
     }
     .imgSitios{
         height: 460px;
-        width: 313px
+        width: 313px;
     }
     .img-Sitios{
         height: 300px;
         width: 350px;
+    }
+    .text-justify2{
+        text-align:justify;
     }
 }
 
@@ -961,7 +973,9 @@ textarea {
         height: 300px;
         width: 350px;
     }
-
+    .text-justify2{
+        text-align:justify;
+    }
 }
 
 
@@ -981,9 +995,12 @@ textarea {
         height: 248px;
         width: 351px;
     }
+    .text-justify2{
+        text-align:justify;
+    }
 }
 
-@media (min-width:637px) and (max-width:767px){
+@media (min-width:637px) and (max-width:800px){
     .boxSitio{
         height: 12422px;
     }
@@ -999,6 +1016,9 @@ textarea {
         height: 248px;
         width: 351px;
     }
+    .text-justify2{
+        text-align:justify;
+    }
 }
 
 @media (min-width:320px) and (max-width:420px){
@@ -1007,8 +1027,6 @@ textarea {
     }
     .imgSitios{
         height: 417px;
-        
-
     }
     .img-Sitios{
         height: 300px;
@@ -1017,6 +1035,17 @@ textarea {
     .text-justify{
         height: 248px;
         width: 351px;
+    }
+    .text-justify2{
+        text-align:justify;
+    }
+    .buttonRedes{
+        position: relative;
+        right: 45px;
+    }
+    .tituloSitio{
+        position: relative;
+        right: 45px;
     }
 }
 
@@ -1036,11 +1065,32 @@ textarea {
         height: 248px;
         width: 351px;
     }
+    .text-justify2{
+        height: 820px;
+        width: 447px;
+        text-align:justify;
+    }
+
+    .ratings {
+        padding-right: 10px;
+        padding-left: 10px;
+        color: #d17581;
+        position: relative;
+        top: 7px;
+        left: 121px;
+    }
 }
+
+
 @media (max-width:589px){
 
     .boxSitio{
         height: 14206px;
+    }
+}
+@media (min-width:768px){
+    img-responsiv{
+        position: relative;
     }
 }
 
@@ -1132,4 +1182,7 @@ textarea {
 
 /*efecto iconos giran fin*/
 
-
+.boxModal{
+    background-color: #a2a79a ;
+    opacity: 0.7 ;
+}
