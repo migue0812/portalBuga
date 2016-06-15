@@ -15,7 +15,7 @@
 
             <div class="col-md-6 portfolio-item">
               <a href="<?php echo url("home/sitios/det/" . $sitio->sit_id) ?>">
-                <img style=""  class="img-responsive img-Sitios" src="<?php echo asset("$sitio->img_ruta") ?>" alt="">
+                <img class="img-contenido" src="<?php echo asset("$sitio->img_ruta") ?>" alt="">
               </a>
 
             </div>
@@ -51,15 +51,16 @@
 
             <div class="col-md-4 portfolio-item">
                 <div class="imgSitios">
-              <div class="contenedor-imgX fxX">
+              <div class="contenedor-imgX fxX"> 
                 <div id="tituloalz"><h2><?php echo ($sitio->sit_nombre) ?></h2></div>
-                <div class="imgback img-contenido" style=" background-image: url('<?php echo asset("$sitio->img_ruta") ?>');"> </div>
+                <a href="<?php echo url("home/sitios/det/" . $sitio->sit_id) ?>">
+                <div class="imgback img-contenido" style=" background-image: url('<?php echo asset("$sitio->img_ruta") ?>');"> </div> </a>
                 <p><?php echo ((strlen($sitio->sit_descripcion) > 100) ? substr(($sitio->sit_descripcion), 0, 100) . " ..." : ($sitio->sit_descripcion)) ?></p>
                 <a href="<?php echo url("home/sitios/det/" . $sitio->sit_id) ?>" class="btn btn-primary"><b title="Ver mas"class="fa fa-eye"></b></a>
                 <?php if (Session::has("usuarioLogueado")): ?>
                   <a href="<?php echo url("itinerario/sitio/" . $sitio->sit_id) ?>" class="btn btn-primary"><b title="Itinerario" class="icon-direction fa-fw"></b></a>
                 <?php endif ?>
-
+                 
               </div>
             </div>
             </div>
