@@ -10,7 +10,7 @@
             <div class="col-lg-12">
                 <div class="visitNav">
                     <div>
-                        <h2 class="text-center">Hospitales De Guadalajara De Buga</h2>
+                        <h2 class="text-center">Clinicas Y Hospitales De Guadalajara De Buga</h2>
                     </div>
                 </div>
                 <hr class="tagline-divider-cont">
