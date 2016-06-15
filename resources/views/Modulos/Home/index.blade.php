@@ -63,8 +63,7 @@
                         posee un patrimonio arquitectónico e histórico que cuenta con diferentes bienes de interés cultural,
                         entre estos, La Basílica del Señor de los Milagros la cual recibe y acoge a visitantes de todo el mundo.
                     </p>
-                    <button class="text-center btn btn-primary">Ver mas</button>
-
+                    <button class="text-center">Ver mas</button>
                 </div>
             </div>
             <div class="col-lg-12">
@@ -123,7 +122,7 @@
                     <div class="col-lg-4 col-sm-4 text-center">
                         <a href="<?php echo url("home/categorias/det/7") ?>" class="info">
                             <diV class="socialicons">
-                                <img class="queHacerIcon img-circle img-responsive img-center" src="<?php echo asset("img/dormir.png") ?>" alt="Descansar?"></a>
+                                <img style="width: 100px; height: 90px" class="queHacerIcon img-circle img-responsive img-center" src="<?php echo asset("img/dormir.png") ?>" alt="Descansar?"></a>
                             </div>
                             <h3>Donde Dormir?
                                 <small>La mejor guia Hotelera</small>
@@ -133,7 +132,7 @@
                     <div class="col-lg-4 col-sm-4 text-center">
                         <a href="<?php echo url("home/categorias/det/8") ?>" class="info">
                             <div class="socialicons">
-                                <img class="queHacerIcon img-circle img-responsive img-center" src="<?php echo asset("img/comer.png") ?>" alt="Comer?"></a>
+                                <img style="width: 100px; height: 100px" class="queHacerIcon img-circle img-responsive img-center" src="<?php echo asset("img/comer.png") ?>" alt="Comer?"></a>
                             </div>
                             <h3>Donde Comer?
                                 <small>Los mejores Restaurantes</small>
@@ -143,7 +142,7 @@
                     <div class="col-lg-4 col-sm-4 text-center">
                         <a href="<?php echo url("home/hospitales") ?>" class="info">
                             <div class="socialicons">
-                                <img class="queHacerIcon img-circle img-responsive img-center" src="<?php echo asset("img/diversion.png") ?>" alt=""></a>
+                                <img style="width: 110px; height: 110px" class="queHacerIcon img-circle img-responsive img-center" src="<?php echo asset("img/diversion.png") ?>" alt=""></a>
                             </div>
                             <h3>Emergencias?
                                 <small>Clinicas las 24 horas</small>
@@ -160,7 +159,7 @@
                 </div>
                 <hr class="tagline-divider-cont">
             </div>
-            
+
             <!-- Page Content -->
             <div class="container text-center actividades">
                 <div class="row">
@@ -171,12 +170,12 @@
                             </div>
                     </div>
                     <div class="col-lg-6 col-sm-6">
-                        <a href="<?php echo url("home/historia") ?>" class="info">
+                        <a href="<?php echo url("#") ?>" class="info">
                             <div class="socialicons">
-                                <img class="queHacerIcon  img-responsive img-center" src="<?php echo asset("img/histoBuga.png") ?>">
+                                <img style="width: 150px; height: 90px" class="queHacerIcon  img-responsive img-center" src="<?php echo asset("img/bugaLog.png") ?>">
                             </div>
                     </div>
-                  
+
                 </div>
             </div>
 
@@ -188,26 +187,26 @@
                 </div>
                 <hr class="tagline-divider-cont">
             </div>
-           
+
             <!-- Page Content -->
             <div class="container text-center actividades">
                 <div class="row">
                     <div class="col-lg-4 col-sm-4">
                         <a href="https://www.facebook.com/BienestarCDTI/?fref=ts" title="CDTI SENA" target="_blank" class="info">
                             <div class="socialicons">
-                                <img class="queHacerIcon img-circle img-responsive img-center" src="<?php echo asset("img/senaLog.png") ?>" alt="Descansar?">
+                                <img class="queHacerIcon img-circle img-responsive img-center" src="<?php echo asset("img/explora.png") ?>" alt="Descansar?">
                             </div>
                     </div>
                     <div class="col-lg-4 col-sm-4">
                         <a href="<?php echo url("home/historia") ?>" class="info">
                             <div class="socialicons">
-                                <img class="queHacerIcon  img-responsive img-center" src="<?php echo asset("img/histoBuga.png") ?>">
+                                <img class="queHacerIcon  img-responsive img-center" src="<?php echo asset("img/nuestraTierra.png") ?>">
                             </div>
                     </div>
                     <div class="col-lg-4 col-sm-4">
                         <a href="<?php echo url("home/sitios/det/9") ?>" class="info">
                             <div class="socialicons">
-                                <img class="queHacerIcon img-circle img-responsive img-center" src="<?php echo asset("img/bugaLog.png") ?>" alt="Comer?">
+                                <img class="queHacerIcon img-responsive img-center" src="<?php echo asset("img/turismundo.png") ?>" alt="Comer?">
                             </div>
                     </div>
                 </div>
