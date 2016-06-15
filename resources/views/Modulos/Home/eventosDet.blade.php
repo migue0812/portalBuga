@@ -24,7 +24,7 @@
       </div>
       <div class="botoness">
         <div class="col-md-2 portfolio-item">
-          <h3 title="Luhar"  class="fa fa-home fa-2x" aria-hidden="true"><b></b></h3>
+          <h3 title="Lugar"  class="fa fa-home fa-2x" aria-hidden="true"><b></b></h3>
           <p><?php echo("$eveDetalle->eve_direccion") ?></p>
         </div>
         <div class="col-md-2 portfolio-item">
@@ -32,14 +32,14 @@
           <p><?php echo("$eveDetalle->eve_direccion") ?></p>
         </div>
         <div class="col-md-2 portfolio-item">
-          <h3 title="Duraccion" class=" fa fa-calendar fa-2x" style="color:blue" aria-hidden="true"><b></b></h3><p>Del <?php echo("$eveDetalle->eve_fecha_inicio") ?> hasta el <?php echo("$eveDetalle->eve_fecha_fin") ?></p>
-        </div>
+         <h3 title="Duracion" class=" fa fa-calendar fa-2x" style="color:blue" aria-hidden="true"><b></b></h3><p>Del <?php echo("$eveDetalle->eve_fecha_inicio") ?> hasta el <?php echo("$eveDetalle->eve_fecha_fin") ?></p>
+        </div> 
         <div class="col-md-2 portfolio-item">
           <h3 title="Valor Por Persona" class="fa fa-money fa-2x" style="color:green" aria-hidden="true"><b></b></h3>
           <p><?php echo("$eveDetalle->eve_valor_boleta") ?></p>
         </div>
         <div class="col-md-2 portfolio-item">
-          <h3 title="Celular" class="fa fa-mobile fa-2x" aria-hidden="true"><b>:</b></h3>
+          <h3 title="Celular" class="fa fa-mobile fa-2x" aria-hidden="true"><b></b></h3>
           <p><?php echo("$eveDetalle->eve_telefono_contacto") ?></p>
         </div>
         <div class="col-md-2 portfolio-item">

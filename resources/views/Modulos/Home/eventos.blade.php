@@ -32,7 +32,7 @@
           <span class="icon-next"></span>
         </a>
       </header>
-      <div class="row">
+    
         <div class="col-lg-12">
           <div class="visitNav">
             <div>
@@ -50,7 +50,7 @@
 
 
           <div class="container portImg">
-            <div class="row ">
+           
               <div class="col-md-7 portfolio-item">
                   <br>
                    <br>
@@ -77,9 +77,8 @@
 
 
             <?php endforeach ?>
-          </div>
-
-          <div class="row">
+         
+        
 
             <div class="col-lg-12">
               <div class="visitNav">
@@ -111,8 +110,7 @@
 
 
 
-          </div>
-        </div>
+     
 
         <script>           $('.carousel').carousel({
             interval: 3000 //changes the speed
