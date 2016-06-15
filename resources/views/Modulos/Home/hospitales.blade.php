@@ -190,7 +190,7 @@
                                         <li style="font: 150% sans-serif;">Telefono:  2367445</li>
                                         <br>
                                         <br>
-                                        <li style="font: 150% sans-serif;">Correo:</li>
+                                        <li style="font: 150% sans-serif;">Correo:  </li>
                                     </ul>
                                 </div>
                                 <div>
