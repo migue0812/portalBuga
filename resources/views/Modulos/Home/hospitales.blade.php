@@ -32,13 +32,13 @@
                 </div>
                 <div class="col-md-5">
                     <ul>
-                        <li  style="font: 150% sans-serif;">Lugar: Hospital San Jose</li>
+                        <li  style="font: 150% sans-serif;">Hospital San Jose</li>
                         <br>
                         <br>
                         <li style="font: 150% sans-serif;">Direccion: Carrera 8 N° 17-52.</li>
                         <br>
                         <br>
-                        <li style="font: 150% sans-serif;">Estrato: 3</li>
+                        <li style="font: 150% sans-serif;">Nivel: III</li>
                         <br>
                         <br>
                         <li style="font: 150% sans-serif;">Telefono: 2361000</li>
@@ -68,13 +68,13 @@
                     </div>
                     <div class="col-md-5">
                         <ul>
-                            <li  style="font: 150% sans-serif;">Lugar: Urgencias Medicas</li>
+                            <li  style="font: 150% sans-serif;">Urgencias Medicas</li>
                             <br>
                             <br>
                             <li style="font: 150% sans-serif;">Direccion: Calle 4 N° 22- 10 </li>
                             <br>
                             <br>
-                            <li style="font: 150% sans-serif;">Estrato: 3</li>
+                            <li style="font: 150% sans-serif;">Nivel: III</li>
                             <br>
                             <br>
                             <li style="font: 150% sans-serif;">Telefono: 2282246</li>
@@ -107,13 +107,13 @@
                         </div>
                         <div class="col-md-5">
                             <ul>
-                                <li  style="font: 150% sans-serif;">Lugar: Clinica Guadalajara</li>
+                                <li  style="font: 150% sans-serif;">Clinica Guadalajara</li>
                                 <br>
                                 <br>
                                 <li style="font: 150% sans-serif;">Direccion: Calle 1 N° 15-28.</li>
                                 <br>
                                 <br>
-                                <li style="font: 150% sans-serif;">Estrato: 2</li>
+                                <li style="font: 150% sans-serif;">Nivel: II</li>
                                 <br>
                                 <br>
                                 <li style="font: 150% sans-serif;">Telefono: 2270007</li>
@@ -143,13 +143,13 @@
                             </div>
                             <div class="col-md-5">
                                 <ul>
-                                    <li  style="font: 150% sans-serif;">Lugar: Clinica La Merced</li>
+                                    <li  style="font: 150% sans-serif;">Clinica La Merced</li>
                                     <br>
                                     <br>
                                     <li style="font: 150% sans-serif;">Direccion: Calle 1 No. 14 - 34.</li>
                                     <br>
                                     <br>
-                                    <li style="font: 150% sans-serif;">Estrato: 3</li>
+                                    <li style="font: 150% sans-serif;">Nivel: III</li>
                                     <br>
                                     <br>
                                     <li style="font: 150% sans-serif;">Telefono: 2282744</li>
@@ -178,13 +178,13 @@
                                 </div>
                                 <div class="col-md-5">
                                     <ul>
-                                        <li  style="font: 150% sans-serif;">Lugar: Comfandi</li>
+                                        <li  style="font: 150% sans-serif;">Comfandi</li>
                                         <br>
                                         <br>
                                         <li style="font: 150% sans-serif;">Direccion: Carrera 17 # 5 - 18</li>
                                         <br>
                                         <br>
-                                        <li style="font: 150% sans-serif;">Estrato: 3/4/5</li>
+                                        <li style="font: 150% sans-serif;">Nivel: III</li>
                                         <br>
                                         <br>
                                         <li style="font: 150% sans-serif;">Telefono:  2367445</li>
