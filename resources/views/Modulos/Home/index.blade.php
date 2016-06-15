@@ -140,14 +140,14 @@
                             <p>Deleita tu paladar</p>
                     </div>
                     <div class="col-lg-4 col-sm-4 text-center">
-                        <a href="<?php echo url("home/categorias/det/6") ?>" class="info">
+                        <a href="<?php echo url("home/hospitales") ?>" class="info">
                             <div class="socialicons">
                                 <img class="queHacerIcon img-circle img-responsive img-center" src="<?php echo asset("img/diversion.png") ?>" alt=""></a>
                             </div>
-                            <h3>Diversión?
-                                <small>Que hacer en Buga?</small>
+                            <h3>Emergencias?
+                                <small>Clinicas las 24 horas</small>
                             </h3>
-                            <p>Los mejores sitios para divertirte?</p>
+                            <p>Las mejores clinicas de Buga?</p>
                     </div>
                 </div>
             </div>

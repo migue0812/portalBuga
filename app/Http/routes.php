@@ -16,6 +16,7 @@ Route::controllers([
     'home/informacion' => "Modulos\Home\InformacionController",
     'home/renuncia' => "Modulos\Home\RenunciaController",
     'home/historia' => "Modulos\Home\HistoriaController",
+    'home/hospitales' => "Modulos\Home\HospitalesController",
     'itinerario' => "Modulos\Itinerario\ItinerarioController",
     'home/busqueda' => "Modulos\Home\BusquedaController",
     'usuario/cuenta' => "Modulos\Usuario\CuentaController",
