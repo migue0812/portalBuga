@@ -199,12 +199,6 @@
                             </div>
                     </div>
                     <div class="col-lg-4 col-sm-4">
-                        <a href="<?php echo url("home/historia") ?>" class="info">
-                            <div class="socialicons">
-                                <img class="queHacerIcon  img-responsive img-center" src="<?php echo asset("img/histoBuga.png") ?>">
-                            </div>
-                    </div>
-                    <div class="col-lg-4 col-sm-4">
                         <a href="<?php echo url("home/sitios/det/9") ?>" class="info">
                             <div class="socialicons">
                                 <img class="queHacerIcon img-circle img-responsive img-center" src="<?php echo asset("img/bugaLog.png") ?>" alt="Comer?">
