@@ -331,6 +331,7 @@ class RegistroController extends Controller {
     Session::forget("usuarioId");
     Session::forget("usuarioGenero");
     Session::forget("usuarioAdmin");
+    Session::forget("usuarioAvatar");
     return redirect('home/index');
   }
 

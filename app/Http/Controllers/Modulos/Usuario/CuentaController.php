@@ -93,7 +93,8 @@ class CuentaController extends Controller {
 
         DB::update('UPDATE bdp_dato_usuario SET '
                 . 'dus_nombre = ?, dus_apellidos = ?, dus_correo = ?, '
-                . 'dus_genero = ?, dus_fecha_nacimiento = ?, dus_updated_at = CURRENT_TIMESTAMP WHERE usu_id = ?', array($pass1, $nombre, $apellidos,
+                . 'dus_genero = ?, dus_fecha_nacimiento = ?, dus_updated_at = CURRENT_TIMESTAMP '
+                . 'WHERE usu_id = ?', array($nombre, $apellidos,
             $email, $genero, $fecha, $idUsuario));
         
         if ($fotoRuta !== "" && $fotoDest !== "") {
@@ -103,10 +104,14 @@ class CuentaController extends Controller {
             if(!empty($img)){
             unlink($img);
             }
-            DB::insert("UPDATE bdp_dato_usuario SET dus_avatar = ? WHERE usu_id = ?", 
+            DB::update("UPDATE bdp_dato_usuario SET dus_avatar = ? WHERE usu_id = ?", 
                     array($fotoDest, $idUsuario));
+            $foto = DB::select("SELECT dus_avatar FROM bdp_dato_usuario WHERE "
+                    . "usu_id = ?", array($idUsuario));
+        $foto = $foto[0]->dus_avatar;
+        Session::put("usuarioAvatar", $foto);
         }
-Session::put("usuarioAvatar", $img);
+        
         Session::flash("usuarioEditado", "Se han editado los datos exitosamente");
         return redirect(url('usuario/cuenta'));
     }

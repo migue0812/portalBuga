@@ -61,11 +61,11 @@ $categorias = DB::select("SELECT * FROM bdp_categoria, bdp_imagen WHERE bdp_imag
                     <?php if ((Session::get("usuarioGenero") === 'M')): ?>
                         <li class="navPerImg hidden-xs">
                             <?php $foto = Session::get("usuarioAvatar");
-                            //if (!empty($foto)): ?>
+                            if (!empty($foto)): ?>
                             <img class="imgTam" src="<?php echo asset("$foto") ?>" />
-                            <?php //else: ?>
-                            <!--<img class="imgTam" src="<?php //echo asset("img/Male.png") ?>" />-->
-                        <?php //endif ?>
+                            <?php else: ?>
+                            <img class="imgTam" src="<?php echo asset("img/Male.png") ?>" />
+                        <?php endif ?>
                         </li>
                         <li class="dropdown navPer" >
                             <a style="padding-right: 0px;padding-left: 0px;" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" title="Categorias"><?php echo ' ' . Session::get("usuarioLogueado") ?><span class="caret"></span></a>
@@ -80,11 +80,11 @@ $categorias = DB::select("SELECT * FROM bdp_categoria, bdp_imagen WHERE bdp_imag
                     <?php else: ?>
                         <li class="navPerImg hidden-xs">
                             <?php $foto = Session::get("usuarioAvatar");
-                            //if (!empty($foto)): ?>
+                            if (!empty($foto)): ?>
                             <img class="imgTam" src="<?php echo asset("$foto") ?>" />
-                            <?php //else: ?>
-                            <!--<img class="imgTam" src="<?php //echo asset("img/Female.png") ?>" />-->
-                        <?php //endif ?>
+                            <?php else: ?>
+                            <img class="imgTam" src="<?php echo asset("img/Female.png") ?>" />
+                        <?php endif ?>
                         </li>
                         <li class="dropdown navPer" >
                             <a style="padding-right: 0px;padding-left: 0px;" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" title="Categorias"><?php echo ' ' . Session::get("usuarioLogueado") ?><span class="caret"></span></a>
