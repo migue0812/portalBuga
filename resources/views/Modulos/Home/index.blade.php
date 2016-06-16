@@ -99,7 +99,7 @@
 
                 <!-- Introduction Row -->
                 <div class="row">
-                    <div class="col-lg-11" style="text-align: justify;">
+                    <div class="col-lg-11 col-sm-11 text-center" style="text-align: justify;">
                         <h3 class="visit">Visitanos
                             <small>Los Mejores Lugares Para Ti !</small>
                         </h3>
@@ -170,7 +170,7 @@
                             </div>
                     </div>
                     <div class="col-lg-6 col-sm-6">
-                        <a href="<?php echo url("#") ?>" class="info">
+                        <a href="http://www.guadalajaradebuga-valle.gov.co/index.shtml" title="Alcaldia" target="_blank" class="info">
                             <div class="socialicons">
                                 <img style="width: 150px; height: 90px" class="queHacerIcon  img-responsive img-center" src="<?php echo asset("img/bugaLog.png") ?>">
                             </div>
@@ -192,19 +192,19 @@
             <div class="container text-center actividades">
                 <div class="row">
                     <div class="col-lg-4 col-sm-4">
-                        <a href="https://www.facebook.com/BienestarCDTI/?fref=ts" title="CDTI SENA" target="_blank" class="info">
+                       <a href="<?php echo url("home/agencias") ?>" class="info">
                             <div class="socialicons">
                                 <img class="queHacerIcon img-circle img-responsive img-center" src="<?php echo asset("img/explora.png") ?>" alt="Descansar?">
                             </div>
                     </div>
                     <div class="col-lg-4 col-sm-4">
-                        <a href="<?php echo url("home/historia") ?>" class="info">
+                        <a href="<?php echo url("home/agencias") ?>" class="info">
                             <div class="socialicons">
                                 <img class="queHacerIcon  img-responsive img-center" src="<?php echo asset("img/nuestraTierra.png") ?>">
                             </div>
                     </div>
                     <div class="col-lg-4 col-sm-4">
-                        <a href="<?php echo url("home/sitios/det/9") ?>" class="info">
+                        <a href="<?php echo url("home/agencias") ?>" class="info">
                             <div class="socialicons">
                                 <img class="queHacerIcon img-responsive img-center" src="<?php echo asset("img/turismundo.png") ?>" alt="Comer?">
                             </div>

@@ -11,6 +11,7 @@ Route::controllers([
     'home/categorias' => "Modulos\Home\CategoriasController",
     'home/subCat' => "Modulos\Home\subCatController",
     'home/contacto' => "Modulos\Home\ContactoController",
+    'home/agencias' => "Modulos\Home\agenciasController",
     'home/cookies' => "Modulos\Home\CookiesController",
     'home/desarrollo' => "Modulos\Home\DesarrolloController",
     'home/informacion' => "Modulos\Home\InformacionController",
