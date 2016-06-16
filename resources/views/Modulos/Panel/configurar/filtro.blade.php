@@ -82,19 +82,10 @@
           <div class="row mt">
             <div class="col-md-12">
               <div class="content-panel table-responsive">
-                  @if (Session::has("registroSuccess"))
-                <div class="alert alert-success center-block" role="alert">{{Session::get("registroSuccess")}}</div>
-                {{Session::forget("registroSuccess")}}
-                @endif
+                  
                 <table class="table table-striped table-advance table-hover">
                   <h4><i class="fa fa-angle-right"></i> Usuarios</h4>
                   <hr>
-                  <form class="navbar-form navbar-left" role="search" method="post" action="{{url('registro/filtro')}}">
-        <div class="form-group col-md-4">
-            <input type="hidden" name="_token" value="<?php echo csrf_token(); ?>">
-            <input type="text" class="form-control " placeholder="Buscar" id="buscar" name="buscar">
-        </div>
-      </form>
                   <thead>
                     <tr>
                       <th><i class="fa fa-bullhorn"></i> Nombre</th>

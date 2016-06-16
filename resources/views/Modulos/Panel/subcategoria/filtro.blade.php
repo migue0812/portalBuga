@@ -1,7 +1,7 @@
 @include('Templates.Backend.headPanel')
 
         <!-- MENU INICIO-->
-        <div>
+      <div>
         <li class="mt">
           <a href="{{url('admin/bienvenido')}}">
             <i class="fa fa-dashboard"></i>
@@ -20,17 +20,19 @@
             <li><a href="{{url('admin/categoria/listar')}}">Listar</a></li>
           </ul>
         </li>
+        
         <li class="sub-menu">
-          <a href="javascript:;" >
+          <a class="active" href="javascript:;" >
             <i class="fa fa-cogs"></i>
             <span>Subcategoria</span>
           </a>
           <ul class="sub">
             <li><a  href="{{url('admin/subcategoria/crear')}}">Crear</a></li>
             <li><a  href="{{url('admin/subcategoria/reporte')}}">Reporte</a></li>
-            <li><a  href="{{url('admin/subcategoria/listar')}}">Listar</a></li>
+            <li class="active"><a  href="{{url('admin/subcategoria/listar')}}">Listar</a></li>
           </ul>
         </li>
+        
         <li class="sub-menu">
           <a href="javascript:;" >
             <i class="fa fa-book"></i>
@@ -42,6 +44,7 @@
             <li><a  href="{{url('admin/sitio/listar')}}">Listar</a></li>
           </ul>
         </li>
+        
         <li class="sub-menu">
           <a href="javascript:;" >
             <i class="fa fa-tasks"></i>
@@ -53,8 +56,9 @@
             <li><a  href="{{url('admin/evento/listar')}}">Listar</a></li>
           </ul>
         </li>
+        
         <li class="sub-menu">
-          <a class="active" href="javascript:;" >
+          <a href="javascript:;" >
             <i class="fa fa-th"></i>
             <span>Configuracion</span>
           </a>
@@ -67,7 +71,7 @@
       </ul>
        <!--BARRA LATERAL MENU FIN-->
     </div>
-  </aside>
+ 
   <!--BARRA LATERAL FIN-->
 
   <!-- **********************************************************************************************************************************************************
@@ -82,64 +86,101 @@
           <div class="row mt">
             <div class="col-md-12">
               <div class="content-panel table-responsive">
-                  @if (Session::has("registroSuccess"))
-                <div class="alert alert-success center-block" role="alert">{{Session::get("registroSuccess")}}</div>
-                {{Session::forget("registroSuccess")}}
-                @endif
+               
+                        @if (Session::has("editar"))
+    <div class="alert alert-warning alert-dismissible center-block" role="alert">{{Session::get("editar")}}</div>
+                @endif 
+  
                 <table class="table table-striped table-advance table-hover">
-                  <h4><i class="fa fa-angle-right"></i> Usuarios</h4>
+                  <h4><i class="fa fa-angle-right"></i> Subcategoria</h4>
                   <hr>
-                  <form class="navbar-form navbar-left" role="search" method="post" action="{{url('registro/filtro')}}">
-        <div class="form-group col-md-4">
-            <input type="hidden" name="_token" value="<?php echo csrf_token(); ?>">
-            <input type="text" class="form-control " placeholder="Buscar" id="buscar" name="buscar">
-        </div>
-      </form>
                   <thead>
                     <tr>
                       <th><i class="fa fa-bullhorn"></i> Nombre</th>
-                      <th><i class=" fa fa-edit"></i> Activo</th>
+                      <th style="width: 400px"><i class="fa fa-bullhorn"></i> Categoría </th>
+                      <th><i class=" fa fa-edit"></i> Estado</th>
                       <th></th>
                     </tr>
                   </thead>
                   <tbody>
-                      <?php foreach ($usuarios as $usuario) {?>
+                      <?php foreach ($subcategorias as $subcategoria) {?>
                     <tr>
-                      <td><?php echo $usuario->usu_usuario ?></td>
-                      <!--<td><span class="label label-info label-mini">Due</span></td>-->
-                      <td><?php $act= $usuario->est_id;if ($act== '1'):?><span class="label label-info label-mini">Si</span><?php else:?><span class="label label-warning label-mini">No</span><?php endif ?></td>
+                      <td><?php echo $subcategoria->subcat_nombre ?></td>
+
+                      <td><?php echo $subcategoria->cat_nombre ?></td>
+                      
+                      <td><?php echo $subcategoria->est_nombre ?></td>
                       <td>
-                        <a href="<?php echo url("registro/editar/" . $usuario->usu_id); ?>" class="btn btn-primary btn-xs"><i class="fa fa-pencil"></i></a>
-                        <a href="<?php echo url("registro/eliminar/" . $usuario->usu_id); ?>" class="btn btn-danger btn-xs"><i class="fa fa-trash-o "></i></a>
+                          <a title="Ver" href="<?php echo url("home/subCat/index/" . $subcategoria->subcat_id); ?>" class="btn btn-default btn-xs"><i class="fa fa-eye"></i></a>
+                          <a title="Editar" href="<?php echo url("admin/subcategoria/editar/" . $subcategoria->subcat_id); ?>" class="btn btn-primary btn-xs"><i class="fa fa-pencil"></i></a>
+                        @if($subcategoria->est_nombre === 'Habilitado' )
+                                                    <a title="Inhabilitar" class="btn btn-danger btn-xs" href="{{url('admin/subcategoria/inhabilitar/' . $subcategoria->subcat_id)}}"><i class="fa fa-remove"></i></a>
+                                                @else
+                                                <a title="Habilitar" class="btn btn-success btn-xs" href="{{url('admin/subcategoria/habilitar/' . $subcategoria->subcat_id)}}"><i class="fa fa-check"></i></a>
+                                                @endif
                       </td>
                     </tr>
+                    
+                    
 <!--                    <tr>
                       <td>
-                        <a href="basic_table.html#">
-                          Dashgum co
-                        </a>
+                        <a href="basic_table.html#">Company Ltd</a>
                       </td>
-                      <td><span class="label label-warning label-mini">Due</span></td>
+
+                      <td>
+                        <a href="basic_table.html#">historia</a>
+                      </td>
+
+                      <td>
+                        <span class="label label-info label-mini">Due</span>
+                      </td>
+
                       <td>
                         <button class="btn btn-success btn-xs"><i class="fa fa-check"></i></button>
                         <button class="btn btn-primary btn-xs"><i class="fa fa-pencil"></i></button>
                         <button class="btn btn-danger btn-xs"><i class="fa fa-trash-o "></i></button>
                       </td>
                     </tr>
+
                     <tr>
                       <td>
-                        <a href="basic_table.html#">
-                          Another Co
-                        </a>
+                        <a href="basic_table.html#">Dashgum co</a>
                       </td>
-                      <td><span class="label label-success label-mini">Paid</span></td>
+
+                      <td>
+                        <a href="basic_table.html#">historia</a>
+                      </td>
+
+                      <td>
+                        <span class="label label-warning label-mini">Due</span>
+                      </td>
+                      <td>
+                        <button class="btn btn-success btn-xs"><i class="fa fa-check"></i></button>
+                        <button class="btn btn-primary btn-xs"><i class="fa fa-pencil"></i></button>
+                        <button class="btn btn-danger btn-xs"><i class="fa fa-trash-o "></i></button>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>
+                        <a href="basic_table.html#">Another Co</a>
+                      </td>
+
+                      <td>
+                        <a href="basic_table.html#">historia</a>
+                      </td>
+
+                      <td>
+                        <span class="label label-success label-mini">Paid</span>
+                      </td>
+
                       <td>
                         <button class="btn btn-success btn-xs"><i class="fa fa-check"></i></button>
                         <button class="btn btn-primary btn-xs"><i class="fa fa-pencil"></i></button>
                         <button class="btn btn-danger btn-xs"><i class="fa fa-trash-o "></i></button>
                       </td>
                     </tr>-->
-                    <?php } ?>
+                     <?php } ?>
                   </tbody>
                 </table>
               </div><!-- /content-panel -->
@@ -166,7 +207,19 @@
 </footer>
 <!--PIE DE PAGINA FIN-->
 
+<script>
+    $(document).ready(function () {
+        console.log("document loaded");
+        $('.usuario').addClass('active');
 
+    });
+
+    $(window).load(function () {
+        console.log("window loaded");
+        $('.usuario').addClass('active');
+    });
+
+</script>
 @include('Templates.Backend.footPanel')
 
 

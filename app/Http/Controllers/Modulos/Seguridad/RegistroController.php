@@ -188,6 +188,22 @@ class RegistroController extends Controller {
     }
 //    return view("Modulos.Panel.configurar.listar");
   }
+  
+  function getFiltro(Request $request) {
+        if (Session::has("usuarioAdmin")) {
+            return view("Modulos.Panel.configurar.filtro");
+        } else {
+            return redirect(url("home/index"));
+        }
+    }
+    
+    function postFiltro(Request $request) {
+        $buscar = $_POST['buscar'];
+        $usuarios = DB::select("SELECT * FROM bdp_usuario WHERE usu_usuario LIKE '%$buscar%'");
+      $dato_usuario = DB::select("SELECT * FROM bdp_dato_usuario");
+
+      return view("Modulos.Panel.configurar.listar", compact("usuarios", "dato_usuario"));
+        }
 
   function getEditar($id) {
 
