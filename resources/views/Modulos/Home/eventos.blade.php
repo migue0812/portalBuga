@@ -74,20 +74,20 @@
                   <a href="<?php echo url("itinerario/eventos/" . $evento->eve_id) ?>" class="btn btn-primary"><b title="Itinerario" class="icon-direction fa-fw"></b></a>
                 <?php endif ?>
               </div>
-
+          </div>
 
             <?php endforeach ?>
          
         
-
-            <div class="col-lg-12">
-              <div class="visitNav">
-                <div>
-                  <h2 class="text-center">Mas Eventos</h2>
-                </div>
-              </div>
-              <hr class="tagline-divider-cont">
+  <div class="col-lg-12">
+          <div class="visitNav">
+            <div>
+              <h2 class="text-center">Mas Eventos</h2>
             </div>
+          </div>
+          <hr class="tagline-divider-cont">
+        </div>
+
             <div class="portafolio">
               <?php foreach ($eventos2 as $evento2): ?>
                 <div class="col-sm-4 portfolio-item">

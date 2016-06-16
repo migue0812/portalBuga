@@ -51,6 +51,7 @@
                     <p  class="col-md-10" style="margin-top: 30px;  text-align: justify">
                         La Fundación Hospital San José de Buga es una institución dedicada a la prestación de servicios de salud de carácter Fundacional sin ánimo de lucro y de origen privado, de beneficio social en el sector de la salud, reglamentada por el Sistema General de Seguridad Social Integral en Salud de Colombia y sus propios Estatutos. Su sede de operación se encuentra ubicada en el centro departamento del Valle del Cauca en el norte de la ciudad de Guadalajara de Buga, en la carrera 8 N° 17-52.</p>
                 </div>
+            </div>
                 <div class="col-lg-12">
                     <div class="visitNav">
                         <div>
@@ -60,7 +61,7 @@
                     <hr class="tagline-divider-cont">
                 </div>
 
-            </div>
+            
 
                 <div class="container portImg">
                     <div class="col-md-7 portfolio-item">
