@@ -63,7 +63,8 @@
                         posee un patrimonio arquitectónico e histórico que cuenta con diferentes bienes de interés cultural,
                         entre estos, La Basílica del Señor de los Milagros la cual recibe y acoge a visitantes de todo el mundo.
                     </p>
-                    <button class="text-center">Ver mas</button>
+                    <a href="<?php echo url("home/historia") ?>" class="info">
+                        <button class="text-center">Ver mas</button></a>
                 </div>
             </div>
             <div class="col-lg-12">
