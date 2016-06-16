@@ -94,15 +94,15 @@
 
         La palabra Basílica significa “Casa donde vive el Rey”. La iglesia católica le concede el título de “Basílicas” a unos cuantos templos muy celebres de Roma. Ahora en cada país el Santo Padre le concede dicho título a los templos más afanados y preferidos de los fieles.
 
-        Desde 1875 se promovió la construcción de la Basílica del Señor de los Milagros. Los primeros en dirigirla fueron el superior de la comunidad Redentorista, padre Alfonso París y tres hermanos de esa congregación. Con la bendicion de la primera Piedra el 7 de Agosto de 1892 se inicio la construcción, se requirieron 126 mil arrobas de cal y 4.000.000 de ladrillos. El área total del templo es de 2.088 metros cuadrados. La construcción del templo duro quince años, se hizo en aquellos tiempos difíciles donde nos golpeaban las guerras, por ejemplo, la guerra de los Mil Días. El costo total de laBasílica en 1907 fue de 10 millones de pesos.
+        Desde 1875 se promovió la construcción de la Basílica del Señor de los Milagros. Los primeros en dirigirla fueron el superior de la comunidad Redentorista, padre Alfonso París y tres hermanos de esa congregación. Con la bendición de la primera Piedra el 7 de Agosto de 1892 se inició la construcción, se requirieron 126 mil arrobas de cal y 4.000.000 de ladrillos. El área total del templo es de 2.088 metros cuadrados. La construcción del templo duro quince años, se hizo en aquellos tiempos difíciles donde nos golpeaban las guerras, por ejemplo, la guerra de los Mil Días. El costo total de la Basílica en 1907 fue de 10 millones de pesos.
 
-        El Templo mide 80 metros de largo y 33 de altura. Entre las dos hermosas torres hay una estatua del Santísimo Redentorde 2 ½ metros de altura en hierro fundido. El reloj de la torre es de fabricación francesa y da las horas desde el 18 de Marzo de 1909.
+        El Templo mide 80 metros de largo y 33 de altura. Entre las dos hermosas torres hay una estatua del Santísimo Redentor de 2 ½ metros de altura en hierro fundido. El reloj de la torre es de fabricación francesa y da las horas desde el 18 de Marzo de 1909.
 
       </p>
       <hr>
 
 
-      <h2 style="text-align: center; margin-top: 40px;">Parque jose maria cabal</h2>
+      <h2 style="text-align: center; margin-top: 40px;">Parque José María cabal</h2>
       <hr>
       <header id="myCarousel" class="carou carousel slide">
         <!-- Indicators -->
@@ -146,7 +146,7 @@
 
         La Plaza o Parque principal de la ciudad de Guadalajara de Buga, se encuentra localizada entre la Calle 6a. (Calle de Bolívar) y 7a. (Calle de Santander) y la Carrera 14 (Calle 20 de Julio o Calle del 7 de Agosto o de la Iglesia Mayor).
 
-        La Plaza Jose María Cabal se inaguró oficialmente el 6 de agosto de 1924. Esta antigua Plaza Mayor, fue diseñada y construida por Don Enrique Figueroa Fernández, a partir de la cual se desarrolló la ciudad de Guadalajara de Buga desde su traslado a este sitio en 1576; su diseño estilo Parque Europeo le da vida a su edificación, en ella se encuentra la estatua en bronce del prócer bugueño General José María Cabal Barona, uno de los mártires de la Independencia y miembro de la Expedición Botánica, obra que realizó el Escultor Fernando Rubinni.
+        La Plaza José María Cabal se inauguró oficialmente el 6 de agosto de 1924. Esta antigua Plaza Mayor, fue diseñada y construida por Don Enrique Figueroa Fernández, a partir de la cual se desarrolló la ciudad de Guadalajara de Buga desde su traslado a este sitio en 1576; su diseño estilo Parque Europeo le da vida a su edificación, en ella se encuentra la estatua en bronce del prócer bugueño General José María Cabal Barona, uno de los mártires de la Independencia y miembro de la Expedición Botánica, obra que realizó el Escultor Fernando Rubinni.
 
       <hr>
       </p>
@@ -205,7 +205,7 @@
       </p>
 
 
-      <h2 style="text-align: center; margin-top: 40px;">Puente de la libertad</h2>
+      <h2 style="text-align: center; margin-top: 40px;">Puente de la Libertad</h2>
       <hr>
       <header id="myCarousel" class="carou carousel slide">
         <!-- Indicators -->
