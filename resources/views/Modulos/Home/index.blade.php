@@ -17,7 +17,7 @@
                             <!-- Set the first background image using inline CSS below. -->
                             <div class="fill" style="background-image:url('../img/Basilica.jpg');"></div>
                             <div class="carousel-caption">
-                                <p class="" style="color: #FFF; font: 180% sans-serif;">Basilica Del Señor De Los Milagros </p>
+                                <p class="" style="color: #FFF; font: 180% sans-serif;">Basílica Del Señor De Los Milagros </p>
                                 <p>La palabra Basílica significa “Casa donde vive el Rey”. La iglesia católica le concede el título de “Basílicas” a unos cuantos templos muy celebres de Roma. </p>
                             </div>
                         </div>
@@ -25,7 +25,7 @@
                             <!-- Set the second background image using inline CSS below. -->
                             <div class="fill" style="background-image:url('../img/bugio.jpg');"></div>
                             <div class="carousel-caption">
-                                <p class=""style="color: #FFF; font: 180% sans-serif">Estacion Del Ferrocarril</p>
+                                <p class=""style="color: #FFF; font: 180% sans-serif">Estación Del Ferrocarril</p>
                                 <p>La Estación del Ferrocarril, espectacular conjunto arquitectónico, declarado Bien de Interés Cultural (BIC) de la Nación por el Ministerio de Cultura. Posee una arquitectura colonial, buscando uniformidad en cada uno de los elementos y detalles que la componen.</p>
                             </div>
                         </div>
@@ -55,7 +55,7 @@
                 <hr class="tagline-divider">
                 <div>
 
-                    <div class="tituloWelcome" style="">Una de las mejores ciudades turisticas!</div>
+                    <div class="tituloWelcome" style="">Una de las mejores ciudades Turísticas!</div>
 
                     <p>En el Centro del Valle del Cauca, específicamente en la parte media de la Cordillera Central,
                         fue fundado en 1573, el municipio de Guadalajara de Buga.
@@ -101,17 +101,15 @@
                 <!-- Introduction Row -->
                 <div class="row">
                     <div class="col-lg-11 col-sm-11 text-center" style="text-align: justify;">
-                        <h3 class="visit">Visitanos
-                            <small>Los Mejores Lugares Para Ti !</small>
+                        <h3 class="visit">Visítanos
+                            <small>Los Mejores Lugares Para Ti!</small>
                         </h3>
-                        <p>Rodeada por diferentes atractivos turísticos,dentro de ellos el más importante de esta ciudad 
-                            La Basílica del Señor de los Milagros,
-                            la cual a bendecido a millones de turistas nacionales y extranjeros.
-                            Ubicada en el centro de la ciudad de Buga.
-                            Por su trayectoria histórica y milagrosa la Basílica es el lugar mas visitado en el Valle del Cauca 
-                            y uno de los centros religiosos por excelencia de Colombia.
-                            Ven y disfruta de la mejor Gastronomía Vallecaucana, Restaurantes, Fincas Campestres,
-                            Hoteles, Balnearios y demás Destinos Turísticos para disfrutar en Familia.
+                        <p>Rodeada por diferentes atractivos turísticos, dentro de ellos el más importante de esta ciudad
+                            La Basílica del Señor de los Milagros, la cual ha bendecido a millones de turistas nacionales
+                            y extranjeros. Ubicada en el centro de la ciudad de Buga. Por su trayectoria histórica y milagrosa
+                            la Basílica es el lugar más visitado en el Valle del Cauca y uno de los centros religiosos por excelencia de Colombia.
+                            Ven y disfruta de la mejor Gastronomía Vallecaucana, Restaurantes, Fincas Campestres, Hoteles, Balnearios
+                            y demás Destinos Turísticos para disfrutar en Familia.
                         </p>
                     </div>
                 </div>
@@ -125,8 +123,8 @@
                             <diV class="socialicons">
                                 <img style="width: 100px; height: 90px" class="queHacerIcon img-circle img-responsive img-center" src="<?php echo asset("img/dormir.png") ?>" alt="Descansar?"></a>
                             </div>
-                            <h3>Donde Dormir?
-                                <small>La mejor guia Hotelera</small>
+                            <h3>Dónde Dormir?
+                                <small>La mejor guía Hotelera</small>
                             </h3>
                             <p>Dejate consentir</p>
                     </div>
@@ -135,7 +133,7 @@
                             <div class="socialicons">
                                 <img style="width: 100px; height: 100px" class="queHacerIcon img-circle img-responsive img-center" src="<?php echo asset("img/comer.png") ?>" alt="Comer?"></a>
                             </div>
-                            <h3>Donde Comer?
+                            <h3>Dónde Comer?
                                 <small>Los mejores Restaurantes</small>
                             </h3>
                             <p>Deleita tu paladar</p>
@@ -146,9 +144,9 @@
                                 <img style="width: 110px; height: 110px" class="queHacerIcon img-circle img-responsive img-center" src="<?php echo asset("img/diversion.png") ?>" alt=""></a>
                             </div>
                             <h3>Emergencias?
-                                <small>Clinicas las 24 horas</small>
+                                <small>Clínicas las 24 horas</small>
                             </h3>
-                            <p>Las mejores clinicas de Buga</p>
+                            <p>La mejor atención en salud</p>
                     </div>
                 </div>
             </div>
