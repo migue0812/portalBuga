@@ -16,15 +16,15 @@
         Traslado definitivo en 1573 al sitio que hoy ocupa, ordenado por el gobernador Jerónimo de Silva y ejecutado por Beltrán de Unzueta recibiendo el nombre de Guadalajara de Buga.
         El primer Alcalde fue el capitán Melchor Velásquez de Valdenebro, y primer Alférez Real el capitán Diego Lazo de la Vega, quien también se desempeñó como alcalde. 
         En 1810 fue una de las ciudades confederadas del Valle del Cauca; 
-        sus hijos apoyaron la causa libertadora como ocurrió con los hermanos Cabal, y algunos terminaron su vida como héroes de la patría, tal el caso del general José María Cabal.
+        sus hijos apoyaron la causa libertadora como ocurrió con los hermanos Cabal, y algunos terminaron su vida como héroes de la patria, tal el caso del general José María Cabal.
         El Libertador Simón Bolívar visitó a Buga en dos ocasiones, quedando señaladas con sendas placas conmemorativas: 11 de enero de 1822 y entre el 26 y el 27 de diciembre de 1829.
         Arriba
       </p>
       <p>
 
-        Está situado el Municipio en la Zona Centro del Departamento del Valle del Cauca, en la parte donde se hace más angosto el valle geográfico, gozando no solamente de la belleza del paisaje, de su variada y hermosa topografía sino también de la fertilidad y productividad de sus tierras, contituyéndose en una verdadera despensa agrícola y ganadera.
+        Está situado el Municipio en la Zona Centro del Departamento del Valle del Cauca, en la parte donde se hace más angosto el valle geográfico, gozando no solamente de la belleza del paisaje, de su variada y hermosa topografía sino también de la fertilidad y productividad de sus tierras, constituyéndose en una verdadera despensa agrícola y ganadera.
         La ciudad está asentada en la estribaciones de la Cordillera Central, sobre el margen derecho del Río Guadalajara que en su recorrido atraviesa la ciudad de oriente a occidente; se encuentra a 74Km de Santiago de Cali, la capital del departamento y a 126Km del Puerto de Buenaventura, el más importante del occidente colombiano.
-        Su ubicación geográfica es privilegiada y estratégica, pues la coloca en un verdadero cruce de caminos, en el lugar de convergencia de las prinicipales vías terrestres que cruzan el occidente del país.
+        Su ubicación geográfica es privilegiada y estratégica, pues la coloca en un verdadero cruce de caminos, en el lugar de convergencia de las principales vías terrestres que cruzan el occidente del país.
         Todo esto le otorga una posición destacada entre las demás ciudades del departamento.
       </p>
 
@@ -37,8 +37,8 @@
       </p>
       <p>
         Al Sur, con el perímetro rural de Guacarí, por el Río Sondo desde su nacimiento en la Cordillera Central hasta su desembocadura en el Río Cauca. 
-        Al Oriente , con el departamento del Tolima, por la sierra alta de la Cordillera Central desde el nacimeinto del Río Tuluá hasta un punto frente al nacimieto del Río Sonso.
-        Al Sudesde, con el Municipio de Ginebra. Al Occidente , con el perimétro rural del Municipio de Yotoco, por el Río Cauca desde la desembocadura del Río Sonso hasta la Quebrada de Presidente.
+        Al Oriente, con el departamento del Tolima, por la sierra alta de la Cordillera Central desde el nacimiento del Río Tuluá hasta un punto frente al nacimiento del Río Sonso.
+        Al Sudesde, con el Municipio de Ginebra. Al Occidente, con el perimétro rural del Municipio de Yotoco, por el Río Cauca desde la desembocadura del Río Sonso hasta la Quebrada de Presidente.
       </p>
       <p>
         Por el Sur Oriente con el Municipio de Cerrito.
