@@ -13,7 +13,7 @@
                 </div>
                 <hr class="tagline-divider-cont">
                 <?php if (Session::has("Resultados")): ?>
-                    <?php echo "<h3><center>".Session::get("Resultados")."</center></h3>" ?>
+                    <?php echo "<h3><center>".Session::pull("Resultados")."</center></h3>" ?>
                 <?php endif ?>
             </div>
             <!-- /.row -->
@@ -48,7 +48,7 @@
                     </div>
                     <hr class="tagline-divider-cont">
                     <?php if (Session::has("Eventos")): ?>
-                        <?php echo "<h3><center>".Session::get("Eventos")."</center></h3>" ?>
+                        <?php echo "<h3><center>".Session::pull("Eventos")."</center></h3>" ?>
                     <?php endif ?>
                 </div>
 
@@ -62,7 +62,7 @@
                             <?php echo ((strlen($evento->eve_nombre) > 15) ? substr(($evento->eve_nombre), 0, 15) . " ..." : ($evento->eve_nombre)) ?>
                         </h3>
                         <div class="contenedor-botones">
-                            <a href="<?php echo url("home/evento/det/" . $evento->eve_id) ?>" class="btn btn-primary">Ver Mas</a>
+                            <a href="<?php echo url("home/eventos/det/" . $evento->eve_id) ?>" class="btn btn-primary">Ver Mas</a>
                         </div>
                     </div>
                 <?php endforeach ?>

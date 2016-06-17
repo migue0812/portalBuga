@@ -208,6 +208,15 @@
                                 </div>
                             </div> 
                         </div>
+                        
+                        <div class="row col-md-12">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label for="eve_etiqueta">Palabras Claves</label>
+                                    <textarea rows="4" class="form-control" id="eve_etiqueta" name="eve_etiqueta" placeholder="Escriba palabras claves del evento separadas por  , ">{{$eventos->eve_etiqueta}}</textarea>
+                                </div>
+                            </div>
+                        </div>
 
                         <div class="row col-md-12">
                             <div class="col-md-12">

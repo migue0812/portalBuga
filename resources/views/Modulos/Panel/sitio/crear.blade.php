@@ -166,6 +166,15 @@ MENU DE CONTENIDO
                             </div>
                         </div>
                         
+                         <div class="row col-md-12">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label for="sit_etiqueta">Palabras Claves</label>
+                                    <textarea rows="4" class="form-control" id="sit_etiqueta" name="sit_etiqueta" placeholder="Escriba palabras claves del sitio"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        
 
                         <div class="row col-md-12">
                             <div class="col-md-12">

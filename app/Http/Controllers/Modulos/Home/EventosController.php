@@ -20,9 +20,9 @@ use App\Http\Controllers\Controller;
 class EventosController extends Controller {
 
     function getIndex() {
-         $eventos = DB::select("SELECT * FROM bdp_evento, bdp_imagen WHERE "
-                        . "bdp_imagen.eve_id = bdp_evento.eve_id ORDER BY RAND() LIMIT 2");
-         $eventos2=DB::select("SELECT * FROM bdp_evento, bdp_imagen WHERE "
+         $eventos = DB::select("SELECT * FROM bdp_evento, bdp_imagen WHERE bdp_evento.est_id ='1' and "
+                        . "bdp_imagen.eve_id = bdp_evento.eve_id ORDER BY RAND() LIMIT 2 ");
+         $eventos2=DB::select("SELECT * FROM bdp_evento, bdp_imagen WHERE  bdp_evento.est_id ='1' and  "
                         . "bdp_imagen.eve_id = bdp_evento.eve_id");
 
         return view('Modulos.Home.eventos', compact('eventos'),  compact('eventos2'));

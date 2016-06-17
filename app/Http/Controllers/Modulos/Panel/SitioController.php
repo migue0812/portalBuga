@@ -32,7 +32,7 @@ class SitioController extends Controller {
             return redirect(url("home/index"));
         }
     }
-    
+
     function getFiltro(Request $request) {
         if (Session::has("usuarioAdmin")) {
             return view("Modulos.Panel.sitio.filtro");
@@ -40,15 +40,15 @@ class SitioController extends Controller {
             return redirect(url("home/index"));
         }
     }
-    
+
     function postFiltro(Request $request) {
         $buscar = $_POST['buscar'];
         $sitios = DB::select("SELECT * FROM bdp_sitio, bdp_estado, bdp_categoria, bdp_subcategoria"
-                            . " WHERE bdp_sitio.est_id=bdp_estado.est_id AND "
-                            . "bdp_sitio.cat_id=bdp_categoria.cat_id AND "
-                            . "bdp_sitio.subcat_id=bdp_subcategoria.subcat_id AND sit_nombre LIKE '%$buscar%'");
-            return view("Modulos.Panel.sitio.listar", compact("sitios"));
-        }
+                        . " WHERE bdp_sitio.est_id=bdp_estado.est_id AND "
+                        . "bdp_sitio.cat_id=bdp_categoria.cat_id AND "
+                        . "bdp_sitio.subcat_id=bdp_subcategoria.subcat_id AND sit_nombre LIKE '%$buscar%'");
+        return view("Modulos.Panel.sitio.listar", compact("sitios"));
+    }
 
     function getCrear(Request $request) {
         if (Session::has("usuarioAdmin")) {
@@ -67,6 +67,7 @@ class SitioController extends Controller {
         $sitSubCategoria = $_POST["subcategoria"];
         $sitDireccion = $_POST["direccion"];
         $sitTelefono = $_POST["telefono"];
+        $sit_etiqueta = $_POST["sit_etiqueta"];
         $sitDescripcion = $_POST["descripcion"];
 
         $sitioImg1 = $_FILES["imagen1"]["name"];
@@ -93,6 +94,7 @@ class SitioController extends Controller {
         $reglas = array(
             "nombre" => "required | max:40 | unique:bdp_sitio,sit_nombre",
             "direccion" => "required | max:40",
+            "sit_etiqueta" => "required | min:10",
             "descripcion" => "required | min:30",
             "imagen" => "image"
         );
@@ -103,7 +105,8 @@ class SitioController extends Controller {
             "nombre.unique" => "El nombre " . "'" . $sitNombre . "'" . " ya existe en la base de datos",
             "direccion.required" => "El campo 'dirección' debe ser obligarorio",
             "direccion.max" => "El campo 'dirección' debe tener máximo 40 caracteres",
-            
+            "sit_etiqueta.required" => "El campo palabras claves es obligatorio",
+            "sit_etiqueta.min" => "El campo palabras clave debe tener minimo 10 caracteres",
             "descripcion.required" => "El campo 'descripción' debe ser obligarorio",
             "descripcion.min" => "El campo 'descripción' debe tener minímo 30 caracteres",
             "imagen.image" => "El campo 'imagen' debe contener una imagen",
@@ -118,9 +121,9 @@ class SitioController extends Controller {
 
         DB::insert("INSERT INTO bdp_sitio (sit_nombre, sit_descripcion, "
                 . "cat_id, subcat_id, sit_direccion, sit_telefono, sit_latitud, sit_longitud,"
-                . "est_id, usu_id) VALUES (?,?,?,?,?,?,?,?,?,?)", array($sitNombre,
+                . "est_id, usu_id,sit_etiqueta) VALUES (?,?,?,?,?,?,?,?,?,?,?)", array($sitNombre,
             $sitDescripcion, $sitCategoria, $sitSubCategoria, $sitDireccion,
-            $sitTelefono, 101010101010, 1100110011, 1, $idUsuario));
+            $sitTelefono, 101010101010, 1100110011, 1, $idUsuario,$sit_etiqueta));
 
         $id = DB::select('SELECT IFNULL(MAX(sit_id),0) AS id FROM bdp_sitio ORDER BY id DESC LIMIT 1');
         $id = $id[0]->id;
@@ -168,16 +171,17 @@ class SitioController extends Controller {
         $sitSubcategoria = $_POST["subcategoria"];
         $sitDireccion = $_POST["direccion"];
         $sitTelefono = $_POST["telefono"];
+        $sit_etiqueta=$_POST["sit_etiqueta"];
         $sitDescripcion = $_POST["descripcion"];
         $sitId = $_POST["id"];
-        if (!empty($_POST["img1"])){
-         $imgId1 = $_POST["img1"];   
+        if (!empty($_POST["img1"])) {
+            $imgId1 = $_POST["img1"];
         }
-        if (!empty($_POST["img2"])){
-         $imgId2 = $_POST["img2"];   
+        if (!empty($_POST["img2"])) {
+            $imgId2 = $_POST["img2"];
         }
-        if (!empty($_POST["img3"])){
-         $imgId3 = $_POST["img3"];   
+        if (!empty($_POST["img3"])) {
+            $imgId3 = $_POST["img3"];
         }
 
         $sitioImg1 = $_FILES["imagen1"]["name"];
@@ -204,6 +208,7 @@ class SitioController extends Controller {
         $reglas = array(
             "nombre" => "required | max:40",
             "direccion" => "required | max:40",
+            "sit_etiqueta" => "required | min:10",
             "descripcion" => "required | min:30",
             "imagen" => "image"
         );
@@ -213,6 +218,8 @@ class SitioController extends Controller {
             "nombre.max" => "El campo 'nombre' debe tener máximo 40 caracteres",
             "direccion.required" => "El campo 'dirección' debe ser obligarorio",
             "direccion.max" => "El campo 'dirección' debe tener máximo 40 caracteres",
+             "sit_etiqueta.required" => "El campo palabras claves es obligatorio",
+            "sit_etiqueta.min" => "El campo palabras clave debe tener minimo 10 caracteres",
             "descripcion.required" => "El campo 'descripción' debe ser obligarorio",
             "descripcion.min" => "El campo 'descripción' debe tener minímo 30 caracteres",
             "imagen.image" => "El campo 'imagen' debe contener una imagen",
@@ -226,44 +233,37 @@ class SitioController extends Controller {
         }
 
         DB::update("UPDATE bdp_sitio SET sit_nombre = ?, cat_id = ?, subcat_id = ?, sit_direccion = ?, "
-                . "sit_telefono = ?, sit_descripcion = ?, sit_updated_at = CURRENT_TIMESTAMP WHERE sit_id = ?", array($sitNombre, $sitCategoria, $sitSubcategoria, $sitDireccion,
-            $sitTelefono, $sitDescripcion, $sitId));
+                . "sit_telefono = ?, sit_descripcion = ?, sit_updated_at = CURRENT_TIMESTAMP WHERE sit_id = ? , sit_etiqueta=?", array($sitNombre, $sitCategoria, $sitSubcategoria, $sitDireccion,
+            $sitTelefono, $sitDescripcion, $sitId,$sit_etiqueta));
 
         $img = DB::select("SELECT img_ruta FROM bdp_imagen WHERE sit_id = ?", array($sitId));
 
         if ($sitioRuta1 !== "" && $sitioDest1 !== "") {
-            if(!empty($img[0]->img_ruta)){
-            $img1 = $img[0]->img_ruta;
-            unlink($img1);
-            DB::update("UPDATE bdp_imagen SET img_ruta = ? WHERE img_id = ?", 
-                    array($sitioDest1, $imgId1));
+            if (!empty($img[0]->img_ruta)) {
+                $img1 = $img[0]->img_ruta;
+                unlink($img1);
+                DB::update("UPDATE bdp_imagen SET img_ruta = ? WHERE img_id = ?", array($sitioDest1, $imgId1));
             } else {
-                DB::insert("INSERT INTO bdp_imagen (sit_id, img_ruta) VALUES (?,?)", 
-                        array($sitId, $sitioDest1));
+                DB::insert("INSERT INTO bdp_imagen (sit_id, img_ruta) VALUES (?,?)", array($sitId, $sitioDest1));
             }
         }
         if ($sitioRuta2 !== "" && $sitioDest2 !== "") {
-            if(!empty($img[1]->img_ruta)){
-               $img2 = $img[1]->img_ruta;
-            unlink($img2);
-            DB::update("UPDATE bdp_imagen SET img_ruta = ? WHERE img_id = ?", 
-                    array($sitioDest2, $imgId2)); 
-            }  else {
-                DB::insert("INSERT INTO bdp_imagen (sit_id, img_ruta) VALUES (?,?)", 
-                        array($sitId, $sitioDest2));
+            if (!empty($img[1]->img_ruta)) {
+                $img2 = $img[1]->img_ruta;
+                unlink($img2);
+                DB::update("UPDATE bdp_imagen SET img_ruta = ? WHERE img_id = ?", array($sitioDest2, $imgId2));
+            } else {
+                DB::insert("INSERT INTO bdp_imagen (sit_id, img_ruta) VALUES (?,?)", array($sitId, $sitioDest2));
             }
-            
         }
         if ($sitioRuta3 !== "" && $sitioDest3 !== "") {
-             if(!empty($img[2]->img_ruta)){
-            $img3 = $img[2]->img_ruta;
-            unlink($img3);
-            DB::update("UPDATE bdp_imagen SET img_ruta = ? WHERE img_id = ?", 
-                    array($sitioDest3, $imgId3));
-             } else {
-                  DB::insert("INSERT INTO bdp_imagen (sit_id, img_ruta) VALUES (?,?)", 
-                        array($sitId, $sitioDest3));
-             }
+            if (!empty($img[2]->img_ruta)) {
+                $img3 = $img[2]->img_ruta;
+                unlink($img3);
+                DB::update("UPDATE bdp_imagen SET img_ruta = ? WHERE img_id = ?", array($sitioDest3, $imgId3));
+            } else {
+                DB::insert("INSERT INTO bdp_imagen (sit_id, img_ruta) VALUES (?,?)", array($sitId, $sitioDest3));
+            }
         }
 
         Session::flash("editar", "Sitio editado exitosamente");
@@ -305,11 +305,11 @@ class SitioController extends Controller {
             return redirect(url("home/index"));
         }
     }
-    
+
     function getSubcategoria() {
         $cat_id = Input::get("cat_id");
         $subcategorias = DB::select("SELECT subcat_id, subcat_nombre FROM "
-                . "bdp_subcategoria WHERE cat_id = ?", array($cat_id));
+                        . "bdp_subcategoria WHERE cat_id = ?", array($cat_id));
         return Response::json($subcategorias);
     }
 
