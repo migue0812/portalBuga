@@ -15,7 +15,7 @@
       <hr>
 
       <!-- Projects Row -->
-
+<div class="row">
       <div class="col-md-6 portfolio-item">
         <a href="se devuleve al index">
           <img class="img-responsive" src="<?php echo asset("$eveDetalle->img_ruta") ?>" alt="">
@@ -56,7 +56,7 @@
         <p style="margin-top:20px; "class="text-justify"><?php echo("$eveDetalle->eve_descripcion") ?></p>
       </div>
 
-
+</div>
       <div id="fb-root"></div>
       <script>(function (d, s, id) {
           var js, fjs = d.getElementsByTagName(s)[0];
