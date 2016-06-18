@@ -78,7 +78,7 @@
 
             <?php endforeach ?>
          
-        
+       <div class="row">   
   <div class="col-lg-12">
           <div class="visitNav">
             <div>
@@ -107,15 +107,7 @@
                 </div>
               <?php endforeach; ?>
             </div>
-
-
-
-     
-
-        <script>           $('.carousel').carousel({
-            interval: 3000 //changes the speed
-          });
-        </script>
+       </div>
 
 
         @include('Templates.Frontend.footer')
