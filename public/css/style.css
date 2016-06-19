@@ -950,7 +950,7 @@ textarea {
     }
     .imgSitios{
         height: 460px;
-        width: 313px;
+        width: 270px;
     }
     .img-Sitios{
         height: 300px;
@@ -969,7 +969,7 @@ textarea {
     }
     .imgSitios{
         height: 460px;
-        width: 313px
+        width: 272px;
     }
     .img-Sitios{
         height: 300px;
@@ -1065,6 +1065,20 @@ textarea {
     
 }
 
+@media (max-width:320px){
+    .imgModals{
+        position: relative;
+    width: 226px !important;
+    height: 225px !important;
+    margin-left: -32px;
+    border: 1px solid #A2A793;
+    border-radius: 10px;
+    padding: 5px;
+    }
+    #facebook{
+        height: 20px;
+    }
+}
 
 @media (min-width:630px) and (max-width:636px){
     .boxSitio{
@@ -1122,8 +1136,8 @@ textarea {
 
     .imgModals{
     position: relative;
-    width: 253px !important;
-    height: 283px !important;
+    width: 174px !important;
+    height: 220px !important;
     margin-left: -32px;
     border: 1px solid #A2A793;
     border-radius: 10px;
@@ -1131,6 +1145,21 @@ textarea {
     
 }
 }
+
+@media  (min-width:420px) and (max-width:629px){
+    .imgSitios{
+        position: relative;
+        height: 417px;
+    }
+}
+
+@media (max-width:768px){
+    .svg{
+        width: 20px;
+    }
+}
+
+
 /* fin raiting position stars e imgs sitios todos (SitioDetalle)*/
 
 .carousel-caption{
