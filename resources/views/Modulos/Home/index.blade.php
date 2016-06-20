@@ -96,11 +96,10 @@
       </div>
       <div class="line"></div>
       <!-- Page Content -->
-      <div class="container">
+      <div>
 
-        <!-- Introduction Row -->
         <div class="row">
-          <div class="col-lg-11 col-sm-11 text-center" style="text-align: justify;">
+          <div class="col-lg-12 col-sm-12 text-center" style="text-align: justify;">
             <h3 class="visit">Visítanos
               <small>Los Mejores Lugares Para Ti!</small>
             </h3>
@@ -128,6 +127,7 @@
               </h3>
               <p>Dejate consentir</p>
           </div>
+          
           <div class="col-lg-4 col-sm-4 text-center">
             <a href="<?php echo url("home/categorias/det/8") ?>" class="info">
               <div class="socialicons">
@@ -138,6 +138,7 @@
               </h3>
               <p>Deleita tu paladar</p>
           </div>
+          
           <div class="col-lg-4 col-sm-4 text-center">
             <a href="<?php echo url("home/hospitales") ?>" class="info">
               <div class="socialicons">
@@ -148,6 +149,7 @@
               </h3>
               <p>La mejor atención en salud</p>
           </div>
+          
         </div>
       </div>
       <div class="col-lg-12 desarrollo">
@@ -160,7 +162,7 @@
       </div>
 
       <!-- Page Content -->
-      <div class="container text-center actividades">
+      <div class="text-center actividades">
         <div class="row">
           <div class="col-lg-6 col-sm-6">
             <a href="https://www.facebook.com/BienestarCDTI/?fref=ts" title="CDTI SENA" target="_blank" class="info">
@@ -188,7 +190,7 @@
       </div>
 
       <!-- Page Content -->
-      <div class="container text-center actividades">
+      <div class="text-center actividades">
         <div class="row">
           <div class="col-lg-4 col-sm-4">
             <a href="<?php echo url("home/agencias") ?>" class="info">

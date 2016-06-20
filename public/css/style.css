@@ -113,7 +113,7 @@ hr {
 
 .box {
     margin-bottom: 20px;
-    padding: 30px 15px;
+    padding: 30px 15px 30px 15px ;
     background: #fff;
     background: rgba(255,255,255,0.9);
     -webkit-box-shadow: 0px 4px 5px -1px rgba(0,0,0,0.59);
@@ -1262,7 +1262,8 @@ textarea {
     padding: 5px;
     
 }
- 
+
+/*efecto boton ver mas index*/ 
 button a.decoration-none{
   text-decoration: none ;
   color: black;
@@ -1272,3 +1273,6 @@ button a.decoration-none{
   text-decoration: none ;
   color: white;
  }
+ /*fin efecto boton ver mas index*/
+ 
+ 
