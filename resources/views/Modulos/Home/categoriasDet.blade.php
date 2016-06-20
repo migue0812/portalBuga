@@ -73,7 +73,7 @@
         fjs.parentNode.insertBefore(js, fjs);
       }(document, 'script', 'facebook-jssdk'));</script>
 
-    <div class="fb-comments" data-href="https://www.facebook.com/groups/860979787324031/?fref=ts" data-numposts="5"></div>
+    <div class="fb-comments" data-href="<?php echo url("home/categorias/det/" . $catDetalle->cat_id) ?>" data-numposts="5"></div>
 
     <!-- /.row -->
     <!-- Script to Activate the Carousel -->

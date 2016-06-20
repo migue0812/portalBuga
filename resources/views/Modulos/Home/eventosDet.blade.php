@@ -57,6 +57,7 @@
       </div>
 
 </div>
+      <?php if (Session::has("usuarioLogueado")): ?>
       <div id="fb-root"></div>
       <script>(function (d, s, id) {
           var js, fjs = d.getElementsByTagName(s)[0];
@@ -69,6 +70,6 @@
         }(document, 'script', 'facebook-jssdk'));</script>
 
       <div class="fb-comments" data-href="<?php echo url("home/eventos/det/" . $eveDetalle->eve_id) ?>" data-numposts="5"></div>
-      
+      <?php endif ?>
       @include('Templates.Frontend.footer')
       @include('Templates.Frontend.foot')
