@@ -17,24 +17,24 @@
               <!-- Set the first background image using inline CSS below. -->
               <div class="fill" style="background-image:url('../img/Basilica.jpg');"></div>
               <div class="carousel-caption">
-                <p class="" style="color: #FFF; font: 180% sans-serif;">Basílica Del Señor De Los Milagros </p>
-                <p>La palabra Basílica significa “Casa donde vive el Rey”. La iglesia católica le concede el título de “Basílicas” a unos cuantos templos muy celebres de Roma. </p>
+                <p class="hidden-xs" style="color: #FFF; font: 180% sans-serif;">Basílica Del Señor De Los Milagros </p>
+                <p class="hidden-xs">La palabra Basílica significa “Casa donde vive el Rey”. La iglesia católica le concede el título de “Basílicas” a unos cuantos templos muy celebres de Roma. </p>
               </div>
             </div>
             <div class="item">
               <!-- Set the second background image using inline CSS below. -->
               <div class="fill" style="background-image:url('../img/bugio.jpg');"></div>
               <div class="carousel-caption">
-                <p class=""style="color: #FFF; font: 180% sans-serif">Estación Del Ferrocarril</p>
-                <p>La Estación del Ferrocarril, espectacular conjunto arquitectónico, declarado Bien de Interés Cultural (BIC) de la Nación por el Ministerio de Cultura. Posee una arquitectura colonial, buscando uniformidad en cada uno de los elementos y detalles que la componen.</p>
+                <p class="hidden-xs" style="color: #FFF; font: 180% sans-serif">Estación Del Ferrocarril</p>
+                <p class="hidden-xs">La Estación del Ferrocarril, espectacular conjunto arquitectónico, declarado Bien de Interés Cultural (BIC) de la Nación por el Ministerio de Cultura. Posee una arquitectura colonial, buscando uniformidad en cada uno de los elementos y detalles que la componen.</p>
               </div>
             </div>
             <div class="item">
               <!-- Set the third background image using inline CSS below. -->
               <div class="fill" style="background-image:url('../img/vintagecom.jpg');"></div>
               <div class="carousel-caption">
-                <p style="color: #FFF; font: 180% sans-serif">Buga</p>
-                <p>Cuenta la leyenda que en 1550 a las manos de una indígena que lavaba ropa en el río Guadalajara llegó un pequeño Cristo, traído por las aguas. Dios recompensaba así un acto caritativo de la mujer hacia un vecino. Tras ser puesta en un altar, la imagen comenzó a crecer y la gente a venerarla.</p>
+                <p class="hidden-xs" style="color: #FFF; font: 180% sans-serif">Buga</p>
+                <p class="hidden-xs">Cuenta la leyenda que en 1550 a las manos de una indígena que lavaba ropa en el río Guadalajara llegó un pequeño Cristo, traído por las aguas. Dios recompensaba así un acto caritativo de la mujer hacia un vecino. Tras ser puesta en un altar, la imagen comenzó a crecer y la gente a venerarla.</p>
               </div>
             </div>
           </div>
@@ -120,7 +120,7 @@
           <div class="col-lg-4 col-sm-4 text-center">
             <a href="<?php echo url("home/categorias/det/7") ?>" class="info">
               <diV class="socialicons">
-                <img style="width: 100px; height: 90px" class="queHacerIcon img-circle img-responsive img-center" src="<?php echo asset("img/dormir.png") ?>" alt="Descansar?"></a>
+                <img style="width: 100px; height: 100px" class="queHacerIcon img-circle img-responsive img-center" src="<?php echo asset("img/dormir.png") ?>" alt="Descansar?"></a>
               </div>
               <h3>Dónde Dormir?
                 <small>La mejor guía Hotelera</small>
@@ -142,7 +142,7 @@
           <div class="col-lg-4 col-sm-4 text-center">
             <a href="<?php echo url("home/hospitales") ?>" class="info">
               <div class="socialicons">
-                <img style="width: 110px; height: 110px" class="queHacerIcon img-circle img-responsive img-center" src="<?php echo asset("img/diversion.png") ?>" alt=""></a>
+                <img style="width: 110px; height: 100px" class="queHacerIcon img-circle img-responsive img-center" src="<?php echo asset("img/diversion.png") ?>" alt=""></a>
               </div>
               <h3>Emergencias?
                 <small>Clínicas las 24 horas</small>
