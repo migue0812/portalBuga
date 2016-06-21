@@ -49,23 +49,23 @@
         <?php
         foreach ($sitios as $sitio):
           ?>
-          <div class="col-sm-4 portfolio-item">
+          <div class="col-sm-4 portfolio-item" style="margin-bottom: 20px;">
             <img class="img-responsive tam thumbnail" src="<?php echo asset("$sitio->img_ruta") ?>" alt="">
             <h3 class="text-center size" style="color:blue;">
               <?php echo $sitio->sit_nombre ?>
-            </h3>
-          
+            </h3>         
             <p class="text-justify2"><?php echo ((strlen($sitio->sit_descripcion) > 100) ? substr(($sitio->sit_descripcion), 0, 100) . " ..." : ($sitio->sit_descripcion)) ?></p>
             <br>
             <a href="<?php echo asset("home/sitios/det/" . $sitio->sit_id) ?>">
               <button type="button" class="btn btn-primary">Ver Mas</button>
             </a>
           </div>
-
+        
         <?php endforeach ?>
       </div>
     </div>
-
+      <br>
+      <hr>
     <div id="fb-root"></div>
     <script>(function (d, s, id) {
         var js, fjs = d.getElementsByTagName(s)[0];
