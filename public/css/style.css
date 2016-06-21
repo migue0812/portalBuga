@@ -912,7 +912,7 @@ textarea {
 
 /* fin raiting position stars (SitioDetalle)*/
 
-/*@media (min-width:1200px) {
+@media (min-width:1200px) {
 
   .imgSitios{
     height: 460px;
@@ -985,10 +985,6 @@ textarea {
     height: 300px;
     width: 350px;
   }
-  .text-justify{
-    height: 248px;
-    width: 351px;
-  }
   .text-justify2{
     text-align:justify;
   }
@@ -1007,10 +1003,6 @@ textarea {
   .img-Sitios{
     height: 300px;
     width: 350px;
-  }
-  .text-justify{
-    height: 248px;
-    width: 351px;
   }
   .text-justify2{
     text-align:justify;
@@ -1080,10 +1072,6 @@ textarea {
     height: 300px;
     width: 350px;
   }
-  .text-justify{
-    height: 248px;
-    width: 351px;
-  }
   .text-justify2{
     height: 820px;
     width: 447px;
@@ -1145,7 +1133,7 @@ textarea {
   .svg{
     width: 20px;
   }
-}*/
+}
 
 
 /* fin raiting position stars e imgs sitios todos (SitioDetalle)*/
