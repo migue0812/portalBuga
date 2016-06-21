@@ -910,17 +910,9 @@ textarea {
 
 }
 
-/* raiting position stars (SitioDetalle)*/
-#starPosition{
-  left: 160px;
-}
-
-#starPosition2{
-  left: 300px;
-}
 /* fin raiting position stars (SitioDetalle)*/
 
-@media (min-width:1200px) {
+/*@media (min-width:1200px) {
 
   .imgSitios{
     height: 460px;
@@ -1153,7 +1145,7 @@ textarea {
   .svg{
     width: 20px;
   }
-}
+}*/
 
 
 /* fin raiting position stars e imgs sitios todos (SitioDetalle)*/
