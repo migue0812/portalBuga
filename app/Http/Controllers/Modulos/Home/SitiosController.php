@@ -14,13 +14,26 @@ use DB;
 class SitiosController extends Controller {
 
     function getIndex() {
+        $numRegistros = DB::select("SELECT COUNT(*) AS total FROM bdp_sitio WHERE est_id = 1");
+        $numRegistros = $numRegistros[0];
+        
+        $registros = 12;
+        $pagina = $_GET["page"];
+        if(is_numeric($pagina)){
+            $inicio = (($pagina-1)*$registros);
+        } else {
+            $inicio = 0;
+        }
+        $paginas = ceil($numRegistros->total/$registros);
+       
         $sitios = DB::select("SELECT * FROM bdp_sitio, bdp_imagen WHERE "
                         . "bdp_imagen.sit_id = bdp_sitio.sit_id AND est_id = 1 "
                 . "GROUP BY bdp_sitio.sit_id ORDER BY RAND() LIMIT 2");
         $sitios2 = DB::select("SELECT * FROM bdp_sitio, bdp_imagen WHERE "
-                        . "bdp_imagen.sit_id = bdp_sitio.sit_id AND est_id = 1 GROUP BY bdp_sitio.sit_id");
-        return view('Modulos.Home.sitios', compact("sitios"), compact("sitios2"));
+                        . "bdp_imagen.sit_id = bdp_sitio.sit_id AND est_id = 1 GROUP BY bdp_sitio.sit_id LIMIT $inicio,$registros");
+        return view('Modulos.Home.sitios', compact("sitios","sitios2","paginas","pagina"));
     }
+
 
     function getDet($id) {
          $sitios = DB::select("SELECT * FROM bdp_sitio, bdp_imagen WHERE "

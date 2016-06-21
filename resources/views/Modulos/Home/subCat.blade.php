@@ -20,10 +20,11 @@
               <img class="img-responsive" src="<?php echo asset("$subcatDetalle->img_ruta") ?>" alt="">     
             </a>
           </div>
+            <br>
 
           <div class="col-sm-12  portfolio-item">
-            <h2 class="size marg"><?php echo $subcatDetalle->subcat_nombre ?></h2>
-            <p class="text-justify"> <?php echo $subcatDetalle->subcat_descripcion ?></p>
+              <br>
+            <p class="text-justify2"> <?php echo $subcatDetalle->subcat_descripcion ?></p>
           </div>
 
 
@@ -50,11 +51,12 @@
           ?>
           <div class="col-sm-4 portfolio-item">
             <img class="img-responsive tam thumbnail" src="<?php echo asset("$sitio->img_ruta") ?>" alt="">
-            <h3 style="color:blue;">
+            <h3 class="text-center size" style="color:blue;">
               <?php echo $sitio->sit_nombre ?>
             </h3>
           
-            <p class="text-justify"><?php echo ((strlen($sitio->sit_descripcion) > 100) ? substr(($sitio->sit_descripcion), 0, 100) . " ..." : ($sitio->sit_descripcion)) ?></p>
+            <p class="text-justify2"><?php echo ((strlen($sitio->sit_descripcion) > 100) ? substr(($sitio->sit_descripcion), 0, 100) . " ..." : ($sitio->sit_descripcion)) ?></p>
+            <br>
             <a href="<?php echo asset("home/sitios/det/" . $sitio->sit_id) ?>">
               <button type="button" class="btn btn-primary">Ver Mas</button>
             </a>

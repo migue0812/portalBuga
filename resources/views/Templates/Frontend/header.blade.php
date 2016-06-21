@@ -44,7 +44,7 @@ $categorias = DB::select("SELECT * FROM bdp_categoria, bdp_imagen WHERE bdp_imag
                     </ul>
                 </li>
                 <li class="navPer">
-                    <a  style="padding-right: 0px;padding-left: 0px;" href="<?php echo url("home/sitios") ?>" title="Sitios">Sitios</a>
+                    <a  style="padding-right: 0px;padding-left: 0px;" href="<?php echo url("home/sitios?page=1") ?>" title="Sitios">Sitios</a>
                 </li>
                 <li class="navPer">
                     <a  style="padding-right: 0px;padding-left: 0px;"href="<?php echo url("home/eventos") ?> " title="Eventos">Eventos</a>

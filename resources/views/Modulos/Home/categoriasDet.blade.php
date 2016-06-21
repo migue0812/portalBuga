@@ -21,8 +21,8 @@
           </div>
 
           <div class="col-sm-12  portfolio-item">
-            <h2 class="size marg"><?php echo $catDetalle->cat_nombre ?></h2>
-            <p class="text-justify"> <?php echo $catDetalle->cat_descripcion ?></p>
+            <h2 class="text-center size"><?php echo $catDetalle->cat_nombre ?></h2>
+            <p class="text-justify2"> <?php echo $catDetalle->cat_descripcion ?></p>
           </div>
 
 
@@ -49,10 +49,10 @@
           ?>
           <div class="col-sm-4 portfolio-item">
             <img class="img-responsive tam thumbnail" src="<?php echo asset("$subcategoria->img_ruta") ?>" alt="">
-            <h3 style="color:blue;">
+            <h3 class="text-center size" style="color:blue;">
               <?php echo $subcategoria->subcat_nombre ?>
             </h3>
-            <p class="text-justify"><?php echo ((strlen($subcategoria->subcat_descripcion) > 100) ? substr(($subcategoria->subcat_descripcion), 0, 100) . " ..." : ($subcategoria->subcat_descripcion)) ?></p>
+            <p class="text-justify2"><?php echo ((strlen($subcategoria->subcat_descripcion) > 100) ? substr(($subcategoria->subcat_descripcion), 0, 100) . " ..." : ($subcategoria->subcat_descripcion)) ?></p>
             <a href="<?php echo asset("home/subCat/index/" . $subcategoria->subcat_id) ?>">
               <button type="button" class="btn btn-primary">Ver Mas</button>
             </a>

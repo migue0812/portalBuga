@@ -29,13 +29,13 @@
                         <h3>
                             <a href="<?php echo url("home/categorias/det/" . $categoria->cat_id) ?>"><?php echo $categoria->cat_nombre ?></a>
                         </h3>
-                        <p class="text-justify"><?php echo ((strlen($categoria->cat_descripcion) > 100) ? substr(($categoria->cat_descripcion), 0, 100) . " ..." : ($categoria->cat_descripcion)) ?></p>
+                        <p class="text-justify2"><?php echo ((strlen($categoria->cat_descripcion) > 100) ? substr(($categoria->cat_descripcion), 0, 100) . " ..." : ($categoria->cat_descripcion)) ?></p>
                     </div>
                 <?php endforeach ?>
                 <!-- /.row -->
 
                 <!-- Projects Row -->
-                <
+                
                 <div id="fb-root"></div>
                 <script>(function (d, s, id) {
                         var js, fjs = d.getElementsByTagName(s)[0];
