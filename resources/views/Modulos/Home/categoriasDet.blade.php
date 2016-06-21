@@ -47,7 +47,7 @@
         <?php
         foreach ($subcategorias as $subcategoria):
           ?>
-          <div class="col-sm-4 portfolio-item">
+          <div class="col-sm-4 portfolio-item" style="margin-bottom: 20px;">
             <img class="img-responsive tam thumbnail" src="<?php echo asset("$subcategoria->img_ruta") ?>" alt="">
             <h3 class="text-center size" style="color:blue;">
               <?php echo $subcategoria->subcat_nombre ?>
