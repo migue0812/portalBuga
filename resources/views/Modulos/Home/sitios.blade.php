@@ -15,7 +15,7 @@
       </div>
 
       <?php foreach ($sitios as $sitio): ?>
-        <div class="container portImg">
+        <div class="portImg">
           <div class="row">
             
             <div class="col-md-6 portfolio-item">
@@ -28,12 +28,13 @@
             <div class="col-md-5 portfolio-item">
               <h2 class="text-center"><?php echo ($sitio->sit_nombre) ?></h2>
               <hr class="tagline-divider-cont">
-              <p class="text-justify">
+              <p class="">
                 <?php echo ((strlen($sitio->sit_descripcion) > 200) ? substr(($sitio->sit_descripcion), 0, 200) . " ..." : ($sitio->sit_descripcion)) ?>
               </p>
-              <a href="<?php echo url("home/sitios/det/" . $sitio->sit_id) ?>" class="btn btn-primary">
+              <a class="btn btn-primary" href="<?php echo url("home/sitios/det/" . $sitio->sit_id) ?>" >
                 <b title="Ver mas"> Ver Mas</b>
               </a>
+              
               <?php if (Session::has("usuarioLogueado")): ?>
                 <a href="<?php echo url("itinerario/sitio/" . $sitio->sit_id) ?>" class="btn btn-primary">
                   <b title="Itinerario" class="icon-direction fa-fw"></b>
@@ -52,7 +53,7 @@
         <h2 class="text-center">MAS SITIOS TURISTICOS</h2>
       </div>
       <hr class="tagline-divider-cont">
-      <div class="container">
+      <div>
         <div class="row ">
           <?php
           foreach ($sitios2 as $sitio):
