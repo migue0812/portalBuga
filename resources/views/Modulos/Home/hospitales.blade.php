@@ -42,7 +42,7 @@
 
                             <div class="media-body">
                                 <h4 class="media-heading">DIRECCION:</h4>
-                                <p>CALLE 6 No. 16 – 21 Buga</p>
+                                <p>Cr8 17-52 Buga, Colombia</p>
                             </div>
                         </div>
                     </div>
@@ -51,7 +51,7 @@
 
                             <div class="media-body">
                                 <h4 class="media-heading">TELEFONO:</h4>
-                                <p>316 618 7865 - 316 5329690</p>							
+                                <p>(57) (2) 2361000</p>							
                             </div>
                         </div>
                     </div>
@@ -98,7 +98,7 @@
 
                             <div class="media-body">
                                 <h4 class="media-heading">DIRECCION:</h4>
-                                <p>CALLE 6 No. 16 – 21 Buga</p>
+                                <p>Carrera 16 N° 7-68</p>
                             </div>
                         </div>
                     </div>
@@ -107,7 +107,7 @@
 
                             <div class="media-body">
                                 <h4 class="media-heading">TELEFONO:</h4>
-                                <p>316 618 7865 - 316 5329690</p>							
+                                <p> (57+29 2282246</p>							
                             </div>
                         </div>
                     </div>
@@ -116,7 +116,7 @@
 
                             <div class="media-body">
                                 <h4 class="media-heading">CORREO:</h4>
-                                <p></p>
+                                <p> urmedicas@ert.com.co</p>
                             </div>
                         </div>
                     </div>
@@ -156,7 +156,7 @@
 
                             <div class="media-body">
                                 <h4 class="media-heading">DIRECCION:</h4>
-                                <p>CALLE 6 No. 16 – 21 Buga</p>
+                                <p>Calle 1 N° 15-28</p>
                             </div>
                         </div>
                     </div>
@@ -165,7 +165,7 @@
 
                             <div class="media-body">
                                 <h4 class="media-heading">TELEFONO:</h4>
-                                <p>316 618 7865 - 316 5329690</p>							
+                                <p>(57+2) 2270007</p>							
                             </div>
                         </div>
                     </div>
@@ -174,7 +174,7 @@
 
                             <div class="media-body">
                                 <h4 class="media-heading">CORREO:</h4>
-                                <p></p>
+                                <p>cgbco@uniweb.net.co</p>
                             </div>
                         </div>
                     </div>
@@ -211,7 +211,7 @@
 
                             <div class="media-body">
                                 <h4 class="media-heading">DIRECCION:</h4>
-                                <p>CALLE 6 No. 16 – 21 Buga</p>
+                                <p>Cr14 1-83 Buga, Colombia</p>
                             </div>
                         </div>
                     </div>
@@ -220,7 +220,7 @@
 
                             <div class="media-body">
                                 <h4 class="media-heading">TELEFONO:</h4>
-                                <p>316 618 7865 - 316 5329690</p>							
+                                <p>(57) (2) 2365555</p>							
                             </div>
                         </div>
                     </div>
