@@ -20,12 +20,23 @@ use App\Http\Controllers\Controller;
 class EventosController extends Controller {
 
     function getIndex() {
+        $numRegistros = DB::select("SELECT COUNT(*) AS total FROM bdp_evento WHERE est_id = 1");
+        $numRegistros = $numRegistros[0];
+        
+        $registros = 6;
+        $pagina = $_GET["page"];
+        if(is_numeric($pagina)){
+            $inicio = (($pagina-1)*$registros);
+        } else {
+            $inicio = 0;
+        }
+        $paginas = ceil($numRegistros->total/$registros);
          $eventos = DB::select("SELECT * FROM bdp_evento, bdp_imagen WHERE bdp_evento.est_id ='1' and "
                         . "bdp_imagen.eve_id = bdp_evento.eve_id ORDER BY RAND() LIMIT 2 ");
          $eventos2=DB::select("SELECT * FROM bdp_evento, bdp_imagen WHERE  bdp_evento.est_id ='1' and  "
-                        . "bdp_imagen.eve_id = bdp_evento.eve_id");
+                        . "bdp_imagen.eve_id = bdp_evento.eve_id LIMIT $inicio,$registros");
 
-        return view('Modulos.Home.eventos', compact('eventos'),  compact('eventos2'));
+        return view('Modulos.Home.eventos', compact("eventos","eventos2","paginas","pagina"));
     }
 
     function getDet($id) {

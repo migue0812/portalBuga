@@ -47,7 +47,7 @@ $categorias = DB::select("SELECT * FROM bdp_categoria, bdp_imagen WHERE bdp_imag
                     <a  style="padding-right: 0px;padding-left: 0px;" href="<?php echo url("home/sitios?page=1") ?>" title="Sitios">Sitios</a>
                 </li>
                 <li class="navPer">
-                    <a  style="padding-right: 0px;padding-left: 0px;"href="<?php echo url("home/eventos") ?> " title="Eventos">Eventos</a>
+                    <a  style="padding-right: 0px;padding-left: 0px;"href="<?php echo url("home/eventos?page=1") ?> " title="Eventos">Eventos</a>
                 </li>
                 <?php if ((Session::has("usuarioLogueado") !== true) && (Session::has("usuarioAdmin") !== true)): ?>
                     <li class="navPer">
