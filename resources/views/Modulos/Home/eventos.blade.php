@@ -39,7 +39,7 @@
                         <h2 class="text-center">Eventos Principales</h2>
                     </div>
                 </div>
-                <hr class="tagline-divider-cont">
+                <hr class="tagline-divider-event">
             </div>
 
 
