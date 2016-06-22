@@ -29,7 +29,7 @@
                 <h3 class="div-h3">Sitios Referidos</h3>
                 <div class="social-footer">
                     <li class="social-contactanos"><a href="http://www.guadalajaradebuga-valle.gov.co/index.shtml" title="Alcaldía" target="_blank">Alcaldía</a></li>
-                    <li class="social-contactanos"><a href="https://www.facebook.com/BienestarCDTI/?fref=ts" title="CDTI SENA" target="_blank">CDTI Sena</a></li>
+                    <li class="social-contactanos"><a href="http://www.cdtisena.com/" title="CDTI SENA" target="_blank">CDTI Sena</a></li>
                 </div>
             </div>
         </nav>
