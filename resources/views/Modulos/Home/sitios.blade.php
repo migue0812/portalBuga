@@ -79,7 +79,6 @@
                       <b title="Itinerario" class="icon-direction fa-fw"></b>
                     </a>
                   <?php endif ?>
-
                 </div>
               </div>
             </div>

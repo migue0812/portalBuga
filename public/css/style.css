@@ -1025,6 +1025,11 @@ textarea {
         height: 300px;
         width: 350px;
     }
+    .Sitios-deta{
+        height: 300px;
+        width: auto;
+    }
+    
     .text-justify2{
         text-align:justify;
     }
