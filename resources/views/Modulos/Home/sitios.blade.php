@@ -32,8 +32,7 @@
                 <?php echo ((strlen($sitio->sit_descripcion) > 200) ? substr(($sitio->sit_descripcion), 0, 200) . " ..." : ($sitio->sit_descripcion)) ?>
               </p>
               <button class="center-block btn btn-primary ">
-                <a class="decoration-none" href="<?php echo url("home/sitios/det/" . $sitio->sit_id) ?>">Ver mas</a>
-              </button>
+                <a class="decoration-none" href="<?php echo url("home/sitios/det/" . $sitio->sit_id) ?>">Ver mas</a></button>
 
               <?php if (Session::has("usuarioLogueado")): ?>
                 <a href="<?php echo url("itinerario/sitio/" . $sitio->sit_id) ?>" class="btn btn-primary">
