@@ -131,7 +131,7 @@
           <div class="col-lg-4 col-sm-4 text-center">
             <a href="<?php echo url("home/categorias/det/8") ?>" class="info">
               <div class="socialicons">
-                <img style="width: 100px; height: 100px" class="queHacerIcon img-circle img-responsive img-center" src="<?php echo asset("img/comer.png") ?>" alt="Comer?"></a>
+                <img style="width: 100px; height: 100px" class="queHacerIcon img-responsive img-center" src="<?php echo asset("img/comer.png") ?>" alt="Comer?"></a>
               </div>
               <h3>Dónde Comer?
                 <small>Los mejores Restaurantes</small>
@@ -142,7 +142,7 @@
           <div class="col-lg-4 col-sm-4 text-center">
             <a href="<?php echo url("home/hospitales") ?>" class="info">
               <div class="socialicons">
-                <img style="width: 110px; height: 100px" class="queHacerIcon img-circle img-responsive img-center" src="<?php echo asset("img/diversion.png") ?>" alt=""></a>
+                <img style="width: 110px; height: 100px" class="queHacerIcon img-responsive img-center" src="<?php echo asset("img/diversion.png") ?>" alt=""></a>
               </div>
               <h3>Emergencias?
                 <small>Clínicas las 24 horas</small>
