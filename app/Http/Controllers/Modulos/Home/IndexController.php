@@ -20,8 +20,8 @@ class IndexController extends Controller
         }
         $sitios = DB::select("SELECT sit_nombre, bdp_imagen.sit_id, img_ruta, COUNT(bdp_visitas.sit_id) "
                 . "AS visita FROM bdp_imagen, bdp_sitio, bdp_visitas "
-                . "WHERE bdp_sitio.sit_id=bdp_visitas.sit_id AND bdp_sitio.sit_id=bdp_imagen.sit_id "
-                . "GROUP BY bdp_visitas.sit_id ORDER BY bdp_visitas.sit_id DESC LIMIT 6");
+                . "WHERE bdp_sitio.sit_id=bdp_visitas.sit_id AND bdp_sitio.sit_id=bdp_imagen.sit_id AND est_id = 1 "
+                . "GROUP BY bdp_visitas.sit_id ORDER BY visita DESC LIMIT 6");
            	return view('Modulos.Home.index', compact("sitios"));
     }
 }

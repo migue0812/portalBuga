@@ -52,7 +52,7 @@
           <div class="col-sm-4 portfolio-item" style="margin-bottom: 20px;">
             <img class="img-responsive tam thumbnail" src="<?php echo asset("$sitio->img_ruta") ?>" alt="">
             <h3 class="text-center size" style="color:blue;">
-              <?php echo $sitio->sit_nombre ?>
+             <?php echo ((strlen($sitio->sit_nombre) > 20) ? substr(($sitio->sit_nombre), 0, 20) . " ..." : ($sitio->sit_nombre)) ?>
             </h3>         
             <p class="text-justify2"><?php echo ((strlen($sitio->sit_descripcion) > 100) ? substr(($sitio->sit_descripcion), 0, 100) . " ..." : ($sitio->sit_descripcion)) ?></p>
             <br>
@@ -66,6 +66,7 @@
     </div>
       <br>
       <hr>
+      <?php if (Session::has("usuarioLogueado")): ?>
     <div id="fb-root"></div>
     <script>(function (d, s, id) {
         var js, fjs = d.getElementsByTagName(s)[0];
@@ -77,7 +78,7 @@
         fjs.parentNode.insertBefore(js, fjs);
       }(document, 'script', 'facebook-jssdk'));</script>
 
-    <div class="fb-comments" data-href="https://www.facebook.com/groups/860979787324031/?fref=ts" data-numposts="5"></div>
+    <div class="fb-comments" data-href="<?php echo url("home/categorias/det/" . $subcatDetalle->subcat_id) ?>" data-numposts="5"></div>
 
     <!-- /.row -->
     <!-- Script to Activate the Carousel -->
@@ -87,7 +88,7 @@
       });
     </script>
 
-
+<?php endif ?>
     @include('Templates.Frontend.footer')
     @include('Templates.Frontend.foot')
 

@@ -233,8 +233,8 @@ class SitioController extends Controller {
         }
 
         DB::update("UPDATE bdp_sitio SET sit_nombre = ?, cat_id = ?, subcat_id = ?, sit_direccion = ?, "
-                . "sit_telefono = ?, sit_descripcion = ?, sit_updated_at = CURRENT_TIMESTAMP WHERE sit_id = ? , sit_etiqueta=?", array($sitNombre, $sitCategoria, $sitSubcategoria, $sitDireccion,
-            $sitTelefono, $sitDescripcion, $sitId,$sit_etiqueta));
+                . "sit_telefono = ?, sit_descripcion = ?, sit_updated_at = CURRENT_TIMESTAMP, sit_etiqueta=? WHERE sit_id = ?", array($sitNombre, $sitCategoria, $sitSubcategoria, $sitDireccion,
+            $sitTelefono, $sitDescripcion, $sit_etiqueta, $sitId));
 
         $img = DB::select("SELECT img_ruta FROM bdp_imagen WHERE sit_id = ?", array($sitId));
 

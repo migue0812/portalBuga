@@ -104,5 +104,17 @@
                     <?php endforeach; ?>
                 </div>
             </div>
+                <center> <div>
+          <nav>
+            <ul class="pagination pagination-lg">
+
+              <?php
+              for ($x = 1; $x <= $paginas; $x++) {
+                echo "<li><a href='eventos?page=" . $x . "'>" . $x . "</a></li>";
+              }
+              ?>
+            </ul>
+          </nav>
+        </div></center>
             @include('Templates.Frontend.footer')
             @include('Templates.Frontend.foot')

@@ -61,7 +61,7 @@
 
       </div>
     </div>
-
+<?php if (Session::has("usuarioLogueado")): ?>
     <div id="fb-root"></div>
     <script>(function (d, s, id) {
         var js, fjs = d.getElementsByTagName(s)[0];
@@ -82,6 +82,6 @@
         interval: 3000 //changes the speed
       });
     </script>
-
+<?php endif ?>
     @include('Templates.Frontend.footer')
     @include('Templates.Frontend.foot')

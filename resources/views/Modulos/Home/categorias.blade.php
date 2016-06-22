@@ -35,7 +35,7 @@
                 <!-- /.row -->
 
                 <!-- Projects Row -->
-                
+                <?php if (Session::has("usuarioLogueado")): ?>
                 <div id="fb-root"></div>
                 <script>(function (d, s, id) {
                         var js, fjs = d.getElementsByTagName(s)[0];
@@ -49,7 +49,7 @@
 
                 <div class="fb-comments" data-href="https://www.facebook.com/groups/860979787324031/?fref=ts" data-numposts="5"></div>
             </div>
-
+<?php endif ?>
             <!-- /.container -->
             @include('Templates.Frontend.footer')
             @include('Templates.Frontend.foot')
