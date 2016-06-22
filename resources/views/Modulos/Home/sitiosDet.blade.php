@@ -45,12 +45,12 @@
     .bigmap{
         height: 450px;
 
-        width: 450px !important; 
+        width: 450px !important;
     }
     .smallmap{
         height: 150px !important;
 
-        width: 400px !important; 
+        width: 400px !important;
     }
     /*    #control #from {
            max-width: 370px;
@@ -156,7 +156,7 @@
         /* top: 600px; */
         width: 400px;
 
-    }      
+    }
     #fbshare{
         position: relative;
         top: -22px;
@@ -167,7 +167,7 @@
     }
 
     .descricont{
-        position:relative;  
+        position:relative;
         height: 100%
     }
     .diruti{
@@ -195,7 +195,7 @@
         width: 100%;
     }
 
-    
+
 
     .thumbnail {
         padding: 0;
@@ -284,7 +284,7 @@
 
                     <div class="col-md-11 col-sm-11 portfolio-item">
                         <div class="parrafoSitio">
-                           <h2 class="tituloSitio text-center"><?php echo ($sitDetalle->sit_nombre) ?></h2>
+                            <h2 class="tituloSitio text-center"><?php echo ($sitDetalle->sit_nombre) ?></h2>
                             <br>
                             <p class="text-justify2"><?php echo ($sitDetalle->sit_descripcion) ?></p>
                         </div>
@@ -306,11 +306,11 @@
                     <div class="col-md-4 col-sm-6 evento-item">
                         <a href="#1" class="evento-link" data-toggle="modal">
                             <div class="evento-hover">
-                                <div class="evento-hover-content">                        
+                                <div class="evento-hover-content">
                                 </div>
                             </div>
                             <img src="<?php echo asset($imagenes[0]->img_ruta) ?>" class="img-responsive" alt="">
-                        </a>            
+                        </a>
                     </div>
                 <?php endif ?>
                 <?php if (!empty($imagenes[1]->img_ruta)): ?>
@@ -318,11 +318,11 @@
                     <div class="col-md-4 col-sm-6 evento-item">
                         <a href="#2" class="evento-link" data-toggle="modal">
                             <div class="evento-hover">
-                                <div class="evento-hover-content">                        
+                                <div class="evento-hover-content">
                                 </div>
                             </div>
                             <img src="<?php echo asset($imagenes[1]->img_ruta) ?>" class="img-responsive" alt="">
-                        </a>            
+                        </a>
                     </div>
                 <?php endif ?>
                 <?php if (!empty($imagenes[2]->img_ruta)): ?>
@@ -330,11 +330,11 @@
                     <div class="col-md-4 col-sm-6 evento-item">
                         <a href="#3" class="evento-link" data-toggle="modal">
                             <div class="evento-hover">
-                                <div class="evento-hover-content">                        
+                                <div class="evento-hover-content">
                                 </div>
                             </div>
                             <img src="<?php echo asset($imagenes[2]->img_ruta) ?>" class="img-responsive" alt="">
-                        </a>            
+                        </a>
                     </div>
                 <?php endif ?>
                 <?php if (!empty($imagenes[0]->img_ruta)): ?>
@@ -533,12 +533,12 @@
                                 geocoder.geocode({
                                     "location": new google.maps.LatLng(position.coords.latitude, position.coords.longitude)
                                 },
-                                function (results, status) {
-                                    if (status == google.maps.GeocoderStatus.OK)
-                                        $("#" + addressId).val(results[0].formatted_address);
-                                    else
-                                        $("#error").append("No se puede obtener su direccion<br />");
-                                });
+                                        function (results, status) {
+                                            if (status == google.maps.GeocoderStatus.OK)
+                                                $("#" + addressId).val(results[0].formatted_address);
+                                            else
+                                                $("#error").append("No se puede obtener su direccion<br />");
+                                        });
                             },
                                     function (positionError) {
                                         $("#error").append("Error: " + positionError.message + "<br />");
@@ -590,19 +590,19 @@
                 <div id="map"></div>
                 <p id="error"></p>
 
-<?php if (Session::has("usuarioLogueado")): ?>
-      <div id="fb-root"></div>
-      <script>(function (d, s, id) {
-          var js, fjs = d.getElementsByTagName(s)[0];
-          if (d.getElementById(id))
-            return;
-          js = d.createElement(s);
-          js.id = id;
-          js.src = "//connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v2.6";
-          fjs.parentNode.insertBefore(js, fjs);
-        }(document, 'script', 'facebook-jssdk'));</script>
+                <?php if (Session::has("usuarioLogueado")): ?>
+                    <div id="fb-root"></div>
+                    <script>(function (d, s, id) {
+                            var js, fjs = d.getElementsByTagName(s)[0];
+                            if (d.getElementById(id))
+                                return;
+                            js = d.createElement(s);
+                            js.id = id;
+                            js.src = "//connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v2.6";
+                            fjs.parentNode.insertBefore(js, fjs);
+                        }(document, 'script', 'facebook-jssdk'));</script>
 
-      <div class="fb-comments" data-href="<?php echo url("home/sitios/det/" . $sitDetalle->sit_id) ?>" data-numposts="5"></div>
-      <?php endif ?>
+                    <div class="fb-comments" data-href="<?php echo url("home/sitios/det/" . $sitDetalle->sit_id) ?>" data-numposts="5"></div>
+                <?php endif ?>
                 @include('Templates.Frontend.footer')
                 @include('Templates.Frontend.foot')
