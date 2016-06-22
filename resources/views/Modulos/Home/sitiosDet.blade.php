@@ -80,134 +80,124 @@
         </div>
       </div>
 
+
       <!-- efecto imgs -->
       <div>
         <h2 class="text-center">Imagenes Del Sitio</h2>
         <hr class="tagline-divider-cont">
       </div>
 
-      <?php if (!empty($imagenes[0]->img_ruta)): ?>
-        <div class="col-md-4 col-sm-6 evento-item">
-          <a href="#1" class="evento-link" data-toggle="modal">
-            <div class="evento-hover">
-              <div class="evento-hover-content">
-              </div>
-            </div>
-            <img src="<?php echo asset($imagenes[0]->img_ruta) ?>" class="img-responsive" alt="">
-          </a>
-        </div>
-      <?php endif ?>
-      <?php if (!empty($imagenes[1]->img_ruta)): ?>
+      <div class="row">
 
-        <div class="col-md-4 col-sm-6 evento-item">
-          <a href="#2" class="evento-link" data-toggle="modal">
-            <div class="evento-hover">
-              <div class="evento-hover-content">
-              </div>
-            </div>
-            <img src="<?php echo asset($imagenes[1]->img_ruta) ?>" class="img-responsive" alt="">
-          </a>
-        </div>
-      <?php endif ?>
-      <?php if (!empty($imagenes[2]->img_ruta)): ?>
+        <div class="col-lg-12">
+          <h1 class="page-header">Thumbnail Gallery</h1>
 
-        <div class="col-md-4 col-sm-6 evento-item">
-          <a href="#3" class="evento-link" data-toggle="modal">
-            <div class="evento-hover">
-              <div class="evento-hover-content">
-              </div>
-            </div>
-            <img src="<?php echo asset($imagenes[2]->img_ruta) ?>" class="img-responsive" alt="">
-          </a>
-        </div>
-      <?php endif ?>
-      <?php if (!empty($imagenes[0]->img_ruta)): ?>
-
-        <!-- efecto IMG GRANDE(modal1) -->
-        <div class="portfolio-modal modal fade" id="1" tabindex="-1" role="dialog" aria-hidden="true">
-          <div class="boxModal">
-            <div class="close-modal" data-dismiss="modal">
-              <div class="lr">
-                <div class="rl">
-                </div>
-              </div>
-            </div>
-            <div class="container">
-              <div class="row">
-                <div class="col-lg-8 col-lg-offset-2">
-                  <div class="modal-body">
-                    <!-- Project Details Go Here -->
-                    <h2 style="margin-top: 20px; text-align: center"><?php echo ($sitDetalle->sit_nombre) ?></h2>
-
-                    <img class="img-responsive img-centered" src="<?php echo asset($imagenes[0]->img_ruta) ?>" class="img-responsive" alt="">
-
-                    <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-
+          <div class="col-md-4 col-xs-6 thumb">
+            <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title="This is my title" data-caption="Some lovely red flowers" data-image="http://onelive.us/wp-content/uploads/2014/08/flower-delivery-online.jpg" data-target="#image-gallery">
+              <img class="img-responsive" src="<?php echo asset("$sitDetalle->img_ruta") ?>" alt="Short alt text">
+            </a>
+          </div>
+          <div class="col-md-4 col-xs-6 thumb">
+            <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title="The car i dream about" data-caption="If you sponsor me, I can drive this car" data-image="http://www.picturesnew.com/media/images/car-image.jpg" data-target="#image-gallery">
+              <img class="img-responsive" src="http://www.picturesnew.com/media/images/car-image.jpg" alt="A alt text">
+            </a>
+          </div>
+          <div class="col-md-4 col-xs-6 thumb">
+            <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title="Im so nice" data-caption="And if there is money left, my girlfriend will receive this car" data-image="http://upload.wikimedia.org/wikipedia/commons/7/78/1997_Fiat_Panda.JPG" data-target="#image-gallery">
+              <img class="img-responsive" src="http://upload.wikimedia.org/wikipedia/commons/7/78/1997_Fiat_Panda.JPG" alt="Another alt text">
+            </a>
           </div>
         </div>
-      <?php endif ?>
-      <?php if (!empty($imagenes[1]->img_ruta)): ?>
 
-        <!-- efecto IMG GRANDE(modal1) -->
 
-        <div class="portfolio-modal modal fade" id="2" tabindex="-1" role="dialog" aria-hidden="true">
-          <div class="boxModal">
-            <div class="close-modal" data-dismiss="modal">
-              <div class="lr">
-                <div class="rl">
+        <div class="modal fade" id="image-gallery" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="image-gallery-title"></h4>
+              </div>
+              <div class="modal-body">
+                <img id="image-gallery-image" class="img-responsive" src="<?php echo asset("$sitDetalle->img_ruta") ?>">
+              </div>
+              <div class="modal-footer">
+
+                <div class="col-md-2">
+                  <button type="button" class="btn btn-primary" id="show-previous-image">Previous</button>
+                </div>
+
+                <div class="col-md-8 text-justify" id="image-gallery-caption">
+                  This text will be overwritten by jQuery
+                </div>
+
+                <div class="col-md-2">
+                  <button type="button" id="show-next-image" class="btn btn-default">Next</button>
                 </div>
               </div>
             </div>
-            <div class="container">
-              <div class="row">
-                <div class="col-lg-8 col-lg-offset-2">
-                  <div class="modal-body">
-                    <!-- Project Details Go Here -->
-                    <h2 style="margin-top: 20px; text-align: center"><?php echo ($sitDetalle->sit_nombre) ?></h2>
-
-                    <img class="img-responsive img-centered" src="<?php echo asset($imagenes[1]->img_ruta) ?>" class="img-responsive" alt="">
-
-                    <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-
           </div>
         </div>
-      <?php endif ?>
-      <?php if (!empty($imagenes[2]->img_ruta)): ?>
+      </div>
 
-        <!-- efecto IMG GRANDE(modal1) -->
-        <div class="portfolio-modal modal fade" id="3" tabindex="-1" role="dialog" aria-hidden="true">
-          <div class="boxModal">
-            <div class="close-modal" data-dismiss="modal">
-              <div class="lr">
-                <div class="rl">
-                </div>
-              </div>
-            </div>
-            <div class="container">
-              <div class="row">
-                <div class="col-lg-8 col-lg-offset-2">
-                  <div class="modal-body">
-                    <!-- Project Details Go Here -->
-                    <h2 style="margin-top: 20px; text-align: center"><?php echo ($sitDetalle->sit_nombre) ?></h2>
+      <script>
+        $(document).ready(function () {
 
-                    <img class="img-responsive img-centered" src="<?php echo asset($imagenes[2]->img_ruta) ?>" class="img-responsive" alt="">
+          loadGallery(true, 'a.thumbnail');
 
-                    <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
-                  </div>
-                </div>
-              </div>
-            </div>
+          //This function disables buttons when needed
+          function disableButtons(counter_max, counter_current) {
+            $('#show-previous-image, #show-next-image').show();
+            if (counter_max == counter_current) {
+              $('#show-next-image').hide();
+            } else if (counter_current == 1) {
+              $('#show-previous-image').hide();
+            }
+          }
 
-          </div>
-        </div>
-      <?php endif ?>    
+          /**
+           *
+           * @param setIDs        Sets IDs when DOM is loaded. If using a PHP counter, set to false.
+           * @param setClickAttr  Sets the attribute for the click handler.
+           */
+
+          function loadGallery(setIDs, setClickAttr) {
+            var current_image,
+                    selector,
+                    counter = 0;
+
+            $('#show-next-image, #show-previous-image').click(function () {
+              if ($(this).attr('id') == 'show-previous-image') {
+                current_image--;
+              } else {
+                current_image++;
+              }
+
+              selector = $('[data-image-id="' + current_image + '"]');
+              updateGallery(selector);
+            });
+
+            function updateGallery(selector) {
+              var $sel = selector;
+              current_image = $sel.data('image-id');
+              $('#image-gallery-caption').text($sel.data('caption'));
+              $('#image-gallery-title').text($sel.data('title'));
+              $('#image-gallery-image').attr('src', $sel.data('image'));
+              disableButtons(counter, $sel.data('image-id'));
+            }
+
+            if (setIDs == true) {
+              $('[data-image-id]').each(function () {
+                counter++;
+                $(this).attr('data-image-id', counter);
+              });
+            }
+            $(setClickAttr).on('click', function () {
+              updateGallery($(this));
+            });
+          }
+        });
+      </script>
+
+
       @include('Templates.Frontend.footer')
       @include('Templates.Frontend.foot')
