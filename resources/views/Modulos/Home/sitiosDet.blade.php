@@ -90,25 +90,32 @@
       <div class="row">
 
         <div class="col-lg-12">
+            <?php if (!empty($imagenes[0]->img_ruta)): ?>
           <div class="col-md-4 col-xs-6 Sitios-deta">
-            <a class="thumbnail " href="#" data-image-id="" data-toggle="modal" data-title="This is my title" data-caption="Some lovely red flowers" data-image="http://onelive.us/wp-content/uploads/2014/08/flower-delivery-online.jpg" data-target="#image-gallery">
-              <img class="img-responsive img-thumbnail" src="<?php echo asset("$sitDetalle->img_ruta") ?>" alt="Short alt text">
+            <a class="thumbnail " href="#" data-image-id="" data-toggle="modal" data-title="This is my title" data-caption="Some lovely red flowers" data-image="http://onelive.us/wp-content/uploads/2014/08/flower-delivery-online.jpg" data-target="#image-gallery1">
+              <img class="img-responsive img-thumbnail" src="<?php echo asset($imagenes[0]->img_ruta) ?>" alt="Short alt text">
             </a>
           </div>
+            <?php endif ?>
+            <?php if (!empty($imagenes[1]->img_ruta)): ?>
           <div class="col-md-4 col-xs-6 Sitios-deta">
-            <a class="thumbnail " href="#" data-image-id="" data-toggle="modal" data-title="The car i dream about" data-caption="If you sponsor me, I can drive this car" data-image="http://www.picturesnew.com/media/images/car-image.jpg" data-target="#image-gallery">
-              <img class="img-responsive img-thumbnail" src="<?php echo asset("$sitDetalle->img_ruta") ?>" alt="A alt text">
+            <a class="thumbnail " href="#" data-image-id="" data-toggle="modal" data-title="The car i dream about" data-caption="If you sponsor me, I can drive this car" data-image="http://www.picturesnew.com/media/images/car-image.jpg" data-target="#image-gallery2">
+              <img class="img-responsive img-thumbnail" src="<?php echo asset($imagenes[1]->img_ruta) ?>" alt="A alt text">
             </a>
           </div>
+            <?php endif ?>
+            <?php if (!empty($imagenes[2]->img_ruta)): ?>
           <div class="col-md-4 col-xs-6 Sitios-deta">
-            <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title="Im so nice" data-caption="And if there is money left, my girlfriend will receive this car" data-image="http://upload.wikimedia.org/wikipedia/commons/7/78/1997_Fiat_Panda.JPG" data-target="#image-gallery">
-              <img class="img-responsive img-thumbnail" src="<?php echo asset("$sitDetalle->img_ruta") ?>" alt="Another alt text">
+            <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title="Im so nice" data-caption="And if there is money left, my girlfriend will receive this car" data-image="http://upload.wikimedia.org/wikipedia/commons/7/78/1997_Fiat_Panda.JPG" data-target="#image-gallery3">
+              <img class="img-responsive img-thumbnail" src="<?php echo asset($imagenes[2]->img_ruta) ?>" alt="Another alt text">
             </a>
           </div>
+            <?php endif ?>
         </div>
 
-
-        <div class="modal fade" id="image-gallery" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<!-- modal1 -->
+<?php if (!empty($imagenes[0]->img_ruta)): ?>
+        <div class="modal fade" id="image-gallery1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
           <div class="modal-dialog">
             <div class="modal-content">
               <div class="modal-header">
@@ -116,7 +123,7 @@
                 <h4 class="modal-title" id="image-gallery-title"></h4>
               </div>
               <div class="modal-body">
-                <img id="image-gallery-image" class="img-responsive" src="<?php echo asset("$sitDetalle->img_ruta") ?>">
+                <img id="image-gallery-image" class="img-responsive" src="<?php echo asset($imagenes[0]->img_ruta) ?>">
               </div>
               <div class="modal-footer">
 
@@ -135,6 +142,69 @@
             </div>
           </div>
         </div>
+<?php endif ?>
+
+          <!-- modal2 -->
+          <?php if (!empty($imagenes[1]->img_ruta)): ?>
+          <div class="modal fade" id="image-gallery2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="image-gallery-title"></h4>
+              </div>
+              <div class="modal-body">
+                <img id="image-gallery-image" class="img-responsive" src="<?php echo asset($imagenes[1]->img_ruta) ?>">
+              </div>
+              <div class="modal-footer">
+
+                <div class="col-md-2">
+                  <button type="button" class="btn btn-primary" id="show-previous-image">Previous</button>
+                </div>
+
+                <div class="col-md-8 text-justify" id="image-gallery-caption">
+                  This text will be overwritten by jQuery
+                </div>
+
+                <div class="col-md-2">
+                  <button type="button" id="show-next-image" class="btn btn-default">Next</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+          <?php endif ?>
+          
+          <!-- modal3 -->
+          <?php if (!empty($imagenes[2]->img_ruta)): ?>
+          <div class="modal fade" id="image-gallery3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="image-gallery-title"></h4>
+              </div>
+              <div class="modal-body">
+                <img id="image-gallery-image" class="img-responsive" src="<?php echo asset($imagenes[2]->img_ruta) ?>">
+              </div>
+              <div class="modal-footer">
+
+                <div class="col-md-2">
+                  <button type="button" class="btn btn-primary" id="show-previous-image">Previous</button>
+                </div>
+
+                <div class="col-md-8 text-justify" id="image-gallery-caption">
+                  This text will be overwritten by jQuery
+                </div>
+
+                <div class="col-md-2">
+                  <button type="button" id="show-next-image" class="btn btn-default">Next</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+          <?php endif ?>
       </div>
 
       <script>
