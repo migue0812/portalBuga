@@ -41,7 +41,7 @@
       <div class="row ">          
         <div class="col-xs-12 col-md-6 portfolio-item">
           <a href="">
-            <img class="img-responsive img-contenido" src="<?php echo asset("$sitDetalle->img_ruta") ?>" alt="">
+            <img class="img-responsive img-contenido thumbnail" src="<?php echo asset("$sitDetalle->img_ruta") ?>" alt="">
           </a>
         </div>
         <div class="col-xs-12 col-md-6 ">
@@ -70,7 +70,6 @@
             </p>
           </div>
         </div>
-        <br>
         <div class="col-md-12 portfolio-item">
           <div class="parrafoSitio">
             <h2 class="tituloSitio text-center"><?php echo ($sitDetalle->sit_nombre) ?></h2>
