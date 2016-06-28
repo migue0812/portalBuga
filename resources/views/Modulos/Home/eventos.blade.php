@@ -98,23 +98,23 @@
                                 <br>
                                 <?php if (Session::has("usuarioLogueado")): ?>
                                     <a href="<?php echo url("itinerario/eventos/" . $evento2->eve_id) ?>" class="btn btn-primary"><b title="Itinerario" class="icon-direction fa-fw"></b></a>
-                                    <?php endif ?>
+                                <?php endif ?>
                             </a>
                         </div>
                     <?php endforeach; ?>
                 </div>
             </div>
-                <center> <div>
-          <nav>
-            <ul class="pagination pagination-lg">
+            <center> <div>
+                    <nav>
+                        <ul class="pagination pagination-lg">
 
-              <?php
-              for ($x = 1; $x <= $paginas; $x++) {
-                echo "<li><a href='eventos?page=" . $x . "'>" . $x . "</a></li>";
-              }
-              ?>
-            </ul>
-          </nav>
-        </div></center>
+                            <?php
+                            for ($x = 1; $x <= $paginas; $x++) {
+                                echo "<li><a href='eventos?page=" . $x . "'>" . $x . "</a></li>";
+                            }
+                            ?>
+                        </ul>
+                    </nav>
+                </div></center>
             @include('Templates.Frontend.footer')
             @include('Templates.Frontend.foot')
