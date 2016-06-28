@@ -56,6 +56,63 @@
                 </div>
 
             </div>
+                <div class="text-center container container-fluid col-md-12">
+                     <div>
+                        <h2 class="text-center">UBICACION</h2>
+                        <hr class="tagline-divider-cont">
+                    </div>
+
+               <form class="mapa form-horizontal col-md-6" id="calculate-route" name="calculate-route" action="#" method="get">
+                    
+                    <div class="form-group">
+                        <label for="from" class="col-sm-2 control-label">Desde:</label>
+                        <div class="col-sm-10">
+                            <input class="form-control"type="text" id="from" name="from" required="required" placeholder="Una dirección" size="30"  />
+                            <a id="from-link" href="#">Obtener mi posición</a>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="to" class="col-sm-2 control-label">Hacia: </label>
+                        <div class="col-sm-10">
+                            <input class="form-control" type="text" id="to" name="to" required="required" placeholder="Otra dirección" size="30" value="<?php echo("$eveDetalle->eve_direccion") ?> ,Guadalajara de Buga" />
+                        </div>
+                    </div>
+                    <br/>
+                    <input class=" btn btn-default" type="submit" />
+                    <input class=" btn btn-default"  type="reset" />
+                </form>
+                <div  class="container container-fluid col-md-6" id="map"></div>
+                
+            </div>
+                <div class="container container-fluid col-md-12">
+                    <h4 id="error"></h4>
+                </div>
+                <style type="text/css">
+                #map {
+                    width: 500px;
+                    height: 400px;
+                    margin-top: 10px;
+                }
+            </style>
+<!--                 <div class="container container-fluid">
+
+                <form class="mapa" id="calculate-route" name="calculate-route" action="#" method="get">
+                    <h1>Ubicación</h1>
+                    <label for="from">Desde:</label>
+                    <input type="text" id="from" name="from" required="required" placeholder="Una dirección" size="30"  />
+                    <a id="from-link" href="#">Obtener mi posición</a>
+                    <br/>
+                    <label for="to">Hacia:</label>
+                    <input type="text" id="to" name="to" required="required" placeholder="Otra dirección" size="30" value="<?php echo("$eveDetalle->eve_direccion") ?> ,Guadalajara de Buga" />
+                    <a id="to-link" href="#">Obtener mi posición</a>
+                    <br />
+                    <input type="submit" />
+                    <input type="reset" />
+                </form>
+                <div  class="container container-fluid" id="map"></div>
+                <p id="error"></p>
+            </div>-->
+        
             <?php if (Session::has("usuarioLogueado")): ?>
                 <div id="fb-root"></div>
                 <script>(function (d, s, id) {
