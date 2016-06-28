@@ -916,6 +916,9 @@ textarea {
 }
 
 /* fin raiting position stars (SitioDetalle)*/
+.tituloSitio{
+        margin-top: 10px;
+    }
 
 @media (min-width:1200px) {
 
