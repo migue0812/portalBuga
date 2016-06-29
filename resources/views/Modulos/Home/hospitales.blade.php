@@ -142,7 +142,7 @@
 
             <div class="container portImg">
                 <div class="col-md-7 portfolio-item">
-                    <img class="img-responsive border-img" src="<?php echo asset("img/clinicaguadalajara.JPG") ?>">
+                    <img class="img-responsive border-img" src="<?php echo asset("img/clinicaguadalajara.jpg") ?>">
                 </div>
 
 
