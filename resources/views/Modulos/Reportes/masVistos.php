@@ -1,4 +1,4 @@
-<?php include ("dompdf/dompdf_config.inc.php") ;
+﻿<?php include ("dompdf/dompdf_config.inc.php") ;
 date_default_timezone_set("America/Bogota");
         $fecha = date("d-m-Y")." ".date("h:i:sa");
 
@@ -15,7 +15,7 @@ date_default_timezone_set("America/Bogota");
     <div class="panel panel-default">
         <div class="panel-heading">
 <h1 class="panel-title"><i class="fa fa-bar-chart-o fa-fw"></i>PORTAL BUGA</h1>
-<h2 class="panel-title"><i class="fa fa-bar-chart-o fa-fw"></i>Reporte de sitios más vistos</h2>
+<h2 class="panel-title"><i class="fa fa-bar-chart-o fa-fw"></i>Reporte de sitios'. utf8_decode(" más ") .'vistos</h2>
 <h4 class="panel-title"><i class="fa fa-bar-chart-o fa-fw"></i>Fecha y Hora: ' . 
  ($fecha).'</h4>
         </div>
@@ -38,7 +38,7 @@ date_default_timezone_set("America/Bogota");
                                 $codigoHTML.='
                                 <tr>
                                     <td>'.$count++.'</td>
-                                    <td>'.$sitio->sit_nombre.'</td>
+                                    <td>'.utf8_decode("$sitio->sit_nombre").'</td>
                                     <td>'.$sitio->visita.'</td>
                                     
                                 </tr>';

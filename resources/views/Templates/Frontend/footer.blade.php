@@ -1,4 +1,4 @@
-<footer  class="footer ">
+﻿<footer  class="footer ">
     <div class="container">
         <nav class="container nav-footer">
             <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3 encuentranos">
@@ -13,8 +13,8 @@
             <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3 contacto">
                 <h3 class="div-h3" >Contacto</h3>
                 <div class="social-footer">
-                    <li class="social-contactanos"><a href="<?php echo url("home/contacto") ?>" title="ContÃ¡ctanos">Contáctanos</a></li>
-                    <li class="social-contactanos"><a href="<?php echo url("home/informacion") ?>" title="InformaciÃ³n">Información</a></li>
+                    <li class="social-contactanos"><a href="<?php echo url("home/contacto") ?>" title="Contáctenos">Contáctenos</a></li>
+                    <li class="social-contactanos"><a href="<?php echo url("home/informacion") ?>" title="Información">Información</a></li>
                 </div>
             </div>
 

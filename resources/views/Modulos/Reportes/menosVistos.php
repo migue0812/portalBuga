@@ -38,7 +38,7 @@ date_default_timezone_set("America/Bogota");
                                 $codigoHTML.='
                                 <tr>
                                     <td>'.$count++.'</td>
-                                    <td>'.$sitio->sit_nombre.'</td>
+                                    <td>'.utf8_decode("$sitio->sit_nombre").'</td>
                                     <td>'.$sitio->visita.'</td>
                                     
                                 </tr>';

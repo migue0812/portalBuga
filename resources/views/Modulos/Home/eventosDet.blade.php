@@ -56,7 +56,7 @@
                 </div>
 
             </div>
-                <div class="text-center container container-fluid col-md-12">
+<!--                <div class="text-center container container-fluid col-md-12">
                      <div>
                         <h2 class="text-center">UBICACION</h2>
                         <hr class="tagline-divider-cont">
@@ -93,7 +93,7 @@
                     height: 400px;
                     margin-top: 10px;
                 }
-            </style>
+            </style>-->
 <!--                 <div class="container container-fluid">
 
                 <form class="mapa" id="calculate-route" name="calculate-route" action="#" method="get">

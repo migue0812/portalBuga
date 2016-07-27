@@ -1,4 +1,4 @@
-@include('Templates.Frontend.head')
+﻿@include('Templates.Frontend.head')
 @include('Templates.Frontend.header')
 
 <style type="text/css">
@@ -8,10 +8,10 @@
   .counter{ color:#333333;}
   .thumbnail img{height:200px;}
   span.glyphicon-thumbs-up{
-    font-size: 54px
+    font-size: 45px
   }
   span.glyphicon-thumbs-down{
-    font-size: 54px
+    font-size: 45px
   }
   .dedo{
     font-size: 30px;
@@ -126,17 +126,7 @@
               </div>
               <div class="modal-footer">
 
-                <div class="col-md-2">
-                  <button type="button" class="btn btn-primary" id="show-previous-image">Previous</button>
-                </div>
-
-                <div class="col-md-8 text-justify" id="image-gallery-caption">
-                  This text will be overwritten by jQuery
-                </div>
-
-                <div class="col-md-2">
-                  <button type="button" id="show-next-image" class="btn btn-default">Next</button>
-                </div>
+               
               </div>
             </div>
           </div>
@@ -157,17 +147,6 @@
               </div>
               <div class="modal-footer">
 
-                <div class="col-md-2">
-                  <button type="button" class="btn btn-primary" id="show-previous-image">Previous</button>
-                </div>
-
-                <div class="col-md-8 text-justify" id="image-gallery-caption">
-                  This text will be overwritten by jQuery
-                </div>
-
-                <div class="col-md-2">
-                  <button type="button" id="show-next-image" class="btn btn-default">Next</button>
-                </div>
               </div>
             </div>
           </div>
@@ -188,17 +167,6 @@
               </div>
               <div class="modal-footer">
 
-                <div class="col-md-2">
-                  <button type="button" class="btn btn-primary" id="show-previous-image">Previous</button>
-                </div>
-
-                <div class="col-md-8 text-justify" id="image-gallery-caption">
-                  This text will be overwritten by jQuery
-                </div>
-
-                <div class="col-md-2">
-                  <button type="button" id="show-next-image" class="btn btn-default">Next</button>
-                </div>
               </div>
             </div>
           </div>
