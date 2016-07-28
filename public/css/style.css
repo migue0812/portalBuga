@@ -6,6 +6,10 @@
 /*---Header Main---*/
 @import url('fonts/fonts.css');
 
+.decoration:hover{
+  text-decoration: none;
+}
+
 body {
     font-family: "Lora","Helvetica Neue",Helvetica,Arial,sans-serif;
     background: url('../img/backUno.jpg') no-repeat center center fixed;
@@ -106,7 +110,7 @@ hr {
     border-color: #999999;
 }
 .tagline-divider-event {
-    margin: 10px auto 0px;
+    margin: 10px auto 15px;
     max-width: 250px;
     border-color: #999999;
 }
@@ -235,7 +239,7 @@ hr {
     font-size: 30px;
 
 }
-.portafolio{
+.portfolio-item{
     margin-bottom:50px;
 }
 
@@ -243,24 +247,40 @@ hr {
     float: right;
     border-radius: 20px;
 }
-.color-enlace{
-    color: black;
-    cursor:pointer ;
-    text-decoration: none;
 
-
+.anim-underline {
+  color: #000;
+  text-decoration: none;
+  position: relative;
+  padding: 0 0 5px 0;
+  text-align: center;
 }
-.color-enlace:hover{
 
-    text-decoration: none;
-    color: #fff;
-    text-shadow:
-        -2px -2px 0 #000,
-        1px -2px 0 #000,
-        -2px 2px 0 #000,
-        2px 2px 0 #000;
-    font-size: 25px;
-    font-family: 'Boogaloo', cursive;
+.anim-underline:before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  width: 100%;
+  background-color: #3d4144;
+  animation: width 0.5s;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+  border-radius: 2px;
+  text-decoration: none;
+}
+
+.anim-underline:hover:before {
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+  text-decoration: none;
+}
+.anim-underline:hover{
+  text-decoration: none;
 }
 
 @media screen and (min-width:1200px) {

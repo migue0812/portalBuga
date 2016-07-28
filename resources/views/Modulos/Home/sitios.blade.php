@@ -31,8 +31,9 @@
               <p class="">
                 <?php echo ((strlen($sitio->sit_descripcion) > 200) ? substr(($sitio->sit_descripcion), 0, 200) . " ..." : ($sitio->sit_descripcion)) ?>
               </p>
-              <button class="center-block btn btn-primary ">
-                <a class="decoration-none" href="<?php echo url("home/sitios/det/" . $sitio->sit_id) ?>">Ver mas</a></button>
+              <a class="decoration" href="<?php echo url("home/sitios/det/" . $sitio->sit_id) ?>">
+              <button class="center-block btn btn-primary ">Ver mas</button>
+              </a>
 
               <?php if (Session::has("usuarioLogueado")): ?>
                 <a href="<?php echo url("itinerario/sitio/" . $sitio->sit_id) ?>" class="btn btn-primary">
@@ -71,9 +72,9 @@
                   <p class="text-justify2">
                     <?php echo ((strlen($sitio->sit_descripcion) > 100) ? substr(($sitio->sit_descripcion), 0, 100) . " ..." : ($sitio->sit_descripcion)) ?>
                   </p>
-                  <button class="center-block btn btn-primary ">
-                    <a class="decoration-none" href="<?php echo url("home/sitios/det/" . $sitio->sit_id) ?>">Ver mas</a>
-                  </button>
+                  <a class="decoration" href="<?php echo url("home/sitios/det/" . $sitio->sit_id) ?>">
+                  <button class="center-block btn btn-primary">Ver mas</button>
+                  </a>
                   <?php if (Session::has("usuarioLogueado")): ?>
                     <a href="<?php echo url("itinerario/sitio/" . $sitio->sit_id) ?>" class="btn btn-primary">
                       <b title="Itinerario" class="icon-direction fa-fw"></b>
