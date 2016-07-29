@@ -1,7 +1,7 @@
 <?php
 $categorias = DB::select("SELECT * FROM bdp_categoria, bdp_imagen WHERE bdp_imagen.cat_id = bdp_categoria.cat_id");
 ?>
-<div class="brand">Buga</div>
+<a class="brand" href="<?php echo url("home/index") ?>">Buga</a>
 <!-- Navigation -->
 <nav class="navbar navbar-default" role="navigation">
     <div class="container">

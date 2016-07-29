@@ -166,6 +166,12 @@ hr {
     font-weight: 700;
     line-height: normal;
     color: #fff;
+    text-decoration: none;
+  }
+  
+  .brand:hover{
+    text-decoration: none;
+    color:#fff;
   }
 
   .top-divider {
