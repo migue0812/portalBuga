@@ -52,7 +52,7 @@
 
         <?php endif ?>
       </div>
-    </div>
+    
     <!-- /.container -->
     @include('Templates.Frontend.footer')
     @include('Templates.Frontend.foot')

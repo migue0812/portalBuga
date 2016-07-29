@@ -8,7 +8,7 @@
       <div class="col-lg-12">
         <div class="visitNav">
           <div>
-            <h2 class="text-center">SITIOS TURISTICOS</h2>
+            <h2 class="text-center"><b>SITIOS TURÍSTICOS</b></h2>
           </div>
         </div>
         <hr class="tagline-divider-cont">
@@ -26,8 +26,8 @@
 
 
             <div class="col-md-5 portfolio-item">
-              <h2 class="text-center"><?php echo ($sitio->sit_nombre) ?></h2>
-              <hr class="tagline-divider-cont">
+              <h3 class="text-center"><?php echo ($sitio->sit_nombre) ?></h3>
+              <hr class="tagline-divider-event">
               <p class="">
                 <?php echo ((strlen($sitio->sit_descripcion) > 200) ? substr(($sitio->sit_descripcion), 0, 200) . " ..." : ($sitio->sit_descripcion)) ?>
               </p>
@@ -70,7 +70,7 @@
                     </div>
                   </a>
                   <p class="text-justify2">
-                    <?php echo ((strlen($sitio->sit_descripcion) > 100) ? substr(($sitio->sit_descripcion), 0, 100) . " ..." : ($sitio->sit_descripcion)) ?>
+                    <?php echo ((strlen($sitio->sit_descripcion) > 150) ? substr(($sitio->sit_descripcion), 0, 150) . " ..." : ($sitio->sit_descripcion)) ?>
                   </p>
                   <a class="decoration" href="<?php echo url("home/sitios/det/" . $sitio->sit_id) ?>">
                   <button class="center-block btn btn-primary">Ver mas</button>

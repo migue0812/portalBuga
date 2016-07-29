@@ -25,11 +25,11 @@ $categorias = DB::select("SELECT * FROM bdp_categoria, bdp_imagen WHERE bdp_imag
                 <?php elseif (Session::has("usuarioLogueado") | (Session::has("usuarioAdmin"))): ?>
                     <?php if ((Session::get("usuarioGenero") === 'M')): ?>
                         <li class="centerImg visible-xs">
-                            <img class="imgTam" src="<?php echo asset("img/Male.png") ?>" />
+                            <img class="imgTam img-circle" src="<?php echo asset("img/Male.png") ?>" />
                         </li>
                     <?php else: ?>
                         <li class="centerImg visible-xs">
-                            <img class="imgTam" src="<?php echo asset("img/Female.png") ?>" />
+                            <img class="imgTam img-circle" src="<?php echo asset("img/Female.png") ?>" />
                         </li>
                     <?php endif ?>
                 <?php endif ?>
@@ -62,9 +62,9 @@ $categorias = DB::select("SELECT * FROM bdp_categoria, bdp_imagen WHERE bdp_imag
                         <li class="navPerImg hidden-xs">
                             <?php $foto = Session::get("usuarioAvatar");
                             if (!empty($foto)): ?>
-                            <img class="imgTam" src="<?php echo asset("$foto") ?>" />
+                            <img class="imgTam img-circle" src="<?php echo asset("$foto") ?>" />
                             <?php else: ?>
-                            <img class="imgTam" src="<?php echo asset("img/Male.png") ?>" />
+                            <img class="imgTam img-circle" src="<?php echo asset("img/Male.png") ?>" />
                         <?php endif ?>
                         </li>
                         <li class="dropdown navPer" >
@@ -81,9 +81,9 @@ $categorias = DB::select("SELECT * FROM bdp_categoria, bdp_imagen WHERE bdp_imag
                         <li class="navPerImg hidden-xs">
                             <?php $foto = Session::get("usuarioAvatar");
                             if (!empty($foto)): ?>
-                            <img class="imgTam" src="<?php echo asset("$foto") ?>" />
+                            <img class="imgTam img-circle" src="<?php echo asset("$foto") ?>" />
                             <?php else: ?>
-                            <img class="imgTam" src="<?php echo asset("img/Female.png") ?>" />
+                            <img class="imgTam img-circle" src="<?php echo asset("img/Female.png") ?>" />
                         <?php endif ?>
                         </li>
                         <li class="dropdown navPer" >
@@ -113,7 +113,7 @@ $categorias = DB::select("SELECT * FROM bdp_categoria, bdp_imagen WHERE bdp_imag
                         </li>
                     <?php else: ?>
                         <li class="navPerImg hidden-xs">
-                            <img class="imgTam" src="<?php echo asset("img/Female.png") ?>" />
+                            <img class="imgTam img-circle" src="<?php echo asset("img/Female.png") ?>" />
                         </li>
                         <li class="dropdown navPer" >
                             <a style="padding-right: 0px;padding-left: 0px;" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" title="Categorias"><?php echo ' ' . Session::get("usuarioAdmin") ?><span class="caret"></span></a>
